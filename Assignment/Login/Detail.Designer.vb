@@ -63,6 +63,7 @@ Partial Class Detail
         Me.Label2.Size = New System.Drawing.Size(165, 31)
         Me.Label2.TabIndex = 2
         Me.Label2.Text = "Movie Name"
+        Me.Label2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
         '
         'Label3
         '
@@ -112,7 +113,7 @@ Partial Class Detail
         '
         Me.Label7.AutoSize = True
         Me.Label7.Font = New System.Drawing.Font("Microsoft Sans Serif", 20.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label7.Location = New System.Drawing.Point(321, 15)
+        Me.Label7.Location = New System.Drawing.Point(255, 15)
         Me.Label7.Margin = New System.Windows.Forms.Padding(5)
         Me.Label7.Name = "Label7"
         Me.Label7.Size = New System.Drawing.Size(160, 31)
@@ -123,7 +124,7 @@ Partial Class Detail
         '
         Me.Label8.AutoSize = True
         Me.Label8.Font = New System.Drawing.Font("Microsoft Sans Serif", 20.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label8.Location = New System.Drawing.Point(321, 69)
+        Me.Label8.Location = New System.Drawing.Point(255, 69)
         Me.Label8.Margin = New System.Windows.Forms.Padding(5)
         Me.Label8.Name = "Label8"
         Me.Label8.Size = New System.Drawing.Size(193, 31)
@@ -134,7 +135,7 @@ Partial Class Detail
         '
         Me.Label9.AutoSize = True
         Me.Label9.Font = New System.Drawing.Font("Microsoft Sans Serif", 20.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label9.Location = New System.Drawing.Point(321, 140)
+        Me.Label9.Location = New System.Drawing.Point(255, 140)
         Me.Label9.Margin = New System.Windows.Forms.Padding(5)
         Me.Label9.Name = "Label9"
         Me.Label9.Size = New System.Drawing.Size(95, 31)
@@ -145,7 +146,7 @@ Partial Class Detail
         '
         Me.Label10.AutoSize = True
         Me.Label10.Font = New System.Drawing.Font("Microsoft Sans Serif", 20.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label10.Location = New System.Drawing.Point(321, 210)
+        Me.Label10.Location = New System.Drawing.Point(255, 210)
         Me.Label10.Margin = New System.Windows.Forms.Padding(5)
         Me.Label10.Name = "Label10"
         Me.Label10.Size = New System.Drawing.Size(95, 31)
@@ -156,7 +157,7 @@ Partial Class Detail
         '
         Me.Label11.AutoSize = True
         Me.Label11.Font = New System.Drawing.Font("Microsoft Sans Serif", 20.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label11.Location = New System.Drawing.Point(321, 279)
+        Me.Label11.Location = New System.Drawing.Point(255, 279)
         Me.Label11.Margin = New System.Windows.Forms.Padding(5)
         Me.Label11.Name = "Label11"
         Me.Label11.Size = New System.Drawing.Size(95, 31)
@@ -166,11 +167,10 @@ Partial Class Detail
         'TableLayoutPanel1
         '
         Me.TableLayoutPanel1.ColumnCount = 3
-        Me.TableLayoutPanel1.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 91.76471!))
-        Me.TableLayoutPanel1.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 8.235294!))
-        Me.TableLayoutPanel1.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 269.0!))
+        Me.TableLayoutPanel1.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle())
+        Me.TableLayoutPanel1.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle())
+        Me.TableLayoutPanel1.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle())
         Me.TableLayoutPanel1.Controls.Add(Me.Label12, 1, 0)
-        Me.TableLayoutPanel1.Controls.Add(Me.Label2, 0, 0)
         Me.TableLayoutPanel1.Controls.Add(Me.Label3, 0, 1)
         Me.TableLayoutPanel1.Controls.Add(Me.Label4, 0, 2)
         Me.TableLayoutPanel1.Controls.Add(Me.Label5, 0, 3)
@@ -184,6 +184,7 @@ Partial Class Detail
         Me.TableLayoutPanel1.Controls.Add(Me.Label14, 1, 2)
         Me.TableLayoutPanel1.Controls.Add(Me.Label15, 1, 3)
         Me.TableLayoutPanel1.Controls.Add(Me.Label16, 1, 4)
+        Me.TableLayoutPanel1.Controls.Add(Me.Label2, 0, 0)
         Me.TableLayoutPanel1.Location = New System.Drawing.Point(60, 69)
         Me.TableLayoutPanel1.Margin = New System.Windows.Forms.Padding(0)
         Me.TableLayoutPanel1.Name = "TableLayoutPanel1"
@@ -201,10 +202,10 @@ Partial Class Detail
         '
         Me.Label12.AutoSize = True
         Me.Label12.Font = New System.Drawing.Font("Microsoft Sans Serif", 20.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label12.Location = New System.Drawing.Point(296, 15)
+        Me.Label12.Location = New System.Drawing.Point(223, 15)
         Me.Label12.Margin = New System.Windows.Forms.Padding(5)
         Me.Label12.Name = "Label12"
-        Me.Label12.Size = New System.Drawing.Size(15, 31)
+        Me.Label12.Size = New System.Drawing.Size(22, 31)
         Me.Label12.TabIndex = 5
         Me.Label12.Text = ":"
         '
@@ -212,10 +213,10 @@ Partial Class Detail
         '
         Me.Label13.AutoSize = True
         Me.Label13.Font = New System.Drawing.Font("Microsoft Sans Serif", 20.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label13.Location = New System.Drawing.Point(296, 69)
+        Me.Label13.Location = New System.Drawing.Point(223, 69)
         Me.Label13.Margin = New System.Windows.Forms.Padding(5)
         Me.Label13.Name = "Label13"
-        Me.Label13.Size = New System.Drawing.Size(15, 31)
+        Me.Label13.Size = New System.Drawing.Size(22, 31)
         Me.Label13.TabIndex = 5
         Me.Label13.Text = ":"
         '
@@ -223,10 +224,10 @@ Partial Class Detail
         '
         Me.Label14.AutoSize = True
         Me.Label14.Font = New System.Drawing.Font("Microsoft Sans Serif", 20.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label14.Location = New System.Drawing.Point(296, 140)
+        Me.Label14.Location = New System.Drawing.Point(223, 140)
         Me.Label14.Margin = New System.Windows.Forms.Padding(5)
         Me.Label14.Name = "Label14"
-        Me.Label14.Size = New System.Drawing.Size(15, 31)
+        Me.Label14.Size = New System.Drawing.Size(22, 31)
         Me.Label14.TabIndex = 5
         Me.Label14.Text = ":"
         '
@@ -234,10 +235,10 @@ Partial Class Detail
         '
         Me.Label15.AutoSize = True
         Me.Label15.Font = New System.Drawing.Font("Microsoft Sans Serif", 20.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label15.Location = New System.Drawing.Point(296, 210)
+        Me.Label15.Location = New System.Drawing.Point(223, 210)
         Me.Label15.Margin = New System.Windows.Forms.Padding(5)
         Me.Label15.Name = "Label15"
-        Me.Label15.Size = New System.Drawing.Size(15, 31)
+        Me.Label15.Size = New System.Drawing.Size(22, 31)
         Me.Label15.TabIndex = 5
         Me.Label15.Text = ":"
         '
@@ -245,10 +246,10 @@ Partial Class Detail
         '
         Me.Label16.AutoSize = True
         Me.Label16.Font = New System.Drawing.Font("Microsoft Sans Serif", 20.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label16.Location = New System.Drawing.Point(296, 279)
+        Me.Label16.Location = New System.Drawing.Point(223, 279)
         Me.Label16.Margin = New System.Windows.Forms.Padding(5)
         Me.Label16.Name = "Label16"
-        Me.Label16.Size = New System.Drawing.Size(15, 31)
+        Me.Label16.Size = New System.Drawing.Size(22, 31)
         Me.Label16.TabIndex = 5
         Me.Label16.Text = ":"
         '
@@ -261,7 +262,7 @@ Partial Class Detail
         Me.Label17.TabIndex = 5
         Me.Label17.Text = "Change the text accrding to the detial "
         '
-        'Movie
+        'Detail
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
@@ -269,7 +270,7 @@ Partial Class Detail
         Me.Controls.Add(Me.Label17)
         Me.Controls.Add(Me.TableLayoutPanel1)
         Me.Controls.Add(Me.Label1)
-        Me.Name = "Movie"
+        Me.Name = "Detail"
         Me.Text = "Movie"
         Me.TableLayoutPanel1.ResumeLayout(False)
         Me.TableLayoutPanel1.PerformLayout()
