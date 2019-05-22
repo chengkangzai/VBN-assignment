@@ -1,11 +1,9 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio Version 16
-VisualStudioVersion = 16.0.28803.202
+# Visual Studio 15
+VisualStudioVersion = 15.0.28307.645
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{F184B08F-C81C-45F6-A57F-5ABD9991F28F}") = "Assignment", "Assignment\Assignment.vbproj", "{8643AB26-1104-4DB7-B2C0-1AC4C3EC72F5}"
-EndProject
-Project("{F184B08F-C81C-45F6-A57F-5ABD9991F28F}") = "WindowsApp1", "WindowsApp1\WindowsApp1.vbproj", "{A7593A57-DB58-4403-A9A2-E6D81E511623}"
+Project("{F184B08F-C81C-45F6-A57F-5ABD9991F28F}") = "Login", "Login\Login.vbproj", "{3B80DB58-A5ED-4870-9EEA-0DAE22981527}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -13,14 +11,10 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{8643AB26-1104-4DB7-B2C0-1AC4C3EC72F5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{8643AB26-1104-4DB7-B2C0-1AC4C3EC72F5}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{8643AB26-1104-4DB7-B2C0-1AC4C3EC72F5}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{8643AB26-1104-4DB7-B2C0-1AC4C3EC72F5}.Release|Any CPU.Build.0 = Release|Any CPU
-		{A7593A57-DB58-4403-A9A2-E6D81E511623}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{A7593A57-DB58-4403-A9A2-E6D81E511623}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{A7593A57-DB58-4403-A9A2-E6D81E511623}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{A7593A57-DB58-4403-A9A2-E6D81E511623}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3B80DB58-A5ED-4870-9EEA-0DAE22981527}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3B80DB58-A5ED-4870-9EEA-0DAE22981527}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3B80DB58-A5ED-4870-9EEA-0DAE22981527}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3B80DB58-A5ED-4870-9EEA-0DAE22981527}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
