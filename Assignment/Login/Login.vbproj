@@ -80,10 +80,10 @@
       <DependentUpon>Login.vb</DependentUpon>
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Movie.Designer.vb">
-      <DependentUpon>Movie.vb</DependentUpon>
+    <Compile Include="Detail.Designer.vb">
+      <DependentUpon>Detail.vb</DependentUpon>
     </Compile>
-    <Compile Include="Movie.vb">
+    <Compile Include="Detail.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="My Project\AssemblyInfo.vb" />
@@ -112,8 +112,8 @@
     <EmbeddedResource Include="Login.resx">
       <DependentUpon>Login.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Movie.resx">
-      <DependentUpon>Movie.vb</DependentUpon>
+    <EmbeddedResource Include="Detail.resx">
+      <DependentUpon>Detail.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="My Project\Resources.resx">
       <Generator>VbMyResourcesResXFileCodeGenerator</Generator>
