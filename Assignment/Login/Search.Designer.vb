@@ -30,6 +30,8 @@ Partial Class Search_Function
         Me.RadioButton3 = New System.Windows.Forms.RadioButton()
         Me.RadioButton2 = New System.Windows.Forms.RadioButton()
         Me.GroupBox2 = New System.Windows.Forms.GroupBox()
+        Me.Label1 = New System.Windows.Forms.Label()
+        Me.TextBox1 = New System.Windows.Forms.TextBox()
         Me.RadioButton10 = New System.Windows.Forms.RadioButton()
         Me.RadioButton9 = New System.Windows.Forms.RadioButton()
         Me.RadioButton6 = New System.Windows.Forms.RadioButton()
@@ -38,8 +40,8 @@ Partial Class Search_Function
         Me.DataSet1 = New System.Data.DataSet()
         Me.PictureBox1 = New System.Windows.Forms.PictureBox()
         Me.PictureBox2 = New System.Windows.Forms.PictureBox()
-        Me.TextBox1 = New System.Windows.Forms.TextBox()
-        Me.Label1 = New System.Windows.Forms.Label()
+        Me.RadioButton11 = New System.Windows.Forms.RadioButton()
+        Me.RadioButton12 = New System.Windows.Forms.RadioButton()
         Me.GroupBox1.SuspendLayout()
         Me.GroupBox2.SuspendLayout()
         CType(Me.DataSet1, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -63,6 +65,8 @@ Partial Class Search_Function
         'GroupBox1
         '
         Me.GroupBox1.BackColor = System.Drawing.SystemColors.ControlDark
+        Me.GroupBox1.Controls.Add(Me.RadioButton12)
+        Me.GroupBox1.Controls.Add(Me.RadioButton11)
         Me.GroupBox1.Controls.Add(Me.RadioButton5)
         Me.GroupBox1.Controls.Add(Me.RadioButton4)
         Me.GroupBox1.Controls.Add(Me.RadioButton3)
@@ -70,7 +74,7 @@ Partial Class Search_Function
         Me.GroupBox1.Controls.Add(Me.RadioButton1)
         Me.GroupBox1.Location = New System.Drawing.Point(12, 12)
         Me.GroupBox1.Name = "GroupBox1"
-        Me.GroupBox1.Size = New System.Drawing.Size(674, 55)
+        Me.GroupBox1.Size = New System.Drawing.Size(939, 55)
         Me.GroupBox1.TabIndex = 1
         Me.GroupBox1.TabStop = False
         Me.GroupBox1.Text = "Choose Categoty (database)"
@@ -143,6 +147,24 @@ Partial Class Search_Function
         Me.GroupBox2.TabIndex = 2
         Me.GroupBox2.TabStop = False
         Me.GroupBox2.Text = "Choose variable"
+        '
+        'Label1
+        '
+        Me.Label1.AutoSize = True
+        Me.Label1.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label1.Location = New System.Drawing.Point(6, 77)
+        Me.Label1.Name = "Label1"
+        Me.Label1.Size = New System.Drawing.Size(189, 25)
+        Me.Label1.TabIndex = 2
+        Me.Label1.Text = "Search by Name : "
+        '
+        'TextBox1
+        '
+        Me.TextBox1.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.TextBox1.Location = New System.Drawing.Point(201, 74)
+        Me.TextBox1.Name = "TextBox1"
+        Me.TextBox1.Size = New System.Drawing.Size(159, 31)
+        Me.TextBox1.TabIndex = 1
         '
         'RadioButton10
         '
@@ -231,29 +253,37 @@ Partial Class Search_Function
         Me.PictureBox2.TabIndex = 4
         Me.PictureBox2.TabStop = False
         '
-        'TextBox1
+        'RadioButton11
         '
-        Me.TextBox1.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.TextBox1.Location = New System.Drawing.Point(201, 74)
-        Me.TextBox1.Name = "TextBox1"
-        Me.TextBox1.Size = New System.Drawing.Size(159, 31)
-        Me.TextBox1.TabIndex = 1
+        Me.RadioButton11.AutoSize = True
+        Me.RadioButton11.BackColor = System.Drawing.SystemColors.ActiveCaption
+        Me.RadioButton11.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.RadioButton11.Location = New System.Drawing.Point(664, 19)
+        Me.RadioButton11.Name = "RadioButton11"
+        Me.RadioButton11.Size = New System.Drawing.Size(126, 24)
+        Me.RadioButton11.TabIndex = 0
+        Me.RadioButton11.TabStop = True
+        Me.RadioButton11.Text = "RadioButton1"
+        Me.RadioButton11.UseVisualStyleBackColor = False
         '
-        'Label1
+        'RadioButton12
         '
-        Me.Label1.AutoSize = True
-        Me.Label1.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label1.Location = New System.Drawing.Point(6, 77)
-        Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(189, 25)
-        Me.Label1.TabIndex = 2
-        Me.Label1.Text = "Search by Name : "
+        Me.RadioButton12.AutoSize = True
+        Me.RadioButton12.BackColor = System.Drawing.SystemColors.ActiveCaption
+        Me.RadioButton12.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.RadioButton12.Location = New System.Drawing.Point(796, 19)
+        Me.RadioButton12.Name = "RadioButton12"
+        Me.RadioButton12.Size = New System.Drawing.Size(126, 24)
+        Me.RadioButton12.TabIndex = 0
+        Me.RadioButton12.TabStop = True
+        Me.RadioButton12.Text = "RadioButton1"
+        Me.RadioButton12.UseVisualStyleBackColor = False
         '
         'Search_Function
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(800, 450)
+        Me.ClientSize = New System.Drawing.Size(999, 450)
         Me.Controls.Add(Me.PictureBox2)
         Me.Controls.Add(Me.PictureBox1)
         Me.Controls.Add(Me.GroupBox2)
@@ -288,4 +318,6 @@ Partial Class Search_Function
     Friend WithEvents PictureBox2 As PictureBox
     Friend WithEvents Label1 As Label
     Friend WithEvents TextBox1 As TextBox
+    Friend WithEvents RadioButton12 As RadioButton
+    Friend WithEvents RadioButton11 As RadioButton
 End Class
