@@ -102,6 +102,4 @@
     Private Sub btnpnlExit_MouseLeave(sender As Object, e As EventArgs) Handles btnpnlExit.MouseLeave
         Button1.BackColor = Color.MediumAquamarine
     End Sub
-
-
 End Class
