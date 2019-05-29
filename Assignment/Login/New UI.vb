@@ -1,9 +1,5 @@
 ﻿Public Class New_UI
-    Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
-        pnlLogin.Visible = False
-        pnlSearch.Visible = True
-        pnlWelcome.Visible = False
-    End Sub
+
 
     Private Sub PictureBox1_Click(sender As Object, e As EventArgs) Handles PictureBox1.Click
         If Me.WindowState = FormWindowState.Normal Then
@@ -36,15 +32,25 @@
         pnlLogin.Visible = True
         pnlSearch.Visible = False
         pnlWelcome.Visible = False
+        pnlMovie.Visible = False
     End Sub
-
+    Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
+        pnlLogin.Visible = False
+        pnlSearch.Visible = True
+        pnlWelcome.Visible = False
+        pnlMovie.Visible = False
+    End Sub
     Private Sub New_UI_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         pnlSearch.Visible = False
         pnlLogin.Visible = False
         pnlWelcome.Visible = True
+        pnlMovie.Visible = False
     End Sub
 
-    Private Sub Label2_Click(sender As Object, e As EventArgs) Handles Label2.Click
-
+    Private Sub Button9_Click(sender As Object, e As EventArgs) Handles Button9.Click
+        pnlSearch.Visible = False
+        pnlLogin.Visible = False
+        pnlWelcome.Visible = False
+        pnlMovie.Visible = True
     End Sub
 End Class

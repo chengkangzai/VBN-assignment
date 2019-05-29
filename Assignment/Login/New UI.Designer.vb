@@ -24,6 +24,14 @@ Partial Class New_UI
     Private Sub InitializeComponent()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(New_UI))
         Me.Panel1 = New System.Windows.Forms.Panel()
+        Me.Panel3 = New System.Windows.Forms.Panel()
+        Me.Panel5 = New System.Windows.Forms.Panel()
+        Me.Label2 = New System.Windows.Forms.Label()
+        Me.Button8 = New System.Windows.Forms.Button()
+        Me.Button9 = New System.Windows.Forms.Button()
+        Me.Button10 = New System.Windows.Forms.Button()
+        Me.Button11 = New System.Windows.Forms.Button()
+        Me.Button12 = New System.Windows.Forms.Button()
         Me.Panel4 = New System.Windows.Forms.Panel()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.Button4 = New System.Windows.Forms.Button()
@@ -41,55 +49,46 @@ Partial Class New_UI
         Me.Label5 = New System.Windows.Forms.Label()
         Me.TextBox2 = New System.Windows.Forms.TextBox()
         Me.pnlLogin = New System.Windows.Forms.Panel()
+        Me.Button7 = New System.Windows.Forms.Button()
         Me.Label7 = New System.Windows.Forms.Label()
         Me.Label9 = New System.Windows.Forms.Label()
         Me.TextBox3 = New System.Windows.Forms.TextBox()
         Me.Label10 = New System.Windows.Forms.Label()
         Me.TextBox4 = New System.Windows.Forms.TextBox()
-        Me.Button7 = New System.Windows.Forms.Button()
         Me.pnlWelcome = New System.Windows.Forms.Panel()
         Me.PictureBox4 = New System.Windows.Forms.PictureBox()
         Me.WinControl = New System.Windows.Forms.Panel()
-        Me.PictureBox1 = New System.Windows.Forms.PictureBox()
-        Me.PictureBox2 = New System.Windows.Forms.PictureBox()
         Me.PictureBox3 = New System.Windows.Forms.PictureBox()
+        Me.PictureBox2 = New System.Windows.Forms.PictureBox()
+        Me.PictureBox1 = New System.Windows.Forms.PictureBox()
         Me.Panel2 = New System.Windows.Forms.Panel()
-        Me.Panel3 = New System.Windows.Forms.Panel()
-        Me.Panel5 = New System.Windows.Forms.Panel()
-        Me.Label2 = New System.Windows.Forms.Label()
-        Me.Button8 = New System.Windows.Forms.Button()
-        Me.Button9 = New System.Windows.Forms.Button()
-        Me.Button10 = New System.Windows.Forms.Button()
-        Me.Button11 = New System.Windows.Forms.Button()
-        Me.Button12 = New System.Windows.Forms.Button()
-        Me.Movie = New System.Windows.Forms.Panel()
-        Me.Panel6 = New System.Windows.Forms.Panel()
-        Me.PictureBox5 = New System.Windows.Forms.PictureBox()
+        Me.pnlMovie = New System.Windows.Forms.Panel()
         Me.Panel7 = New System.Windows.Forms.Panel()
-        Me.PictureBox6 = New System.Windows.Forms.PictureBox()
-        Me.Label8 = New System.Windows.Forms.Label()
-        Me.Label11 = New System.Windows.Forms.Label()
         Me.Label12 = New System.Windows.Forms.Label()
-        Me.lblPublishedDate1 = New System.Windows.Forms.Label()
+        Me.PictureBox6 = New System.Windows.Forms.PictureBox()
+        Me.Panel6 = New System.Windows.Forms.Panel()
+        Me.Label15 = New System.Windows.Forms.Label()
         Me.Label13 = New System.Windows.Forms.Label()
         Me.Label14 = New System.Windows.Forms.Label()
-        Me.Label15 = New System.Windows.Forms.Label()
+        Me.lblPublishedDate1 = New System.Windows.Forms.Label()
+        Me.Label11 = New System.Windows.Forms.Label()
+        Me.PictureBox5 = New System.Windows.Forms.PictureBox()
         Me.Panel1.SuspendLayout()
+        Me.Panel3.SuspendLayout()
         Me.pnlSearch.SuspendLayout()
         Me.pnlLogin.SuspendLayout()
         Me.pnlWelcome.SuspendLayout()
         CType(Me.PictureBox4, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.WinControl.SuspendLayout()
-        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox3, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.Panel2.SuspendLayout()
-        Me.Panel3.SuspendLayout()
-        Me.Movie.SuspendLayout()
-        Me.Panel6.SuspendLayout()
-        CType(Me.PictureBox5, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.pnlMovie.SuspendLayout()
         Me.Panel7.SuspendLayout()
         CType(Me.PictureBox6, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.Panel6.SuspendLayout()
+        CType(Me.PictureBox5, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'Panel1
@@ -108,6 +107,130 @@ Partial Class New_UI
         Me.Panel1.Name = "Panel1"
         Me.Panel1.Size = New System.Drawing.Size(201, 578)
         Me.Panel1.TabIndex = 0
+        '
+        'Panel3
+        '
+        Me.Panel3.BackColor = System.Drawing.Color.MediumAquamarine
+        Me.Panel3.Controls.Add(Me.Panel5)
+        Me.Panel3.Controls.Add(Me.Label2)
+        Me.Panel3.Controls.Add(Me.Button8)
+        Me.Panel3.Controls.Add(Me.Button9)
+        Me.Panel3.Controls.Add(Me.Button10)
+        Me.Panel3.Controls.Add(Me.Button11)
+        Me.Panel3.Controls.Add(Me.Button12)
+        Me.Panel3.Dock = System.Windows.Forms.DockStyle.Left
+        Me.Panel3.Location = New System.Drawing.Point(0, 0)
+        Me.Panel3.Name = "Panel3"
+        Me.Panel3.Size = New System.Drawing.Size(201, 578)
+        Me.Panel3.TabIndex = 3
+        '
+        'Panel5
+        '
+        Me.Panel5.Location = New System.Drawing.Point(201, 45)
+        Me.Panel5.Name = "Panel5"
+        Me.Panel5.Size = New System.Drawing.Size(856, 540)
+        Me.Panel5.TabIndex = 2
+        '
+        'Label2
+        '
+        Me.Label2.AutoSize = True
+        Me.Label2.BackColor = System.Drawing.Color.Transparent
+        Me.Label2.Font = New System.Drawing.Font("Microsoft JhengHei", 20.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(134, Byte))
+        Me.Label2.ForeColor = System.Drawing.Color.Green
+        Me.Label2.Location = New System.Drawing.Point(12, 48)
+        Me.Label2.Name = "Label2"
+        Me.Label2.Size = New System.Drawing.Size(166, 34)
+        Me.Label2.TabIndex = 1
+        Me.Label2.Text = "Power Apps"
+        '
+        'Button8
+        '
+        Me.Button8.BackColor = System.Drawing.Color.MediumAquamarine
+        Me.Button8.FlatAppearance.BorderSize = 0
+        Me.Button8.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.Button8.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(134, Byte))
+        Me.Button8.ForeColor = System.Drawing.Color.Black
+        Me.Button8.Image = CType(resources.GetObject("Button8.Image"), System.Drawing.Image)
+        Me.Button8.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.Button8.Location = New System.Drawing.Point(0, 378)
+        Me.Button8.Margin = New System.Windows.Forms.Padding(0)
+        Me.Button8.Name = "Button8"
+        Me.Button8.Size = New System.Drawing.Size(201, 53)
+        Me.Button8.TabIndex = 0
+        Me.Button8.Text = "Exit"
+        Me.Button8.UseVisualStyleBackColor = False
+        '
+        'Button9
+        '
+        Me.Button9.BackColor = System.Drawing.Color.MediumAquamarine
+        Me.Button9.CausesValidation = False
+        Me.Button9.FlatAppearance.BorderSize = 0
+        Me.Button9.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.Button9.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(134, Byte))
+        Me.Button9.ForeColor = System.Drawing.Color.Black
+        Me.Button9.Image = CType(resources.GetObject("Button9.Image"), System.Drawing.Image)
+        Me.Button9.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.Button9.Location = New System.Drawing.Point(0, 242)
+        Me.Button9.Margin = New System.Windows.Forms.Padding(0)
+        Me.Button9.Name = "Button9"
+        Me.Button9.Size = New System.Drawing.Size(201, 53)
+        Me.Button9.TabIndex = 0
+        Me.Button9.Text = "Movie"
+        Me.Button9.UseVisualStyleBackColor = False
+        '
+        'Button10
+        '
+        Me.Button10.BackColor = System.Drawing.Color.MediumAquamarine
+        Me.Button10.CausesValidation = False
+        Me.Button10.FlatAppearance.BorderSize = 0
+        Me.Button10.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.Button10.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(134, Byte))
+        Me.Button10.ForeColor = System.Drawing.Color.Black
+        Me.Button10.Image = CType(resources.GetObject("Button10.Image"), System.Drawing.Image)
+        Me.Button10.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.Button10.Location = New System.Drawing.Point(0, 313)
+        Me.Button10.Margin = New System.Windows.Forms.Padding(0)
+        Me.Button10.Name = "Button10"
+        Me.Button10.Size = New System.Drawing.Size(201, 53)
+        Me.Button10.TabIndex = 0
+        Me.Button10.Text = "About"
+        Me.Button10.UseVisualStyleBackColor = False
+        '
+        'Button11
+        '
+        Me.Button11.BackColor = System.Drawing.Color.MediumAquamarine
+        Me.Button11.CausesValidation = False
+        Me.Button11.FlatAppearance.BorderSize = 0
+        Me.Button11.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.Button11.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(134, Byte))
+        Me.Button11.ForeColor = System.Drawing.Color.Black
+        Me.Button11.Image = CType(resources.GetObject("Button11.Image"), System.Drawing.Image)
+        Me.Button11.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.Button11.Location = New System.Drawing.Point(0, 175)
+        Me.Button11.Margin = New System.Windows.Forms.Padding(0)
+        Me.Button11.Name = "Button11"
+        Me.Button11.Size = New System.Drawing.Size(201, 53)
+        Me.Button11.TabIndex = 0
+        Me.Button11.Text = "Login"
+        Me.Button11.UseVisualStyleBackColor = False
+        '
+        'Button12
+        '
+        Me.Button12.BackColor = System.Drawing.Color.MediumAquamarine
+        Me.Button12.CausesValidation = False
+        Me.Button12.FlatAppearance.BorderSize = 0
+        Me.Button12.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.Button12.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(134, Byte))
+        Me.Button12.ForeColor = System.Drawing.Color.Black
+        Me.Button12.Image = CType(resources.GetObject("Button12.Image"), System.Drawing.Image)
+        Me.Button12.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.Button12.Location = New System.Drawing.Point(0, 111)
+        Me.Button12.Margin = New System.Windows.Forms.Padding(0)
+        Me.Button12.Name = "Button12"
+        Me.Button12.Size = New System.Drawing.Size(201, 53)
+        Me.Button12.TabIndex = 0
+        Me.Button12.Text = "Search "
+        Me.Button12.UseVisualStyleBackColor = False
         '
         'Panel4
         '
@@ -323,6 +446,17 @@ Partial Class New_UI
         Me.pnlLogin.Size = New System.Drawing.Size(856, 537)
         Me.pnlLogin.TabIndex = 4
         '
+        'Button7
+        '
+        Me.Button7.BackColor = System.Drawing.Color.Aquamarine
+        Me.Button7.Font = New System.Drawing.Font("Microsoft Sans Serif", 20.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Button7.Location = New System.Drawing.Point(224, 302)
+        Me.Button7.Name = "Button7"
+        Me.Button7.Size = New System.Drawing.Size(158, 65)
+        Me.Button7.TabIndex = 3
+        Me.Button7.Text = "Search"
+        Me.Button7.UseVisualStyleBackColor = False
+        '
         'Label7
         '
         Me.Label7.AutoSize = True
@@ -372,17 +506,6 @@ Partial Class New_UI
         Me.TextBox4.Size = New System.Drawing.Size(290, 37)
         Me.TextBox4.TabIndex = 0
         '
-        'Button7
-        '
-        Me.Button7.BackColor = System.Drawing.Color.Aquamarine
-        Me.Button7.Font = New System.Drawing.Font("Microsoft Sans Serif", 20.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Button7.Location = New System.Drawing.Point(224, 302)
-        Me.Button7.Name = "Button7"
-        Me.Button7.Size = New System.Drawing.Size(158, 65)
-        Me.Button7.TabIndex = 3
-        Me.Button7.Text = "Search"
-        Me.Button7.UseVisualStyleBackColor = False
-        '
         'pnlWelcome
         '
         Me.pnlWelcome.Controls.Add(Me.PictureBox4)
@@ -413,15 +536,15 @@ Partial Class New_UI
         Me.WinControl.Size = New System.Drawing.Size(128, 45)
         Me.WinControl.TabIndex = 3
         '
-        'PictureBox1
+        'PictureBox3
         '
-        Me.PictureBox1.Image = CType(resources.GetObject("PictureBox1.Image"), System.Drawing.Image)
-        Me.PictureBox1.Location = New System.Drawing.Point(45, 4)
-        Me.PictureBox1.Name = "PictureBox1"
-        Me.PictureBox1.Size = New System.Drawing.Size(35, 35)
-        Me.PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
-        Me.PictureBox1.TabIndex = 2
-        Me.PictureBox1.TabStop = False
+        Me.PictureBox3.Image = CType(resources.GetObject("PictureBox3.Image"), System.Drawing.Image)
+        Me.PictureBox3.Location = New System.Drawing.Point(86, 4)
+        Me.PictureBox3.Name = "PictureBox3"
+        Me.PictureBox3.Size = New System.Drawing.Size(35, 35)
+        Me.PictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
+        Me.PictureBox3.TabIndex = 2
+        Me.PictureBox3.TabStop = False
         '
         'PictureBox2
         '
@@ -433,15 +556,15 @@ Partial Class New_UI
         Me.PictureBox2.TabIndex = 2
         Me.PictureBox2.TabStop = False
         '
-        'PictureBox3
+        'PictureBox1
         '
-        Me.PictureBox3.Image = CType(resources.GetObject("PictureBox3.Image"), System.Drawing.Image)
-        Me.PictureBox3.Location = New System.Drawing.Point(86, 4)
-        Me.PictureBox3.Name = "PictureBox3"
-        Me.PictureBox3.Size = New System.Drawing.Size(35, 35)
-        Me.PictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
-        Me.PictureBox3.TabIndex = 2
-        Me.PictureBox3.TabStop = False
+        Me.PictureBox1.Image = CType(resources.GetObject("PictureBox1.Image"), System.Drawing.Image)
+        Me.PictureBox1.Location = New System.Drawing.Point(45, 4)
+        Me.PictureBox1.Name = "PictureBox1"
+        Me.PictureBox1.Size = New System.Drawing.Size(35, 35)
+        Me.PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
+        Me.PictureBox1.TabIndex = 2
+        Me.PictureBox1.TabStop = False
         '
         'Panel2
         '
@@ -453,173 +576,35 @@ Partial Class New_UI
         Me.Panel2.Size = New System.Drawing.Size(852, 45)
         Me.Panel2.TabIndex = 1
         '
-        'Panel3
+        'pnlMovie
         '
-        Me.Panel3.BackColor = System.Drawing.Color.MediumAquamarine
-        Me.Panel3.Controls.Add(Me.Panel5)
-        Me.Panel3.Controls.Add(Me.Label2)
-        Me.Panel3.Controls.Add(Me.Button8)
-        Me.Panel3.Controls.Add(Me.Button9)
-        Me.Panel3.Controls.Add(Me.Button10)
-        Me.Panel3.Controls.Add(Me.Button11)
-        Me.Panel3.Controls.Add(Me.Button12)
-        Me.Panel3.Dock = System.Windows.Forms.DockStyle.Left
-        Me.Panel3.Location = New System.Drawing.Point(0, 0)
-        Me.Panel3.Name = "Panel3"
-        Me.Panel3.Size = New System.Drawing.Size(201, 578)
-        Me.Panel3.TabIndex = 3
-        '
-        'Panel5
-        '
-        Me.Panel5.Location = New System.Drawing.Point(201, 45)
-        Me.Panel5.Name = "Panel5"
-        Me.Panel5.Size = New System.Drawing.Size(856, 540)
-        Me.Panel5.TabIndex = 2
-        '
-        'Label2
-        '
-        Me.Label2.AutoSize = True
-        Me.Label2.BackColor = System.Drawing.Color.Transparent
-        Me.Label2.Font = New System.Drawing.Font("Microsoft JhengHei", 20.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(134, Byte))
-        Me.Label2.ForeColor = System.Drawing.Color.Green
-        Me.Label2.Location = New System.Drawing.Point(12, 48)
-        Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(166, 34)
-        Me.Label2.TabIndex = 1
-        Me.Label2.Text = "Power Apps"
-        '
-        'Button8
-        '
-        Me.Button8.BackColor = System.Drawing.Color.MediumAquamarine
-        Me.Button8.FlatAppearance.BorderSize = 0
-        Me.Button8.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.Button8.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(134, Byte))
-        Me.Button8.ForeColor = System.Drawing.Color.Black
-        Me.Button8.Image = CType(resources.GetObject("Button8.Image"), System.Drawing.Image)
-        Me.Button8.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.Button8.Location = New System.Drawing.Point(0, 378)
-        Me.Button8.Margin = New System.Windows.Forms.Padding(0)
-        Me.Button8.Name = "Button8"
-        Me.Button8.Size = New System.Drawing.Size(201, 53)
-        Me.Button8.TabIndex = 0
-        Me.Button8.Text = "Exit"
-        Me.Button8.UseVisualStyleBackColor = False
-        '
-        'Button9
-        '
-        Me.Button9.BackColor = System.Drawing.Color.MediumAquamarine
-        Me.Button9.CausesValidation = False
-        Me.Button9.FlatAppearance.BorderSize = 0
-        Me.Button9.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.Button9.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(134, Byte))
-        Me.Button9.ForeColor = System.Drawing.Color.Black
-        Me.Button9.Image = CType(resources.GetObject("Button9.Image"), System.Drawing.Image)
-        Me.Button9.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.Button9.Location = New System.Drawing.Point(0, 242)
-        Me.Button9.Margin = New System.Windows.Forms.Padding(0)
-        Me.Button9.Name = "Button9"
-        Me.Button9.Size = New System.Drawing.Size(201, 53)
-        Me.Button9.TabIndex = 0
-        Me.Button9.Text = "Movie"
-        Me.Button9.UseVisualStyleBackColor = False
-        '
-        'Button10
-        '
-        Me.Button10.BackColor = System.Drawing.Color.MediumAquamarine
-        Me.Button10.CausesValidation = False
-        Me.Button10.FlatAppearance.BorderSize = 0
-        Me.Button10.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.Button10.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(134, Byte))
-        Me.Button10.ForeColor = System.Drawing.Color.Black
-        Me.Button10.Image = CType(resources.GetObject("Button10.Image"), System.Drawing.Image)
-        Me.Button10.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.Button10.Location = New System.Drawing.Point(0, 313)
-        Me.Button10.Margin = New System.Windows.Forms.Padding(0)
-        Me.Button10.Name = "Button10"
-        Me.Button10.Size = New System.Drawing.Size(201, 53)
-        Me.Button10.TabIndex = 0
-        Me.Button10.Text = "About"
-        Me.Button10.UseVisualStyleBackColor = False
-        '
-        'Button11
-        '
-        Me.Button11.BackColor = System.Drawing.Color.MediumAquamarine
-        Me.Button11.CausesValidation = False
-        Me.Button11.FlatAppearance.BorderSize = 0
-        Me.Button11.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.Button11.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(134, Byte))
-        Me.Button11.ForeColor = System.Drawing.Color.Black
-        Me.Button11.Image = CType(resources.GetObject("Button11.Image"), System.Drawing.Image)
-        Me.Button11.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.Button11.Location = New System.Drawing.Point(0, 175)
-        Me.Button11.Margin = New System.Windows.Forms.Padding(0)
-        Me.Button11.Name = "Button11"
-        Me.Button11.Size = New System.Drawing.Size(201, 53)
-        Me.Button11.TabIndex = 0
-        Me.Button11.Text = "Login"
-        Me.Button11.UseVisualStyleBackColor = False
-        '
-        'Button12
-        '
-        Me.Button12.BackColor = System.Drawing.Color.MediumAquamarine
-        Me.Button12.CausesValidation = False
-        Me.Button12.FlatAppearance.BorderSize = 0
-        Me.Button12.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.Button12.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(134, Byte))
-        Me.Button12.ForeColor = System.Drawing.Color.Black
-        Me.Button12.Image = CType(resources.GetObject("Button12.Image"), System.Drawing.Image)
-        Me.Button12.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.Button12.Location = New System.Drawing.Point(0, 111)
-        Me.Button12.Margin = New System.Windows.Forms.Padding(0)
-        Me.Button12.Name = "Button12"
-        Me.Button12.Size = New System.Drawing.Size(201, 53)
-        Me.Button12.TabIndex = 0
-        Me.Button12.Text = "Search "
-        Me.Button12.UseVisualStyleBackColor = False
-        '
-        'Movie
-        '
-        Me.Movie.Controls.Add(Me.Label8)
-        Me.Movie.Controls.Add(Me.Panel7)
-        Me.Movie.Controls.Add(Me.Panel6)
-        Me.Movie.Location = New System.Drawing.Point(199, 41)
-        Me.Movie.Margin = New System.Windows.Forms.Padding(0)
-        Me.Movie.Name = "Movie"
-        Me.Movie.Size = New System.Drawing.Size(856, 537)
-        Me.Movie.TabIndex = 5
-        '
-        'Panel6
-        '
-        Me.Panel6.Controls.Add(Me.Label15)
-        Me.Panel6.Controls.Add(Me.Label13)
-        Me.Panel6.Controls.Add(Me.Label14)
-        Me.Panel6.Controls.Add(Me.lblPublishedDate1)
-        Me.Panel6.Controls.Add(Me.Label11)
-        Me.Panel6.Controls.Add(Me.PictureBox5)
-        Me.Panel6.Location = New System.Drawing.Point(8, 7)
-        Me.Panel6.Name = "Panel6"
-        Me.Panel6.Size = New System.Drawing.Size(334, 454)
-        Me.Panel6.TabIndex = 0
-        '
-        'PictureBox5
-        '
-        Me.PictureBox5.Dock = System.Windows.Forms.DockStyle.Top
-        Me.PictureBox5.Image = CType(resources.GetObject("PictureBox5.Image"), System.Drawing.Image)
-        Me.PictureBox5.Location = New System.Drawing.Point(0, 0)
-        Me.PictureBox5.Name = "PictureBox5"
-        Me.PictureBox5.Size = New System.Drawing.Size(334, 177)
-        Me.PictureBox5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
-        Me.PictureBox5.TabIndex = 0
-        Me.PictureBox5.TabStop = False
+        Me.pnlMovie.Controls.Add(Me.Panel7)
+        Me.pnlMovie.Controls.Add(Me.Panel6)
+        Me.pnlMovie.Location = New System.Drawing.Point(199, 41)
+        Me.pnlMovie.Margin = New System.Windows.Forms.Padding(0)
+        Me.pnlMovie.Name = "pnlMovie"
+        Me.pnlMovie.Size = New System.Drawing.Size(856, 537)
+        Me.pnlMovie.TabIndex = 5
         '
         'Panel7
         '
         Me.Panel7.Controls.Add(Me.Label12)
         Me.Panel7.Controls.Add(Me.PictureBox6)
+        Me.Panel7.Controls.Add(Me.Label14)
         Me.Panel7.Location = New System.Drawing.Point(390, 7)
         Me.Panel7.Name = "Panel7"
         Me.Panel7.Size = New System.Drawing.Size(334, 454)
         Me.Panel7.TabIndex = 0
+        '
+        'Label12
+        '
+        Me.Label12.AutoSize = True
+        Me.Label12.Font = New System.Drawing.Font("Microsoft Uighur", 24.0!, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label12.Location = New System.Drawing.Point(13, 199)
+        Me.Label12.Name = "Label12"
+        Me.Label12.Size = New System.Drawing.Size(278, 42)
+        Me.Label12.TabIndex = 1
+        Me.Label12.Text = "Spiderman: Home Comming"
         '
         'PictureBox6
         '
@@ -632,44 +617,26 @@ Partial Class New_UI
         Me.PictureBox6.TabIndex = 0
         Me.PictureBox6.TabStop = False
         '
-        'Label8
+        'Panel6
         '
-        Me.Label8.AutoSize = True
-        Me.Label8.Location = New System.Drawing.Point(0, 0)
-        Me.Label8.Name = "Label8"
-        Me.Label8.Size = New System.Drawing.Size(39, 13)
-        Me.Label8.TabIndex = 1
-        Me.Label8.Text = "Label8"
+        Me.Panel6.Controls.Add(Me.Label15)
+        Me.Panel6.Controls.Add(Me.Label13)
+        Me.Panel6.Controls.Add(Me.lblPublishedDate1)
+        Me.Panel6.Controls.Add(Me.Label11)
+        Me.Panel6.Controls.Add(Me.PictureBox5)
+        Me.Panel6.Location = New System.Drawing.Point(8, 7)
+        Me.Panel6.Name = "Panel6"
+        Me.Panel6.Size = New System.Drawing.Size(334, 454)
+        Me.Panel6.TabIndex = 0
         '
-        'Label11
+        'Label15
         '
-        Me.Label11.AutoSize = True
-        Me.Label11.Font = New System.Drawing.Font("Microsoft Uighur", 24.0!, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label11.Location = New System.Drawing.Point(66, 199)
-        Me.Label11.Name = "Label11"
-        Me.Label11.Size = New System.Drawing.Size(200, 42)
-        Me.Label11.TabIndex = 1
-        Me.Label11.Text = "Avengers: EndGame"
-        '
-        'Label12
-        '
-        Me.Label12.AutoSize = True
-        Me.Label12.Font = New System.Drawing.Font("Microsoft Uighur", 24.0!, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label12.Location = New System.Drawing.Point(13, 199)
-        Me.Label12.Name = "Label12"
-        Me.Label12.Size = New System.Drawing.Size(278, 42)
-        Me.Label12.TabIndex = 1
-        Me.Label12.Text = "Spiderman: Home Comming"
-        '
-        'lblPublishedDate1
-        '
-        Me.lblPublishedDate1.AutoSize = True
-        Me.lblPublishedDate1.Font = New System.Drawing.Font("Microsoft Uighur", 15.75!, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lblPublishedDate1.Location = New System.Drawing.Point(3, 241)
-        Me.lblPublishedDate1.Name = "lblPublishedDate1"
-        Me.lblPublishedDate1.Size = New System.Drawing.Size(107, 28)
-        Me.lblPublishedDate1.TabIndex = 1
-        Me.lblPublishedDate1.Text = "Published Date :"
+        Me.Label15.AutoSize = True
+        Me.Label15.Font = New System.Drawing.Font("Microsoft Uighur", 15.75!, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label15.Location = New System.Drawing.Point(146, 282)
+        Me.Label15.Name = "Label15"
+        Me.Label15.Size = New System.Drawing.Size(0, 28)
+        Me.Label15.TabIndex = 1
         '
         'Label13
         '
@@ -684,27 +651,49 @@ Partial Class New_UI
         '
         Me.Label14.AutoSize = True
         Me.Label14.Font = New System.Drawing.Font("Microsoft Uighur", 15.75!, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label14.Location = New System.Drawing.Point(3, 282)
+        Me.Label14.Location = New System.Drawing.Point(3, 241)
         Me.Label14.Name = "Label14"
         Me.Label14.Size = New System.Drawing.Size(107, 28)
         Me.Label14.TabIndex = 1
         Me.Label14.Text = "Published Date :"
         '
-        'Label15
+        'lblPublishedDate1
         '
-        Me.Label15.AutoSize = True
-        Me.Label15.Font = New System.Drawing.Font("Microsoft Uighur", 15.75!, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label15.Location = New System.Drawing.Point(146, 282)
-        Me.Label15.Name = "Label15"
-        Me.Label15.Size = New System.Drawing.Size(0, 28)
-        Me.Label15.TabIndex = 1
+        Me.lblPublishedDate1.AutoSize = True
+        Me.lblPublishedDate1.Font = New System.Drawing.Font("Microsoft Uighur", 15.75!, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblPublishedDate1.Location = New System.Drawing.Point(3, 241)
+        Me.lblPublishedDate1.Name = "lblPublishedDate1"
+        Me.lblPublishedDate1.Size = New System.Drawing.Size(107, 28)
+        Me.lblPublishedDate1.TabIndex = 1
+        Me.lblPublishedDate1.Text = "Published Date :"
+        '
+        'Label11
+        '
+        Me.Label11.AutoSize = True
+        Me.Label11.Font = New System.Drawing.Font("Microsoft Uighur", 24.0!, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label11.Location = New System.Drawing.Point(66, 199)
+        Me.Label11.Name = "Label11"
+        Me.Label11.Size = New System.Drawing.Size(200, 42)
+        Me.Label11.TabIndex = 1
+        Me.Label11.Text = "Avengers: EndGame"
+        '
+        'PictureBox5
+        '
+        Me.PictureBox5.Dock = System.Windows.Forms.DockStyle.Top
+        Me.PictureBox5.Image = CType(resources.GetObject("PictureBox5.Image"), System.Drawing.Image)
+        Me.PictureBox5.Location = New System.Drawing.Point(0, 0)
+        Me.PictureBox5.Name = "PictureBox5"
+        Me.PictureBox5.Size = New System.Drawing.Size(334, 177)
+        Me.PictureBox5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
+        Me.PictureBox5.TabIndex = 0
+        Me.PictureBox5.TabStop = False
         '
         'New_UI
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(1053, 578)
-        Me.Controls.Add(Me.Movie)
+        Me.Controls.Add(Me.pnlMovie)
         Me.Controls.Add(Me.pnlWelcome)
         Me.Controls.Add(Me.pnlLogin)
         Me.Controls.Add(Me.pnlSearch)
@@ -716,6 +705,8 @@ Partial Class New_UI
         Me.Text = "New_UI"
         Me.Panel1.ResumeLayout(False)
         Me.Panel1.PerformLayout()
+        Me.Panel3.ResumeLayout(False)
+        Me.Panel3.PerformLayout()
         Me.pnlSearch.ResumeLayout(False)
         Me.pnlSearch.PerformLayout()
         Me.pnlLogin.ResumeLayout(False)
@@ -723,20 +714,17 @@ Partial Class New_UI
         Me.pnlWelcome.ResumeLayout(False)
         CType(Me.PictureBox4, System.ComponentModel.ISupportInitialize).EndInit()
         Me.WinControl.ResumeLayout(False)
-        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.PictureBox3, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.Panel2.ResumeLayout(False)
-        Me.Panel3.ResumeLayout(False)
-        Me.Panel3.PerformLayout()
-        Me.Movie.ResumeLayout(False)
-        Me.Movie.PerformLayout()
-        Me.Panel6.ResumeLayout(False)
-        Me.Panel6.PerformLayout()
-        CType(Me.PictureBox5, System.ComponentModel.ISupportInitialize).EndInit()
+        Me.pnlMovie.ResumeLayout(False)
         Me.Panel7.ResumeLayout(False)
         Me.Panel7.PerformLayout()
         CType(Me.PictureBox6, System.ComponentModel.ISupportInitialize).EndInit()
+        Me.Panel6.ResumeLayout(False)
+        Me.Panel6.PerformLayout()
+        CType(Me.PictureBox5, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
 
     End Sub
@@ -780,8 +768,7 @@ Partial Class New_UI
     Friend WithEvents PictureBox2 As PictureBox
     Friend WithEvents PictureBox1 As PictureBox
     Friend WithEvents Panel2 As Panel
-    Friend WithEvents Movie As Panel
-    Friend WithEvents Label8 As Label
+    Friend WithEvents pnlMovie As Panel
     Friend WithEvents Panel7 As Panel
     Friend WithEvents Label12 As Label
     Friend WithEvents PictureBox6 As PictureBox
