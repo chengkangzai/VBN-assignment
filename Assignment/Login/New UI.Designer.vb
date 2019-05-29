@@ -27,11 +27,11 @@ Partial Class New_UI
         Me.Panel3 = New System.Windows.Forms.Panel()
         Me.Panel5 = New System.Windows.Forms.Panel()
         Me.Label2 = New System.Windows.Forms.Label()
-        Me.Button8 = New System.Windows.Forms.Button()
-        Me.Button9 = New System.Windows.Forms.Button()
-        Me.Button10 = New System.Windows.Forms.Button()
-        Me.Button11 = New System.Windows.Forms.Button()
-        Me.Button12 = New System.Windows.Forms.Button()
+        Me.btnpnlExit = New System.Windows.Forms.Button()
+        Me.btnpnlMovie = New System.Windows.Forms.Button()
+        Me.btnpnlAbout = New System.Windows.Forms.Button()
+        Me.btnpnlLogin = New System.Windows.Forms.Button()
+        Me.btnpnlSearch = New System.Windows.Forms.Button()
         Me.Panel4 = New System.Windows.Forms.Panel()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.Button4 = New System.Windows.Forms.Button()
@@ -66,10 +66,10 @@ Partial Class New_UI
         Me.Panel7 = New System.Windows.Forms.Panel()
         Me.Label12 = New System.Windows.Forms.Label()
         Me.PictureBox6 = New System.Windows.Forms.PictureBox()
+        Me.Label14 = New System.Windows.Forms.Label()
         Me.Panel6 = New System.Windows.Forms.Panel()
         Me.Label15 = New System.Windows.Forms.Label()
         Me.Label13 = New System.Windows.Forms.Label()
-        Me.Label14 = New System.Windows.Forms.Label()
         Me.lblPublishedDate1 = New System.Windows.Forms.Label()
         Me.Label11 = New System.Windows.Forms.Label()
         Me.PictureBox5 = New System.Windows.Forms.PictureBox()
@@ -113,11 +113,11 @@ Partial Class New_UI
         Me.Panel3.BackColor = System.Drawing.Color.MediumAquamarine
         Me.Panel3.Controls.Add(Me.Panel5)
         Me.Panel3.Controls.Add(Me.Label2)
-        Me.Panel3.Controls.Add(Me.Button8)
-        Me.Panel3.Controls.Add(Me.Button9)
-        Me.Panel3.Controls.Add(Me.Button10)
-        Me.Panel3.Controls.Add(Me.Button11)
-        Me.Panel3.Controls.Add(Me.Button12)
+        Me.Panel3.Controls.Add(Me.btnpnlExit)
+        Me.Panel3.Controls.Add(Me.btnpnlMovie)
+        Me.Panel3.Controls.Add(Me.btnpnlAbout)
+        Me.Panel3.Controls.Add(Me.btnpnlLogin)
+        Me.Panel3.Controls.Add(Me.btnpnlSearch)
         Me.Panel3.Dock = System.Windows.Forms.DockStyle.Left
         Me.Panel3.Location = New System.Drawing.Point(0, 0)
         Me.Panel3.Name = "Panel3"
@@ -143,94 +143,94 @@ Partial Class New_UI
         Me.Label2.TabIndex = 1
         Me.Label2.Text = "Power Apps"
         '
-        'Button8
+        'btnpnlExit
         '
-        Me.Button8.BackColor = System.Drawing.Color.MediumAquamarine
-        Me.Button8.FlatAppearance.BorderSize = 0
-        Me.Button8.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.Button8.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(134, Byte))
-        Me.Button8.ForeColor = System.Drawing.Color.Black
-        Me.Button8.Image = CType(resources.GetObject("Button8.Image"), System.Drawing.Image)
-        Me.Button8.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.Button8.Location = New System.Drawing.Point(0, 378)
-        Me.Button8.Margin = New System.Windows.Forms.Padding(0)
-        Me.Button8.Name = "Button8"
-        Me.Button8.Size = New System.Drawing.Size(201, 53)
-        Me.Button8.TabIndex = 0
-        Me.Button8.Text = "Exit"
-        Me.Button8.UseVisualStyleBackColor = False
+        Me.btnpnlExit.BackColor = System.Drawing.Color.MediumAquamarine
+        Me.btnpnlExit.FlatAppearance.BorderSize = 0
+        Me.btnpnlExit.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.btnpnlExit.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(134, Byte))
+        Me.btnpnlExit.ForeColor = System.Drawing.Color.Black
+        Me.btnpnlExit.Image = CType(resources.GetObject("btnpnlExit.Image"), System.Drawing.Image)
+        Me.btnpnlExit.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.btnpnlExit.Location = New System.Drawing.Point(0, 378)
+        Me.btnpnlExit.Margin = New System.Windows.Forms.Padding(0)
+        Me.btnpnlExit.Name = "btnpnlExit"
+        Me.btnpnlExit.Size = New System.Drawing.Size(201, 53)
+        Me.btnpnlExit.TabIndex = 0
+        Me.btnpnlExit.Text = "Exit"
+        Me.btnpnlExit.UseVisualStyleBackColor = False
         '
-        'Button9
+        'btnpnlMovie
         '
-        Me.Button9.BackColor = System.Drawing.Color.MediumAquamarine
-        Me.Button9.CausesValidation = False
-        Me.Button9.FlatAppearance.BorderSize = 0
-        Me.Button9.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.Button9.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(134, Byte))
-        Me.Button9.ForeColor = System.Drawing.Color.Black
-        Me.Button9.Image = CType(resources.GetObject("Button9.Image"), System.Drawing.Image)
-        Me.Button9.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.Button9.Location = New System.Drawing.Point(0, 242)
-        Me.Button9.Margin = New System.Windows.Forms.Padding(0)
-        Me.Button9.Name = "Button9"
-        Me.Button9.Size = New System.Drawing.Size(201, 53)
-        Me.Button9.TabIndex = 0
-        Me.Button9.Text = "Movie"
-        Me.Button9.UseVisualStyleBackColor = False
+        Me.btnpnlMovie.BackColor = System.Drawing.Color.MediumAquamarine
+        Me.btnpnlMovie.CausesValidation = False
+        Me.btnpnlMovie.FlatAppearance.BorderSize = 0
+        Me.btnpnlMovie.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.btnpnlMovie.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(134, Byte))
+        Me.btnpnlMovie.ForeColor = System.Drawing.Color.Black
+        Me.btnpnlMovie.Image = CType(resources.GetObject("btnpnlMovie.Image"), System.Drawing.Image)
+        Me.btnpnlMovie.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.btnpnlMovie.Location = New System.Drawing.Point(0, 242)
+        Me.btnpnlMovie.Margin = New System.Windows.Forms.Padding(0)
+        Me.btnpnlMovie.Name = "btnpnlMovie"
+        Me.btnpnlMovie.Size = New System.Drawing.Size(201, 53)
+        Me.btnpnlMovie.TabIndex = 0
+        Me.btnpnlMovie.Text = "Movie"
+        Me.btnpnlMovie.UseVisualStyleBackColor = False
         '
-        'Button10
+        'btnpnlAbout
         '
-        Me.Button10.BackColor = System.Drawing.Color.MediumAquamarine
-        Me.Button10.CausesValidation = False
-        Me.Button10.FlatAppearance.BorderSize = 0
-        Me.Button10.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.Button10.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(134, Byte))
-        Me.Button10.ForeColor = System.Drawing.Color.Black
-        Me.Button10.Image = CType(resources.GetObject("Button10.Image"), System.Drawing.Image)
-        Me.Button10.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.Button10.Location = New System.Drawing.Point(0, 313)
-        Me.Button10.Margin = New System.Windows.Forms.Padding(0)
-        Me.Button10.Name = "Button10"
-        Me.Button10.Size = New System.Drawing.Size(201, 53)
-        Me.Button10.TabIndex = 0
-        Me.Button10.Text = "About"
-        Me.Button10.UseVisualStyleBackColor = False
+        Me.btnpnlAbout.BackColor = System.Drawing.Color.MediumAquamarine
+        Me.btnpnlAbout.CausesValidation = False
+        Me.btnpnlAbout.FlatAppearance.BorderSize = 0
+        Me.btnpnlAbout.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.btnpnlAbout.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(134, Byte))
+        Me.btnpnlAbout.ForeColor = System.Drawing.Color.Black
+        Me.btnpnlAbout.Image = CType(resources.GetObject("btnpnlAbout.Image"), System.Drawing.Image)
+        Me.btnpnlAbout.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.btnpnlAbout.Location = New System.Drawing.Point(0, 313)
+        Me.btnpnlAbout.Margin = New System.Windows.Forms.Padding(0)
+        Me.btnpnlAbout.Name = "btnpnlAbout"
+        Me.btnpnlAbout.Size = New System.Drawing.Size(201, 53)
+        Me.btnpnlAbout.TabIndex = 0
+        Me.btnpnlAbout.Text = "About"
+        Me.btnpnlAbout.UseVisualStyleBackColor = False
         '
-        'Button11
+        'btnpnlLogin
         '
-        Me.Button11.BackColor = System.Drawing.Color.MediumAquamarine
-        Me.Button11.CausesValidation = False
-        Me.Button11.FlatAppearance.BorderSize = 0
-        Me.Button11.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.Button11.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(134, Byte))
-        Me.Button11.ForeColor = System.Drawing.Color.Black
-        Me.Button11.Image = CType(resources.GetObject("Button11.Image"), System.Drawing.Image)
-        Me.Button11.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.Button11.Location = New System.Drawing.Point(0, 175)
-        Me.Button11.Margin = New System.Windows.Forms.Padding(0)
-        Me.Button11.Name = "Button11"
-        Me.Button11.Size = New System.Drawing.Size(201, 53)
-        Me.Button11.TabIndex = 0
-        Me.Button11.Text = "Login"
-        Me.Button11.UseVisualStyleBackColor = False
+        Me.btnpnlLogin.BackColor = System.Drawing.Color.MediumAquamarine
+        Me.btnpnlLogin.CausesValidation = False
+        Me.btnpnlLogin.FlatAppearance.BorderSize = 0
+        Me.btnpnlLogin.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.btnpnlLogin.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(134, Byte))
+        Me.btnpnlLogin.ForeColor = System.Drawing.Color.Black
+        Me.btnpnlLogin.Image = CType(resources.GetObject("btnpnlLogin.Image"), System.Drawing.Image)
+        Me.btnpnlLogin.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.btnpnlLogin.Location = New System.Drawing.Point(0, 175)
+        Me.btnpnlLogin.Margin = New System.Windows.Forms.Padding(0)
+        Me.btnpnlLogin.Name = "btnpnlLogin"
+        Me.btnpnlLogin.Size = New System.Drawing.Size(201, 53)
+        Me.btnpnlLogin.TabIndex = 0
+        Me.btnpnlLogin.Text = "Login"
+        Me.btnpnlLogin.UseVisualStyleBackColor = False
         '
-        'Button12
+        'btnpnlSearch
         '
-        Me.Button12.BackColor = System.Drawing.Color.MediumAquamarine
-        Me.Button12.CausesValidation = False
-        Me.Button12.FlatAppearance.BorderSize = 0
-        Me.Button12.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.Button12.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(134, Byte))
-        Me.Button12.ForeColor = System.Drawing.Color.Black
-        Me.Button12.Image = CType(resources.GetObject("Button12.Image"), System.Drawing.Image)
-        Me.Button12.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.Button12.Location = New System.Drawing.Point(0, 111)
-        Me.Button12.Margin = New System.Windows.Forms.Padding(0)
-        Me.Button12.Name = "Button12"
-        Me.Button12.Size = New System.Drawing.Size(201, 53)
-        Me.Button12.TabIndex = 0
-        Me.Button12.Text = "Search "
-        Me.Button12.UseVisualStyleBackColor = False
+        Me.btnpnlSearch.BackColor = System.Drawing.Color.MediumAquamarine
+        Me.btnpnlSearch.CausesValidation = False
+        Me.btnpnlSearch.FlatAppearance.BorderSize = 0
+        Me.btnpnlSearch.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.btnpnlSearch.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(134, Byte))
+        Me.btnpnlSearch.ForeColor = System.Drawing.Color.Black
+        Me.btnpnlSearch.Image = CType(resources.GetObject("btnpnlSearch.Image"), System.Drawing.Image)
+        Me.btnpnlSearch.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.btnpnlSearch.Location = New System.Drawing.Point(0, 111)
+        Me.btnpnlSearch.Margin = New System.Windows.Forms.Padding(0)
+        Me.btnpnlSearch.Name = "btnpnlSearch"
+        Me.btnpnlSearch.Size = New System.Drawing.Size(201, 53)
+        Me.btnpnlSearch.TabIndex = 0
+        Me.btnpnlSearch.Text = "Search "
+        Me.btnpnlSearch.UseVisualStyleBackColor = False
         '
         'Panel4
         '
@@ -617,6 +617,16 @@ Partial Class New_UI
         Me.PictureBox6.TabIndex = 0
         Me.PictureBox6.TabStop = False
         '
+        'Label14
+        '
+        Me.Label14.AutoSize = True
+        Me.Label14.Font = New System.Drawing.Font("Microsoft Uighur", 15.75!, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label14.Location = New System.Drawing.Point(3, 241)
+        Me.Label14.Name = "Label14"
+        Me.Label14.Size = New System.Drawing.Size(107, 28)
+        Me.Label14.TabIndex = 1
+        Me.Label14.Text = "Published Date :"
+        '
         'Panel6
         '
         Me.Panel6.Controls.Add(Me.Label15)
@@ -646,16 +656,6 @@ Partial Class New_UI
         Me.Label13.Name = "Label13"
         Me.Label13.Size = New System.Drawing.Size(0, 28)
         Me.Label13.TabIndex = 1
-        '
-        'Label14
-        '
-        Me.Label14.AutoSize = True
-        Me.Label14.Font = New System.Drawing.Font("Microsoft Uighur", 15.75!, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label14.Location = New System.Drawing.Point(3, 241)
-        Me.Label14.Name = "Label14"
-        Me.Label14.Size = New System.Drawing.Size(107, 28)
-        Me.Label14.TabIndex = 1
-        Me.Label14.Text = "Published Date :"
         '
         'lblPublishedDate1
         '
@@ -758,11 +758,11 @@ Partial Class New_UI
     Friend WithEvents Panel3 As Panel
     Friend WithEvents Panel5 As Panel
     Friend WithEvents Label2 As Label
-    Friend WithEvents Button8 As Button
-    Friend WithEvents Button9 As Button
-    Friend WithEvents Button10 As Button
-    Friend WithEvents Button11 As Button
-    Friend WithEvents Button12 As Button
+    Friend WithEvents btnpnlExit As Button
+    Friend WithEvents btnpnlMovie As Button
+    Friend WithEvents btnpnlAbout As Button
+    Friend WithEvents btnpnlLogin As Button
+    Friend WithEvents btnpnlSearch As Button
     Friend WithEvents WinControl As Panel
     Friend WithEvents PictureBox3 As PictureBox
     Friend WithEvents PictureBox2 As PictureBox
