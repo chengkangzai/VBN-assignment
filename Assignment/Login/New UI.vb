@@ -26,6 +26,7 @@
         pnlLogin.Visible = False
         pnlMovie.Visible = False
         pnlWelcome.Visible = True
+        pnlAbout.Visible = False
     End Sub
 
     Private Sub Search_button(sender As Object, e As EventArgs) Handles btnpnlSearch.Click
@@ -33,6 +34,7 @@
         pnlSearch.Visible = True
         pnlMovie.Visible = False
         pnlLogin.Visible = False
+        pnlAbout.Visible = False
     End Sub
 
     Private Sub btnpnlLogin_Click(sender As Object, e As EventArgs) Handles btnpnlLogin.Click
@@ -40,6 +42,7 @@
         pnlSearch.Visible = False
         pnlMovie.Visible = False
         pnlLogin.Visible = True
+        pnlAbout.Visible = False
     End Sub
 
     Private Sub btnpnlMovie_Click(sender As Object, e As EventArgs) Handles btnpnlMovie.Click
@@ -47,6 +50,14 @@
         pnlSearch.Visible = False
         pnlMovie.Visible = True
         pnlLogin.Visible = False
+        pnlAbout.Visible = False
+    End Sub
+    Private Sub btnpnlAbout_Click(sender As Object, e As EventArgs) Handles btnpnlAbout.Click
+        pnlWelcome.Visible = False
+        pnlSearch.Visible = False
+        pnlMovie.Visible = False
+        pnlLogin.Visible = False
+        pnlAbout.Visible = True
     End Sub
 
 
@@ -91,5 +102,6 @@
     Private Sub btnpnlExit_MouseLeave(sender As Object, e As EventArgs) Handles btnpnlExit.MouseLeave
         Button1.BackColor = Color.MediumAquamarine
     End Sub
+
 
 End Class

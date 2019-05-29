@@ -74,16 +74,21 @@ Partial Class New_UI
         Me.Label11 = New System.Windows.Forms.Label()
         Me.PictureBox5 = New System.Windows.Forms.PictureBox()
         Me.pnlAbout = New System.Windows.Forms.Panel()
-        Me.Panel9 = New System.Windows.Forms.Panel()
-        Me.Label8 = New System.Windows.Forms.Label()
-        Me.PictureBox7 = New System.Windows.Forms.PictureBox()
-        Me.Label16 = New System.Windows.Forms.Label()
         Me.Panel10 = New System.Windows.Forms.Panel()
         Me.Label17 = New System.Windows.Forms.Label()
         Me.Label18 = New System.Windows.Forms.Label()
+        Me.PictureBox8 = New System.Windows.Forms.PictureBox()
+        Me.Panel8 = New System.Windows.Forms.Panel()
+        Me.Label8 = New System.Windows.Forms.Label()
+        Me.Label16 = New System.Windows.Forms.Label()
+        Me.PictureBox7 = New System.Windows.Forms.PictureBox()
+        Me.Panel9 = New System.Windows.Forms.Panel()
+        Me.Label23 = New System.Windows.Forms.Label()
+        Me.Label24 = New System.Windows.Forms.Label()
+        Me.PictureBox9 = New System.Windows.Forms.PictureBox()
         Me.Label19 = New System.Windows.Forms.Label()
         Me.Label20 = New System.Windows.Forms.Label()
-        Me.PictureBox8 = New System.Windows.Forms.PictureBox()
+        Me.Label21 = New System.Windows.Forms.Label()
         Me.Panel1.SuspendLayout()
         Me.Panel3.SuspendLayout()
         Me.pnlSearch.SuspendLayout()
@@ -101,10 +106,12 @@ Partial Class New_UI
         Me.Panel6.SuspendLayout()
         CType(Me.PictureBox5, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.pnlAbout.SuspendLayout()
-        Me.Panel9.SuspendLayout()
-        CType(Me.PictureBox7, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.Panel10.SuspendLayout()
         CType(Me.PictureBox8, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.Panel8.SuspendLayout()
+        CType(Me.PictureBox7, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.Panel9.SuspendLayout()
+        CType(Me.PictureBox9, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'Panel1
@@ -121,7 +128,7 @@ Partial Class New_UI
         Me.Panel1.Dock = System.Windows.Forms.DockStyle.Left
         Me.Panel1.Location = New System.Drawing.Point(0, 0)
         Me.Panel1.Name = "Panel1"
-        Me.Panel1.Size = New System.Drawing.Size(201, 578)
+        Me.Panel1.Size = New System.Drawing.Size(201, 705)
         Me.Panel1.TabIndex = 0
         '
         'Panel3
@@ -137,7 +144,7 @@ Partial Class New_UI
         Me.Panel3.Dock = System.Windows.Forms.DockStyle.Left
         Me.Panel3.Location = New System.Drawing.Point(0, 0)
         Me.Panel3.Name = "Panel3"
-        Me.Panel3.Size = New System.Drawing.Size(201, 578)
+        Me.Panel3.Size = New System.Drawing.Size(201, 705)
         Me.Panel3.TabIndex = 3
         '
         'Panel5
@@ -547,7 +554,7 @@ Partial Class New_UI
         Me.WinControl.Controls.Add(Me.PictureBox2)
         Me.WinControl.Controls.Add(Me.PictureBox1)
         Me.WinControl.Dock = System.Windows.Forms.DockStyle.Right
-        Me.WinControl.Location = New System.Drawing.Point(724, 0)
+        Me.WinControl.Location = New System.Drawing.Point(867, 0)
         Me.WinControl.Name = "WinControl"
         Me.WinControl.Size = New System.Drawing.Size(128, 45)
         Me.WinControl.TabIndex = 3
@@ -589,7 +596,7 @@ Partial Class New_UI
         Me.Panel2.Dock = System.Windows.Forms.DockStyle.Top
         Me.Panel2.Location = New System.Drawing.Point(201, 0)
         Me.Panel2.Name = "Panel2"
-        Me.Panel2.Size = New System.Drawing.Size(852, 45)
+        Me.Panel2.Size = New System.Drawing.Size(995, 45)
         Me.Panel2.TabIndex = 1
         '
         'pnlMovie
@@ -707,64 +714,23 @@ Partial Class New_UI
         'pnlAbout
         '
         Me.pnlAbout.Controls.Add(Me.Panel9)
+        Me.pnlAbout.Controls.Add(Me.Panel8)
         Me.pnlAbout.Controls.Add(Me.Panel10)
         Me.pnlAbout.Location = New System.Drawing.Point(201, 42)
         Me.pnlAbout.Margin = New System.Windows.Forms.Padding(0)
         Me.pnlAbout.Name = "pnlAbout"
-        Me.pnlAbout.Size = New System.Drawing.Size(856, 537)
+        Me.pnlAbout.Size = New System.Drawing.Size(852, 537)
         Me.pnlAbout.TabIndex = 6
-        '
-        'Panel9
-        '
-        Me.Panel9.Controls.Add(Me.Label8)
-        Me.Panel9.Controls.Add(Me.PictureBox7)
-        Me.Panel9.Controls.Add(Me.Label16)
-        Me.Panel9.Location = New System.Drawing.Point(390, 7)
-        Me.Panel9.Name = "Panel9"
-        Me.Panel9.Size = New System.Drawing.Size(334, 454)
-        Me.Panel9.TabIndex = 0
-        '
-        'Label8
-        '
-        Me.Label8.AutoSize = True
-        Me.Label8.Font = New System.Drawing.Font("Microsoft Uighur", 24.0!, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label8.Location = New System.Drawing.Point(13, 199)
-        Me.Label8.Name = "Label8"
-        Me.Label8.Size = New System.Drawing.Size(278, 42)
-        Me.Label8.TabIndex = 1
-        Me.Label8.Text = "Spiderman: Home Comming"
-        '
-        'PictureBox7
-        '
-        Me.PictureBox7.Dock = System.Windows.Forms.DockStyle.Top
-        Me.PictureBox7.Image = CType(resources.GetObject("PictureBox7.Image"), System.Drawing.Image)
-        Me.PictureBox7.Location = New System.Drawing.Point(0, 0)
-        Me.PictureBox7.Name = "PictureBox7"
-        Me.PictureBox7.Size = New System.Drawing.Size(334, 177)
-        Me.PictureBox7.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
-        Me.PictureBox7.TabIndex = 0
-        Me.PictureBox7.TabStop = False
-        '
-        'Label16
-        '
-        Me.Label16.AutoSize = True
-        Me.Label16.Font = New System.Drawing.Font("Microsoft Uighur", 15.75!, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label16.Location = New System.Drawing.Point(3, 241)
-        Me.Label16.Name = "Label16"
-        Me.Label16.Size = New System.Drawing.Size(107, 28)
-        Me.Label16.TabIndex = 1
-        Me.Label16.Text = "Published Date :"
         '
         'Panel10
         '
+        Me.Panel10.Controls.Add(Me.Label19)
         Me.Panel10.Controls.Add(Me.Label17)
         Me.Panel10.Controls.Add(Me.Label18)
-        Me.Panel10.Controls.Add(Me.Label19)
-        Me.Panel10.Controls.Add(Me.Label20)
         Me.Panel10.Controls.Add(Me.PictureBox8)
-        Me.Panel10.Location = New System.Drawing.Point(8, 7)
+        Me.Panel10.Location = New System.Drawing.Point(20, 56)
         Me.Panel10.Name = "Panel10"
-        Me.Panel10.Size = New System.Drawing.Size(334, 454)
+        Me.Panel10.Size = New System.Drawing.Size(264, 454)
         Me.Panel10.TabIndex = 0
         '
         'Label17
@@ -785,42 +751,132 @@ Partial Class New_UI
         Me.Label18.Size = New System.Drawing.Size(0, 28)
         Me.Label18.TabIndex = 1
         '
-        'Label19
-        '
-        Me.Label19.AutoSize = True
-        Me.Label19.Font = New System.Drawing.Font("Microsoft Uighur", 15.75!, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label19.Location = New System.Drawing.Point(3, 241)
-        Me.Label19.Name = "Label19"
-        Me.Label19.Size = New System.Drawing.Size(107, 28)
-        Me.Label19.TabIndex = 1
-        Me.Label19.Text = "Published Date :"
-        '
-        'Label20
-        '
-        Me.Label20.AutoSize = True
-        Me.Label20.Font = New System.Drawing.Font("Microsoft Uighur", 24.0!, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label20.Location = New System.Drawing.Point(66, 199)
-        Me.Label20.Name = "Label20"
-        Me.Label20.Size = New System.Drawing.Size(200, 42)
-        Me.Label20.TabIndex = 1
-        Me.Label20.Text = "Avengers: EndGame"
-        '
         'PictureBox8
         '
         Me.PictureBox8.Dock = System.Windows.Forms.DockStyle.Top
         Me.PictureBox8.Image = CType(resources.GetObject("PictureBox8.Image"), System.Drawing.Image)
         Me.PictureBox8.Location = New System.Drawing.Point(0, 0)
         Me.PictureBox8.Name = "PictureBox8"
-        Me.PictureBox8.Size = New System.Drawing.Size(334, 177)
+        Me.PictureBox8.Size = New System.Drawing.Size(264, 177)
         Me.PictureBox8.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
         Me.PictureBox8.TabIndex = 0
         Me.PictureBox8.TabStop = False
+        '
+        'Panel8
+        '
+        Me.Panel8.Controls.Add(Me.Label20)
+        Me.Panel8.Controls.Add(Me.Label8)
+        Me.Panel8.Controls.Add(Me.Label16)
+        Me.Panel8.Controls.Add(Me.PictureBox7)
+        Me.Panel8.Location = New System.Drawing.Point(290, 55)
+        Me.Panel8.Name = "Panel8"
+        Me.Panel8.Size = New System.Drawing.Size(264, 454)
+        Me.Panel8.TabIndex = 0
+        '
+        'Label8
+        '
+        Me.Label8.AutoSize = True
+        Me.Label8.Font = New System.Drawing.Font("Microsoft Uighur", 15.75!, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label8.Location = New System.Drawing.Point(146, 282)
+        Me.Label8.Name = "Label8"
+        Me.Label8.Size = New System.Drawing.Size(0, 28)
+        Me.Label8.TabIndex = 1
+        '
+        'Label16
+        '
+        Me.Label16.AutoSize = True
+        Me.Label16.Font = New System.Drawing.Font("Microsoft Uighur", 15.75!, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label16.Location = New System.Drawing.Point(146, 241)
+        Me.Label16.Name = "Label16"
+        Me.Label16.Size = New System.Drawing.Size(0, 28)
+        Me.Label16.TabIndex = 1
+        '
+        'PictureBox7
+        '
+        Me.PictureBox7.Dock = System.Windows.Forms.DockStyle.Top
+        Me.PictureBox7.Image = CType(resources.GetObject("PictureBox7.Image"), System.Drawing.Image)
+        Me.PictureBox7.Location = New System.Drawing.Point(0, 0)
+        Me.PictureBox7.Name = "PictureBox7"
+        Me.PictureBox7.Size = New System.Drawing.Size(264, 177)
+        Me.PictureBox7.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
+        Me.PictureBox7.TabIndex = 0
+        Me.PictureBox7.TabStop = False
+        '
+        'Panel9
+        '
+        Me.Panel9.Controls.Add(Me.Label21)
+        Me.Panel9.Controls.Add(Me.Label23)
+        Me.Panel9.Controls.Add(Me.Label24)
+        Me.Panel9.Controls.Add(Me.PictureBox9)
+        Me.Panel9.Location = New System.Drawing.Point(560, 58)
+        Me.Panel9.Name = "Panel9"
+        Me.Panel9.Size = New System.Drawing.Size(264, 454)
+        Me.Panel9.TabIndex = 0
+        '
+        'Label23
+        '
+        Me.Label23.AutoSize = True
+        Me.Label23.Font = New System.Drawing.Font("Microsoft Uighur", 15.75!, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label23.Location = New System.Drawing.Point(146, 282)
+        Me.Label23.Name = "Label23"
+        Me.Label23.Size = New System.Drawing.Size(0, 28)
+        Me.Label23.TabIndex = 1
+        '
+        'Label24
+        '
+        Me.Label24.AutoSize = True
+        Me.Label24.Font = New System.Drawing.Font("Microsoft Uighur", 15.75!, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label24.Location = New System.Drawing.Point(146, 241)
+        Me.Label24.Name = "Label24"
+        Me.Label24.Size = New System.Drawing.Size(0, 28)
+        Me.Label24.TabIndex = 1
+        '
+        'PictureBox9
+        '
+        Me.PictureBox9.Dock = System.Windows.Forms.DockStyle.Top
+        Me.PictureBox9.Image = CType(resources.GetObject("PictureBox9.Image"), System.Drawing.Image)
+        Me.PictureBox9.Location = New System.Drawing.Point(0, 0)
+        Me.PictureBox9.Name = "PictureBox9"
+        Me.PictureBox9.Size = New System.Drawing.Size(264, 177)
+        Me.PictureBox9.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
+        Me.PictureBox9.TabIndex = 0
+        Me.PictureBox9.TabStop = False
+        '
+        'Label19
+        '
+        Me.Label19.AutoSize = True
+        Me.Label19.Font = New System.Drawing.Font("Microsoft Uighur", 21.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label19.Location = New System.Drawing.Point(53, 185)
+        Me.Label19.Name = "Label19"
+        Me.Label19.Size = New System.Drawing.Size(175, 38)
+        Me.Label19.TabIndex = 2
+        Me.Label19.Text = "Ching Cheng Kang"
+        '
+        'Label20
+        '
+        Me.Label20.AutoSize = True
+        Me.Label20.Font = New System.Drawing.Font("Microsoft Uighur", 21.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label20.Location = New System.Drawing.Point(54, 186)
+        Me.Label20.Name = "Label20"
+        Me.Label20.Size = New System.Drawing.Size(148, 38)
+        Me.Label20.TabIndex = 2
+        Me.Label20.Text = "Chan Chin Wei "
+        '
+        'Label21
+        '
+        Me.Label21.AutoSize = True
+        Me.Label21.Font = New System.Drawing.Font("Microsoft Uighur", 21.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label21.Location = New System.Drawing.Point(67, 183)
+        Me.Label21.Name = "Label21"
+        Me.Label21.Size = New System.Drawing.Size(136, 38)
+        Me.Label21.TabIndex = 2
+        Me.Label21.Text = "Kok Hua Chin"
         '
         'New_UI
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(1053, 578)
+        Me.ClientSize = New System.Drawing.Size(1196, 705)
         Me.Controls.Add(Me.pnlAbout)
         Me.Controls.Add(Me.pnlMovie)
         Me.Controls.Add(Me.pnlWelcome)
@@ -855,12 +911,15 @@ Partial Class New_UI
         Me.Panel6.PerformLayout()
         CType(Me.PictureBox5, System.ComponentModel.ISupportInitialize).EndInit()
         Me.pnlAbout.ResumeLayout(False)
-        Me.Panel9.ResumeLayout(False)
-        Me.Panel9.PerformLayout()
-        CType(Me.PictureBox7, System.ComponentModel.ISupportInitialize).EndInit()
         Me.Panel10.ResumeLayout(False)
         Me.Panel10.PerformLayout()
         CType(Me.PictureBox8, System.ComponentModel.ISupportInitialize).EndInit()
+        Me.Panel8.ResumeLayout(False)
+        Me.Panel8.PerformLayout()
+        CType(Me.PictureBox7, System.ComponentModel.ISupportInitialize).EndInit()
+        Me.Panel9.ResumeLayout(False)
+        Me.Panel9.PerformLayout()
+        CType(Me.PictureBox9, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
 
     End Sub
@@ -916,14 +975,19 @@ Partial Class New_UI
     Friend WithEvents Label14 As Label
     Friend WithEvents lblPublishedDate1 As Label
     Friend WithEvents pnlAbout As Panel
-    Friend WithEvents Panel9 As Panel
-    Friend WithEvents Label8 As Label
-    Friend WithEvents PictureBox7 As PictureBox
-    Friend WithEvents Label16 As Label
     Friend WithEvents Panel10 As Panel
     Friend WithEvents Label17 As Label
     Friend WithEvents Label18 As Label
-    Friend WithEvents Label19 As Label
-    Friend WithEvents Label20 As Label
     Friend WithEvents PictureBox8 As PictureBox
+    Friend WithEvents Panel9 As Panel
+    Friend WithEvents Label21 As Label
+    Friend WithEvents Label23 As Label
+    Friend WithEvents Label24 As Label
+    Friend WithEvents PictureBox9 As PictureBox
+    Friend WithEvents Panel8 As Panel
+    Friend WithEvents Label20 As Label
+    Friend WithEvents Label8 As Label
+    Friend WithEvents Label16 As Label
+    Friend WithEvents PictureBox7 As PictureBox
+    Friend WithEvents Label19 As Label
 End Class
