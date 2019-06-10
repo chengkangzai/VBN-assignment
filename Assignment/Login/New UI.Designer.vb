@@ -41,18 +41,14 @@ Partial Class New_UI
         Me.Button2 = New System.Windows.Forms.Button()
         Me.Button1 = New System.Windows.Forms.Button()
         Me.pnlSearch = New System.Windows.Forms.Panel()
+        Me.pnlMovieSearch = New System.Windows.Forms.Panel()
+        Me.btnSearch = New System.Windows.Forms.Button()
+        Me.txtMSearchName = New System.Windows.Forms.TextBox()
+        Me.txtMSearchSYear = New System.Windows.Forms.TextBox()
+        Me.cboSearchGenre = New System.Windows.Forms.ComboBox()
         Me.pnlAfterSearch = New System.Windows.Forms.Panel()
         Me.dgvSearchResult = New System.Windows.Forms.DataGridView()
         Me.btnBack = New System.Windows.Forms.Button()
-        Me.pnlMainSearch = New System.Windows.Forms.Panel()
-        Me.btnSearch = New System.Windows.Forms.Button()
-        Me.txtSearchName = New System.Windows.Forms.TextBox()
-        Me.txtSearchYear = New System.Windows.Forms.TextBox()
-        Me.lblSearchMovieName = New System.Windows.Forms.Label()
-        Me.lblSearchYear = New System.Windows.Forms.Label()
-        Me.lblSearchGenre = New System.Windows.Forms.Label()
-        Me.lblSearchTitle = New System.Windows.Forms.Label()
-        Me.cbxSearchGenre = New System.Windows.Forms.ComboBox()
         Me.pnlLogin = New System.Windows.Forms.Panel()
         Me.Button7 = New System.Windows.Forms.Button()
         Me.Label7 = New System.Windows.Forms.Label()
@@ -119,12 +115,34 @@ Partial Class New_UI
         Me._vb_net_imdbDataSet = New Login._vb_net_imdbDataSet()
         Me.VbnetimdbDataSetBindingSource = New System.Windows.Forms.BindingSource(Me.components)
         Me._vb_net_imdbDataSet1 = New Login._vb_net_imdbDataSet()
+        Me.pnlPreSearch = New System.Windows.Forms.Panel()
+        Me.cboFilterMovie = New System.Windows.Forms.CheckBox()
+        Me.lblSearchTitle = New System.Windows.Forms.Label()
+        Me.lblFilterType = New System.Windows.Forms.Label()
+        Me.CheckBcboFilterTV = New System.Windows.Forms.CheckBox()
+        Me.lblFilterFunctions = New System.Windows.Forms.Label()
+        Me.cboFilterActors = New System.Windows.Forms.CheckBox()
+        Me.ckbFMRMins = New System.Windows.Forms.CheckBox()
+        Me.ckbFMSYear = New System.Windows.Forms.CheckBox()
+        Me.ckbFMGenre = New System.Windows.Forms.CheckBox()
+        Me.ckbFMEYear = New System.Windows.Forms.CheckBox()
+        Me.Temp = New System.Windows.Forms.Panel()
+        Me.lblFilterOptions = New System.Windows.Forms.Label()
+        Me.lblMTitle = New System.Windows.Forms.Label()
+        Me.lblMYear = New System.Windows.Forms.Label()
+        Me.lblMGenre = New System.Windows.Forms.Label()
+        Me.txtMSearchEYear = New System.Windows.Forms.TextBox()
+        Me.lblMMovieTitle = New System.Windows.Forms.Label()
+        Me.lblMRTM = New System.Windows.Forms.Label()
+        Me.cboRTMMod = New System.Windows.Forms.ComboBox()
+        Me.txtRTM = New System.Windows.Forms.TextBox()
+        Me.pnlTVSearch = New System.Windows.Forms.Panel()
         Me.Panel1.SuspendLayout()
         Me.Panel3.SuspendLayout()
         Me.pnlSearch.SuspendLayout()
+        Me.pnlMovieSearch.SuspendLayout()
         Me.pnlAfterSearch.SuspendLayout()
         CType(Me.dgvSearchResult, System.ComponentModel.ISupportInitialize).BeginInit()
-        Me.pnlMainSearch.SuspendLayout()
         Me.pnlLogin.SuspendLayout()
         Me.pnlWelcome.SuspendLayout()
         CType(Me.PictureBox4, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -148,6 +166,8 @@ Partial Class New_UI
         CType(Me._vb_net_imdbDataSet, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.VbnetimdbDataSetBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me._vb_net_imdbDataSet1, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.pnlPreSearch.SuspendLayout()
+        Me.Temp.SuspendLayout()
         Me.SuspendLayout()
         '
         'Panel1
@@ -165,7 +185,7 @@ Partial Class New_UI
         Me.Panel1.Location = New System.Drawing.Point(0, 0)
         Me.Panel1.Margin = New System.Windows.Forms.Padding(4)
         Me.Panel1.Name = "Panel1"
-        Me.Panel1.Size = New System.Drawing.Size(268, 735)
+        Me.Panel1.Size = New System.Drawing.Size(268, 712)
         Me.Panel1.TabIndex = 0
         '
         'Panel3
@@ -182,7 +202,7 @@ Partial Class New_UI
         Me.Panel3.Location = New System.Drawing.Point(0, 0)
         Me.Panel3.Margin = New System.Windows.Forms.Padding(4)
         Me.Panel3.Name = "Panel3"
-        Me.Panel3.Size = New System.Drawing.Size(268, 735)
+        Me.Panel3.Size = New System.Drawing.Size(268, 712)
         Me.Panel3.TabIndex = 3
         '
         'Panel5
@@ -407,13 +427,74 @@ Partial Class New_UI
         '
         'pnlSearch
         '
-        Me.pnlSearch.Controls.Add(Me.pnlMainSearch)
+        Me.pnlSearch.Controls.Add(Me.pnlPreSearch)
         Me.pnlSearch.Controls.Add(Me.pnlAfterSearch)
+        Me.pnlSearch.Controls.Add(Me.Temp)
         Me.pnlSearch.Location = New System.Drawing.Point(268, 55)
         Me.pnlSearch.Margin = New System.Windows.Forms.Padding(0)
         Me.pnlSearch.Name = "pnlSearch"
         Me.pnlSearch.Size = New System.Drawing.Size(1141, 661)
         Me.pnlSearch.TabIndex = 3
+        '
+        'pnlMovieSearch
+        '
+        Me.pnlMovieSearch.Controls.Add(Me.txtRTM)
+        Me.pnlMovieSearch.Controls.Add(Me.cboRTMMod)
+        Me.pnlMovieSearch.Controls.Add(Me.lblMRTM)
+        Me.pnlMovieSearch.Controls.Add(Me.lblMMovieTitle)
+        Me.pnlMovieSearch.Controls.Add(Me.txtMSearchEYear)
+        Me.pnlMovieSearch.Controls.Add(Me.lblMGenre)
+        Me.pnlMovieSearch.Controls.Add(Me.lblMYear)
+        Me.pnlMovieSearch.Controls.Add(Me.lblMTitle)
+        Me.pnlMovieSearch.Controls.Add(Me.txtMSearchName)
+        Me.pnlMovieSearch.Controls.Add(Me.txtMSearchSYear)
+        Me.pnlMovieSearch.Controls.Add(Me.cboSearchGenre)
+        Me.pnlMovieSearch.Location = New System.Drawing.Point(11, 224)
+        Me.pnlMovieSearch.Margin = New System.Windows.Forms.Padding(4)
+        Me.pnlMovieSearch.Name = "pnlMovieSearch"
+        Me.pnlMovieSearch.Size = New System.Drawing.Size(965, 172)
+        Me.pnlMovieSearch.TabIndex = 4
+        '
+        'btnSearch
+        '
+        Me.btnSearch.BackColor = System.Drawing.Color.Aquamarine
+        Me.btnSearch.Font = New System.Drawing.Font("Microsoft Sans Serif", 20.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnSearch.Location = New System.Drawing.Point(39, 518)
+        Me.btnSearch.Margin = New System.Windows.Forms.Padding(4)
+        Me.btnSearch.Name = "btnSearch"
+        Me.btnSearch.Size = New System.Drawing.Size(211, 80)
+        Me.btnSearch.TabIndex = 3
+        Me.btnSearch.Text = "Search"
+        Me.btnSearch.UseVisualStyleBackColor = False
+        '
+        'txtMSearchName
+        '
+        Me.txtMSearchName.Font = New System.Drawing.Font("Microsoft Sans Serif", 20.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txtMSearchName.Location = New System.Drawing.Point(149, 20)
+        Me.txtMSearchName.Margin = New System.Windows.Forms.Padding(4)
+        Me.txtMSearchName.Name = "txtMSearchName"
+        Me.txtMSearchName.Size = New System.Drawing.Size(249, 46)
+        Me.txtMSearchName.TabIndex = 0
+        '
+        'txtMSearchSYear
+        '
+        Me.txtMSearchSYear.Font = New System.Drawing.Font("Microsoft Sans Serif", 20.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txtMSearchSYear.Location = New System.Drawing.Point(149, 82)
+        Me.txtMSearchSYear.Margin = New System.Windows.Forms.Padding(4)
+        Me.txtMSearchSYear.Name = "txtMSearchSYear"
+        Me.txtMSearchSYear.Size = New System.Drawing.Size(89, 46)
+        Me.txtMSearchSYear.TabIndex = 0
+        '
+        'cboSearchGenre
+        '
+        Me.cboSearchGenre.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
+        Me.cboSearchGenre.Font = New System.Drawing.Font("Microsoft Sans Serif", 20.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.cboSearchGenre.FormattingEnabled = True
+        Me.cboSearchGenre.Location = New System.Drawing.Point(624, 81)
+        Me.cboSearchGenre.Margin = New System.Windows.Forms.Padding(4)
+        Me.cboSearchGenre.Name = "cboSearchGenre"
+        Me.cboSearchGenre.Size = New System.Drawing.Size(249, 47)
+        Me.cboSearchGenre.TabIndex = 2
         '
         'pnlAfterSearch
         '
@@ -446,106 +527,6 @@ Partial Class New_UI
         Me.btnBack.TabIndex = 0
         Me.btnBack.Text = "Back Button"
         Me.btnBack.UseVisualStyleBackColor = True
-        '
-        'pnlMainSearch
-        '
-        Me.pnlMainSearch.Controls.Add(Me.btnSearch)
-        Me.pnlMainSearch.Controls.Add(Me.txtSearchName)
-        Me.pnlMainSearch.Controls.Add(Me.txtSearchYear)
-        Me.pnlMainSearch.Controls.Add(Me.lblSearchMovieName)
-        Me.pnlMainSearch.Controls.Add(Me.lblSearchYear)
-        Me.pnlMainSearch.Controls.Add(Me.lblSearchGenre)
-        Me.pnlMainSearch.Controls.Add(Me.lblSearchTitle)
-        Me.pnlMainSearch.Controls.Add(Me.cbxSearchGenre)
-        Me.pnlMainSearch.Location = New System.Drawing.Point(12, 10)
-        Me.pnlMainSearch.Margin = New System.Windows.Forms.Padding(4)
-        Me.pnlMainSearch.Name = "pnlMainSearch"
-        Me.pnlMainSearch.Size = New System.Drawing.Size(1107, 596)
-        Me.pnlMainSearch.TabIndex = 4
-        '
-        'btnSearch
-        '
-        Me.btnSearch.BackColor = System.Drawing.Color.Aquamarine
-        Me.btnSearch.Font = New System.Drawing.Font("Microsoft Sans Serif", 20.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btnSearch.Location = New System.Drawing.Point(257, 359)
-        Me.btnSearch.Margin = New System.Windows.Forms.Padding(4)
-        Me.btnSearch.Name = "btnSearch"
-        Me.btnSearch.Size = New System.Drawing.Size(211, 80)
-        Me.btnSearch.TabIndex = 3
-        Me.btnSearch.Text = "Search"
-        Me.btnSearch.UseVisualStyleBackColor = False
-        '
-        'txtSearchName
-        '
-        Me.txtSearchName.Font = New System.Drawing.Font("Microsoft Sans Serif", 20.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txtSearchName.Location = New System.Drawing.Point(236, 128)
-        Me.txtSearchName.Margin = New System.Windows.Forms.Padding(4)
-        Me.txtSearchName.Name = "txtSearchName"
-        Me.txtSearchName.Size = New System.Drawing.Size(385, 46)
-        Me.txtSearchName.TabIndex = 0
-        '
-        'txtSearchYear
-        '
-        Me.txtSearchYear.Font = New System.Drawing.Font("Microsoft Sans Serif", 20.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txtSearchYear.Location = New System.Drawing.Point(236, 191)
-        Me.txtSearchYear.Margin = New System.Windows.Forms.Padding(4)
-        Me.txtSearchYear.Name = "txtSearchYear"
-        Me.txtSearchYear.Size = New System.Drawing.Size(385, 46)
-        Me.txtSearchYear.TabIndex = 0
-        '
-        'lblSearchMovieName
-        '
-        Me.lblSearchMovieName.AutoSize = True
-        Me.lblSearchMovieName.Font = New System.Drawing.Font("Microsoft Sans Serif", 20.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lblSearchMovieName.Location = New System.Drawing.Point(58, 131)
-        Me.lblSearchMovieName.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
-        Me.lblSearchMovieName.Name = "lblSearchMovieName"
-        Me.lblSearchMovieName.Size = New System.Drawing.Size(126, 39)
-        Me.lblSearchMovieName.TabIndex = 1
-        Me.lblSearchMovieName.Text = "Name :"
-        '
-        'lblSearchYear
-        '
-        Me.lblSearchYear.AutoSize = True
-        Me.lblSearchYear.Font = New System.Drawing.Font("Microsoft Sans Serif", 20.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lblSearchYear.Location = New System.Drawing.Point(79, 191)
-        Me.lblSearchYear.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
-        Me.lblSearchYear.Name = "lblSearchYear"
-        Me.lblSearchYear.Size = New System.Drawing.Size(106, 39)
-        Me.lblSearchYear.TabIndex = 1
-        Me.lblSearchYear.Text = "Year :"
-        '
-        'lblSearchGenre
-        '
-        Me.lblSearchGenre.AutoSize = True
-        Me.lblSearchGenre.Font = New System.Drawing.Font("Microsoft Sans Serif", 20.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lblSearchGenre.Location = New System.Drawing.Point(55, 251)
-        Me.lblSearchGenre.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
-        Me.lblSearchGenre.Name = "lblSearchGenre"
-        Me.lblSearchGenre.Size = New System.Drawing.Size(129, 39)
-        Me.lblSearchGenre.TabIndex = 1
-        Me.lblSearchGenre.Text = "Genre :"
-        '
-        'lblSearchTitle
-        '
-        Me.lblSearchTitle.AutoSize = True
-        Me.lblSearchTitle.Font = New System.Drawing.Font("Microsoft Sans Serif", 36.0!, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lblSearchTitle.Location = New System.Drawing.Point(98, 20)
-        Me.lblSearchTitle.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
-        Me.lblSearchTitle.Name = "lblSearchTitle"
-        Me.lblSearchTitle.Size = New System.Drawing.Size(490, 69)
-        Me.lblSearchTitle.TabIndex = 1
-        Me.lblSearchTitle.Text = "Search by Movie "
-        '
-        'cbxSearchGenre
-        '
-        Me.cbxSearchGenre.Font = New System.Drawing.Font("Microsoft Sans Serif", 20.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.cbxSearchGenre.FormattingEnabled = True
-        Me.cbxSearchGenre.Location = New System.Drawing.Point(236, 251)
-        Me.cbxSearchGenre.Margin = New System.Windows.Forms.Padding(4)
-        Me.cbxSearchGenre.Name = "cbxSearchGenre"
-        Me.cbxSearchGenre.Size = New System.Drawing.Size(385, 47)
-        Me.cbxSearchGenre.TabIndex = 2
         '
         'pnlLogin
         '
@@ -1258,11 +1239,244 @@ Partial Class New_UI
         Me._vb_net_imdbDataSet1.DataSetName = "_vb_net_imdbDataSet"
         Me._vb_net_imdbDataSet1.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
         '
+        'pnlPreSearch
+        '
+        Me.pnlPreSearch.Controls.Add(Me.pnlMovieSearch)
+        Me.pnlPreSearch.Controls.Add(Me.pnlTVSearch)
+        Me.pnlPreSearch.Controls.Add(Me.lblFilterOptions)
+        Me.pnlPreSearch.Controls.Add(Me.cboFilterActors)
+        Me.pnlPreSearch.Controls.Add(Me.CheckBcboFilterTV)
+        Me.pnlPreSearch.Controls.Add(Me.lblFilterType)
+        Me.pnlPreSearch.Controls.Add(Me.lblSearchTitle)
+        Me.pnlPreSearch.Controls.Add(Me.cboFilterMovie)
+        Me.pnlPreSearch.Controls.Add(Me.btnSearch)
+        Me.pnlPreSearch.Location = New System.Drawing.Point(0, 0)
+        Me.pnlPreSearch.Name = "pnlPreSearch"
+        Me.pnlPreSearch.Size = New System.Drawing.Size(1198, 656)
+        Me.pnlPreSearch.TabIndex = 7
+        '
+        'cboFilterMovie
+        '
+        Me.cboFilterMovie.AutoSize = True
+        Me.cboFilterMovie.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.cboFilterMovie.Location = New System.Drawing.Point(39, 123)
+        Me.cboFilterMovie.Name = "cboFilterMovie"
+        Me.cboFilterMovie.Size = New System.Drawing.Size(87, 29)
+        Me.cboFilterMovie.TabIndex = 0
+        Me.cboFilterMovie.Text = "Movie"
+        Me.cboFilterMovie.UseVisualStyleBackColor = True
+        '
+        'lblSearchTitle
+        '
+        Me.lblSearchTitle.AutoSize = True
+        Me.lblSearchTitle.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.lblSearchTitle.Font = New System.Drawing.Font("Microsoft Sans Serif", 22.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblSearchTitle.Location = New System.Drawing.Point(39, 16)
+        Me.lblSearchTitle.Name = "lblSearchTitle"
+        Me.lblSearchTitle.Size = New System.Drawing.Size(142, 46)
+        Me.lblSearchTitle.TabIndex = 12
+        Me.lblSearchTitle.Text = "Search"
+        '
+        'lblFilterType
+        '
+        Me.lblFilterType.AutoSize = True
+        Me.lblFilterType.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.lblFilterType.Font = New System.Drawing.Font("Microsoft Sans Serif", 16.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblFilterType.Location = New System.Drawing.Point(39, 76)
+        Me.lblFilterType.Name = "lblFilterType"
+        Me.lblFilterType.Size = New System.Drawing.Size(80, 34)
+        Me.lblFilterType.TabIndex = 13
+        Me.lblFilterType.Text = "Type"
+        '
+        'CheckBcboFilterTV
+        '
+        Me.CheckBcboFilterTV.AutoSize = True
+        Me.CheckBcboFilterTV.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.CheckBcboFilterTV.Location = New System.Drawing.Point(181, 123)
+        Me.CheckBcboFilterTV.Name = "CheckBcboFilterTV"
+        Me.CheckBcboFilterTV.Size = New System.Drawing.Size(122, 29)
+        Me.CheckBcboFilterTV.TabIndex = 14
+        Me.CheckBcboFilterTV.Text = "TV Series"
+        Me.CheckBcboFilterTV.UseVisualStyleBackColor = True
+        '
+        'lblFilterFunctions
+        '
+        Me.lblFilterFunctions.AutoSize = True
+        Me.lblFilterFunctions.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.lblFilterFunctions.Font = New System.Drawing.Font("Microsoft Sans Serif", 16.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblFilterFunctions.Location = New System.Drawing.Point(58, 25)
+        Me.lblFilterFunctions.Name = "lblFilterFunctions"
+        Me.lblFilterFunctions.Size = New System.Drawing.Size(141, 34)
+        Me.lblFilterFunctions.TabIndex = 15
+        Me.lblFilterFunctions.Text = "Functions"
+        '
+        'cboFilterActors
+        '
+        Me.cboFilterActors.AutoSize = True
+        Me.cboFilterActors.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.cboFilterActors.Location = New System.Drawing.Point(356, 123)
+        Me.cboFilterActors.Name = "cboFilterActors"
+        Me.cboFilterActors.Size = New System.Drawing.Size(90, 29)
+        Me.cboFilterActors.TabIndex = 16
+        Me.cboFilterActors.Text = "Actors"
+        Me.cboFilterActors.UseVisualStyleBackColor = True
+        '
+        'ckbFMRMins
+        '
+        Me.ckbFMRMins.AutoSize = True
+        Me.ckbFMRMins.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.ckbFMRMins.Location = New System.Drawing.Point(58, 182)
+        Me.ckbFMRMins.Name = "ckbFMRMins"
+        Me.ckbFMRMins.Size = New System.Drawing.Size(179, 29)
+        Me.ckbFMRMins.TabIndex = 17
+        Me.ckbFMRMins.Text = "Runtime Minutes"
+        Me.ckbFMRMins.UseVisualStyleBackColor = True
+        '
+        'ckbFMSYear
+        '
+        Me.ckbFMSYear.AutoSize = True
+        Me.ckbFMSYear.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.ckbFMSYear.Location = New System.Drawing.Point(58, 85)
+        Me.ckbFMSYear.Name = "ckbFMSYear"
+        Me.ckbFMSYear.Size = New System.Drawing.Size(121, 29)
+        Me.ckbFMSYear.TabIndex = 18
+        Me.ckbFMSYear.Text = "Start Year"
+        Me.ckbFMSYear.UseVisualStyleBackColor = True
+        '
+        'ckbFMGenre
+        '
+        Me.ckbFMGenre.AutoSize = True
+        Me.ckbFMGenre.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.ckbFMGenre.Location = New System.Drawing.Point(58, 134)
+        Me.ckbFMGenre.Name = "ckbFMGenre"
+        Me.ckbFMGenre.Size = New System.Drawing.Size(98, 29)
+        Me.ckbFMGenre.TabIndex = 19
+        Me.ckbFMGenre.Text = "Genres"
+        Me.ckbFMGenre.UseVisualStyleBackColor = True
+        '
+        'ckbFMEYear
+        '
+        Me.ckbFMEYear.AutoSize = True
+        Me.ckbFMEYear.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.ckbFMEYear.Location = New System.Drawing.Point(200, 85)
+        Me.ckbFMEYear.Name = "ckbFMEYear"
+        Me.ckbFMEYear.Size = New System.Drawing.Size(115, 29)
+        Me.ckbFMEYear.TabIndex = 20
+        Me.ckbFMEYear.Text = "End Year"
+        Me.ckbFMEYear.UseVisualStyleBackColor = True
+        '
+        'Temp
+        '
+        Me.Temp.Controls.Add(Me.lblFilterFunctions)
+        Me.Temp.Controls.Add(Me.ckbFMSYear)
+        Me.Temp.Controls.Add(Me.ckbFMGenre)
+        Me.Temp.Controls.Add(Me.ckbFMEYear)
+        Me.Temp.Controls.Add(Me.ckbFMRMins)
+        Me.Temp.Location = New System.Drawing.Point(502, 146)
+        Me.Temp.Name = "Temp"
+        Me.Temp.Size = New System.Drawing.Size(443, 252)
+        Me.Temp.TabIndex = 21
+        '
+        'lblFilterOptions
+        '
+        Me.lblFilterOptions.AutoSize = True
+        Me.lblFilterOptions.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.lblFilterOptions.Font = New System.Drawing.Font("Microsoft Sans Serif", 22.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblFilterOptions.Location = New System.Drawing.Point(39, 164)
+        Me.lblFilterOptions.Name = "lblFilterOptions"
+        Me.lblFilterOptions.Size = New System.Drawing.Size(250, 46)
+        Me.lblFilterOptions.TabIndex = 17
+        Me.lblFilterOptions.Text = "Filter Options"
+        '
+        'lblMTitle
+        '
+        Me.lblMTitle.AutoSize = True
+        Me.lblMTitle.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblMTitle.Location = New System.Drawing.Point(29, 33)
+        Me.lblMTitle.Name = "lblMTitle"
+        Me.lblMTitle.Size = New System.Drawing.Size(113, 25)
+        Me.lblMTitle.TabIndex = 4
+        Me.lblMTitle.Text = "Movie Title:"
+        '
+        'lblMYear
+        '
+        Me.lblMYear.AutoSize = True
+        Me.lblMYear.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblMYear.Location = New System.Drawing.Point(83, 91)
+        Me.lblMYear.Name = "lblMYear"
+        Me.lblMYear.Size = New System.Drawing.Size(59, 25)
+        Me.lblMYear.TabIndex = 5
+        Me.lblMYear.Text = "Year:"
+        '
+        'lblMGenre
+        '
+        Me.lblMGenre.AutoSize = True
+        Me.lblMGenre.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblMGenre.Location = New System.Drawing.Point(546, 90)
+        Me.lblMGenre.Name = "lblMGenre"
+        Me.lblMGenre.Size = New System.Drawing.Size(72, 25)
+        Me.lblMGenre.TabIndex = 6
+        Me.lblMGenre.Text = "Genre:"
+        '
+        'txtMSearchEYear
+        '
+        Me.txtMSearchEYear.Font = New System.Drawing.Font("Microsoft Sans Serif", 20.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txtMSearchEYear.Location = New System.Drawing.Point(309, 82)
+        Me.txtMSearchEYear.Margin = New System.Windows.Forms.Padding(4)
+        Me.txtMSearchEYear.Name = "txtMSearchEYear"
+        Me.txtMSearchEYear.Size = New System.Drawing.Size(89, 46)
+        Me.txtMSearchEYear.TabIndex = 7
+        '
+        'lblMMovieTitle
+        '
+        Me.lblMMovieTitle.AutoSize = True
+        Me.lblMMovieTitle.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblMMovieTitle.Location = New System.Drawing.Point(259, 96)
+        Me.lblMMovieTitle.Name = "lblMMovieTitle"
+        Me.lblMMovieTitle.Size = New System.Drawing.Size(28, 25)
+        Me.lblMMovieTitle.TabIndex = 8
+        Me.lblMMovieTitle.Text = "to"
+        '
+        'lblMRTM
+        '
+        Me.lblMRTM.AutoSize = True
+        Me.lblMRTM.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblMRTM.Location = New System.Drawing.Point(455, 31)
+        Me.lblMRTM.Name = "lblMRTM"
+        Me.lblMRTM.Size = New System.Drawing.Size(163, 25)
+        Me.lblMRTM.TabIndex = 9
+        Me.lblMRTM.Text = "Runtime Minutes:"
+        '
+        'cboRTMMod
+        '
+        Me.cboRTMMod.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
+        Me.cboRTMMod.FormattingEnabled = True
+        Me.cboRTMMod.Location = New System.Drawing.Point(624, 32)
+        Me.cboRTMMod.Name = "cboRTMMod"
+        Me.cboRTMMod.Size = New System.Drawing.Size(116, 24)
+        Me.cboRTMMod.TabIndex = 10
+        '
+        'txtRTM
+        '
+        Me.txtRTM.Font = New System.Drawing.Font("Microsoft Sans Serif", 20.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txtRTM.Location = New System.Drawing.Point(758, 18)
+        Me.txtRTM.Margin = New System.Windows.Forms.Padding(4)
+        Me.txtRTM.Name = "txtRTM"
+        Me.txtRTM.Size = New System.Drawing.Size(89, 46)
+        Me.txtRTM.TabIndex = 11
+        '
+        'pnlTVSearch
+        '
+        Me.pnlTVSearch.Location = New System.Drawing.Point(8, 215)
+        Me.pnlTVSearch.Name = "pnlTVSearch"
+        Me.pnlTVSearch.Size = New System.Drawing.Size(1069, 302)
+        Me.pnlTVSearch.TabIndex = 12
+        '
         'New_UI
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(1467, 735)
+        Me.ClientSize = New System.Drawing.Size(1467, 712)
         Me.Controls.Add(Me.pnlSearch)
         Me.Controls.Add(Me.pnlAbout)
         Me.Controls.Add(Me.pnlMovie)
@@ -1280,10 +1494,10 @@ Partial Class New_UI
         Me.Panel3.ResumeLayout(False)
         Me.Panel3.PerformLayout()
         Me.pnlSearch.ResumeLayout(False)
+        Me.pnlMovieSearch.ResumeLayout(False)
+        Me.pnlMovieSearch.PerformLayout()
         Me.pnlAfterSearch.ResumeLayout(False)
         CType(Me.dgvSearchResult, System.ComponentModel.ISupportInitialize).EndInit()
-        Me.pnlMainSearch.ResumeLayout(False)
-        Me.pnlMainSearch.PerformLayout()
         Me.pnlLogin.ResumeLayout(False)
         Me.pnlLogin.PerformLayout()
         Me.pnlWelcome.ResumeLayout(False)
@@ -1314,6 +1528,10 @@ Partial Class New_UI
         CType(Me._vb_net_imdbDataSet, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.VbnetimdbDataSetBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me._vb_net_imdbDataSet1, System.ComponentModel.ISupportInitialize).EndInit()
+        Me.pnlPreSearch.ResumeLayout(False)
+        Me.pnlPreSearch.PerformLayout()
+        Me.Temp.ResumeLayout(False)
+        Me.Temp.PerformLayout()
         Me.ResumeLayout(False)
 
     End Sub
@@ -1327,14 +1545,10 @@ Partial Class New_UI
     Friend WithEvents Button5 As Button
     Friend WithEvents Panel4 As Panel
     Friend WithEvents pnlSearch As Panel
-    Friend WithEvents lblSearchTitle As Label
-    Friend WithEvents lblSearchMovieName As Label
-    Friend WithEvents txtSearchName As TextBox
-    Friend WithEvents lblSearchGenre As Label
-    Friend WithEvents lblSearchYear As Label
-    Friend WithEvents txtSearchYear As TextBox
+    Friend WithEvents txtMSearchName As TextBox
+    Friend WithEvents txtMSearchSYear As TextBox
     Friend WithEvents btnSearch As Button
-    Friend WithEvents cbxSearchGenre As ComboBox
+    Friend WithEvents cboSearchGenre As ComboBox
     Friend WithEvents pnlLogin As Panel
     Friend WithEvents Label7 As Label
     Friend WithEvents Label9 As Label
@@ -1406,11 +1620,33 @@ Partial Class New_UI
     Friend WithEvents Label20 As Label
     Friend WithEvents Label30 As Label
     Friend WithEvents Label21 As Label
-    Friend WithEvents pnlMainSearch As Panel
+    Friend WithEvents pnlMovieSearch As Panel
     Friend WithEvents pnlAfterSearch As Panel
     Friend WithEvents btnBack As Button
     Friend WithEvents _vb_net_imdbDataSet As _vb_net_imdbDataSet
     Friend WithEvents VbnetimdbDataSetBindingSource As BindingSource
     Friend WithEvents dgvSearchResult As DataGridView
     Friend WithEvents _vb_net_imdbDataSet1 As _vb_net_imdbDataSet
+    Friend WithEvents pnlPreSearch As Panel
+    Friend WithEvents ckbFMSYear As CheckBox
+    Friend WithEvents ckbFMEYear As CheckBox
+    Friend WithEvents ckbFMRMins As CheckBox
+    Friend WithEvents ckbFMGenre As CheckBox
+    Friend WithEvents cboFilterActors As CheckBox
+    Friend WithEvents lblFilterFunctions As Label
+    Friend WithEvents CheckBcboFilterTV As CheckBox
+    Friend WithEvents lblFilterType As Label
+    Friend WithEvents lblSearchTitle As Label
+    Friend WithEvents cboFilterMovie As CheckBox
+    Friend WithEvents Temp As Panel
+    Friend WithEvents lblFilterOptions As Label
+    Friend WithEvents txtRTM As TextBox
+    Friend WithEvents cboRTMMod As ComboBox
+    Friend WithEvents lblMRTM As Label
+    Friend WithEvents lblMMovieTitle As Label
+    Friend WithEvents txtMSearchEYear As TextBox
+    Friend WithEvents lblMGenre As Label
+    Friend WithEvents lblMYear As Label
+    Friend WithEvents lblMTitle As Label
+    Friend WithEvents pnlTVSearch As Panel
 End Class

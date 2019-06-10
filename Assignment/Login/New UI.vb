@@ -35,29 +35,34 @@ Public Class New_UI
         pnlWelcome.Visible = True
         pnlAbout.Visible = False
         pnlAfterSearch.Visible = False
-        cbxSearchGenre.Items.Add("Action")
-        cbxSearchGenre.Items.Add("Adventurer")
-        cbxSearchGenre.Items.Add("Animation")
-        cbxSearchGenre.Items.Add("Biography")
-        cbxSearchGenre.Items.Add("Comedy")
-        cbxSearchGenre.Items.Add("Crime")
-        cbxSearchGenre.Items.Add("Documentary")
-        cbxSearchGenre.Items.Add("Drama")
-        cbxSearchGenre.Items.Add("Family")
-        cbxSearchGenre.Items.Add("Fantasy")
-        cbxSearchGenre.Items.Add("Film Noir")
-        cbxSearchGenre.Items.Add("History")
-        cbxSearchGenre.Items.Add("Horror")
-        cbxSearchGenre.Items.Add("Musical")
-        cbxSearchGenre.Items.Add("Mystery")
-        cbxSearchGenre.Items.Add("Romance")
-        cbxSearchGenre.Items.Add("Sci-Fi")
-        cbxSearchGenre.Items.Add("Short")
-        cbxSearchGenre.Items.Add("Sport")
-        cbxSearchGenre.Items.Add("Superhero")
-        cbxSearchGenre.Items.Add("Thriller")
-        cbxSearchGenre.Items.Add("War")
-        cbxSearchGenre.Items.Add("Western")
+        cboSearchGenre.Items.Add("Action")
+        cboSearchGenre.Items.Add("Adventurer")
+        cboSearchGenre.Items.Add("Animation")
+        cboSearchGenre.Items.Add("Biography")
+        cboSearchGenre.Items.Add("Comedy")
+        cboSearchGenre.Items.Add("Crime")
+        cboSearchGenre.Items.Add("Documentary")
+        cboSearchGenre.Items.Add("Drama")
+        cboSearchGenre.Items.Add("Family")
+        cboSearchGenre.Items.Add("Fantasy")
+        cboSearchGenre.Items.Add("Film Noir")
+        cboSearchGenre.Items.Add("History")
+        cboSearchGenre.Items.Add("Horror")
+        cboSearchGenre.Items.Add("Musical")
+        cboSearchGenre.Items.Add("Mystery")
+        cboSearchGenre.Items.Add("Romance")
+        cboSearchGenre.Items.Add("Sci-Fi")
+        cboSearchGenre.Items.Add("Short")
+        cboSearchGenre.Items.Add("Sport")
+        cboSearchGenre.Items.Add("Superhero")
+        cboSearchGenre.Items.Add("Thriller")
+        cboSearchGenre.Items.Add("War")
+        cboSearchGenre.Items.Add("Western")
+        cboRTMMod.Items.Add(">")
+        cboRTMMod.Items.Add(">=")
+        cboRTMMod.Items.Add("<")
+        cboRTMMod.Items.Add("<=")
+        cboRTMMod.Items.Add("=")
     End Sub
 
     Private Sub Search_button(sender As Object, e As EventArgs) Handles btnpnlSearch.Click
@@ -67,6 +72,8 @@ Public Class New_UI
         pnlLogin.Visible = False
         pnlAbout.Visible = False
         pnlAfterSearch.Visible = False
+        pnlMovieSearch.Visible = True
+        pnlPreSearch.Visible = True
 
     End Sub
 
@@ -148,11 +155,13 @@ Public Class New_UI
         Dim rowcount As Integer
         Dim con As New SqlConnection("Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\ryuko\Desktop\VB.Net\vb.net imdb.mdf;Integrated Security=True;Connect Timeout=30")
         rowcount = 100
-        Dim cmd As New SqlCommand(" SELECT TOP 200 primaryTitle as 'Movie Title', startYear as Year, runtimeMinutes as 'Runtime Minute', genres as Genres
+        Dim cmd As New SqlCommand(" SELECT TOP 200 primaryTitle as 'Movie Title', startYear as 'Start Year', endYear as 'End Year', runtimeMinutes as 'Runtime Minute', genres as Genres
                                     FROM [title.basics]
-                                    WHERE primaryTitle LIKE'%" & txtSearchName.Text & "%'
-                                    AND startYear ='" & txtSearchYear.Text & "'
-                                    AND genres LIKE'%" & cbxSearchGenre.Text & "%'
+                                    WHERE primaryTitle LIKE'%" & txtMSearchName.Text & "%'
+                                    AND startYear ='" & txtMSearchSYear.Text & "'
+    
+                                    AND genres LIKE'%" & cboSearchGenre.Text & "%'
+         
                                     ", con)
         Dim DBDA As New SqlDataAdapter(cmd)
         Dim table As New DataTable
@@ -172,8 +181,10 @@ Public Class New_UI
         'Finally
         '    con.Dispose()
         'End Try
-        pnlMainSearch.Visible = False
+        pnlMovieSearch.Visible = False
         pnlAfterSearch.Visible = True
+        pnlPreSearch.Visible = False
+        Temp.Visible = False
     End Sub
 
     Private Sub dgvSearchResult_CellContentClick(sender As Object, e As DataGridViewCellEventArgs)
@@ -186,10 +197,15 @@ Public Class New_UI
 
     Private Sub btnBack_Click(sender As Object, e As EventArgs) Handles btnBack.Click
         pnlAfterSearch.Visible = False
-        pnlMainSearch.Visible = True
+        pnlMovieSearch.Visible = True
+        pnlPreSearch.Visible = True
     End Sub
 
-    Private Sub cbxSearchGenre_SelectedIndexChanged(sender As Object, e As EventArgs) Handles cbxSearchGenre.SelectedIndexChanged
+    Private Sub cbxSearchGenre_SelectedIndexChanged(sender As Object, e As EventArgs) Handles cboSearchGenre.SelectedIndexChanged
+
+    End Sub
+
+    Private Sub lblSearchTitle_Click(sender As Object, e As EventArgs)
 
     End Sub
 End Class
