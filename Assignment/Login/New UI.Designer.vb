@@ -22,6 +22,7 @@ Partial Class New_UI
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
+        Me.components = New System.ComponentModel.Container()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(New_UI))
         Me.Panel1 = New System.Windows.Forms.Panel()
         Me.Panel3 = New System.Windows.Forms.Panel()
@@ -40,14 +41,18 @@ Partial Class New_UI
         Me.Button2 = New System.Windows.Forms.Button()
         Me.Button1 = New System.Windows.Forms.Button()
         Me.pnlSearch = New System.Windows.Forms.Panel()
-        Me.Button6 = New System.Windows.Forms.Button()
-        Me.ComboBox1 = New System.Windows.Forms.ComboBox()
-        Me.Label4 = New System.Windows.Forms.Label()
-        Me.Label6 = New System.Windows.Forms.Label()
-        Me.Label3 = New System.Windows.Forms.Label()
-        Me.TextBox1 = New System.Windows.Forms.TextBox()
-        Me.Label5 = New System.Windows.Forms.Label()
-        Me.TextBox2 = New System.Windows.Forms.TextBox()
+        Me.pnlMainSearch = New System.Windows.Forms.Panel()
+        Me.btnSearch = New System.Windows.Forms.Button()
+        Me.txtSearchName = New System.Windows.Forms.TextBox()
+        Me.txtSearchYear = New System.Windows.Forms.TextBox()
+        Me.lblSearchMovieName = New System.Windows.Forms.Label()
+        Me.lblSearchYear = New System.Windows.Forms.Label()
+        Me.lblSearchGenre = New System.Windows.Forms.Label()
+        Me.lblSearchTitle = New System.Windows.Forms.Label()
+        Me.txtSearchGenre = New System.Windows.Forms.ComboBox()
+        Me.dgvSearchResult = New System.Windows.Forms.DataGridView()
+        Me.pnlAfterSearch = New System.Windows.Forms.Panel()
+        Me.btnBack = New System.Windows.Forms.Button()
         Me.pnlLogin = New System.Windows.Forms.Panel()
         Me.Button7 = New System.Windows.Forms.Button()
         Me.Label7 = New System.Windows.Forms.Label()
@@ -76,13 +81,31 @@ Partial Class New_UI
         Me.pnlAbout = New System.Windows.Forms.Panel()
         Me.Label22 = New System.Windows.Forms.Label()
         Me.Panel9 = New System.Windows.Forms.Panel()
+        Me.Label45 = New System.Windows.Forms.Label()
         Me.Label23 = New System.Windows.Forms.Label()
+        Me.Label44 = New System.Windows.Forms.Label()
         Me.Label24 = New System.Windows.Forms.Label()
+        Me.Label43 = New System.Windows.Forms.Label()
         Me.PictureBox9 = New System.Windows.Forms.PictureBox()
+        Me.Label42 = New System.Windows.Forms.Label()
+        Me.Label40 = New System.Windows.Forms.Label()
+        Me.Label41 = New System.Windows.Forms.Label()
+        Me.Label36 = New System.Windows.Forms.Label()
+        Me.Label37 = New System.Windows.Forms.Label()
+        Me.Label38 = New System.Windows.Forms.Label()
+        Me.Label39 = New System.Windows.Forms.Label()
         Me.Panel8 = New System.Windows.Forms.Panel()
+        Me.Label35 = New System.Windows.Forms.Label()
         Me.Label8 = New System.Windows.Forms.Label()
+        Me.Label34 = New System.Windows.Forms.Label()
         Me.Label16 = New System.Windows.Forms.Label()
+        Me.Label33 = New System.Windows.Forms.Label()
         Me.PictureBox7 = New System.Windows.Forms.PictureBox()
+        Me.Label32 = New System.Windows.Forms.Label()
+        Me.Label31 = New System.Windows.Forms.Label()
+        Me.Label20 = New System.Windows.Forms.Label()
+        Me.Label30 = New System.Windows.Forms.Label()
+        Me.Label21 = New System.Windows.Forms.Label()
         Me.Panel10 = New System.Windows.Forms.Panel()
         Me.Label29 = New System.Windows.Forms.Label()
         Me.Label28 = New System.Windows.Forms.Label()
@@ -93,27 +116,15 @@ Partial Class New_UI
         Me.Label17 = New System.Windows.Forms.Label()
         Me.Label18 = New System.Windows.Forms.Label()
         Me.PictureBox8 = New System.Windows.Forms.PictureBox()
-        Me.Label20 = New System.Windows.Forms.Label()
-        Me.Label21 = New System.Windows.Forms.Label()
-        Me.Label30 = New System.Windows.Forms.Label()
-        Me.Label31 = New System.Windows.Forms.Label()
-        Me.Label32 = New System.Windows.Forms.Label()
-        Me.Label33 = New System.Windows.Forms.Label()
-        Me.Label34 = New System.Windows.Forms.Label()
-        Me.Label35 = New System.Windows.Forms.Label()
-        Me.Label36 = New System.Windows.Forms.Label()
-        Me.Label37 = New System.Windows.Forms.Label()
-        Me.Label38 = New System.Windows.Forms.Label()
-        Me.Label39 = New System.Windows.Forms.Label()
-        Me.Label40 = New System.Windows.Forms.Label()
-        Me.Label41 = New System.Windows.Forms.Label()
-        Me.Label42 = New System.Windows.Forms.Label()
-        Me.Label43 = New System.Windows.Forms.Label()
-        Me.Label44 = New System.Windows.Forms.Label()
-        Me.Label45 = New System.Windows.Forms.Label()
+        Me._vb_net_imdbDataSet = New Login._vb_net_imdbDataSet()
+        Me.VbnetimdbDataSetBindingSource = New System.Windows.Forms.BindingSource(Me.components)
+        Me._vb_net_imdbDataSet1 = New Login._vb_net_imdbDataSet()
         Me.Panel1.SuspendLayout()
         Me.Panel3.SuspendLayout()
         Me.pnlSearch.SuspendLayout()
+        Me.pnlMainSearch.SuspendLayout()
+        CType(Me.dgvSearchResult, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.pnlAfterSearch.SuspendLayout()
         Me.pnlLogin.SuspendLayout()
         Me.pnlWelcome.SuspendLayout()
         CType(Me.PictureBox4, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -134,6 +145,9 @@ Partial Class New_UI
         CType(Me.PictureBox7, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.Panel10.SuspendLayout()
         CType(Me.PictureBox8, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me._vb_net_imdbDataSet, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.VbnetimdbDataSetBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me._vb_net_imdbDataSet1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'Panel1
@@ -151,7 +165,7 @@ Partial Class New_UI
         Me.Panel1.Location = New System.Drawing.Point(0, 0)
         Me.Panel1.Margin = New System.Windows.Forms.Padding(4)
         Me.Panel1.Name = "Panel1"
-        Me.Panel1.Size = New System.Drawing.Size(268, 868)
+        Me.Panel1.Size = New System.Drawing.Size(268, 735)
         Me.Panel1.TabIndex = 0
         '
         'Panel3
@@ -168,7 +182,7 @@ Partial Class New_UI
         Me.Panel3.Location = New System.Drawing.Point(0, 0)
         Me.Panel3.Margin = New System.Windows.Forms.Padding(4)
         Me.Panel3.Name = "Panel3"
-        Me.Panel3.Size = New System.Drawing.Size(268, 868)
+        Me.Panel3.Size = New System.Drawing.Size(268, 735)
         Me.Panel3.TabIndex = 3
         '
         'Panel5
@@ -393,103 +407,145 @@ Partial Class New_UI
         '
         'pnlSearch
         '
-        Me.pnlSearch.Controls.Add(Me.Button6)
-        Me.pnlSearch.Controls.Add(Me.ComboBox1)
-        Me.pnlSearch.Controls.Add(Me.Label4)
-        Me.pnlSearch.Controls.Add(Me.Label6)
-        Me.pnlSearch.Controls.Add(Me.Label3)
-        Me.pnlSearch.Controls.Add(Me.TextBox1)
-        Me.pnlSearch.Controls.Add(Me.Label5)
-        Me.pnlSearch.Controls.Add(Me.TextBox2)
+        Me.pnlSearch.Controls.Add(Me.pnlAfterSearch)
+        Me.pnlSearch.Controls.Add(Me.pnlMainSearch)
         Me.pnlSearch.Location = New System.Drawing.Point(268, 55)
         Me.pnlSearch.Margin = New System.Windows.Forms.Padding(0)
         Me.pnlSearch.Name = "pnlSearch"
         Me.pnlSearch.Size = New System.Drawing.Size(1141, 661)
         Me.pnlSearch.TabIndex = 3
         '
-        'Button6
+        'pnlMainSearch
         '
-        Me.Button6.BackColor = System.Drawing.Color.Aquamarine
-        Me.Button6.Font = New System.Drawing.Font("Microsoft Sans Serif", 20.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Button6.Location = New System.Drawing.Point(416, 414)
-        Me.Button6.Margin = New System.Windows.Forms.Padding(4)
-        Me.Button6.Name = "Button6"
-        Me.Button6.Size = New System.Drawing.Size(211, 80)
-        Me.Button6.TabIndex = 3
-        Me.Button6.Text = "Search"
-        Me.Button6.UseVisualStyleBackColor = False
+        Me.pnlMainSearch.Controls.Add(Me.btnSearch)
+        Me.pnlMainSearch.Controls.Add(Me.txtSearchName)
+        Me.pnlMainSearch.Controls.Add(Me.txtSearchYear)
+        Me.pnlMainSearch.Controls.Add(Me.lblSearchMovieName)
+        Me.pnlMainSearch.Controls.Add(Me.lblSearchYear)
+        Me.pnlMainSearch.Controls.Add(Me.lblSearchGenre)
+        Me.pnlMainSearch.Controls.Add(Me.lblSearchTitle)
+        Me.pnlMainSearch.Controls.Add(Me.txtSearchGenre)
+        Me.pnlMainSearch.Location = New System.Drawing.Point(12, 10)
+        Me.pnlMainSearch.Margin = New System.Windows.Forms.Padding(4)
+        Me.pnlMainSearch.Name = "pnlMainSearch"
+        Me.pnlMainSearch.Size = New System.Drawing.Size(1107, 596)
+        Me.pnlMainSearch.TabIndex = 4
         '
-        'ComboBox1
+        'btnSearch
         '
-        Me.ComboBox1.Font = New System.Drawing.Font("Microsoft Sans Serif", 20.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.ComboBox1.FormattingEnabled = True
-        Me.ComboBox1.Location = New System.Drawing.Point(387, 311)
-        Me.ComboBox1.Margin = New System.Windows.Forms.Padding(4)
-        Me.ComboBox1.Name = "ComboBox1"
-        Me.ComboBox1.Size = New System.Drawing.Size(385, 47)
-        Me.ComboBox1.TabIndex = 2
+        Me.btnSearch.BackColor = System.Drawing.Color.Aquamarine
+        Me.btnSearch.Font = New System.Drawing.Font("Microsoft Sans Serif", 20.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnSearch.Location = New System.Drawing.Point(257, 359)
+        Me.btnSearch.Margin = New System.Windows.Forms.Padding(4)
+        Me.btnSearch.Name = "btnSearch"
+        Me.btnSearch.Size = New System.Drawing.Size(211, 80)
+        Me.btnSearch.TabIndex = 3
+        Me.btnSearch.Text = "Search"
+        Me.btnSearch.UseVisualStyleBackColor = False
         '
-        'Label4
+        'txtSearchName
         '
-        Me.Label4.AutoSize = True
-        Me.Label4.Font = New System.Drawing.Font("Microsoft Sans Serif", 36.0!, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label4.Location = New System.Drawing.Point(461, 107)
-        Me.Label4.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
-        Me.Label4.Name = "Label4"
-        Me.Label4.Size = New System.Drawing.Size(490, 69)
-        Me.Label4.TabIndex = 1
-        Me.Label4.Text = "Search by Movie "
+        Me.txtSearchName.Font = New System.Drawing.Font("Microsoft Sans Serif", 20.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txtSearchName.Location = New System.Drawing.Point(236, 128)
+        Me.txtSearchName.Margin = New System.Windows.Forms.Padding(4)
+        Me.txtSearchName.Name = "txtSearchName"
+        Me.txtSearchName.Size = New System.Drawing.Size(385, 46)
+        Me.txtSearchName.TabIndex = 0
         '
-        'Label6
+        'txtSearchYear
         '
-        Me.Label6.AutoSize = True
-        Me.Label6.Font = New System.Drawing.Font("Microsoft Sans Serif", 20.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label6.Location = New System.Drawing.Point(236, 311)
-        Me.Label6.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
-        Me.Label6.Name = "Label6"
-        Me.Label6.Size = New System.Drawing.Size(129, 39)
-        Me.Label6.TabIndex = 1
-        Me.Label6.Text = "Genre :"
+        Me.txtSearchYear.Font = New System.Drawing.Font("Microsoft Sans Serif", 20.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txtSearchYear.Location = New System.Drawing.Point(236, 191)
+        Me.txtSearchYear.Margin = New System.Windows.Forms.Padding(4)
+        Me.txtSearchYear.Name = "txtSearchYear"
+        Me.txtSearchYear.Size = New System.Drawing.Size(385, 46)
+        Me.txtSearchYear.TabIndex = 0
         '
-        'Label3
+        'lblSearchMovieName
         '
-        Me.Label3.AutoSize = True
-        Me.Label3.Font = New System.Drawing.Font("Microsoft Sans Serif", 20.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label3.Location = New System.Drawing.Point(253, 258)
-        Me.Label3.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
-        Me.Label3.Name = "Label3"
-        Me.Label3.Size = New System.Drawing.Size(106, 39)
-        Me.Label3.TabIndex = 1
-        Me.Label3.Text = "Year :"
+        Me.lblSearchMovieName.AutoSize = True
+        Me.lblSearchMovieName.Font = New System.Drawing.Font("Microsoft Sans Serif", 20.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblSearchMovieName.Location = New System.Drawing.Point(58, 131)
+        Me.lblSearchMovieName.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.lblSearchMovieName.Name = "lblSearchMovieName"
+        Me.lblSearchMovieName.Size = New System.Drawing.Size(126, 39)
+        Me.lblSearchMovieName.TabIndex = 1
+        Me.lblSearchMovieName.Text = "Name :"
         '
-        'TextBox1
+        'lblSearchYear
         '
-        Me.TextBox1.Font = New System.Drawing.Font("Microsoft Sans Serif", 20.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.TextBox1.Location = New System.Drawing.Point(387, 255)
-        Me.TextBox1.Margin = New System.Windows.Forms.Padding(4)
-        Me.TextBox1.Name = "TextBox1"
-        Me.TextBox1.Size = New System.Drawing.Size(385, 46)
-        Me.TextBox1.TabIndex = 0
+        Me.lblSearchYear.AutoSize = True
+        Me.lblSearchYear.Font = New System.Drawing.Font("Microsoft Sans Serif", 20.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblSearchYear.Location = New System.Drawing.Point(79, 191)
+        Me.lblSearchYear.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.lblSearchYear.Name = "lblSearchYear"
+        Me.lblSearchYear.Size = New System.Drawing.Size(106, 39)
+        Me.lblSearchYear.TabIndex = 1
+        Me.lblSearchYear.Text = "Year :"
         '
-        'Label5
+        'lblSearchGenre
         '
-        Me.Label5.AutoSize = True
-        Me.Label5.Font = New System.Drawing.Font("Microsoft Sans Serif", 20.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label5.Location = New System.Drawing.Point(239, 208)
-        Me.Label5.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
-        Me.Label5.Name = "Label5"
-        Me.Label5.Size = New System.Drawing.Size(126, 39)
-        Me.Label5.TabIndex = 1
-        Me.Label5.Text = "Name :"
+        Me.lblSearchGenre.AutoSize = True
+        Me.lblSearchGenre.Font = New System.Drawing.Font("Microsoft Sans Serif", 20.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblSearchGenre.Location = New System.Drawing.Point(55, 251)
+        Me.lblSearchGenre.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.lblSearchGenre.Name = "lblSearchGenre"
+        Me.lblSearchGenre.Size = New System.Drawing.Size(129, 39)
+        Me.lblSearchGenre.TabIndex = 1
+        Me.lblSearchGenre.Text = "Genre :"
         '
-        'TextBox2
+        'lblSearchTitle
         '
-        Me.TextBox2.Font = New System.Drawing.Font("Microsoft Sans Serif", 20.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.TextBox2.Location = New System.Drawing.Point(387, 204)
-        Me.TextBox2.Margin = New System.Windows.Forms.Padding(4)
-        Me.TextBox2.Name = "TextBox2"
-        Me.TextBox2.Size = New System.Drawing.Size(385, 46)
-        Me.TextBox2.TabIndex = 0
+        Me.lblSearchTitle.AutoSize = True
+        Me.lblSearchTitle.Font = New System.Drawing.Font("Microsoft Sans Serif", 36.0!, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblSearchTitle.Location = New System.Drawing.Point(98, 20)
+        Me.lblSearchTitle.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.lblSearchTitle.Name = "lblSearchTitle"
+        Me.lblSearchTitle.Size = New System.Drawing.Size(490, 69)
+        Me.lblSearchTitle.TabIndex = 1
+        Me.lblSearchTitle.Text = "Search by Movie "
+        '
+        'txtSearchGenre
+        '
+        Me.txtSearchGenre.Font = New System.Drawing.Font("Microsoft Sans Serif", 20.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txtSearchGenre.FormattingEnabled = True
+        Me.txtSearchGenre.Location = New System.Drawing.Point(236, 251)
+        Me.txtSearchGenre.Margin = New System.Windows.Forms.Padding(4)
+        Me.txtSearchGenre.Name = "txtSearchGenre"
+        Me.txtSearchGenre.Size = New System.Drawing.Size(385, 47)
+        Me.txtSearchGenre.TabIndex = 2
+        '
+        'dgvSearchResult
+        '
+        Me.dgvSearchResult.AllowUserToAddRows = False
+        Me.dgvSearchResult.AllowUserToDeleteRows = False
+        Me.dgvSearchResult.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
+        Me.dgvSearchResult.Location = New System.Drawing.Point(39, 97)
+        Me.dgvSearchResult.Name = "dgvSearchResult"
+        Me.dgvSearchResult.ReadOnly = True
+        Me.dgvSearchResult.RowTemplate.Height = 24
+        Me.dgvSearchResult.Size = New System.Drawing.Size(1041, 467)
+        Me.dgvSearchResult.TabIndex = 1
+        '
+        'pnlAfterSearch
+        '
+        Me.pnlAfterSearch.Controls.Add(Me.dgvSearchResult)
+        Me.pnlAfterSearch.Controls.Add(Me.btnBack)
+        Me.pnlAfterSearch.Location = New System.Drawing.Point(0, 0)
+        Me.pnlAfterSearch.Margin = New System.Windows.Forms.Padding(4)
+        Me.pnlAfterSearch.Name = "pnlAfterSearch"
+        Me.pnlAfterSearch.Size = New System.Drawing.Size(1137, 602)
+        Me.pnlAfterSearch.TabIndex = 4
+        '
+        'btnBack
+        '
+        Me.btnBack.Location = New System.Drawing.Point(39, 30)
+        Me.btnBack.Margin = New System.Windows.Forms.Padding(4)
+        Me.btnBack.Name = "btnBack"
+        Me.btnBack.Size = New System.Drawing.Size(183, 60)
+        Me.btnBack.TabIndex = 0
+        Me.btnBack.Text = "Back Button"
+        Me.btnBack.UseVisualStyleBackColor = True
         '
         'pnlLogin
         '
@@ -597,7 +653,7 @@ Partial Class New_UI
         Me.WinControl.Controls.Add(Me.PictureBox2)
         Me.WinControl.Controls.Add(Me.PictureBox1)
         Me.WinControl.Dock = System.Windows.Forms.DockStyle.Right
-        Me.WinControl.Location = New System.Drawing.Point(1156, 0)
+        Me.WinControl.Location = New System.Drawing.Point(1028, 0)
         Me.WinControl.Margin = New System.Windows.Forms.Padding(4)
         Me.WinControl.Name = "WinControl"
         Me.WinControl.Size = New System.Drawing.Size(171, 55)
@@ -644,7 +700,7 @@ Partial Class New_UI
         Me.Panel2.Location = New System.Drawing.Point(268, 0)
         Me.Panel2.Margin = New System.Windows.Forms.Padding(4)
         Me.Panel2.Name = "Panel2"
-        Me.Panel2.Size = New System.Drawing.Size(1327, 55)
+        Me.Panel2.Size = New System.Drawing.Size(1199, 55)
         Me.Panel2.TabIndex = 1
         '
         'pnlMovie
@@ -785,7 +841,7 @@ Partial Class New_UI
         '
         Me.Label22.AutoSize = True
         Me.Label22.Font = New System.Drawing.Font("Microsoft YaHei", 16.2!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label22.Location = New System.Drawing.Point(481, 13)
+        Me.Label22.Location = New System.Drawing.Point(481, 14)
         Me.Label22.Name = "Label22"
         Me.Label22.Size = New System.Drawing.Size(152, 37)
         Me.Label22.TabIndex = 3
@@ -812,6 +868,16 @@ Partial Class New_UI
         Me.Panel9.Size = New System.Drawing.Size(352, 559)
         Me.Panel9.TabIndex = 0
         '
+        'Label45
+        '
+        Me.Label45.AutoSize = True
+        Me.Label45.Font = New System.Drawing.Font("Comic Sans MS", 13.8!, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label45.Location = New System.Drawing.Point(33, 268)
+        Me.Label45.Name = "Label45"
+        Me.Label45.Size = New System.Drawing.Size(85, 34)
+        Me.Label45.TabIndex = 6
+        Me.Label45.Text = "Name:"
+        '
         'Label23
         '
         Me.Label23.AutoSize = True
@@ -822,6 +888,16 @@ Partial Class New_UI
         Me.Label23.Size = New System.Drawing.Size(0, 31)
         Me.Label23.TabIndex = 1
         '
+        'Label44
+        '
+        Me.Label44.AutoSize = True
+        Me.Label44.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.75!, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label44.Location = New System.Drawing.Point(203, 345)
+        Me.Label44.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.Label44.Name = "Label44"
+        Me.Label44.Size = New System.Drawing.Size(0, 31)
+        Me.Label44.TabIndex = 1
+        '
         'Label24
         '
         Me.Label24.AutoSize = True
@@ -831,6 +907,16 @@ Partial Class New_UI
         Me.Label24.Name = "Label24"
         Me.Label24.Size = New System.Drawing.Size(0, 31)
         Me.Label24.TabIndex = 1
+        '
+        'Label43
+        '
+        Me.Label43.AutoSize = True
+        Me.Label43.Font = New System.Drawing.Font("Comic Sans MS", 13.8!, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label43.Location = New System.Drawing.Point(116, 350)
+        Me.Label43.Name = "Label43"
+        Me.Label43.Size = New System.Drawing.Size(126, 34)
+        Me.Label43.TabIndex = 5
+        Me.Label43.Text = "TP051210"
         '
         'PictureBox9
         '
@@ -843,6 +929,77 @@ Partial Class New_UI
         Me.PictureBox9.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
         Me.PictureBox9.TabIndex = 0
         Me.PictureBox9.TabStop = False
+        '
+        'Label42
+        '
+        Me.Label42.AutoSize = True
+        Me.Label42.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.75!, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label42.Location = New System.Drawing.Point(203, 294)
+        Me.Label42.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.Label42.Name = "Label42"
+        Me.Label42.Size = New System.Drawing.Size(0, 31)
+        Me.Label42.TabIndex = 1
+        '
+        'Label40
+        '
+        Me.Label40.AutoSize = True
+        Me.Label40.Font = New System.Drawing.Font("Comic Sans MS", 13.8!, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label40.Location = New System.Drawing.Point(116, 308)
+        Me.Label40.Name = "Label40"
+        Me.Label40.Size = New System.Drawing.Size(41, 34)
+        Me.Label40.TabIndex = 4
+        Me.Label40.Text = "19"
+        '
+        'Label41
+        '
+        Me.Label41.AutoSize = True
+        Me.Label41.Font = New System.Drawing.Font("Comic Sans MS", 13.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label41.Location = New System.Drawing.Point(35, 348)
+        Me.Label41.Name = "Label41"
+        Me.Label41.Size = New System.Drawing.Size(83, 33)
+        Me.Label41.TabIndex = 5
+        Me.Label41.Text = "TP.no:"
+        '
+        'Label36
+        '
+        Me.Label36.AutoSize = True
+        Me.Label36.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.75!, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label36.Location = New System.Drawing.Point(205, 350)
+        Me.Label36.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.Label36.Name = "Label36"
+        Me.Label36.Size = New System.Drawing.Size(0, 31)
+        Me.Label36.TabIndex = 1
+        '
+        'Label37
+        '
+        Me.Label37.AutoSize = True
+        Me.Label37.Font = New System.Drawing.Font("Comic Sans MS", 13.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label37.Location = New System.Drawing.Point(116, 270)
+        Me.Label37.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.Label37.Name = "Label37"
+        Me.Label37.Size = New System.Drawing.Size(161, 33)
+        Me.Label37.TabIndex = 2
+        Me.Label37.Text = "Kok Hua Chin"
+        '
+        'Label38
+        '
+        Me.Label38.AutoSize = True
+        Me.Label38.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.75!, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label38.Location = New System.Drawing.Point(205, 299)
+        Me.Label38.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.Label38.Name = "Label38"
+        Me.Label38.Size = New System.Drawing.Size(0, 31)
+        Me.Label38.TabIndex = 1
+        '
+        'Label39
+        '
+        Me.Label39.AutoSize = True
+        Me.Label39.Font = New System.Drawing.Font("Comic Sans MS", 13.8!, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label39.Location = New System.Drawing.Point(52, 308)
+        Me.Label39.Name = "Label39"
+        Me.Label39.Size = New System.Drawing.Size(66, 34)
+        Me.Label39.TabIndex = 4
+        Me.Label39.Text = "Age:"
         '
         'Panel8
         '
@@ -863,6 +1020,16 @@ Partial Class New_UI
         Me.Panel8.Size = New System.Drawing.Size(352, 559)
         Me.Panel8.TabIndex = 0
         '
+        'Label35
+        '
+        Me.Label35.AutoSize = True
+        Me.Label35.Font = New System.Drawing.Font("Comic Sans MS", 13.8!, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label35.Location = New System.Drawing.Point(27, 271)
+        Me.Label35.Name = "Label35"
+        Me.Label35.Size = New System.Drawing.Size(85, 34)
+        Me.Label35.TabIndex = 6
+        Me.Label35.Text = "Name:"
+        '
         'Label8
         '
         Me.Label8.AutoSize = True
@@ -873,6 +1040,16 @@ Partial Class New_UI
         Me.Label8.Size = New System.Drawing.Size(0, 31)
         Me.Label8.TabIndex = 1
         '
+        'Label34
+        '
+        Me.Label34.AutoSize = True
+        Me.Label34.Font = New System.Drawing.Font("Comic Sans MS", 13.8!, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label34.Location = New System.Drawing.Point(109, 352)
+        Me.Label34.Name = "Label34"
+        Me.Label34.Size = New System.Drawing.Size(130, 34)
+        Me.Label34.TabIndex = 5
+        Me.Label34.Text = "TP051429"
+        '
         'Label16
         '
         Me.Label16.AutoSize = True
@@ -882,6 +1059,16 @@ Partial Class New_UI
         Me.Label16.Name = "Label16"
         Me.Label16.Size = New System.Drawing.Size(0, 31)
         Me.Label16.TabIndex = 1
+        '
+        'Label33
+        '
+        Me.Label33.AutoSize = True
+        Me.Label33.Font = New System.Drawing.Font("Comic Sans MS", 13.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label33.Location = New System.Drawing.Point(28, 351)
+        Me.Label33.Name = "Label33"
+        Me.Label33.Size = New System.Drawing.Size(83, 33)
+        Me.Label33.TabIndex = 5
+        Me.Label33.Text = "TP.no:"
         '
         'PictureBox7
         '
@@ -894,6 +1081,57 @@ Partial Class New_UI
         Me.PictureBox7.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
         Me.PictureBox7.TabIndex = 0
         Me.PictureBox7.TabStop = False
+        '
+        'Label32
+        '
+        Me.Label32.AutoSize = True
+        Me.Label32.Font = New System.Drawing.Font("Comic Sans MS", 13.8!, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label32.Location = New System.Drawing.Point(109, 311)
+        Me.Label32.Name = "Label32"
+        Me.Label32.Size = New System.Drawing.Size(41, 34)
+        Me.Label32.TabIndex = 4
+        Me.Label32.Text = "19"
+        '
+        'Label31
+        '
+        Me.Label31.AutoSize = True
+        Me.Label31.Font = New System.Drawing.Font("Comic Sans MS", 13.8!, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label31.Location = New System.Drawing.Point(45, 311)
+        Me.Label31.Name = "Label31"
+        Me.Label31.Size = New System.Drawing.Size(66, 34)
+        Me.Label31.TabIndex = 4
+        Me.Label31.Text = "Age:"
+        '
+        'Label20
+        '
+        Me.Label20.AutoSize = True
+        Me.Label20.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.75!, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label20.Location = New System.Drawing.Point(199, 302)
+        Me.Label20.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.Label20.Name = "Label20"
+        Me.Label20.Size = New System.Drawing.Size(0, 31)
+        Me.Label20.TabIndex = 1
+        '
+        'Label30
+        '
+        Me.Label30.AutoSize = True
+        Me.Label30.Font = New System.Drawing.Font("Comic Sans MS", 13.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label30.Location = New System.Drawing.Point(109, 272)
+        Me.Label30.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.Label30.Name = "Label30"
+        Me.Label30.Size = New System.Drawing.Size(175, 33)
+        Me.Label30.TabIndex = 2
+        Me.Label30.Text = "Chan Chin Wei"
+        '
+        'Label21
+        '
+        Me.Label21.AutoSize = True
+        Me.Label21.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.75!, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label21.Location = New System.Drawing.Point(199, 352)
+        Me.Label21.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.Label21.Name = "Label21"
+        Me.Label21.Size = New System.Drawing.Size(0, 31)
+        Me.Label21.TabIndex = 1
         '
         'Panel10
         '
@@ -916,7 +1154,7 @@ Partial Class New_UI
         '
         Me.Label29.AutoSize = True
         Me.Label29.Font = New System.Drawing.Font("Comic Sans MS", 13.8!, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label29.Location = New System.Drawing.Point(22, 266)
+        Me.Label29.Location = New System.Drawing.Point(21, 266)
         Me.Label29.Name = "Label29"
         Me.Label29.Size = New System.Drawing.Size(85, 34)
         Me.Label29.TabIndex = 6
@@ -1005,198 +1243,31 @@ Partial Class New_UI
         Me.PictureBox8.TabIndex = 0
         Me.PictureBox8.TabStop = False
         '
-        'Label20
+        '_vb_net_imdbDataSet
         '
-        Me.Label20.AutoSize = True
-        Me.Label20.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.75!, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label20.Location = New System.Drawing.Point(199, 302)
-        Me.Label20.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
-        Me.Label20.Name = "Label20"
-        Me.Label20.Size = New System.Drawing.Size(0, 31)
-        Me.Label20.TabIndex = 1
+        Me._vb_net_imdbDataSet.DataSetName = "_vb_net_imdbDataSet"
+        Me._vb_net_imdbDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
         '
-        'Label21
+        'VbnetimdbDataSetBindingSource
         '
-        Me.Label21.AutoSize = True
-        Me.Label21.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.75!, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label21.Location = New System.Drawing.Point(199, 352)
-        Me.Label21.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
-        Me.Label21.Name = "Label21"
-        Me.Label21.Size = New System.Drawing.Size(0, 31)
-        Me.Label21.TabIndex = 1
+        Me.VbnetimdbDataSetBindingSource.DataSource = Me._vb_net_imdbDataSet
+        Me.VbnetimdbDataSetBindingSource.Position = 0
         '
-        'Label30
+        '_vb_net_imdbDataSet1
         '
-        Me.Label30.AutoSize = True
-        Me.Label30.Font = New System.Drawing.Font("Comic Sans MS", 13.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label30.Location = New System.Drawing.Point(109, 272)
-        Me.Label30.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
-        Me.Label30.Name = "Label30"
-        Me.Label30.Size = New System.Drawing.Size(175, 33)
-        Me.Label30.TabIndex = 2
-        Me.Label30.Text = "Chan Chin Wei"
-        '
-        'Label31
-        '
-        Me.Label31.AutoSize = True
-        Me.Label31.Font = New System.Drawing.Font("Comic Sans MS", 13.8!, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label31.Location = New System.Drawing.Point(45, 311)
-        Me.Label31.Name = "Label31"
-        Me.Label31.Size = New System.Drawing.Size(66, 34)
-        Me.Label31.TabIndex = 4
-        Me.Label31.Text = "Age:"
-        '
-        'Label32
-        '
-        Me.Label32.AutoSize = True
-        Me.Label32.Font = New System.Drawing.Font("Comic Sans MS", 13.8!, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label32.Location = New System.Drawing.Point(109, 311)
-        Me.Label32.Name = "Label32"
-        Me.Label32.Size = New System.Drawing.Size(41, 34)
-        Me.Label32.TabIndex = 4
-        Me.Label32.Text = "19"
-        '
-        'Label33
-        '
-        Me.Label33.AutoSize = True
-        Me.Label33.Font = New System.Drawing.Font("Comic Sans MS", 13.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label33.Location = New System.Drawing.Point(28, 351)
-        Me.Label33.Name = "Label33"
-        Me.Label33.Size = New System.Drawing.Size(83, 33)
-        Me.Label33.TabIndex = 5
-        Me.Label33.Text = "TP.no:"
-        '
-        'Label34
-        '
-        Me.Label34.AutoSize = True
-        Me.Label34.Font = New System.Drawing.Font("Comic Sans MS", 13.8!, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label34.Location = New System.Drawing.Point(109, 352)
-        Me.Label34.Name = "Label34"
-        Me.Label34.Size = New System.Drawing.Size(130, 34)
-        Me.Label34.TabIndex = 5
-        Me.Label34.Text = "TP051429"
-        '
-        'Label35
-        '
-        Me.Label35.AutoSize = True
-        Me.Label35.Font = New System.Drawing.Font("Comic Sans MS", 13.8!, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label35.Location = New System.Drawing.Point(26, 271)
-        Me.Label35.Name = "Label35"
-        Me.Label35.Size = New System.Drawing.Size(85, 34)
-        Me.Label35.TabIndex = 6
-        Me.Label35.Text = "Name:"
-        '
-        'Label36
-        '
-        Me.Label36.AutoSize = True
-        Me.Label36.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.75!, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label36.Location = New System.Drawing.Point(206, 349)
-        Me.Label36.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
-        Me.Label36.Name = "Label36"
-        Me.Label36.Size = New System.Drawing.Size(0, 31)
-        Me.Label36.TabIndex = 1
-        '
-        'Label37
-        '
-        Me.Label37.AutoSize = True
-        Me.Label37.Font = New System.Drawing.Font("Comic Sans MS", 13.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label37.Location = New System.Drawing.Point(116, 269)
-        Me.Label37.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
-        Me.Label37.Name = "Label37"
-        Me.Label37.Size = New System.Drawing.Size(161, 33)
-        Me.Label37.TabIndex = 2
-        Me.Label37.Text = "Kok Hua Chin"
-        '
-        'Label38
-        '
-        Me.Label38.AutoSize = True
-        Me.Label38.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.75!, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label38.Location = New System.Drawing.Point(206, 299)
-        Me.Label38.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
-        Me.Label38.Name = "Label38"
-        Me.Label38.Size = New System.Drawing.Size(0, 31)
-        Me.Label38.TabIndex = 1
-        '
-        'Label39
-        '
-        Me.Label39.AutoSize = True
-        Me.Label39.Font = New System.Drawing.Font("Comic Sans MS", 13.8!, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label39.Location = New System.Drawing.Point(52, 308)
-        Me.Label39.Name = "Label39"
-        Me.Label39.Size = New System.Drawing.Size(66, 34)
-        Me.Label39.TabIndex = 4
-        Me.Label39.Text = "Age:"
-        '
-        'Label40
-        '
-        Me.Label40.AutoSize = True
-        Me.Label40.Font = New System.Drawing.Font("Comic Sans MS", 13.8!, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label40.Location = New System.Drawing.Point(116, 308)
-        Me.Label40.Name = "Label40"
-        Me.Label40.Size = New System.Drawing.Size(41, 34)
-        Me.Label40.TabIndex = 4
-        Me.Label40.Text = "19"
-        '
-        'Label41
-        '
-        Me.Label41.AutoSize = True
-        Me.Label41.Font = New System.Drawing.Font("Comic Sans MS", 13.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label41.Location = New System.Drawing.Point(35, 348)
-        Me.Label41.Name = "Label41"
-        Me.Label41.Size = New System.Drawing.Size(83, 33)
-        Me.Label41.TabIndex = 5
-        Me.Label41.Text = "TP.no:"
-        '
-        'Label42
-        '
-        Me.Label42.AutoSize = True
-        Me.Label42.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.75!, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label42.Location = New System.Drawing.Point(202, 294)
-        Me.Label42.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
-        Me.Label42.Name = "Label42"
-        Me.Label42.Size = New System.Drawing.Size(0, 31)
-        Me.Label42.TabIndex = 1
-        '
-        'Label43
-        '
-        Me.Label43.AutoSize = True
-        Me.Label43.Font = New System.Drawing.Font("Comic Sans MS", 13.8!, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label43.Location = New System.Drawing.Point(116, 349)
-        Me.Label43.Name = "Label43"
-        Me.Label43.Size = New System.Drawing.Size(126, 34)
-        Me.Label43.TabIndex = 5
-        Me.Label43.Text = "TP051210"
-        '
-        'Label44
-        '
-        Me.Label44.AutoSize = True
-        Me.Label44.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.75!, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label44.Location = New System.Drawing.Point(202, 344)
-        Me.Label44.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
-        Me.Label44.Name = "Label44"
-        Me.Label44.Size = New System.Drawing.Size(0, 31)
-        Me.Label44.TabIndex = 1
-        '
-        'Label45
-        '
-        Me.Label45.AutoSize = True
-        Me.Label45.Font = New System.Drawing.Font("Comic Sans MS", 13.8!, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label45.Location = New System.Drawing.Point(33, 268)
-        Me.Label45.Name = "Label45"
-        Me.Label45.Size = New System.Drawing.Size(85, 34)
-        Me.Label45.TabIndex = 6
-        Me.Label45.Text = "Name:"
+        Me._vb_net_imdbDataSet1.DataSetName = "_vb_net_imdbDataSet"
+        Me._vb_net_imdbDataSet1.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
         '
         'New_UI
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(1595, 868)
+        Me.ClientSize = New System.Drawing.Size(1467, 735)
+        Me.Controls.Add(Me.pnlSearch)
         Me.Controls.Add(Me.pnlAbout)
         Me.Controls.Add(Me.pnlMovie)
         Me.Controls.Add(Me.pnlWelcome)
         Me.Controls.Add(Me.pnlLogin)
-        Me.Controls.Add(Me.pnlSearch)
         Me.Controls.Add(Me.Panel2)
         Me.Controls.Add(Me.Panel1)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
@@ -1209,7 +1280,10 @@ Partial Class New_UI
         Me.Panel3.ResumeLayout(False)
         Me.Panel3.PerformLayout()
         Me.pnlSearch.ResumeLayout(False)
-        Me.pnlSearch.PerformLayout()
+        Me.pnlMainSearch.ResumeLayout(False)
+        Me.pnlMainSearch.PerformLayout()
+        CType(Me.dgvSearchResult, System.ComponentModel.ISupportInitialize).EndInit()
+        Me.pnlAfterSearch.ResumeLayout(False)
         Me.pnlLogin.ResumeLayout(False)
         Me.pnlLogin.PerformLayout()
         Me.pnlWelcome.ResumeLayout(False)
@@ -1237,6 +1311,9 @@ Partial Class New_UI
         Me.Panel10.ResumeLayout(False)
         Me.Panel10.PerformLayout()
         CType(Me.PictureBox8, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me._vb_net_imdbDataSet, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.VbnetimdbDataSetBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me._vb_net_imdbDataSet1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
 
     End Sub
@@ -1250,14 +1327,14 @@ Partial Class New_UI
     Friend WithEvents Button5 As Button
     Friend WithEvents Panel4 As Panel
     Friend WithEvents pnlSearch As Panel
-    Friend WithEvents Label4 As Label
-    Friend WithEvents Label5 As Label
-    Friend WithEvents TextBox2 As TextBox
-    Friend WithEvents Label6 As Label
-    Friend WithEvents Label3 As Label
-    Friend WithEvents TextBox1 As TextBox
-    Friend WithEvents Button6 As Button
-    Friend WithEvents ComboBox1 As ComboBox
+    Friend WithEvents lblSearchTitle As Label
+    Friend WithEvents lblSearchMovieName As Label
+    Friend WithEvents txtSearchName As TextBox
+    Friend WithEvents lblSearchGenre As Label
+    Friend WithEvents lblSearchYear As Label
+    Friend WithEvents txtSearchYear As TextBox
+    Friend WithEvents btnSearch As Button
+    Friend WithEvents txtSearchGenre As ComboBox
     Friend WithEvents pnlLogin As Panel
     Friend WithEvents Label7 As Label
     Friend WithEvents Label9 As Label
@@ -1329,4 +1406,11 @@ Partial Class New_UI
     Friend WithEvents Label20 As Label
     Friend WithEvents Label30 As Label
     Friend WithEvents Label21 As Label
+    Friend WithEvents pnlMainSearch As Panel
+    Friend WithEvents pnlAfterSearch As Panel
+    Friend WithEvents btnBack As Button
+    Friend WithEvents _vb_net_imdbDataSet As _vb_net_imdbDataSet
+    Friend WithEvents VbnetimdbDataSetBindingSource As BindingSource
+    Friend WithEvents dgvSearchResult As DataGridView
+    Friend WithEvents _vb_net_imdbDataSet1 As _vb_net_imdbDataSet
 End Class
