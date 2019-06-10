@@ -41,6 +41,9 @@ Partial Class New_UI
         Me.Button2 = New System.Windows.Forms.Button()
         Me.Button1 = New System.Windows.Forms.Button()
         Me.pnlSearch = New System.Windows.Forms.Panel()
+        Me.pnlAfterSearch = New System.Windows.Forms.Panel()
+        Me.dgvSearchResult = New System.Windows.Forms.DataGridView()
+        Me.btnBack = New System.Windows.Forms.Button()
         Me.pnlMainSearch = New System.Windows.Forms.Panel()
         Me.btnSearch = New System.Windows.Forms.Button()
         Me.txtSearchName = New System.Windows.Forms.TextBox()
@@ -49,10 +52,7 @@ Partial Class New_UI
         Me.lblSearchYear = New System.Windows.Forms.Label()
         Me.lblSearchGenre = New System.Windows.Forms.Label()
         Me.lblSearchTitle = New System.Windows.Forms.Label()
-        Me.txtSearchGenre = New System.Windows.Forms.ComboBox()
-        Me.dgvSearchResult = New System.Windows.Forms.DataGridView()
-        Me.pnlAfterSearch = New System.Windows.Forms.Panel()
-        Me.btnBack = New System.Windows.Forms.Button()
+        Me.cbxSearchGenre = New System.Windows.Forms.ComboBox()
         Me.pnlLogin = New System.Windows.Forms.Panel()
         Me.Button7 = New System.Windows.Forms.Button()
         Me.Label7 = New System.Windows.Forms.Label()
@@ -122,9 +122,9 @@ Partial Class New_UI
         Me.Panel1.SuspendLayout()
         Me.Panel3.SuspendLayout()
         Me.pnlSearch.SuspendLayout()
-        Me.pnlMainSearch.SuspendLayout()
-        CType(Me.dgvSearchResult, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.pnlAfterSearch.SuspendLayout()
+        CType(Me.dgvSearchResult, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.pnlMainSearch.SuspendLayout()
         Me.pnlLogin.SuspendLayout()
         Me.pnlWelcome.SuspendLayout()
         CType(Me.PictureBox4, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -407,13 +407,45 @@ Partial Class New_UI
         '
         'pnlSearch
         '
-        Me.pnlSearch.Controls.Add(Me.pnlAfterSearch)
         Me.pnlSearch.Controls.Add(Me.pnlMainSearch)
+        Me.pnlSearch.Controls.Add(Me.pnlAfterSearch)
         Me.pnlSearch.Location = New System.Drawing.Point(268, 55)
         Me.pnlSearch.Margin = New System.Windows.Forms.Padding(0)
         Me.pnlSearch.Name = "pnlSearch"
         Me.pnlSearch.Size = New System.Drawing.Size(1141, 661)
         Me.pnlSearch.TabIndex = 3
+        '
+        'pnlAfterSearch
+        '
+        Me.pnlAfterSearch.Controls.Add(Me.dgvSearchResult)
+        Me.pnlAfterSearch.Controls.Add(Me.btnBack)
+        Me.pnlAfterSearch.Location = New System.Drawing.Point(0, 0)
+        Me.pnlAfterSearch.Margin = New System.Windows.Forms.Padding(4)
+        Me.pnlAfterSearch.Name = "pnlAfterSearch"
+        Me.pnlAfterSearch.Size = New System.Drawing.Size(1137, 602)
+        Me.pnlAfterSearch.TabIndex = 4
+        '
+        'dgvSearchResult
+        '
+        Me.dgvSearchResult.AllowUserToAddRows = False
+        Me.dgvSearchResult.AllowUserToDeleteRows = False
+        Me.dgvSearchResult.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
+        Me.dgvSearchResult.Location = New System.Drawing.Point(39, 97)
+        Me.dgvSearchResult.Name = "dgvSearchResult"
+        Me.dgvSearchResult.ReadOnly = True
+        Me.dgvSearchResult.RowTemplate.Height = 24
+        Me.dgvSearchResult.Size = New System.Drawing.Size(1041, 467)
+        Me.dgvSearchResult.TabIndex = 1
+        '
+        'btnBack
+        '
+        Me.btnBack.Location = New System.Drawing.Point(39, 30)
+        Me.btnBack.Margin = New System.Windows.Forms.Padding(4)
+        Me.btnBack.Name = "btnBack"
+        Me.btnBack.Size = New System.Drawing.Size(183, 60)
+        Me.btnBack.TabIndex = 0
+        Me.btnBack.Text = "Back Button"
+        Me.btnBack.UseVisualStyleBackColor = True
         '
         'pnlMainSearch
         '
@@ -424,7 +456,7 @@ Partial Class New_UI
         Me.pnlMainSearch.Controls.Add(Me.lblSearchYear)
         Me.pnlMainSearch.Controls.Add(Me.lblSearchGenre)
         Me.pnlMainSearch.Controls.Add(Me.lblSearchTitle)
-        Me.pnlMainSearch.Controls.Add(Me.txtSearchGenre)
+        Me.pnlMainSearch.Controls.Add(Me.cbxSearchGenre)
         Me.pnlMainSearch.Location = New System.Drawing.Point(12, 10)
         Me.pnlMainSearch.Margin = New System.Windows.Forms.Padding(4)
         Me.pnlMainSearch.Name = "pnlMainSearch"
@@ -505,47 +537,15 @@ Partial Class New_UI
         Me.lblSearchTitle.TabIndex = 1
         Me.lblSearchTitle.Text = "Search by Movie "
         '
-        'txtSearchGenre
+        'cbxSearchGenre
         '
-        Me.txtSearchGenre.Font = New System.Drawing.Font("Microsoft Sans Serif", 20.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txtSearchGenre.FormattingEnabled = True
-        Me.txtSearchGenre.Location = New System.Drawing.Point(236, 251)
-        Me.txtSearchGenre.Margin = New System.Windows.Forms.Padding(4)
-        Me.txtSearchGenre.Name = "txtSearchGenre"
-        Me.txtSearchGenre.Size = New System.Drawing.Size(385, 47)
-        Me.txtSearchGenre.TabIndex = 2
-        '
-        'dgvSearchResult
-        '
-        Me.dgvSearchResult.AllowUserToAddRows = False
-        Me.dgvSearchResult.AllowUserToDeleteRows = False
-        Me.dgvSearchResult.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.dgvSearchResult.Location = New System.Drawing.Point(39, 97)
-        Me.dgvSearchResult.Name = "dgvSearchResult"
-        Me.dgvSearchResult.ReadOnly = True
-        Me.dgvSearchResult.RowTemplate.Height = 24
-        Me.dgvSearchResult.Size = New System.Drawing.Size(1041, 467)
-        Me.dgvSearchResult.TabIndex = 1
-        '
-        'pnlAfterSearch
-        '
-        Me.pnlAfterSearch.Controls.Add(Me.dgvSearchResult)
-        Me.pnlAfterSearch.Controls.Add(Me.btnBack)
-        Me.pnlAfterSearch.Location = New System.Drawing.Point(0, 0)
-        Me.pnlAfterSearch.Margin = New System.Windows.Forms.Padding(4)
-        Me.pnlAfterSearch.Name = "pnlAfterSearch"
-        Me.pnlAfterSearch.Size = New System.Drawing.Size(1137, 602)
-        Me.pnlAfterSearch.TabIndex = 4
-        '
-        'btnBack
-        '
-        Me.btnBack.Location = New System.Drawing.Point(39, 30)
-        Me.btnBack.Margin = New System.Windows.Forms.Padding(4)
-        Me.btnBack.Name = "btnBack"
-        Me.btnBack.Size = New System.Drawing.Size(183, 60)
-        Me.btnBack.TabIndex = 0
-        Me.btnBack.Text = "Back Button"
-        Me.btnBack.UseVisualStyleBackColor = True
+        Me.cbxSearchGenre.Font = New System.Drawing.Font("Microsoft Sans Serif", 20.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.cbxSearchGenre.FormattingEnabled = True
+        Me.cbxSearchGenre.Location = New System.Drawing.Point(236, 251)
+        Me.cbxSearchGenre.Margin = New System.Windows.Forms.Padding(4)
+        Me.cbxSearchGenre.Name = "cbxSearchGenre"
+        Me.cbxSearchGenre.Size = New System.Drawing.Size(385, 47)
+        Me.cbxSearchGenre.TabIndex = 2
         '
         'pnlLogin
         '
@@ -1280,10 +1280,10 @@ Partial Class New_UI
         Me.Panel3.ResumeLayout(False)
         Me.Panel3.PerformLayout()
         Me.pnlSearch.ResumeLayout(False)
+        Me.pnlAfterSearch.ResumeLayout(False)
+        CType(Me.dgvSearchResult, System.ComponentModel.ISupportInitialize).EndInit()
         Me.pnlMainSearch.ResumeLayout(False)
         Me.pnlMainSearch.PerformLayout()
-        CType(Me.dgvSearchResult, System.ComponentModel.ISupportInitialize).EndInit()
-        Me.pnlAfterSearch.ResumeLayout(False)
         Me.pnlLogin.ResumeLayout(False)
         Me.pnlLogin.PerformLayout()
         Me.pnlWelcome.ResumeLayout(False)
@@ -1334,7 +1334,7 @@ Partial Class New_UI
     Friend WithEvents lblSearchYear As Label
     Friend WithEvents txtSearchYear As TextBox
     Friend WithEvents btnSearch As Button
-    Friend WithEvents txtSearchGenre As ComboBox
+    Friend WithEvents cbxSearchGenre As ComboBox
     Friend WithEvents pnlLogin As Panel
     Friend WithEvents Label7 As Label
     Friend WithEvents Label9 As Label
