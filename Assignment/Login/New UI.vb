@@ -67,14 +67,18 @@ Public Class New_UI
 
     Private Sub Search_button(sender As Object, e As EventArgs) Handles btnpnlSearch.Click
         pnlWelcome.Visible = False
-        pnlSearch.Visible = True
         pnlMovie.Visible = False
         pnlLogin.Visible = False
         pnlAbout.Visible = False
-        pnlAfterSearch.Visible = False
-        pnlMovieSearch.Visible = True
-        pnlPreSearch.Visible = True
 
+        pnlSearch.Visible = True
+        pnlPreSearch.Visible = True
+        pnlMovieSearch.Visible = False
+        pnlAfterSearch.Visible = False
+        pnlFilterMovieTV.Visible = False
+        pnlFilterTV.Visible = False
+        lblFilterOptions.Visible = False
+        btnPreSearchNext.Visible = False
     End Sub
 
     Private Sub btnpnlLogin_Click(sender As Object, e As EventArgs) Handles btnpnlLogin.Click
@@ -152,9 +156,10 @@ Public Class New_UI
     Private Sub btnSearch_Click(sender As Object, e As EventArgs) Handles btnSearch.Click
         'Connected 
         ''Con = New SqlConnection
-        Dim rowcount As Integer
-        Dim con As New SqlConnection("Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\ryuko\Desktop\VB.Net\vb.net imdb.mdf;Integrated Security=True;Connect Timeout=30")
-        rowcount = 100
+        'Dim rowcount As Integer
+        Dim con As New SqlConnection("Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=D:\Program Files\Microsoft SQL Server\MSSQL13.SQLEXP2016\MSSQL\DATA\vb.net imdb.mdf;Integrated Security=True;Connect Timeout=30")
+        'rowcount = 100
+
         Dim cmd As New SqlCommand(" SELECT TOP 200 primaryTitle as 'Movie Title', startYear as 'Start Year', endYear as 'End Year', runtimeMinutes as 'Runtime Minute', genres as Genres
                                     FROM [title.basics]
                                     WHERE primaryTitle LIKE'%" & txtMSearchName.Text & "%'
@@ -184,28 +189,269 @@ Public Class New_UI
         pnlMovieSearch.Visible = False
         pnlAfterSearch.Visible = True
         pnlPreSearch.Visible = False
-        Temp.Visible = False
-    End Sub
-
-    Private Sub dgvSearchResult_CellContentClick(sender As Object, e As DataGridViewCellEventArgs)
-
-    End Sub
-
-    Private Sub DataGridView1_CellContentClick(sender As Object, e As DataGridViewCellEventArgs) Handles dgvSearchResult.CellContentClick
-
     End Sub
 
     Private Sub btnBack_Click(sender As Object, e As EventArgs) Handles btnBack.Click
         pnlAfterSearch.Visible = False
         pnlMovieSearch.Visible = True
         pnlPreSearch.Visible = True
-    End Sub
-
-    Private Sub cbxSearchGenre_SelectedIndexChanged(sender As Object, e As EventArgs) Handles cboSearchGenre.SelectedIndexChanged
 
     End Sub
+    'Filter Types
+    Private Sub CbFilterMovie_CheckedChanged(sender As Object, e As EventArgs) Handles cbFilterMovie.CheckedChanged
+        If cbFilterMovie.CheckState = 1 Then
+            cbFilterActors.Enabled = False
+            cbFilterTV.Enabled = False
+            cbSeasonNum.Enabled = False
+            cbEpisodeNum.Enabled = False
+            cbTotalVotes.Enabled = False
+            cbFEYear.Enabled = False
+            lblSearchTips.Visible = False
+            lblFilterOptions.Visible = True
+            pnlFilterMovieTV.Visible = True
+            btnPreSearchNext.Visible = True
 
-    Private Sub lblSearchTitle_Click(sender As Object, e As EventArgs)
+        Else
+            cbFilterTV.Enabled = True
+            cbFilterActors.Enabled = True
+            cbSeasonNum.Enabled = True
+            cbEpisodeNum.Enabled = True
+            cbTotalVotes.Enabled = False
+            cbFEYear.Enabled = False
+            lblSearchTips.Visible = True
+            lblFilterOptions.Visible = False
+            pnlFilterMovieTV.Visible = False
+            btnPreSearchNext.Visible = False
+        End If
+    End Sub
+    Private Sub CbFilterTV_CheckedChanged(sender As Object, e As EventArgs) Handles cbFilterTV.CheckedChanged
+        If cbFilterTV.CheckState = 1 Then
+            cbFilterActors.Enabled = False
+            cbFilterMovie.Enabled = False
+            lblSearchTips.Visible = False
+            lblFilterOptions.Visible = True
+            cbTotalVotes.Enabled = False
+            cbFEYear.Enabled = False
+            cbEpisodeNum.Enabled = False
+            pnlFilterMovieTV.Visible = True
+            pnlFilterTV.Visible = True
+            btnPreSearchNext.Visible = True
+        Else
+            cbFilterActors.Enabled = True
+            cbFilterMovie.Enabled = True
+            lblSearchTips.Visible = True
+            cbTotalVotes.Enabled = False
+            cbFEYear.Enabled = False
+            cbEpisodeNum.Enabled = False
+            lblFilterOptions.Visible = False
+            pnlFilterMovieTV.Visible = False
+            pnlFilterTV.Visible = False
+            btnPreSearchNext.Visible = False
+        End If
+    End Sub
+    Private Sub CbFilterActors_CheckedChanged(sender As Object, e As EventArgs) Handles cbFilterActors.CheckedChanged
+        If cbFilterActors.CheckState = 1 Then
+            cbFilterMovie.Enabled = False
+            cbFilterTV.Enabled = False
+            btnPreSearchNext.Visible = True
+        Else
+            cbFilterTV.Enabled = True
+            cbFilterMovie.Enabled = True
+            btnPreSearchNext.Visible = False
+        End If
+    End Sub
+    'Filter Options Settings
+    Private Sub CbAdult_CheckedChanged(sender As Object, e As EventArgs) Handles cbAdult.CheckedChanged
+        If cbAdult.CheckState = 1 Then
+            cbEveryone.Enabled = False
+        Else
+            cbEveryone.Enabled = True
+        End If
+    End Sub
+    Private Sub CbEveryone_CheckedChanged(sender As Object, e As EventArgs) Handles cbEveryone.CheckedChanged
+        If cbEveryone.CheckState = 1 Then
+            cbAdult.Enabled = False
+        Else
+            cbAdult.Enabled = True
+        End If
+    End Sub
+    Private Sub CbRating_CheckedChanged(sender As Object, e As EventArgs) Handles cbRating.CheckedChanged
+        If cbRating.Checked Then
+            cbTotalVotes.Enabled = True
+        Else
+            cbTotalVotes.Enabled = False
+            cbTotalVotes.CheckState = 0
+        End If
+    End Sub
+    Private Sub CbFSYear_CheckedChanged(sender As Object, e As EventArgs) Handles cbFSYear.CheckedChanged
+        If cbFSYear.Checked Then
+            cbFEYear.Enabled = True
+        Else
+            cbFEYear.Enabled = False
+            cbFEYear.CheckState = 0
+        End If
+    End Sub
+    Private Sub CbSeasonNum_CheckedChanged(sender As Object, e As EventArgs) Handles cbSeasonNum.CheckedChanged
+        If cbSeasonNum.Checked Then
+            cbEpisodeNum.Enabled = True
+        Else
+            cbEpisodeNum.Enabled = False
+            cbEpisodeNum.Checked = 0
+        End If
+    End Sub
+
+    'Ignore below until further notice
+    Private Sub BtnPreSearchNext_Click(sender As Object, e As EventArgs) Handles btnPreSearchNext.Click
+        If cbFilterMovie.Checked Then
+            pnlPreSearch.Visible = False
+            pnlMovieSearch.Visible = True
+            'None Selected
+            If cbFSYear.CheckState = 0 And cbFEYear.CheckState = 0 And cbFGenre.CheckState = 0 And cbFRtM.CheckState = 0 And cbRating.CheckState = 0 And cbTotalVotes.CheckState = 0 Then
+
+            End If
+            '6 Basic
+            If cbFSYear.CheckState = 1 And cbFEYear.CheckState = 0 And cbFGenre.CheckState = 0 And cbFRtM.CheckState = 0 And cbRating.CheckState = 0 And cbTotalVotes.CheckState = 0 Then
+
+            End If
+            If cbFSYear.CheckState = 0 And cbFEYear.CheckState = 0 And cbFGenre.CheckState = 0 And cbFRtM.CheckState = 1 And cbRating.CheckState = 0 And cbTotalVotes.CheckState = 0 Then
+
+            End If
+            If cbFSYear.CheckState = 0 And cbFEYear.CheckState = 0 And cbFGenre.CheckState = 1 And cbFRtM.CheckState = 0 And cbRating.CheckState = 0 And cbTotalVotes.CheckState = 0 Then
+
+            End If
+            If cbFSYear.CheckState = 0 And cbFEYear.CheckState = 0 And cbFGenre.CheckState = 0 And cbFRtM.CheckState = 0 And cbRating.CheckState = 1 And cbTotalVotes.CheckState = 0 Then
+
+            End If
+            If cbFSYear.CheckState = 1 And cbFEYear.CheckState = 1 And cbFGenre.CheckState = 0 And cbFRtM.CheckState = 0 And cbRating.CheckState = 0 And cbTotalVotes.CheckState = 0 Then
+
+            End If
+            If cbFSYear.CheckState = 0 And cbFEYear.CheckState = 0 And cbFGenre.CheckState = 0 And cbFRtM.CheckState = 0 And cbRating.CheckState = 1 And cbTotalVotes.CheckState = 1 Then
+
+            End If
+            '4 Mixed w SYear
+            If cbFSYear.CheckState = 1 And cbFEYear.CheckState = 0 And cbFGenre.CheckState = 0 And cbFRtM.CheckState = 1 And cbRating.CheckState = 0 And cbTotalVotes.CheckState = 0 Then
+
+            End If
+            If cbFSYear.CheckState = 1 And cbFEYear.CheckState = 0 And cbFGenre.CheckState = 1 And cbFRtM.CheckState = 0 And cbRating.CheckState = 0 And cbTotalVotes.CheckState = 0 Then
+
+            End If
+            If cbFSYear.CheckState = 1 And cbFEYear.CheckState = 0 And cbFGenre.CheckState = 0 And cbFRtM.CheckState = 0 And cbRating.CheckState = 1 And cbTotalVotes.CheckState = 0 Then
+
+            End If
+            If cbFSYear.CheckState = 1 And cbFEYear.CheckState = 0 And cbFGenre.CheckState = 0 And cbFRtM.CheckState = 0 And cbRating.CheckState = 1 And cbTotalVotes.CheckState = 1 Then
+
+            End If
+            '4 Mixed w SYear2
+            If cbFSYear.CheckState = 1 And cbFEYear.CheckState = 1 And cbFGenre.CheckState = 0 And cbFRtM.CheckState = 1 And cbRating.CheckState = 0 And cbTotalVotes.CheckState = 0 Then
+
+            End If
+            If cbFSYear.CheckState = 1 And cbFEYear.CheckState = 1 And cbFGenre.CheckState = 1 And cbFRtM.CheckState = 0 And cbRating.CheckState = 0 And cbTotalVotes.CheckState = 0 Then
+
+            End If
+            If cbFSYear.CheckState = 1 And cbFEYear.CheckState = 1 And cbFGenre.CheckState = 0 And cbFRtM.CheckState = 0 And cbRating.CheckState = 1 And cbTotalVotes.CheckState = 0 Then
+
+            End If
+            If cbFSYear.CheckState = 1 And cbFEYear.CheckState = 1 And cbFGenre.CheckState = 0 And cbFRtM.CheckState = 0 And cbRating.CheckState = 1 And cbTotalVotes.CheckState = 1 Then
+
+            End If
+            '3 Mixed w RTM
+            If cbFSYear.CheckState = 0 And cbFEYear.CheckState = 0 And cbFGenre.CheckState = 1 And cbFRtM.CheckState = 1 And cbRating.CheckState = 0 And cbTotalVotes.CheckState = 0 Then
+
+            End If
+            If cbFSYear.CheckState = 0 And cbFEYear.CheckState = 0 And cbFGenre.CheckState = 0 And cbFRtM.CheckState = 1 And cbRating.CheckState = 1 And cbTotalVotes.CheckState = 0 Then
+
+            End If
+            If cbFSYear.CheckState = 0 And cbFEYear.CheckState = 0 And cbFGenre.CheckState = 0 And cbFRtM.CheckState = 1 And cbRating.CheckState = 1 And cbTotalVotes.CheckState = 1 Then
+
+            End If
+            '2 Mixed w Genre
+            If cbFSYear.CheckState = 0 And cbFEYear.CheckState = 0 And cbFGenre.CheckState = 1 And cbFRtM.CheckState = 0 And cbRating.CheckState = 1 And cbTotalVotes.CheckState = 0 Then
+
+            End If
+            If cbFSYear.CheckState = 0 And cbFEYear.CheckState = 0 And cbFGenre.CheckState = 1 And cbFRtM.CheckState = 0 And cbRating.CheckState = 1 And cbTotalVotes.CheckState = 1 Then
+
+            End If
+            'Triple
+        End If
+
+        If cbFilterActors.Checked Then
+            pnlPreSearch.Visible = False
+            'pnlActorSearch.Visible = True - To Be Implemented
+            'None Selected
+            If cbSeasonNum.CheckState = 0 And cbEpisodeNum.CheckState = 0 And cbFSYear.CheckState = 0 And cbFEYear.CheckState = 0 And cbFGenre.CheckState = 0 And cbFRtM.CheckState = 0 And cbRating.CheckState = 0 And cbTotalVotes.CheckState = 0 Then
+
+            End If
+            '6 Basic
+            If cbSeasonNum.CheckState = 0 And cbEpisodeNum.CheckState = 0 And cbFSYear.CheckState = 1 And cbFEYear.CheckState = 0 And cbFGenre.CheckState = 0 And cbFRtM.CheckState = 0 And cbRating.CheckState = 0 And cbTotalVotes.CheckState = 0 Then
+
+            End If
+            If cbSeasonNum.CheckState = 0 And cbEpisodeNum.CheckState = 0 And cbFSYear.CheckState = 0 And cbFEYear.CheckState = 0 And cbFGenre.CheckState = 0 And cbFRtM.CheckState = 1 And cbRating.CheckState = 0 And cbTotalVotes.CheckState = 0 Then
+
+            End If
+            If cbSeasonNum.CheckState = 0 And cbEpisodeNum.CheckState = 0 And cbFSYear.CheckState = 0 And cbFEYear.CheckState = 0 And cbFGenre.CheckState = 1 And cbFRtM.CheckState = 0 And cbRating.CheckState = 0 And cbTotalVotes.CheckState = 0 Then
+
+            End If
+            If cbSeasonNum.CheckState = 0 And cbEpisodeNum.CheckState = 0 And cbFSYear.CheckState = 0 And cbFEYear.CheckState = 0 And cbFGenre.CheckState = 0 And cbFRtM.CheckState = 0 And cbRating.CheckState = 1 And cbTotalVotes.CheckState = 0 Then
+
+            End If
+            If cbSeasonNum.CheckState = 0 And cbEpisodeNum.CheckState = 0 And cbFSYear.CheckState = 1 And cbFEYear.CheckState = 1 And cbFGenre.CheckState = 0 And cbFRtM.CheckState = 0 And cbRating.CheckState = 0 And cbTotalVotes.CheckState = 0 Then
+
+            End If
+            If cbSeasonNum.CheckState = 0 And cbEpisodeNum.CheckState = 0 And cbFSYear.CheckState = 0 And cbFEYear.CheckState = 0 And cbFGenre.CheckState = 0 And cbFRtM.CheckState = 0 And cbRating.CheckState = 1 And cbTotalVotes.CheckState = 1 Then
+
+            End If
+            '4 Mixed w SYear
+            If cbSeasonNum.CheckState = 0 And cbEpisodeNum.CheckState = 0 And cbFSYear.CheckState = 1 And cbFEYear.CheckState = 0 And cbFGenre.CheckState = 0 And cbFRtM.CheckState = 1 And cbRating.CheckState = 0 And cbTotalVotes.CheckState = 0 Then
+
+            End If
+            If cbSeasonNum.CheckState = 0 And cbEpisodeNum.CheckState = 0 And cbFSYear.CheckState = 1 And cbFEYear.CheckState = 0 And cbFGenre.CheckState = 1 And cbFRtM.CheckState = 0 And cbRating.CheckState = 0 And cbTotalVotes.CheckState = 0 Then
+
+            End If
+            If cbSeasonNum.CheckState = 0 And cbEpisodeNum.CheckState = 0 And cbFSYear.CheckState = 1 And cbFEYear.CheckState = 0 And cbFGenre.CheckState = 0 And cbFRtM.CheckState = 0 And cbRating.CheckState = 1 And cbTotalVotes.CheckState = 0 Then
+
+            End If
+            If cbSeasonNum.CheckState = 0 And cbEpisodeNum.CheckState = 0 And cbFSYear.CheckState = 1 And cbFEYear.CheckState = 0 And cbFGenre.CheckState = 0 And cbFRtM.CheckState = 0 And cbRating.CheckState = 1 And cbTotalVotes.CheckState = 1 Then
+
+            End If
+            '4 Mixed w SYear2
+            If cbSeasonNum.CheckState = 0 And cbEpisodeNum.CheckState = 0 And cbFSYear.CheckState = 1 And cbFEYear.CheckState = 1 And cbFGenre.CheckState = 0 And cbFRtM.CheckState = 1 And cbRating.CheckState = 0 And cbTotalVotes.CheckState = 0 Then
+
+            End If
+            If cbSeasonNum.CheckState = 0 And cbEpisodeNum.CheckState = 0 And cbFSYear.CheckState = 1 And cbFEYear.CheckState = 1 And cbFGenre.CheckState = 1 And cbFRtM.CheckState = 0 And cbRating.CheckState = 0 And cbTotalVotes.CheckState = 0 Then
+
+            End If
+            If cbSeasonNum.CheckState = 0 And cbEpisodeNum.CheckState = 0 And cbFSYear.CheckState = 1 And cbFEYear.CheckState = 1 And cbFGenre.CheckState = 0 And cbFRtM.CheckState = 0 And cbRating.CheckState = 1 And cbTotalVotes.CheckState = 0 Then
+
+            End If
+            If cbSeasonNum.CheckState = 0 And cbEpisodeNum.CheckState = 0 And cbFSYear.CheckState = 1 And cbFEYear.CheckState = 1 And cbFGenre.CheckState = 0 And cbFRtM.CheckState = 0 And cbRating.CheckState = 1 And cbTotalVotes.CheckState = 1 Then
+
+            End If
+            '3 Mixed w RTM
+            If cbSeasonNum.CheckState = 0 And cbEpisodeNum.CheckState = 0 And cbFSYear.CheckState = 0 And cbFEYear.CheckState = 0 And cbFGenre.CheckState = 1 And cbFRtM.CheckState = 1 And cbRating.CheckState = 0 And cbTotalVotes.CheckState = 0 Then
+
+            End If
+            If cbSeasonNum.CheckState = 0 And cbEpisodeNum.CheckState = 0 And cbFSYear.CheckState = 0 And cbFEYear.CheckState = 0 And cbFGenre.CheckState = 0 And cbFRtM.CheckState = 1 And cbRating.CheckState = 1 And cbTotalVotes.CheckState = 0 Then
+
+            End If
+            If cbSeasonNum.CheckState = 0 And cbEpisodeNum.CheckState = 0 And cbFSYear.CheckState = 0 And cbFEYear.CheckState = 0 And cbFGenre.CheckState = 0 And cbFRtM.CheckState = 1 And cbRating.CheckState = 1 And cbTotalVotes.CheckState = 1 Then
+
+            End If
+            '2 Mixed w Genre
+            If cbSeasonNum.CheckState = 0 And cbEpisodeNum.CheckState = 0 And cbFSYear.CheckState = 0 And cbFEYear.CheckState = 0 And cbFGenre.CheckState = 1 And cbFRtM.CheckState = 0 And cbRating.CheckState = 1 And cbTotalVotes.CheckState = 0 Then
+
+            End If
+            If cbSeasonNum.CheckState = 0 And cbEpisodeNum.CheckState = 0 And cbFSYear.CheckState = 0 And cbFEYear.CheckState = 0 And cbFGenre.CheckState = 1 And cbFRtM.CheckState = 0 And cbRating.CheckState = 1 And cbTotalVotes.CheckState = 1 Then
+
+            End If
+            If cbSeasonNum.CheckState = 0 And cbEpisodeNum.CheckState = 0 And cbFSYear.CheckState = 0 And cbFEYear.CheckState = 0 And cbFGenre.CheckState = 0 And cbFRtM.CheckState = 0 And cbRating.CheckState = 0 And cbTotalVotes.CheckState = 0 Then
+
+            End If
+        End If
+
+        If cbFilterTV.Checked Then
+            pnlPreSearch.Visible = False
+            'pnlTVSearch.Visible = True - To Be Implemented
+        End If
 
     End Sub
 End Class
