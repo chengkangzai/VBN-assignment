@@ -454,4 +454,25 @@ Public Class home
         End If
 
     End Sub
+
+    Dim drag As Boolean = False
+    Dim mousex As Integer
+    Dim mousey As Integer
+    ' REF: https://www.dreamincode.net/forums/topic/135768-moving-a-borderless-form/
+    Private Sub Panel2_MouseDown(sender As Object, e As MouseEventArgs) Handles Panel2.MouseDown
+        drag = True
+        mousex = Windows.Forms.Cursor.Position.X - Me.Left
+        mousey = Windows.Forms.Cursor.Position.Y - Me.Top
+    End Sub
+
+    Private Sub Panel2_MouseMove(sender As Object, e As MouseEventArgs) Handles Panel2.MouseMove
+        If drag = True Then
+            Me.Top = Windows.Forms.Cursor.Position.Y - mousey
+            Me.Left = Windows.Forms.Cursor.Position.X - mousex
+        End If
+    End Sub
+
+    Private Sub Panel2_MouseUp(sender As Object, e As MouseEventArgs) Handles Panel2.MouseUp
+        drag = False
+    End Sub
 End Class
