@@ -456,6 +456,7 @@ Public Class New_UI
     End Sub
 
     'Make Panel 2 dragable
+    'REf: https://www.dreamincode.net/forums/topic/135768-moving-a-borderless-form/
     Dim drag As Boolean
     Dim mousex As Integer
     Dim mousey As Integer
