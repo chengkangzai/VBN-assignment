@@ -73,6 +73,12 @@
     <Import Include="System.Threading.Tasks" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="LoginRegister.Designer.vb">
+      <DependentUpon>LoginRegister.vb</DependentUpon>
+    </Compile>
+    <Compile Include="LoginRegister.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="My Project\AssemblyInfo.vb" />
     <Compile Include="My Project\Application.Designer.vb">
       <AutoGen>True</AutoGen>
@@ -88,10 +94,10 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
-    <Compile Include="New UI.Designer.vb">
-      <DependentUpon>New UI.vb</DependentUpon>
+    <Compile Include="home.Designer.vb">
+      <DependentUpon>home.vb</DependentUpon>
     </Compile>
-    <Compile Include="New UI.vb">
+    <Compile Include="home.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="_vb_net_imdbDataSet.Designer.vb">
@@ -101,14 +107,17 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
+    <EmbeddedResource Include="LoginRegister.resx">
+      <DependentUpon>LoginRegister.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="My Project\Resources.resx">
       <Generator>VbMyResourcesResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.vb</LastGenOutput>
       <CustomToolNamespace>My.Resources</CustomToolNamespace>
       <SubType>Designer</SubType>
     </EmbeddedResource>
-    <EmbeddedResource Include="New UI.resx">
-      <DependentUpon>New UI.vb</DependentUpon>
+    <EmbeddedResource Include="home.resx">
+      <DependentUpon>home.vb</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>

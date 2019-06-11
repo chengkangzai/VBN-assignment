@@ -1,6 +1,6 @@
 ﻿Imports System.Data.SqlClient
 
-Public Class New_UI
+Public Class home
     'Maximize and Minimize or close
 
     'Data Source Below
