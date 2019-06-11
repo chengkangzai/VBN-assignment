@@ -1,6 +1,6 @@
 ﻿Imports System.Data.SqlClient
 
-Public Class New_UI
+Public Class home
     'Maximize and Minimize or close
 
     'Data Source Below
@@ -157,7 +157,7 @@ Public Class New_UI
         'Connected 
         ''Con = New SqlConnection
         'Dim rowcount As Integer
-        Dim con As New SqlConnection("Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\ASUS\OneDrive - Asia Pacific University\SynologyDrive\APU SEM 3\VBN - Visual Basic.NET\04 Assignment\DB\VBN Imdb.mdf;Integrated Security=True;Connect Timeout=30")
+        Dim con As New SqlConnection("Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=D:\Program Files\Microsoft SQL Server\MSSQL13.SQLEXP2016\MSSQL\DATA\vb.net imdb.mdf;Integrated Security=True;Connect Timeout=30")
         'rowcount = 100
 
         Dim cmd As New SqlCommand(" SELECT TOP 200 primaryTitle as 'Movie Title', startYear as 'Start Year', endYear as 'End Year', runtimeMinutes as 'Runtime Minute', genres as Genres
@@ -453,28 +453,5 @@ Public Class New_UI
             'pnlTVSearch.Visible = True - To Be Implemented
         End If
 
-    End Sub
-
-    'Make Panel 2 dragable
-    'REf: https://www.dreamincode.net/forums/topic/135768-moving-a-borderless-form/
-    Dim drag As Boolean
-    Dim mousex As Integer
-    Dim mousey As Integer
-
-    Private Sub New_UI_MouseDown(sender As Object, e As MouseEventArgs) Handles Panel2.MouseDown
-        drag = True
-        mousex = Windows.Forms.Cursor.Position.X - Me.Left
-        mousey = Windows.Forms.Cursor.Position.Y - Me.Top
-    End Sub
-
-    Private Sub New_UI_MouseMove(sender As Object, e As MouseEventArgs) Handles Panel2.MouseMove
-        If drag = True Then
-            Me.Top = Windows.Forms.Cursor.Position.Y - mousey
-            Me.Left = Windows.Forms.Cursor.Position.X - mousex
-        End If
-    End Sub
-
-    Private Sub New_UI_MouseUp(sender As Object, e As MouseEventArgs) Handles Panel2.MouseUp
-        drag = False
     End Sub
 End Class
