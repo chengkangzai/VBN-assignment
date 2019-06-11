@@ -452,7 +452,7 @@ Partial Class home
         Me.pnlPreSearch.Controls.Add(Me.pnlFilterMovieTV)
         Me.pnlPreSearch.Controls.Add(Me.pnlFilterTV)
         Me.pnlPreSearch.Location = New System.Drawing.Point(0, 0)
-        Me.pnlPreSearch.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.pnlPreSearch.Margin = New System.Windows.Forms.Padding(2)
         Me.pnlPreSearch.Name = "pnlPreSearch"
         Me.pnlPreSearch.Size = New System.Drawing.Size(898, 533)
         Me.pnlPreSearch.TabIndex = 7
@@ -505,7 +505,7 @@ Partial Class home
         Me.cbFilterActors.AutoSize = True
         Me.cbFilterActors.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.cbFilterActors.Location = New System.Drawing.Point(277, 112)
-        Me.cbFilterActors.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.cbFilterActors.Margin = New System.Windows.Forms.Padding(2)
         Me.cbFilterActors.Name = "cbFilterActors"
         Me.cbFilterActors.Size = New System.Drawing.Size(74, 24)
         Me.cbFilterActors.TabIndex = 16
@@ -517,7 +517,7 @@ Partial Class home
         Me.cbFilterTV.AutoSize = True
         Me.cbFilterTV.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.cbFilterTV.Location = New System.Drawing.Point(146, 112)
-        Me.cbFilterTV.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.cbFilterTV.Margin = New System.Windows.Forms.Padding(2)
         Me.cbFilterTV.Name = "cbFilterTV"
         Me.cbFilterTV.Size = New System.Drawing.Size(97, 24)
         Me.cbFilterTV.TabIndex = 14
@@ -540,7 +540,7 @@ Partial Class home
         Me.cbFilterMovie.AutoSize = True
         Me.cbFilterMovie.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.cbFilterMovie.Location = New System.Drawing.Point(39, 112)
-        Me.cbFilterMovie.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.cbFilterMovie.Margin = New System.Windows.Forms.Padding(2)
         Me.cbFilterMovie.Name = "cbFilterMovie"
         Me.cbFilterMovie.Size = New System.Drawing.Size(69, 24)
         Me.cbFilterMovie.TabIndex = 0
@@ -567,7 +567,7 @@ Partial Class home
         Me.cbFSYear.AutoSize = True
         Me.cbFSYear.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.cbFSYear.Location = New System.Drawing.Point(15, 9)
-        Me.cbFSYear.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.cbFSYear.Margin = New System.Windows.Forms.Padding(2)
         Me.cbFSYear.Name = "cbFSYear"
         Me.cbFSYear.Size = New System.Drawing.Size(101, 24)
         Me.cbFSYear.TabIndex = 18
@@ -579,7 +579,7 @@ Partial Class home
         Me.cbAdult.AutoSize = True
         Me.cbAdult.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.cbAdult.Location = New System.Drawing.Point(179, 93)
-        Me.cbAdult.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.cbAdult.Margin = New System.Windows.Forms.Padding(2)
         Me.cbAdult.Name = "cbAdult"
         Me.cbAdult.Size = New System.Drawing.Size(67, 24)
         Me.cbAdult.TabIndex = 22
@@ -591,7 +591,7 @@ Partial Class home
         Me.cbEveryone.AutoSize = True
         Me.cbEveryone.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.cbEveryone.Location = New System.Drawing.Point(15, 92)
-        Me.cbEveryone.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.cbEveryone.Margin = New System.Windows.Forms.Padding(2)
         Me.cbEveryone.Name = "cbEveryone"
         Me.cbEveryone.Size = New System.Drawing.Size(94, 24)
         Me.cbEveryone.TabIndex = 21
@@ -603,7 +603,7 @@ Partial Class home
         Me.cbFGenre.AutoSize = True
         Me.cbFGenre.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.cbFGenre.Location = New System.Drawing.Point(179, 51)
-        Me.cbFGenre.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.cbFGenre.Margin = New System.Windows.Forms.Padding(2)
         Me.cbFGenre.Name = "cbFGenre"
         Me.cbFGenre.Size = New System.Drawing.Size(81, 24)
         Me.cbFGenre.TabIndex = 19
@@ -615,7 +615,7 @@ Partial Class home
         Me.cbFRtM.AutoSize = True
         Me.cbFRtM.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.cbFRtM.Location = New System.Drawing.Point(15, 50)
-        Me.cbFRtM.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.cbFRtM.Margin = New System.Windows.Forms.Padding(2)
         Me.cbFRtM.Name = "cbFRtM"
         Me.cbFRtM.Size = New System.Drawing.Size(148, 24)
         Me.cbFRtM.TabIndex = 17
@@ -627,7 +627,7 @@ Partial Class home
         Me.cbTotalVotes.AutoSize = True
         Me.cbTotalVotes.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.cbTotalVotes.Location = New System.Drawing.Point(179, 134)
-        Me.cbTotalVotes.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.cbTotalVotes.Margin = New System.Windows.Forms.Padding(2)
         Me.cbTotalVotes.Name = "cbTotalVotes"
         Me.cbTotalVotes.Size = New System.Drawing.Size(148, 24)
         Me.cbTotalVotes.TabIndex = 24
@@ -639,7 +639,7 @@ Partial Class home
         Me.cbFEYear.AutoSize = True
         Me.cbFEYear.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.cbFEYear.Location = New System.Drawing.Point(179, 9)
-        Me.cbFEYear.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.cbFEYear.Margin = New System.Windows.Forms.Padding(2)
         Me.cbFEYear.Name = "cbFEYear"
         Me.cbFEYear.Size = New System.Drawing.Size(95, 24)
         Me.cbFEYear.TabIndex = 20
@@ -651,7 +651,7 @@ Partial Class home
         Me.cbRating.AutoSize = True
         Me.cbRating.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.cbRating.Location = New System.Drawing.Point(15, 134)
-        Me.cbRating.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.cbRating.Margin = New System.Windows.Forms.Padding(2)
         Me.cbRating.Name = "cbRating"
         Me.cbRating.Size = New System.Drawing.Size(83, 24)
         Me.cbRating.TabIndex = 23
@@ -672,7 +672,7 @@ Partial Class home
         Me.cbSeasonNum.AutoSize = True
         Me.cbSeasonNum.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.cbSeasonNum.Location = New System.Drawing.Point(5, 15)
-        Me.cbSeasonNum.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.cbSeasonNum.Margin = New System.Windows.Forms.Padding(2)
         Me.cbSeasonNum.Name = "cbSeasonNum"
         Me.cbSeasonNum.Size = New System.Drawing.Size(111, 24)
         Me.cbSeasonNum.TabIndex = 25
@@ -684,7 +684,7 @@ Partial Class home
         Me.cbEpisodeNum.AutoSize = True
         Me.cbEpisodeNum.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.cbEpisodeNum.Location = New System.Drawing.Point(5, 57)
-        Me.cbEpisodeNum.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.cbEpisodeNum.Margin = New System.Windows.Forms.Padding(2)
         Me.cbEpisodeNum.Name = "cbEpisodeNum"
         Me.cbEpisodeNum.Size = New System.Drawing.Size(114, 24)
         Me.cbEpisodeNum.TabIndex = 26
@@ -855,7 +855,7 @@ Partial Class home
         Me.dgvSearchResult.AllowUserToDeleteRows = False
         Me.dgvSearchResult.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         Me.dgvSearchResult.Location = New System.Drawing.Point(29, 79)
-        Me.dgvSearchResult.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.dgvSearchResult.Margin = New System.Windows.Forms.Padding(2)
         Me.dgvSearchResult.Name = "dgvSearchResult"
         Me.dgvSearchResult.ReadOnly = True
         Me.dgvSearchResult.RowTemplate.Height = 24

@@ -475,4 +475,12 @@ Public Class home
     Private Sub Panel2_MouseUp(sender As Object, e As MouseEventArgs) Handles Panel2.MouseUp
         drag = False
     End Sub
+
+
+    Private Sub Panel2_MouseDoubleClick(sender As Object, e As MouseEventArgs) Handles Panel2.MouseDoubleClick
+        If Me.WindowState = FormWindowState.Normal Then
+            Me.WindowState = FormWindowState.Maximized
+        Else Me.WindowState = FormWindowState.Normal
+        End If
+    End Sub
 End Class
