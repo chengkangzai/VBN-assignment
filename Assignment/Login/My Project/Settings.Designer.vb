@@ -57,12 +57,23 @@ Namespace My
         <Global.System.Configuration.ApplicationScopedSettingAttribute(),  _
          Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.Configuration.SpecialSettingAttribute(Global.System.Configuration.SpecialSetting.ConnectionString),  _
-         Global.System.Configuration.DefaultSettingValueAttribute("Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=""D:\Program Files\Microsoft S"& _ 
-            "QL Server\MSSQL13.SQLEXP2016\MSSQL\DATA\vb.net imdb.mdf"";Integrated Security=Tru"& _ 
-            "e;Connect Timeout=30")>  _
+         Global.System.Configuration.DefaultSettingValueAttribute("Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=""E:\Assignments\Semester 3\VB"& _ 
+            ".Net\vb.net imdb.mdf"";Integrated Security=True;Connect Timeout=30")>  _
         Public ReadOnly Property vb_net_imdbConnectionString() As String
             Get
                 Return CType(Me("vb_net_imdbConnectionString"),String)
+            End Get
+        End Property
+        
+        <Global.System.Configuration.ApplicationScopedSettingAttribute(),  _
+         Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.Configuration.SpecialSettingAttribute(Global.System.Configuration.SpecialSetting.ConnectionString),  _
+         Global.System.Configuration.DefaultSettingValueAttribute("Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=""D:\Program Files\Microsoft S"& _ 
+            "QL Server\MSSQL13.SQLEXP2016\MSSQL\DATA\VBimdb.mdf"";Integrated Security=True;Con"& _ 
+            "nect Timeout=30")>  _
+        Public ReadOnly Property VBimdbConnectionString() As String
+            Get
+                Return CType(Me("VBimdbConnectionString"),String)
             End Get
         End Property
     End Class
