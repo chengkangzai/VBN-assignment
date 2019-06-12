@@ -72,8 +72,8 @@ Public Class home
         pnlAbout.Visible = False
 
         pnlSearch.Visible = True
-        pnlPreSearch.Visible = True
-        pnlMovieSearch.Visible = False
+        pnlPreSearch.Visible = False
+        pnlMovieSearch.Visible = True
         pnlAfterSearch.Visible = False
         pnlFilterMovieTV.Visible = False
         pnlFilterTV.Visible = False
@@ -157,17 +157,36 @@ Public Class home
         'Connected 
         ''Con = New SqlConnection
         'Dim rowcount As Integer
-        Dim con As New SqlConnection("Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=D:\Program Files\Microsoft SQL Server\MSSQL13.SQLEXP2016\MSSQL\DATA\vb.net imdb.mdf;Integrated Security=True;Connect Timeout=30")
+        Dim con As New SqlConnection("Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=D:\Program Files\Microsoft SQL Server\MSSQL13.SQLEXP2016\MSSQL\DATA\vbimdb.mdf;Integrated Security=True;Connect Timeout=30")
         'rowcount = 100
+        Dim sql = "SELECT TOP (200) * FROM [VBimdb].[dbo].[MovieFilter] WHERE "
+        If Not String.IsNullOrWhiteSpace(txtMSearchName.Text) Then
+            sql = sql & "[movie title] LIKE '%" & txtMSearchName.Text & "%' AND "
+        End If
+        If Not String.IsNullOrWhiteSpace(txtMSearchSYear.Text) Then
+            sql = sql & "[release year] ='" & txtMSearchSYear.Text & "' AND "
+        End If
+        If Not String.IsNullOrWhiteSpace(txtMSearchEYear.Text) Then
+            sql = sql & "[ending year] ='" & txtMSearchEYear.Text & "' AND "
+        End If
+        If Not String.IsNullOrWhiteSpace(txtRTM.Text) Then
+            sql = sql & "[runtime min(s)] " & cboRTMMod.Text & " '" & txtRTM.Text & "' AND "
+        End If
+        If Not String.IsNullOrWhiteSpace(cboSearchGenre.Text) Then
+            sql = sql & "[genres] LIKE '%" & cboSearchGenre.Text & "%' AND "
+        End If
+        If Not String.IsNullOrWhiteSpace(txtRatings.Text) Then
+            sql = sql & "[rating] " & cboRatingsMod.Text & " '" & txtRatings.Text & "' AND "
+        End If
+        ' Remove Last AND if Empty
+        If sql.EndsWith(" AND ") Then
+            sql = sql.Substring(0, sql.Length - 5)
+        End If
+        If sql.EndsWith(" WHERE ") Then
+            sql = sql.Substring(0, sql.Length - 7)
+        End If
 
-        Dim cmd As New SqlCommand(" SELECT TOP 200 primaryTitle as 'Movie Title', startYear as 'Start Year', endYear as 'End Year', runtimeMinutes as 'Runtime Minute', genres as Genres
-                                    FROM [title.basics]
-                                    WHERE primaryTitle LIKE'%" & txtMSearchName.Text & "%'
-                                    AND startYear ='" & txtMSearchSYear.Text & "'
-    
-                                    AND genres LIKE'%" & cboSearchGenre.Text & "%'
-         
-                                    ", con)
+        Dim cmd As New SqlCommand(Sql, con)
         Dim DBDA As New SqlDataAdapter(cmd)
         Dim table As New DataTable
         DBDA.Fill(table)
