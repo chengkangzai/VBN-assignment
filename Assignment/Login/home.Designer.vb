@@ -76,16 +76,6 @@ Partial Class home
         Me.PictureBox1 = New System.Windows.Forms.PictureBox()
         Me.Panel2 = New System.Windows.Forms.Panel()
         Me.pnlMovie = New System.Windows.Forms.Panel()
-        Me.Panel7 = New System.Windows.Forms.Panel()
-        Me.Label12 = New System.Windows.Forms.Label()
-        Me.PictureBox6 = New System.Windows.Forms.PictureBox()
-        Me.Label14 = New System.Windows.Forms.Label()
-        Me.Panel6 = New System.Windows.Forms.Panel()
-        Me.Label15 = New System.Windows.Forms.Label()
-        Me.Label13 = New System.Windows.Forms.Label()
-        Me.lblPublishedDate1 = New System.Windows.Forms.Label()
-        Me.Label11 = New System.Windows.Forms.Label()
-        Me.PictureBox5 = New System.Windows.Forms.PictureBox()
         Me.pnlAbout = New System.Windows.Forms.Panel()
         Me.Label22 = New System.Windows.Forms.Label()
         Me.Panel9 = New System.Windows.Forms.Panel()
@@ -129,6 +119,10 @@ Partial Class home
         Me._vb_net_imdbDataSet1 = New Login._vb_net_imdbDataSet()
         Me.btnPrevious = New System.Windows.Forms.Button()
         Me.btnNext = New System.Windows.Forms.Button()
+        Me.dgvMovieList = New System.Windows.Forms.DataGridView()
+        Me.btnLoadMovie = New System.Windows.Forms.Button()
+        Me.btnPreviousMovie = New System.Windows.Forms.Button()
+        Me.btnNextMovie = New System.Windows.Forms.Button()
         Me.Panel1.SuspendLayout()
         Me.Panel3.SuspendLayout()
         Me.pnlSearch.SuspendLayout()
@@ -144,10 +138,6 @@ Partial Class home
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.Panel2.SuspendLayout()
         Me.pnlMovie.SuspendLayout()
-        Me.Panel7.SuspendLayout()
-        CType(Me.PictureBox6, System.ComponentModel.ISupportInitialize).BeginInit()
-        Me.Panel6.SuspendLayout()
-        CType(Me.PictureBox5, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.pnlAbout.SuspendLayout()
         Me.Panel9.SuspendLayout()
         CType(Me.PictureBox9, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -158,6 +148,7 @@ Partial Class home
         CType(Me._vb_net_imdbDataSet, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.VbnetimdbDataSetBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me._vb_net_imdbDataSet1, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.dgvMovieList, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'Panel1
@@ -615,6 +606,9 @@ Partial Class home
         '
         Me.dgvSearchResult.AllowUserToAddRows = False
         Me.dgvSearchResult.AllowUserToDeleteRows = False
+        Me.dgvSearchResult.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
+            Or System.Windows.Forms.AnchorStyles.Left) _
+            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.dgvSearchResult.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill
         Me.dgvSearchResult.BackgroundColor = System.Drawing.SystemColors.ButtonHighlight
         Me.dgvSearchResult.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
@@ -781,115 +775,15 @@ Partial Class home
         '
         'pnlMovie
         '
-        Me.pnlMovie.Controls.Add(Me.Panel7)
-        Me.pnlMovie.Controls.Add(Me.Panel6)
+        Me.pnlMovie.Controls.Add(Me.btnNextMovie)
+        Me.pnlMovie.Controls.Add(Me.btnPreviousMovie)
+        Me.pnlMovie.Controls.Add(Me.btnLoadMovie)
+        Me.pnlMovie.Controls.Add(Me.dgvMovieList)
         Me.pnlMovie.Location = New System.Drawing.Point(199, 41)
         Me.pnlMovie.Margin = New System.Windows.Forms.Padding(0)
         Me.pnlMovie.Name = "pnlMovie"
         Me.pnlMovie.Size = New System.Drawing.Size(856, 537)
         Me.pnlMovie.TabIndex = 5
-        '
-        'Panel7
-        '
-        Me.Panel7.Controls.Add(Me.Label12)
-        Me.Panel7.Controls.Add(Me.PictureBox6)
-        Me.Panel7.Controls.Add(Me.Label14)
-        Me.Panel7.Location = New System.Drawing.Point(390, 7)
-        Me.Panel7.Name = "Panel7"
-        Me.Panel7.Size = New System.Drawing.Size(334, 454)
-        Me.Panel7.TabIndex = 0
-        '
-        'Label12
-        '
-        Me.Label12.AutoSize = True
-        Me.Label12.Font = New System.Drawing.Font("Microsoft Sans Serif", 24.0!, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label12.Location = New System.Drawing.Point(13, 199)
-        Me.Label12.Name = "Label12"
-        Me.Label12.Size = New System.Drawing.Size(422, 37)
-        Me.Label12.TabIndex = 1
-        Me.Label12.Text = "Spiderman: Home Comming"
-        '
-        'PictureBox6
-        '
-        Me.PictureBox6.Dock = System.Windows.Forms.DockStyle.Top
-        Me.PictureBox6.Image = CType(resources.GetObject("PictureBox6.Image"), System.Drawing.Image)
-        Me.PictureBox6.Location = New System.Drawing.Point(0, 0)
-        Me.PictureBox6.Name = "PictureBox6"
-        Me.PictureBox6.Size = New System.Drawing.Size(334, 177)
-        Me.PictureBox6.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
-        Me.PictureBox6.TabIndex = 0
-        Me.PictureBox6.TabStop = False
-        '
-        'Label14
-        '
-        Me.Label14.AutoSize = True
-        Me.Label14.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.75!, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label14.Location = New System.Drawing.Point(3, 241)
-        Me.Label14.Name = "Label14"
-        Me.Label14.Size = New System.Drawing.Size(170, 25)
-        Me.Label14.TabIndex = 1
-        Me.Label14.Text = "Published Date :"
-        '
-        'Panel6
-        '
-        Me.Panel6.Controls.Add(Me.Label15)
-        Me.Panel6.Controls.Add(Me.Label13)
-        Me.Panel6.Controls.Add(Me.lblPublishedDate1)
-        Me.Panel6.Controls.Add(Me.Label11)
-        Me.Panel6.Controls.Add(Me.PictureBox5)
-        Me.Panel6.Location = New System.Drawing.Point(8, 7)
-        Me.Panel6.Name = "Panel6"
-        Me.Panel6.Size = New System.Drawing.Size(334, 454)
-        Me.Panel6.TabIndex = 0
-        '
-        'Label15
-        '
-        Me.Label15.AutoSize = True
-        Me.Label15.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.75!, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label15.Location = New System.Drawing.Point(146, 282)
-        Me.Label15.Name = "Label15"
-        Me.Label15.Size = New System.Drawing.Size(0, 25)
-        Me.Label15.TabIndex = 1
-        '
-        'Label13
-        '
-        Me.Label13.AutoSize = True
-        Me.Label13.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.75!, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label13.Location = New System.Drawing.Point(146, 241)
-        Me.Label13.Name = "Label13"
-        Me.Label13.Size = New System.Drawing.Size(0, 25)
-        Me.Label13.TabIndex = 1
-        '
-        'lblPublishedDate1
-        '
-        Me.lblPublishedDate1.AutoSize = True
-        Me.lblPublishedDate1.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.75!, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lblPublishedDate1.Location = New System.Drawing.Point(3, 241)
-        Me.lblPublishedDate1.Name = "lblPublishedDate1"
-        Me.lblPublishedDate1.Size = New System.Drawing.Size(170, 25)
-        Me.lblPublishedDate1.TabIndex = 1
-        Me.lblPublishedDate1.Text = "Published Date :"
-        '
-        'Label11
-        '
-        Me.Label11.AutoSize = True
-        Me.Label11.Font = New System.Drawing.Font("Microsoft Sans Serif", 24.0!, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label11.Location = New System.Drawing.Point(66, 199)
-        Me.Label11.Name = "Label11"
-        Me.Label11.Size = New System.Drawing.Size(313, 37)
-        Me.Label11.TabIndex = 1
-        Me.Label11.Text = "Avengers: EndGame"
-        '
-        'PictureBox5
-        '
-        Me.PictureBox5.Dock = System.Windows.Forms.DockStyle.Top
-        Me.PictureBox5.Image = CType(resources.GetObject("PictureBox5.Image"), System.Drawing.Image)
-        Me.PictureBox5.Location = New System.Drawing.Point(0, 0)
-        Me.PictureBox5.Name = "PictureBox5"
-        Me.PictureBox5.Size = New System.Drawing.Size(334, 177)
-        Me.PictureBox5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
-        Me.PictureBox5.TabIndex = 0
-        Me.PictureBox5.TabStop = False
         '
         'pnlAbout
         '
@@ -1341,14 +1235,55 @@ Partial Class home
         Me.btnNext.Text = "Next"
         Me.btnNext.UseVisualStyleBackColor = False
         '
+        'dgvMovieList
+        '
+        Me.dgvMovieList.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
+        Me.dgvMovieList.Location = New System.Drawing.Point(25, 67)
+        Me.dgvMovieList.Name = "dgvMovieList"
+        Me.dgvMovieList.Size = New System.Drawing.Size(812, 395)
+        Me.dgvMovieList.TabIndex = 0
+        '
+        'btnLoadMovie
+        '
+        Me.btnLoadMovie.BackColor = System.Drawing.Color.Aquamarine
+        Me.btnLoadMovie.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnLoadMovie.Location = New System.Drawing.Point(25, 26)
+        Me.btnLoadMovie.Name = "btnLoadMovie"
+        Me.btnLoadMovie.Size = New System.Drawing.Size(138, 35)
+        Me.btnLoadMovie.TabIndex = 5
+        Me.btnLoadMovie.Text = "Load"
+        Me.btnLoadMovie.UseVisualStyleBackColor = False
+        '
+        'btnPreviousMovie
+        '
+        Me.btnPreviousMovie.BackColor = System.Drawing.Color.Aquamarine
+        Me.btnPreviousMovie.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnPreviousMovie.Location = New System.Drawing.Point(554, 26)
+        Me.btnPreviousMovie.Name = "btnPreviousMovie"
+        Me.btnPreviousMovie.Size = New System.Drawing.Size(138, 35)
+        Me.btnPreviousMovie.TabIndex = 6
+        Me.btnPreviousMovie.Text = "Previous"
+        Me.btnPreviousMovie.UseVisualStyleBackColor = False
+        '
+        'btnNextMovie
+        '
+        Me.btnNextMovie.BackColor = System.Drawing.Color.Aquamarine
+        Me.btnNextMovie.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnNextMovie.Location = New System.Drawing.Point(699, 26)
+        Me.btnNextMovie.Name = "btnNextMovie"
+        Me.btnNextMovie.Size = New System.Drawing.Size(138, 35)
+        Me.btnNextMovie.TabIndex = 7
+        Me.btnNextMovie.Text = "Next"
+        Me.btnNextMovie.UseVisualStyleBackColor = False
+        '
         'home
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(1095, 578)
         Me.Controls.Add(Me.pnlSearch)
-        Me.Controls.Add(Me.pnlAbout)
         Me.Controls.Add(Me.pnlMovie)
+        Me.Controls.Add(Me.pnlAbout)
         Me.Controls.Add(Me.pnlWelcome)
         Me.Controls.Add(Me.pnlLogin)
         Me.Controls.Add(Me.Panel2)
@@ -1376,12 +1311,6 @@ Partial Class home
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.Panel2.ResumeLayout(False)
         Me.pnlMovie.ResumeLayout(False)
-        Me.Panel7.ResumeLayout(False)
-        Me.Panel7.PerformLayout()
-        CType(Me.PictureBox6, System.ComponentModel.ISupportInitialize).EndInit()
-        Me.Panel6.ResumeLayout(False)
-        Me.Panel6.PerformLayout()
-        CType(Me.PictureBox5, System.ComponentModel.ISupportInitialize).EndInit()
         Me.pnlAbout.ResumeLayout(False)
         Me.pnlAbout.PerformLayout()
         Me.Panel9.ResumeLayout(False)
@@ -1396,6 +1325,7 @@ Partial Class home
         CType(Me._vb_net_imdbDataSet, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.VbnetimdbDataSetBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me._vb_net_imdbDataSet1, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.dgvMovieList, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
 
     End Sub
@@ -1436,16 +1366,6 @@ Partial Class home
     Friend WithEvents PictureBox1 As PictureBox
     Friend WithEvents Panel2 As Panel
     Friend WithEvents pnlMovie As Panel
-    Friend WithEvents Panel7 As Panel
-    Friend WithEvents Label12 As Label
-    Friend WithEvents PictureBox6 As PictureBox
-    Friend WithEvents Panel6 As Panel
-    Friend WithEvents Label11 As Label
-    Friend WithEvents PictureBox5 As PictureBox
-    Friend WithEvents Label15 As Label
-    Friend WithEvents Label13 As Label
-    Friend WithEvents Label14 As Label
-    Friend WithEvents lblPublishedDate1 As Label
     Friend WithEvents pnlAbout As Panel
     Friend WithEvents Panel10 As Panel
     Friend WithEvents Label17 As Label
@@ -1505,4 +1425,8 @@ Partial Class home
     Friend WithEvents lblEYear As Label
     Friend WithEvents btnNext As Button
     Friend WithEvents btnPrevious As Button
+    Friend WithEvents btnLoadMovie As Button
+    Friend WithEvents dgvMovieList As DataGridView
+    Friend WithEvents btnNextMovie As Button
+    Friend WithEvents btnPreviousMovie As Button
 End Class

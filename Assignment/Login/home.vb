@@ -280,4 +280,35 @@ Public Class home
         pagingds.Clear()
         pageadapter.Fill(pagingds, scrollval, 100, "[MovieFilter]")
     End Sub
+
+    Private Sub Button6_Click(sender As Object, e As EventArgs) Handles btnLoadMovie.Click
+        Dim con As New SqlConnection("Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=D:\Program Files\Microsoft SQL Server\MSSQL13.SQLEXP2016\MSSQL\DATA\vbimdb.mdf;Integrated Security=True;Connect Timeout=30")
+        'Dim rowcount As Integer
+        'rowcount = 100
+
+        Dim sql As String = "SELECT * FROM [FilterView]"
+
+        pageadapter = New SqlDataAdapter(sql, con)
+        pagingds = New DataSet()
+        pageadapter.SelectCommand.CommandTimeout = 0
+        pageadapter.Fill(pagingds, scrollval, 100, "[FilterView]")
+        dgvMovieList.DataSource = pagingds
+        dgvMovieList.DataMember = "[FilterView]"
+
+    End Sub
+
+    Private Sub BtnPreviousMovie_Click(sender As Object, e As EventArgs) Handles btnPreviousMovie.Click
+        scrollval = scrollval - 100
+        If scrollval <= 0 Then
+            scrollval = 0
+        End If
+        pagingds.Clear()
+        pageadapter.Fill(pagingds, scrollval, 100, "[FilterView]")
+    End Sub
+
+    Private Sub BtnNextMovie_Click(sender As Object, e As EventArgs) Handles btnNextMovie.Click
+        scrollval = scrollval + 100
+        pagingds.Clear()
+        pageadapter.Fill(pagingds, scrollval, 100, "[FilterView]")
+    End Sub
 End Class
