@@ -70,8 +70,22 @@ Public Class home
         cboRatingsMod.Items.Add("<")
         cboRatingsMod.Items.Add("<=")
         cboRatingsMod.Items.Add("=")
+        cboYearMod.Items.Add(">")
+        cboYearMod.Items.Add(">=")
+        cboYearMod.Items.Add("<")
+        cboYearMod.Items.Add("<=")
+        cboYearMod.Items.Add("=")
+        cboCrewBYearMOD.Items.Add(">")
+        cboCrewBYearMOD.Items.Add(">=")
+        cboCrewBYearMOD.Items.Add("<")
+        cboCrewBYearMOD.Items.Add("<=")
+        cboCrewBYearMOD.Items.Add("=")
         cboRTMMod.SelectedIndex = 0
         cboRatingsMod.SelectedIndex = 0
+        cboYearMod.SelectedIndex = 0
+        cboCrewBYearMOD.SelectedIndex = 0
+        radMovie.Checked = 1
+
     End Sub
 
     Private Sub Search_button(sender As Object, e As EventArgs) Handles btnpnlSearch.Click
@@ -81,8 +95,10 @@ Public Class home
         pnlAbout.Visible = False
 
         pnlSearch.Visible = True
-        pnlMovieSearch.Visible = True
+        pnlPreSearch.Visible = True
         pnlAfterSearch.Visible = False
+        pnlMovieSearch.Visible = True
+        pnlCrewSearch.Visible = False
     End Sub
 
     Private Sub btnpnlLogin_Click(sender As Object, e As EventArgs) Handles btnpnlLogin.Click
@@ -160,7 +176,7 @@ Public Class home
     Private Sub btnSearch_Click(sender As Object, e As EventArgs) Handles btnSearch.Click
         'Connected 
         ''Con = New SqlConnection
-        Dim con As New SqlConnection("Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=D:\Program Files\Microsoft SQL Server\MSSQL13.SQLEXP2016\MSSQL\DATA\vbimdb.mdf;Integrated Security=True;Connect Timeout=30")
+        Dim con As New SqlConnection("Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\ryuko\Desktop\vb\vbimdb.mdf;Integrated Security=True;Connect Timeout=30")
         'Dim rowcount As Integer
         'rowcount = 100
 
@@ -169,7 +185,7 @@ Public Class home
             sql = sql & "[movie title] LIKE '%" & txtMSearchName.Text & "%' AND "
         End If
         If Not String.IsNullOrWhiteSpace(txtMSearchSYear.Text) Then
-            sql = sql & "[release year] ='" & txtMSearchSYear.Text & "' AND "
+            sql = sql & "[release year] " & cboYearMod.Text & " '" & txtMSearchSYear.Text & "' AND "
         End If
         If Not String.IsNullOrWhiteSpace(txtMSearchEYear.Text) Then
             sql = sql & "[ending year] ='" & txtMSearchEYear.Text & "' AND "
@@ -191,11 +207,39 @@ Public Class home
             sql = sql.Substring(0, sql.Length - 7)
         End If
 
-        pageadapter = New SqlDataAdapter(sql, con)
-        pagingds = New DataSet()
-        pageadapter.Fill(pagingds, scrollval, 100, "[MovieFilter]")
-        dgvSearchResult.DataSource = pagingds
-        dgvSearchResult.DataMember = "[MovieFilter]"
+        Dim sql2 As String = "SELECT * FROM [CrewFilter] WHERE "
+        If Not String.IsNullOrWhiteSpace(txtCrewName.Text) Then
+            sql2 = sql2 & "[crew's name] LIKE '%" & txtCrewName.Text & "%' AND "
+        End If
+        If Not String.IsNullOrWhiteSpace(txtCrewPos.Text) Then
+            sql2 = sql2 & "[crew's position] LIKE '%" & txtCrewPos.Text & "%' AND "
+        End If
+        If Not String.IsNullOrWhiteSpace(txtCrewBYear.Text) Then
+            sql2 = sql2 & "[Crew's Birth Year] " & cboCrewBYearMOD.Text & " '" & txtCrewBYear.Text & "' AND "
+        End If
+        If Not String.IsNullOrWhiteSpace(txtCrewDYear.Text) Then
+            sql2 = sql2 & "[Crew's Death Year] = '" & txtCrewDYear.Text & "' AND "
+        End If
+        If Not String.IsNullOrWhiteSpace(txtCrewProf.Text) Then
+            sql2 = sql2 & "[crew's profession] LIKE '%" & txtCrewProf.Text & "%' AND "
+        End If
+
+        If radMovie.Checked Then
+            pageadapter = New SqlDataAdapter(sql, con)
+            pagingds = New DataSet()
+            pageadapter.SelectCommand.CommandTimeout = 0
+            pageadapter.Fill(pagingds, scrollval, 100, "[MovieFilter]")
+            dgvSearchResult.DataSource = pagingds
+            dgvSearchResult.DataMember = "[MovieFilter]"
+        End If
+        If radCrew.Checked Then
+            pageadapter = New SqlDataAdapter(sql2, con)
+            pagingds = New DataSet()
+            pageadapter.SelectCommand.CommandTimeout = 0
+            pageadapter.Fill(pagingds, scrollval, 100, "[CrewFilter]")
+            dgvSearchResult.DataSource = pagingds
+            dgvSearchResult.DataMember = "[CrewFilter]"
+        End If
         'Dim cmd As New SqlCommand(Sql, con)
         'Dim DBDA As New SqlDataAdapter(cmd)
         'Dim table As New DataTable
@@ -215,13 +259,13 @@ Public Class home
         'Finally
         '    con.Dispose()
         'End Try
-        pnlMovieSearch.Visible = False
+        pnlPreSearch.Visible = False
         pnlAfterSearch.Visible = True
     End Sub
 
     Private Sub btnBack_Click(sender As Object, e As EventArgs) Handles btnBack.Click
         pnlAfterSearch.Visible = False
-        pnlMovieSearch.Visible = True
+        pnlPreSearch.Visible = True
 
     End Sub
 
@@ -268,8 +312,13 @@ Public Class home
         If scrollVal <= 0 Then
             scrollVal = 0
         End If
-        pagingDS.Clear()
-        pageadapter.Fill(pagingds, scrollval, 100, "[MovieFilter]")
+        pagingds.Clear()
+        If radMovie.Checked Then
+            pageadapter.Fill(pagingds, scrollval, 100, "[MovieFilter]")
+        End If
+        If radCrew.Checked Then
+            pageadapter.Fill(pagingds, scrollval, 100, "[CrewFilter]")
+        End If
     End Sub
 
     Private Sub BtnNext_Click(sender As Object, e As EventArgs) Handles btnNext.Click
@@ -278,11 +327,16 @@ Public Class home
             scrollval = 500
         End If
         pagingds.Clear()
-        pageadapter.Fill(pagingds, scrollval, 100, "[MovieFilter]")
+        If radMovie.Checked Then
+            pageadapter.Fill(pagingds, scrollval, 100, "[MovieFilter]")
+        End If
+        If radCrew.Checked Then
+            pageadapter.Fill(pagingds, scrollval, 100, "[CrewFilter]")
+        End If
     End Sub
 
     Private Sub Button6_Click(sender As Object, e As EventArgs) Handles btnLoadMovie.Click
-        Dim con As New SqlConnection("Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=D:\Program Files\Microsoft SQL Server\MSSQL13.SQLEXP2016\MSSQL\DATA\vbimdb.mdf;Integrated Security=True;Connect Timeout=30")
+        Dim con As New SqlConnection("Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\ryuko\Desktop\vb\vbimdb.mdf;Integrated Security=True;Connect Timeout=30")
         'Dim rowcount As Integer
         'rowcount = 100
 
@@ -310,5 +364,23 @@ Public Class home
         scrollval = scrollval + 100
         pagingds.Clear()
         pageadapter.Fill(pagingds, scrollval, 100, "[FilterView]")
+    End Sub
+
+    Private Sub radMovie_CheckedChanged(sender As Object, e As EventArgs) Handles radMovie.CheckedChanged
+        If radMovie.Checked Then
+
+            pnlMovieSearch.Visible = True
+        Else
+            pnlMovieSearch.Visible = False
+        End If
+    End Sub
+
+    Private Sub radCrew_CheckedChanged(sender As Object, e As EventArgs) Handles radCrew.CheckedChanged
+        If radCrew.Checked Then
+
+            pnlCrewSearch.Visible = True
+        Else
+            pnlCrewSearch.Visible = False
+        End If
     End Sub
 End Class
