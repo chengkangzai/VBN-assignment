@@ -22,21 +22,21 @@ Partial Class LoginRegister
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
-        Me.navigation = New System.Windows.Forms.Panel()
+        Me.pnlNavigation = New System.Windows.Forms.Panel()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.btnavLogin = New System.Windows.Forms.Button()
         Me.btnavRegister = New System.Windows.Forms.Button()
         Me.btnavRecPass = New System.Windows.Forms.Button()
         Me.btnFormClose = New System.Windows.Forms.Button()
-        Me.navbutton = New System.Windows.Forms.Panel()
-        Me.login = New System.Windows.Forms.Panel()
+        Me.pnlNavButton = New System.Windows.Forms.Panel()
+        Me.pnlLogin = New System.Windows.Forms.Panel()
         Me.btnLogin = New System.Windows.Forms.Button()
         Me.txtLpassword = New System.Windows.Forms.TextBox()
         Me.txtLusername = New System.Windows.Forms.TextBox()
         Me.Label5 = New System.Windows.Forms.Label()
         Me.Label4 = New System.Windows.Forms.Label()
         Me.Label3 = New System.Windows.Forms.Label()
-        Me.register = New System.Windows.Forms.Panel()
+        Me.pnlRegister = New System.Windows.Forms.Panel()
         Me.lblRTipsIC = New System.Windows.Forms.Label()
         Me.lblRTipsAge = New System.Windows.Forms.Label()
         Me.btncheckconnect = New System.Windows.Forms.Button()
@@ -54,7 +54,8 @@ Partial Class LoginRegister
         Me.txtRFName = New System.Windows.Forms.TextBox()
         Me.Label7 = New System.Windows.Forms.Label()
         Me.Label6 = New System.Windows.Forms.Label()
-        Me.Recovery = New System.Windows.Forms.Panel()
+        Me.pnlRecovery = New System.Windows.Forms.Panel()
+        Me.lblPRTipsIC = New System.Windows.Forms.Label()
         Me.btnconchanges = New System.Windows.Forms.Button()
         Me.txtPRConPass = New System.Windows.Forms.TextBox()
         Me.lblPRConPass = New System.Windows.Forms.Label()
@@ -65,23 +66,23 @@ Partial Class LoginRegister
         Me.txtPRUsername = New System.Windows.Forms.TextBox()
         Me.lblPRUsername = New System.Windows.Forms.Label()
         Me.lblPRTitle = New System.Windows.Forms.Label()
-        Me.navigation.SuspendLayout()
-        Me.login.SuspendLayout()
-        Me.register.SuspendLayout()
-        Me.Recovery.SuspendLayout()
+        Me.pnlNavigation.SuspendLayout()
+        Me.pnlLogin.SuspendLayout()
+        Me.pnlRegister.SuspendLayout()
+        Me.pnlRecovery.SuspendLayout()
         Me.SuspendLayout()
         '
-        'navigation
+        'pnlNavigation
         '
-        Me.navigation.Controls.Add(Me.Label1)
-        Me.navigation.Controls.Add(Me.btnavLogin)
-        Me.navigation.Controls.Add(Me.btnavRegister)
-        Me.navigation.Controls.Add(Me.btnavRecPass)
-        Me.navigation.Controls.Add(Me.btnFormClose)
-        Me.navigation.Location = New System.Drawing.Point(0, 0)
-        Me.navigation.Name = "navigation"
-        Me.navigation.Size = New System.Drawing.Size(200, 502)
-        Me.navigation.TabIndex = 0
+        Me.pnlNavigation.Controls.Add(Me.Label1)
+        Me.pnlNavigation.Controls.Add(Me.btnavLogin)
+        Me.pnlNavigation.Controls.Add(Me.btnavRegister)
+        Me.pnlNavigation.Controls.Add(Me.btnavRecPass)
+        Me.pnlNavigation.Controls.Add(Me.btnFormClose)
+        Me.pnlNavigation.Location = New System.Drawing.Point(0, 0)
+        Me.pnlNavigation.Name = "pnlNavigation"
+        Me.pnlNavigation.Size = New System.Drawing.Size(200, 502)
+        Me.pnlNavigation.TabIndex = 0
         '
         'Label1
         '
@@ -128,25 +129,25 @@ Partial Class LoginRegister
         Me.btnFormClose.Text = "Close"
         Me.btnFormClose.UseVisualStyleBackColor = True
         '
-        'navbutton
+        'pnlNavButton
         '
-        Me.navbutton.Location = New System.Drawing.Point(201, 0)
-        Me.navbutton.Name = "navbutton"
-        Me.navbutton.Size = New System.Drawing.Size(672, 58)
-        Me.navbutton.TabIndex = 0
+        Me.pnlNavButton.Location = New System.Drawing.Point(201, 0)
+        Me.pnlNavButton.Name = "pnlNavButton"
+        Me.pnlNavButton.Size = New System.Drawing.Size(672, 58)
+        Me.pnlNavButton.TabIndex = 0
         '
-        'login
+        'pnlLogin
         '
-        Me.login.Controls.Add(Me.btnLogin)
-        Me.login.Controls.Add(Me.txtLpassword)
-        Me.login.Controls.Add(Me.txtLusername)
-        Me.login.Controls.Add(Me.Label5)
-        Me.login.Controls.Add(Me.Label4)
-        Me.login.Controls.Add(Me.Label3)
-        Me.login.Location = New System.Drawing.Point(201, 55)
-        Me.login.Name = "login"
-        Me.login.Size = New System.Drawing.Size(669, 447)
-        Me.login.TabIndex = 2
+        Me.pnlLogin.Controls.Add(Me.btnLogin)
+        Me.pnlLogin.Controls.Add(Me.txtLpassword)
+        Me.pnlLogin.Controls.Add(Me.txtLusername)
+        Me.pnlLogin.Controls.Add(Me.Label5)
+        Me.pnlLogin.Controls.Add(Me.Label4)
+        Me.pnlLogin.Controls.Add(Me.Label3)
+        Me.pnlLogin.Location = New System.Drawing.Point(201, 55)
+        Me.pnlLogin.Name = "pnlLogin"
+        Me.pnlLogin.Size = New System.Drawing.Size(669, 447)
+        Me.pnlLogin.TabIndex = 2
         '
         'btnLogin
         '
@@ -160,6 +161,7 @@ Partial Class LoginRegister
         'txtLpassword
         '
         Me.txtLpassword.Location = New System.Drawing.Point(300, 181)
+        Me.txtLpassword.MaxLength = 12
         Me.txtLpassword.Name = "txtLpassword"
         Me.txtLpassword.Size = New System.Drawing.Size(151, 22)
         Me.txtLpassword.TabIndex = 3
@@ -167,6 +169,7 @@ Partial Class LoginRegister
         'txtLusername
         '
         Me.txtLusername.Location = New System.Drawing.Point(300, 120)
+        Me.txtLusername.MaxLength = 20
         Me.txtLusername.Name = "txtLusername"
         Me.txtLusername.Size = New System.Drawing.Size(151, 22)
         Me.txtLusername.TabIndex = 2
@@ -198,29 +201,29 @@ Partial Class LoginRegister
         Me.Label3.TabIndex = 0
         Me.Label3.Text = "Login"
         '
-        'register
+        'pnlRegister
         '
-        Me.register.Controls.Add(Me.lblRTipsIC)
-        Me.register.Controls.Add(Me.lblRTipsAge)
-        Me.register.Controls.Add(Me.btncheckconnect)
-        Me.register.Controls.Add(Me.btnRegister)
-        Me.register.Controls.Add(Me.txtRpassword)
-        Me.register.Controls.Add(Me.lblRPass)
-        Me.register.Controls.Add(Me.txtRIC)
-        Me.register.Controls.Add(Me.lblRIC)
-        Me.register.Controls.Add(Me.txtRUserName)
-        Me.register.Controls.Add(Me.lblRUserName)
-        Me.register.Controls.Add(Me.txtRAge)
-        Me.register.Controls.Add(Me.lblRAge)
-        Me.register.Controls.Add(Me.txtRLName)
-        Me.register.Controls.Add(Me.lblRLName)
-        Me.register.Controls.Add(Me.txtRFName)
-        Me.register.Controls.Add(Me.Label7)
-        Me.register.Controls.Add(Me.Label6)
-        Me.register.Location = New System.Drawing.Point(199, 56)
-        Me.register.Name = "register"
-        Me.register.Size = New System.Drawing.Size(669, 447)
-        Me.register.TabIndex = 3
+        Me.pnlRegister.Controls.Add(Me.lblRTipsIC)
+        Me.pnlRegister.Controls.Add(Me.lblRTipsAge)
+        Me.pnlRegister.Controls.Add(Me.btncheckconnect)
+        Me.pnlRegister.Controls.Add(Me.btnRegister)
+        Me.pnlRegister.Controls.Add(Me.txtRpassword)
+        Me.pnlRegister.Controls.Add(Me.lblRPass)
+        Me.pnlRegister.Controls.Add(Me.txtRIC)
+        Me.pnlRegister.Controls.Add(Me.lblRIC)
+        Me.pnlRegister.Controls.Add(Me.txtRUserName)
+        Me.pnlRegister.Controls.Add(Me.lblRUserName)
+        Me.pnlRegister.Controls.Add(Me.txtRAge)
+        Me.pnlRegister.Controls.Add(Me.lblRAge)
+        Me.pnlRegister.Controls.Add(Me.txtRLName)
+        Me.pnlRegister.Controls.Add(Me.lblRLName)
+        Me.pnlRegister.Controls.Add(Me.txtRFName)
+        Me.pnlRegister.Controls.Add(Me.Label7)
+        Me.pnlRegister.Controls.Add(Me.Label6)
+        Me.pnlRegister.Location = New System.Drawing.Point(199, 56)
+        Me.pnlRegister.Name = "pnlRegister"
+        Me.pnlRegister.Size = New System.Drawing.Size(669, 447)
+        Me.pnlRegister.TabIndex = 3
         '
         'lblRTipsIC
         '
@@ -261,7 +264,9 @@ Partial Class LoginRegister
         'txtRpassword
         '
         Me.txtRpassword.Location = New System.Drawing.Point(279, 239)
+        Me.txtRpassword.MaxLength = 12
         Me.txtRpassword.Name = "txtRpassword"
+        Me.txtRpassword.PasswordChar = Global.Microsoft.VisualBasic.ChrW(42)
         Me.txtRpassword.Size = New System.Drawing.Size(181, 22)
         Me.txtRpassword.TabIndex = 2
         '
@@ -277,6 +282,7 @@ Partial Class LoginRegister
         'txtRIC
         '
         Me.txtRIC.Location = New System.Drawing.Point(279, 287)
+        Me.txtRIC.MaxLength = 12
         Me.txtRIC.Name = "txtRIC"
         Me.txtRIC.Size = New System.Drawing.Size(181, 22)
         Me.txtRIC.TabIndex = 2
@@ -293,6 +299,7 @@ Partial Class LoginRegister
         'txtRUserName
         '
         Me.txtRUserName.Location = New System.Drawing.Point(279, 194)
+        Me.txtRUserName.MaxLength = 20
         Me.txtRUserName.Name = "txtRUserName"
         Me.txtRUserName.Size = New System.Drawing.Size(181, 22)
         Me.txtRUserName.TabIndex = 2
@@ -309,6 +316,7 @@ Partial Class LoginRegister
         'txtRAge
         '
         Me.txtRAge.Location = New System.Drawing.Point(279, 152)
+        Me.txtRAge.MaxLength = 3
         Me.txtRAge.Name = "txtRAge"
         Me.txtRAge.Size = New System.Drawing.Size(181, 22)
         Me.txtRAge.TabIndex = 2
@@ -325,6 +333,7 @@ Partial Class LoginRegister
         'txtRLName
         '
         Me.txtRLName.Location = New System.Drawing.Point(279, 110)
+        Me.txtRLName.MaxLength = 25
         Me.txtRLName.Name = "txtRLName"
         Me.txtRLName.Size = New System.Drawing.Size(181, 22)
         Me.txtRLName.TabIndex = 2
@@ -341,6 +350,7 @@ Partial Class LoginRegister
         'txtRFName
         '
         Me.txtRFName.Location = New System.Drawing.Point(279, 69)
+        Me.txtRFName.MaxLength = 15
         Me.txtRFName.Name = "txtRFName"
         Me.txtRFName.Size = New System.Drawing.Size(181, 22)
         Me.txtRFName.TabIndex = 2
@@ -363,22 +373,32 @@ Partial Class LoginRegister
         Me.Label6.TabIndex = 0
         Me.Label6.Text = "Register Now!"
         '
-        'Recovery
+        'pnlRecovery
         '
-        Me.Recovery.Controls.Add(Me.btnconchanges)
-        Me.Recovery.Controls.Add(Me.txtPRConPass)
-        Me.Recovery.Controls.Add(Me.lblPRConPass)
-        Me.Recovery.Controls.Add(Me.txtPRNewPass)
-        Me.Recovery.Controls.Add(Me.lblPRNewPass)
-        Me.Recovery.Controls.Add(Me.txtPRIC)
-        Me.Recovery.Controls.Add(Me.lblPRIC)
-        Me.Recovery.Controls.Add(Me.txtPRUsername)
-        Me.Recovery.Controls.Add(Me.lblPRUsername)
-        Me.Recovery.Controls.Add(Me.lblPRTitle)
-        Me.Recovery.Location = New System.Drawing.Point(200, 56)
-        Me.Recovery.Name = "Recovery"
-        Me.Recovery.Size = New System.Drawing.Size(669, 447)
-        Me.Recovery.TabIndex = 4
+        Me.pnlRecovery.Controls.Add(Me.lblPRTipsIC)
+        Me.pnlRecovery.Controls.Add(Me.btnconchanges)
+        Me.pnlRecovery.Controls.Add(Me.txtPRConPass)
+        Me.pnlRecovery.Controls.Add(Me.lblPRConPass)
+        Me.pnlRecovery.Controls.Add(Me.txtPRNewPass)
+        Me.pnlRecovery.Controls.Add(Me.lblPRNewPass)
+        Me.pnlRecovery.Controls.Add(Me.txtPRIC)
+        Me.pnlRecovery.Controls.Add(Me.lblPRIC)
+        Me.pnlRecovery.Controls.Add(Me.txtPRUsername)
+        Me.pnlRecovery.Controls.Add(Me.lblPRUsername)
+        Me.pnlRecovery.Controls.Add(Me.lblPRTitle)
+        Me.pnlRecovery.Location = New System.Drawing.Point(200, 56)
+        Me.pnlRecovery.Name = "pnlRecovery"
+        Me.pnlRecovery.Size = New System.Drawing.Size(669, 447)
+        Me.pnlRecovery.TabIndex = 4
+        '
+        'lblPRTipsIC
+        '
+        Me.lblPRTipsIC.AutoSize = True
+        Me.lblPRTipsIC.Location = New System.Drawing.Point(483, 115)
+        Me.lblPRTipsIC.Name = "lblPRTipsIC"
+        Me.lblPRTipsIC.Size = New System.Drawing.Size(165, 17)
+        Me.lblPRTipsIC.TabIndex = 4
+        Me.lblPRTipsIC.Text = "Please Put Only Numeric"
         '
         'btnconchanges
         '
@@ -386,12 +406,13 @@ Partial Class LoginRegister
         Me.btnconchanges.Name = "btnconchanges"
         Me.btnconchanges.Size = New System.Drawing.Size(158, 41)
         Me.btnconchanges.TabIndex = 3
-        Me.btnconchanges.Text = "Confirm Changes"
+        Me.btnconchanges.Text = "Recover"
         Me.btnconchanges.UseVisualStyleBackColor = True
         '
         'txtPRConPass
         '
         Me.txtPRConPass.Location = New System.Drawing.Point(256, 196)
+        Me.txtPRConPass.MaxLength = 12
         Me.txtPRConPass.Name = "txtPRConPass"
         Me.txtPRConPass.Size = New System.Drawing.Size(203, 22)
         Me.txtPRConPass.TabIndex = 2
@@ -408,6 +429,7 @@ Partial Class LoginRegister
         'txtPRNewPass
         '
         Me.txtPRNewPass.Location = New System.Drawing.Point(256, 152)
+        Me.txtPRNewPass.MaxLength = 12
         Me.txtPRNewPass.Name = "txtPRNewPass"
         Me.txtPRNewPass.Size = New System.Drawing.Size(203, 22)
         Me.txtPRNewPass.TabIndex = 2
@@ -424,6 +446,7 @@ Partial Class LoginRegister
         'txtPRIC
         '
         Me.txtPRIC.Location = New System.Drawing.Point(256, 110)
+        Me.txtPRIC.MaxLength = 12
         Me.txtPRIC.Name = "txtPRIC"
         Me.txtPRIC.Size = New System.Drawing.Size(203, 22)
         Me.txtPRIC.TabIndex = 2
@@ -440,6 +463,7 @@ Partial Class LoginRegister
         'txtPRUsername
         '
         Me.txtPRUsername.Location = New System.Drawing.Point(256, 66)
+        Me.txtPRUsername.MaxLength = 20
         Me.txtPRUsername.Name = "txtPRUsername"
         Me.txtPRUsername.Size = New System.Drawing.Size(203, 22)
         Me.txtPRUsername.TabIndex = 2
@@ -467,41 +491,41 @@ Partial Class LoginRegister
         Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(870, 501)
-        Me.Controls.Add(Me.register)
-        Me.Controls.Add(Me.login)
-        Me.Controls.Add(Me.Recovery)
-        Me.Controls.Add(Me.navigation)
-        Me.Controls.Add(Me.navbutton)
+        Me.Controls.Add(Me.pnlLogin)
+        Me.Controls.Add(Me.pnlRegister)
+        Me.Controls.Add(Me.pnlRecovery)
+        Me.Controls.Add(Me.pnlNavigation)
+        Me.Controls.Add(Me.pnlNavButton)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
         Me.Name = "LoginRegister"
         Me.Text = "LoginRegister"
-        Me.navigation.ResumeLayout(False)
-        Me.navigation.PerformLayout()
-        Me.login.ResumeLayout(False)
-        Me.login.PerformLayout()
-        Me.register.ResumeLayout(False)
-        Me.register.PerformLayout()
-        Me.Recovery.ResumeLayout(False)
-        Me.Recovery.PerformLayout()
+        Me.pnlNavigation.ResumeLayout(False)
+        Me.pnlNavigation.PerformLayout()
+        Me.pnlLogin.ResumeLayout(False)
+        Me.pnlLogin.PerformLayout()
+        Me.pnlRegister.ResumeLayout(False)
+        Me.pnlRegister.PerformLayout()
+        Me.pnlRecovery.ResumeLayout(False)
+        Me.pnlRecovery.PerformLayout()
         Me.ResumeLayout(False)
 
     End Sub
 
-    Friend WithEvents navigation As Panel
+    Friend WithEvents pnlNavigation As Panel
     Friend WithEvents btnavLogin As Button
     Friend WithEvents btnavRegister As Button
     Friend WithEvents btnavRecPass As Button
     Friend WithEvents btnFormClose As Button
-    Friend WithEvents navbutton As Panel
+    Friend WithEvents pnlNavButton As Panel
     Friend WithEvents Label1 As Label
-    Friend WithEvents login As Panel
+    Friend WithEvents pnlLogin As Panel
     Friend WithEvents btnLogin As Button
     Friend WithEvents txtLpassword As TextBox
     Friend WithEvents txtLusername As TextBox
     Friend WithEvents Label5 As Label
     Friend WithEvents Label4 As Label
     Friend WithEvents Label3 As Label
-    Friend WithEvents register As Panel
+    Friend WithEvents pnlRegister As Panel
     Friend WithEvents btnRegister As Button
     Friend WithEvents txtRpassword As TextBox
     Friend WithEvents lblRPass As Label
@@ -516,7 +540,7 @@ Partial Class LoginRegister
     Friend WithEvents txtRFName As TextBox
     Friend WithEvents Label7 As Label
     Friend WithEvents Label6 As Label
-    Friend WithEvents Recovery As Panel
+    Friend WithEvents pnlRecovery As Panel
     Friend WithEvents btnconchanges As Button
     Friend WithEvents txtPRConPass As TextBox
     Friend WithEvents lblPRConPass As Label
@@ -530,4 +554,5 @@ Partial Class LoginRegister
     Friend WithEvents btncheckconnect As Button
     Friend WithEvents lblRTipsIC As Label
     Friend WithEvents lblRTipsAge As Label
+    Friend WithEvents lblPRTipsIC As Label
 End Class

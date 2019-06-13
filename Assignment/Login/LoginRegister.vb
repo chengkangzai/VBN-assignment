@@ -1,4 +1,6 @@
-﻿Imports System.ComponentModel
+﻿
+
+Imports System.ComponentModel
 Imports System.Data.SqlClient
 Public Class LoginRegister
     Dim con As New SqlConnection
@@ -12,7 +14,7 @@ Public Class LoginRegister
     'Login
     Private Sub Button5_Click(sender As Object, e As EventArgs) Handles btnLogin.Click
 
-        con = New SqlConnection("Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=E:\Assignments\Semester 3\VB.Net\vbimdb.mdf;Integrated Security=True;Connect Timeout=30")
+        con = New SqlConnection("Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\Chin Wei\Desktop\VBimdb.mdf;Integrated Security=True;Connect Timeout=30")
         con.Open()
         Dim stmt As String = "select * from [User] where U_Username='" & txtLusername.Text & "' And U_Password='" & txtLpassword.Text & "' "
         cmd = New SqlCommand(stmt, con)
@@ -32,40 +34,40 @@ Public Class LoginRegister
     'Register
     Private Sub Button6_Click(sender As Object, e As EventArgs) Handles btnRegister.Click
 
-        con = New SqlConnection("Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=E:\Assignments\Semester 3\VB.Net\vbimdb.mdf;Integrated Security=True;Connect Timeout=30")
+        con = New SqlConnection("Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\Chin Wei\Desktop\VBimdb.mdf;Integrated Security=True;Connect Timeout=30")
         con.Open()
         MsgBox("Connection Open")
         cmd.Connection = con
         cmd.CommandType = CommandType.Text
         cmd.CommandText = "Select * from [User] where U_Username='" & txtRUserName.Text & "' "
-        'Try
-        dr = cmd.ExecuteReader
-        If dr.HasRows Then
-            MsgBox("Username Already Exist")
-            con.Close()
-        Else
-            con.Close()
-            con.Open()
-            cmd = New SqlCommand("insert into [User] (U_Fname, U_Lname, U_Age, U_Username, U_Password, U_ICnumber) values ('" & txtRFName.Text & "', '" & txtRLName.Text & "', '" & txtRAge.Text & "', '" & txtRUserName.Text & "', '" & txtRpassword.Text & "', '" & txtRIC.Text & "')", con)
-            If Not IsNumeric(txtRAge.Text) Or Not IsNumeric(txtRIC.Text) Then
-                MsgBox("Please Enter Value Only")
-            End If
-            If (txtRFName.Text = "" And txtRLName.Text = "" And txtRAge.Text = "" And txtRUserName.Text = "" And txtRpassword.Text = "" And txtRIC.Text = "") Then
-                MsgBox("Please enter the details")
+        Try
+            dr = cmd.ExecuteReader
+            If dr.HasRows Then
+                MsgBox("Username Already Exist")
+                con.Close()
             Else
-                cmd.ExecuteNonQuery()
-                MsgBox("Successfully Registered")
+                con.Close()
+                con.Open()
+                cmd = New SqlCommand("insert into [User] (U_Fname, U_Lname, U_Age, U_Username, U_Password, U_ICnumber) values ('" & txtRFName.Text & "', '" & txtRLName.Text & "', '" & txtRAge.Text & "', '" & txtRUserName.Text & "', '" & txtRpassword.Text & "', '" & txtRIC.Text & "')", con)
+                If Not IsNumeric(txtRAge.Text) Or Not IsNumeric(txtRIC.Text) Then
+                    MsgBox("Please Enter Value Only")
+                End If
+                If (txtRFName.Text = "" And txtRLName.Text = "" And txtRAge.Text = "" And txtRUserName.Text = "" And txtRpassword.Text = "" And txtRIC.Text = "") Then
+                    MsgBox("Please enter the details")
+                Else
+                    cmd.ExecuteNonQuery()
+                    MsgBox("Successfully Registered")
+                End If
+                con.Close()
             End If
             con.Close()
-        End If
-        con.Close()
-        'Catch ex As Exception
-        '    MsgBox("Unsuccessful Register")
-        'End Try
+        Catch ex As Exception
+            MsgBox("Unsuccessful Register")
+        End Try
     End Sub
 
     Private Sub Button8_Click(sender As Object, e As EventArgs) Handles btncheckconnect.Click
-        If txtRAge.Text.Length <= 6 Then
+        If txtRpassword.Text.Length <= 6 Then
             MsgBox("Weak Password")
         Else
             MsgBox("Strong Password")
@@ -78,14 +80,17 @@ Public Class LoginRegister
             MsgBox("Password does not match")
         End If
 
-        con = New SqlConnection("Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=E:\Assignments\Semester 3\VB.Net\vbimdb.mdf;Integrated Security=True;Connect Timeout=30")
+        con = New SqlConnection("Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\Chin Wei\Desktop\VBimdb.mdf;Integrated Security=True;Connect Timeout=30")
         If txtRFName.Text = txtRLName.Text Then
             Try
                 con.Open()
-                cmd = New SqlCommand("update [User] set U_Password = '" & txtPRNewPass.Text & "' where U_Username= '" & txtPRUsername.Text & "'", con)
+                cmd = New SqlCommand("update [User] set U_Password = '" & txtPRNewPass.Text & "' where U_Username= '" & txtPRUsername.Text & "' And U_ICnumber='" & txtPRIC.Text & "'", con)
                 If (txtPRUsername.Text = "" And txtPRIC.Text = "" And txtPRNewPass.Text = "" And txtPRConPass.Text = "") Then
                     MsgBox("Please enter every info in the textbox")
                 Else
+                    If Not IsNumeric(txtPRIC.Text) Then
+                        MsgBox("Please Enter Value Only")
+                    End If
                     If (cmd.ExecuteNonQuery() > 0) Then
                         MessageBox.Show("Password Successfully Recover")
                         con.Close()
@@ -94,31 +99,31 @@ Public Class LoginRegister
                     End If
                 End If
             Catch ex As Exception
-                MsgBox("error")
+                MsgBox("Recovery Unsuccessful")
             End Try
         End If
     End Sub
 
     'btnavigation
     Private Sub btnavLogin_Click(sender As Object, e As EventArgs) Handles btnavLogin.Click
-        login.Visible = True
-        Recovery.Visible = False
-        register.Visible = False
+        pnlLogin.Visible = True
+        pnlRecovery.Visible = False
+        pnlRegister.Visible = False
     End Sub
 
     Private Sub btnavRegister_Click(sender As Object, e As EventArgs) Handles btnavRegister.Click
-        login.Visible = False
-        Recovery.Visible = False
-        register.Visible = True
+        pnlLogin.Visible = False
+        pnlRecovery.Visible = False
+        pnlRegister.Visible = True
     End Sub
 
     Private Sub btnavRecPass_Click(sender As Object, e As EventArgs) Handles btnavRecPass.Click
-        login.Visible = False
-        Recovery.Visible = True
-        register.Visible = False
+        pnlLogin.Visible = False
+        pnlRecovery.Visible = True
+        pnlRegister.Visible = False
     End Sub
 
-    'Data Validation(register)
+    'Data Validation label show(register)
     Private Sub txtRage_Validating(sender As Object, e As CancelEventArgs) Handles txtRAge.Validating
         If IsNumeric(txtRAge.Text) Then
             lblRTipsAge.Visible = False
@@ -128,7 +133,7 @@ Public Class LoginRegister
     End Sub
 
     Private Sub txtRic_Validating(sender As Object, e As CancelEventArgs) Handles txtRIC.Validating
-        If IsNumeric(txtRIC) Then
+        If IsNumeric(txtRIC.Text) Then
             lblRTipsIC.Visible = False
         Else
             lblRTipsIC.Visible = True
@@ -138,15 +143,16 @@ Public Class LoginRegister
     Private Sub LoginRegister_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         lblRTipsAge.Visible = False
         lblRTipsIC.Visible = False
+        lblPRTipsIC.Visible = False
     End Sub
 
-    Private Sub txtPRic_TextChanged(sender As Object, e As EventArgs) Handles txtPRIC.TextChanged
-        Try
-            If txtPRIC.Text < 0 Then
-                MsgBox("Please input your Identification Number")
-            End If
-        Catch ex As Exception
-            MsgBox("Must be number")
-        End Try
+    'Data Validation label show(password recovery)
+
+    Private Sub txtPRIC_Validating(sender As Object, e As CancelEventArgs) Handles txtPRIC.Validating
+        If IsNumeric(txtPRIC.Text) Then
+            lblPRTipsIC.Visible = False
+        Else
+            lblPRTipsIC.Visible = True
+        End If
     End Sub
 End Class
