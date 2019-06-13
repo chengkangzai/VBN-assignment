@@ -37,34 +37,34 @@ Partial Class LoginRegister
         Me.Label4 = New System.Windows.Forms.Label()
         Me.Label3 = New System.Windows.Forms.Label()
         Me.register = New System.Windows.Forms.Panel()
-        Me.Label18 = New System.Windows.Forms.Label()
-        Me.Label2 = New System.Windows.Forms.Label()
+        Me.lblRTipsIC = New System.Windows.Forms.Label()
+        Me.lblRTipsAge = New System.Windows.Forms.Label()
         Me.btncheckconnect = New System.Windows.Forms.Button()
         Me.btnRegister = New System.Windows.Forms.Button()
         Me.txtRpassword = New System.Windows.Forms.TextBox()
-        Me.Label12 = New System.Windows.Forms.Label()
-        Me.txtRic = New System.Windows.Forms.TextBox()
-        Me.Label11 = New System.Windows.Forms.Label()
-        Me.txtRusername = New System.Windows.Forms.TextBox()
-        Me.Label10 = New System.Windows.Forms.Label()
-        Me.txtRage = New System.Windows.Forms.TextBox()
-        Me.Label9 = New System.Windows.Forms.Label()
-        Me.txtRlname = New System.Windows.Forms.TextBox()
-        Me.Label8 = New System.Windows.Forms.Label()
-        Me.txtRfname = New System.Windows.Forms.TextBox()
+        Me.lblRPass = New System.Windows.Forms.Label()
+        Me.txtRIC = New System.Windows.Forms.TextBox()
+        Me.lblRIC = New System.Windows.Forms.Label()
+        Me.txtRUserName = New System.Windows.Forms.TextBox()
+        Me.lblRUserName = New System.Windows.Forms.Label()
+        Me.txtRAge = New System.Windows.Forms.TextBox()
+        Me.lblRAge = New System.Windows.Forms.Label()
+        Me.txtRLName = New System.Windows.Forms.TextBox()
+        Me.lblRLName = New System.Windows.Forms.Label()
+        Me.txtRFName = New System.Windows.Forms.TextBox()
         Me.Label7 = New System.Windows.Forms.Label()
         Me.Label6 = New System.Windows.Forms.Label()
         Me.Recovery = New System.Windows.Forms.Panel()
         Me.btnconchanges = New System.Windows.Forms.Button()
-        Me.txtPRconpass = New System.Windows.Forms.TextBox()
-        Me.Label17 = New System.Windows.Forms.Label()
-        Me.txtPRnewpass = New System.Windows.Forms.TextBox()
-        Me.Label16 = New System.Windows.Forms.Label()
-        Me.txtPRic = New System.Windows.Forms.TextBox()
-        Me.Label15 = New System.Windows.Forms.Label()
-        Me.txtPRusername = New System.Windows.Forms.TextBox()
-        Me.Label14 = New System.Windows.Forms.Label()
-        Me.Label13 = New System.Windows.Forms.Label()
+        Me.txtPRConPass = New System.Windows.Forms.TextBox()
+        Me.lblPRConPass = New System.Windows.Forms.Label()
+        Me.txtPRNewPass = New System.Windows.Forms.TextBox()
+        Me.lblPRNewPass = New System.Windows.Forms.Label()
+        Me.txtPRIC = New System.Windows.Forms.TextBox()
+        Me.lblPRIC = New System.Windows.Forms.Label()
+        Me.txtPRUsername = New System.Windows.Forms.TextBox()
+        Me.lblPRUsername = New System.Windows.Forms.Label()
+        Me.lblPRTitle = New System.Windows.Forms.Label()
         Me.navigation.SuspendLayout()
         Me.login.SuspendLayout()
         Me.register.SuspendLayout()
@@ -200,21 +200,21 @@ Partial Class LoginRegister
         '
         'register
         '
-        Me.register.Controls.Add(Me.Label18)
-        Me.register.Controls.Add(Me.Label2)
+        Me.register.Controls.Add(Me.lblRTipsIC)
+        Me.register.Controls.Add(Me.lblRTipsAge)
         Me.register.Controls.Add(Me.btncheckconnect)
         Me.register.Controls.Add(Me.btnRegister)
         Me.register.Controls.Add(Me.txtRpassword)
-        Me.register.Controls.Add(Me.Label12)
-        Me.register.Controls.Add(Me.txtRic)
-        Me.register.Controls.Add(Me.Label11)
-        Me.register.Controls.Add(Me.txtRusername)
-        Me.register.Controls.Add(Me.Label10)
-        Me.register.Controls.Add(Me.txtRage)
-        Me.register.Controls.Add(Me.Label9)
-        Me.register.Controls.Add(Me.txtRlname)
-        Me.register.Controls.Add(Me.Label8)
-        Me.register.Controls.Add(Me.txtRfname)
+        Me.register.Controls.Add(Me.lblRPass)
+        Me.register.Controls.Add(Me.txtRIC)
+        Me.register.Controls.Add(Me.lblRIC)
+        Me.register.Controls.Add(Me.txtRUserName)
+        Me.register.Controls.Add(Me.lblRUserName)
+        Me.register.Controls.Add(Me.txtRAge)
+        Me.register.Controls.Add(Me.lblRAge)
+        Me.register.Controls.Add(Me.txtRLName)
+        Me.register.Controls.Add(Me.lblRLName)
+        Me.register.Controls.Add(Me.txtRFName)
         Me.register.Controls.Add(Me.Label7)
         Me.register.Controls.Add(Me.Label6)
         Me.register.Location = New System.Drawing.Point(199, 56)
@@ -222,23 +222,23 @@ Partial Class LoginRegister
         Me.register.Size = New System.Drawing.Size(669, 447)
         Me.register.TabIndex = 3
         '
-        'Label18
+        'lblRTipsIC
         '
-        Me.Label18.AutoSize = True
-        Me.Label18.Location = New System.Drawing.Point(484, 292)
-        Me.Label18.Name = "Label18"
-        Me.Label18.Size = New System.Drawing.Size(165, 17)
-        Me.Label18.TabIndex = 6
-        Me.Label18.Text = "Please Put Only Numeric"
+        Me.lblRTipsIC.AutoSize = True
+        Me.lblRTipsIC.Location = New System.Drawing.Point(484, 292)
+        Me.lblRTipsIC.Name = "lblRTipsIC"
+        Me.lblRTipsIC.Size = New System.Drawing.Size(165, 17)
+        Me.lblRTipsIC.TabIndex = 6
+        Me.lblRTipsIC.Text = "Please Put Only Numeric"
         '
-        'Label2
+        'lblRTipsAge
         '
-        Me.Label2.AutoSize = True
-        Me.Label2.Location = New System.Drawing.Point(484, 157)
-        Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(165, 17)
-        Me.Label2.TabIndex = 5
-        Me.Label2.Text = "Please Put Only Numeric"
+        Me.lblRTipsAge.AutoSize = True
+        Me.lblRTipsAge.Location = New System.Drawing.Point(484, 157)
+        Me.lblRTipsAge.Name = "lblRTipsAge"
+        Me.lblRTipsAge.Size = New System.Drawing.Size(165, 17)
+        Me.lblRTipsAge.TabIndex = 5
+        Me.lblRTipsAge.Text = "Please Put Only Numeric"
         '
         'btncheckconnect
         '
@@ -265,85 +265,85 @@ Partial Class LoginRegister
         Me.txtRpassword.Size = New System.Drawing.Size(181, 22)
         Me.txtRpassword.TabIndex = 2
         '
-        'Label12
+        'lblRPass
         '
-        Me.Label12.AutoSize = True
-        Me.Label12.Location = New System.Drawing.Point(157, 244)
-        Me.Label12.Name = "Label12"
-        Me.Label12.Size = New System.Drawing.Size(73, 17)
-        Me.Label12.TabIndex = 1
-        Me.Label12.Text = "Password:"
+        Me.lblRPass.AutoSize = True
+        Me.lblRPass.Location = New System.Drawing.Point(157, 244)
+        Me.lblRPass.Name = "lblRPass"
+        Me.lblRPass.Size = New System.Drawing.Size(73, 17)
+        Me.lblRPass.TabIndex = 1
+        Me.lblRPass.Text = "Password:"
         '
-        'txtRic
+        'txtRIC
         '
-        Me.txtRic.Location = New System.Drawing.Point(279, 287)
-        Me.txtRic.Name = "txtRic"
-        Me.txtRic.Size = New System.Drawing.Size(181, 22)
-        Me.txtRic.TabIndex = 2
+        Me.txtRIC.Location = New System.Drawing.Point(279, 287)
+        Me.txtRIC.Name = "txtRIC"
+        Me.txtRIC.Size = New System.Drawing.Size(181, 22)
+        Me.txtRIC.TabIndex = 2
         '
-        'Label11
+        'lblRIC
         '
-        Me.Label11.AutoSize = True
-        Me.Label11.Location = New System.Drawing.Point(186, 292)
-        Me.Label11.Name = "Label11"
-        Me.Label11.Size = New System.Drawing.Size(44, 17)
-        Me.Label11.TabIndex = 1
-        Me.Label11.Text = "IC.no:"
+        Me.lblRIC.AutoSize = True
+        Me.lblRIC.Location = New System.Drawing.Point(186, 292)
+        Me.lblRIC.Name = "lblRIC"
+        Me.lblRIC.Size = New System.Drawing.Size(44, 17)
+        Me.lblRIC.TabIndex = 1
+        Me.lblRIC.Text = "IC.no:"
         '
-        'txtRusername
+        'txtRUserName
         '
-        Me.txtRusername.Location = New System.Drawing.Point(279, 194)
-        Me.txtRusername.Name = "txtRusername"
-        Me.txtRusername.Size = New System.Drawing.Size(181, 22)
-        Me.txtRusername.TabIndex = 2
+        Me.txtRUserName.Location = New System.Drawing.Point(279, 194)
+        Me.txtRUserName.Name = "txtRUserName"
+        Me.txtRUserName.Size = New System.Drawing.Size(181, 22)
+        Me.txtRUserName.TabIndex = 2
         '
-        'Label10
+        'lblRUserName
         '
-        Me.Label10.AutoSize = True
-        Me.Label10.Location = New System.Drawing.Point(153, 199)
-        Me.Label10.Name = "Label10"
-        Me.Label10.Size = New System.Drawing.Size(77, 17)
-        Me.Label10.TabIndex = 1
-        Me.Label10.Text = "Username:"
+        Me.lblRUserName.AutoSize = True
+        Me.lblRUserName.Location = New System.Drawing.Point(153, 199)
+        Me.lblRUserName.Name = "lblRUserName"
+        Me.lblRUserName.Size = New System.Drawing.Size(77, 17)
+        Me.lblRUserName.TabIndex = 1
+        Me.lblRUserName.Text = "Username:"
         '
-        'txtRage
+        'txtRAge
         '
-        Me.txtRage.Location = New System.Drawing.Point(279, 152)
-        Me.txtRage.Name = "txtRage"
-        Me.txtRage.Size = New System.Drawing.Size(181, 22)
-        Me.txtRage.TabIndex = 2
+        Me.txtRAge.Location = New System.Drawing.Point(279, 152)
+        Me.txtRAge.Name = "txtRAge"
+        Me.txtRAge.Size = New System.Drawing.Size(181, 22)
+        Me.txtRAge.TabIndex = 2
         '
-        'Label9
+        'lblRAge
         '
-        Me.Label9.AutoSize = True
-        Me.Label9.Location = New System.Drawing.Point(193, 157)
-        Me.Label9.Name = "Label9"
-        Me.Label9.Size = New System.Drawing.Size(37, 17)
-        Me.Label9.TabIndex = 1
-        Me.Label9.Text = "Age:"
+        Me.lblRAge.AutoSize = True
+        Me.lblRAge.Location = New System.Drawing.Point(193, 157)
+        Me.lblRAge.Name = "lblRAge"
+        Me.lblRAge.Size = New System.Drawing.Size(37, 17)
+        Me.lblRAge.TabIndex = 1
+        Me.lblRAge.Text = "Age:"
         '
-        'txtRlname
+        'txtRLName
         '
-        Me.txtRlname.Location = New System.Drawing.Point(279, 110)
-        Me.txtRlname.Name = "txtRlname"
-        Me.txtRlname.Size = New System.Drawing.Size(181, 22)
-        Me.txtRlname.TabIndex = 2
+        Me.txtRLName.Location = New System.Drawing.Point(279, 110)
+        Me.txtRLName.Name = "txtRLName"
+        Me.txtRLName.Size = New System.Drawing.Size(181, 22)
+        Me.txtRLName.TabIndex = 2
         '
-        'Label8
+        'lblRLName
         '
-        Me.Label8.AutoSize = True
-        Me.Label8.Location = New System.Drawing.Point(175, 115)
-        Me.Label8.Name = "Label8"
-        Me.Label8.Size = New System.Drawing.Size(55, 17)
-        Me.Label8.TabIndex = 1
-        Me.Label8.Text = "Lname:"
+        Me.lblRLName.AutoSize = True
+        Me.lblRLName.Location = New System.Drawing.Point(175, 115)
+        Me.lblRLName.Name = "lblRLName"
+        Me.lblRLName.Size = New System.Drawing.Size(55, 17)
+        Me.lblRLName.TabIndex = 1
+        Me.lblRLName.Text = "Lname:"
         '
-        'txtRfname
+        'txtRFName
         '
-        Me.txtRfname.Location = New System.Drawing.Point(279, 69)
-        Me.txtRfname.Name = "txtRfname"
-        Me.txtRfname.Size = New System.Drawing.Size(181, 22)
-        Me.txtRfname.TabIndex = 2
+        Me.txtRFName.Location = New System.Drawing.Point(279, 69)
+        Me.txtRFName.Name = "txtRFName"
+        Me.txtRFName.Size = New System.Drawing.Size(181, 22)
+        Me.txtRFName.TabIndex = 2
         '
         'Label7
         '
@@ -366,15 +366,15 @@ Partial Class LoginRegister
         'Recovery
         '
         Me.Recovery.Controls.Add(Me.btnconchanges)
-        Me.Recovery.Controls.Add(Me.txtPRconpass)
-        Me.Recovery.Controls.Add(Me.Label17)
-        Me.Recovery.Controls.Add(Me.txtPRnewpass)
-        Me.Recovery.Controls.Add(Me.Label16)
-        Me.Recovery.Controls.Add(Me.txtPRic)
-        Me.Recovery.Controls.Add(Me.Label15)
-        Me.Recovery.Controls.Add(Me.txtPRusername)
-        Me.Recovery.Controls.Add(Me.Label14)
-        Me.Recovery.Controls.Add(Me.Label13)
+        Me.Recovery.Controls.Add(Me.txtPRConPass)
+        Me.Recovery.Controls.Add(Me.lblPRConPass)
+        Me.Recovery.Controls.Add(Me.txtPRNewPass)
+        Me.Recovery.Controls.Add(Me.lblPRNewPass)
+        Me.Recovery.Controls.Add(Me.txtPRIC)
+        Me.Recovery.Controls.Add(Me.lblPRIC)
+        Me.Recovery.Controls.Add(Me.txtPRUsername)
+        Me.Recovery.Controls.Add(Me.lblPRUsername)
+        Me.Recovery.Controls.Add(Me.lblPRTitle)
         Me.Recovery.Location = New System.Drawing.Point(200, 56)
         Me.Recovery.Name = "Recovery"
         Me.Recovery.Size = New System.Drawing.Size(669, 447)
@@ -389,87 +389,87 @@ Partial Class LoginRegister
         Me.btnconchanges.Text = "Confirm Changes"
         Me.btnconchanges.UseVisualStyleBackColor = True
         '
-        'txtPRconpass
+        'txtPRConPass
         '
-        Me.txtPRconpass.Location = New System.Drawing.Point(256, 196)
-        Me.txtPRconpass.Name = "txtPRconpass"
-        Me.txtPRconpass.Size = New System.Drawing.Size(203, 22)
-        Me.txtPRconpass.TabIndex = 2
+        Me.txtPRConPass.Location = New System.Drawing.Point(256, 196)
+        Me.txtPRConPass.Name = "txtPRConPass"
+        Me.txtPRConPass.Size = New System.Drawing.Size(203, 22)
+        Me.txtPRConPass.TabIndex = 2
         '
-        'Label17
+        'lblPRConPass
         '
-        Me.Label17.AutoSize = True
-        Me.Label17.Location = New System.Drawing.Point(104, 202)
-        Me.Label17.Name = "Label17"
-        Me.Label17.Size = New System.Drawing.Size(125, 17)
-        Me.Label17.TabIndex = 1
-        Me.Label17.Text = "Confirm Password:"
+        Me.lblPRConPass.AutoSize = True
+        Me.lblPRConPass.Location = New System.Drawing.Point(104, 202)
+        Me.lblPRConPass.Name = "lblPRConPass"
+        Me.lblPRConPass.Size = New System.Drawing.Size(125, 17)
+        Me.lblPRConPass.TabIndex = 1
+        Me.lblPRConPass.Text = "Confirm Password:"
         '
-        'txtPRnewpass
+        'txtPRNewPass
         '
-        Me.txtPRnewpass.Location = New System.Drawing.Point(256, 152)
-        Me.txtPRnewpass.Name = "txtPRnewpass"
-        Me.txtPRnewpass.Size = New System.Drawing.Size(203, 22)
-        Me.txtPRnewpass.TabIndex = 2
+        Me.txtPRNewPass.Location = New System.Drawing.Point(256, 152)
+        Me.txtPRNewPass.Name = "txtPRNewPass"
+        Me.txtPRNewPass.Size = New System.Drawing.Size(203, 22)
+        Me.txtPRNewPass.TabIndex = 2
         '
-        'Label16
+        'lblPRNewPass
         '
-        Me.Label16.AutoSize = True
-        Me.Label16.Location = New System.Drawing.Point(125, 152)
-        Me.Label16.Name = "Label16"
-        Me.Label16.Size = New System.Drawing.Size(104, 17)
-        Me.Label16.TabIndex = 1
-        Me.Label16.Text = "New Password:"
+        Me.lblPRNewPass.AutoSize = True
+        Me.lblPRNewPass.Location = New System.Drawing.Point(125, 152)
+        Me.lblPRNewPass.Name = "lblPRNewPass"
+        Me.lblPRNewPass.Size = New System.Drawing.Size(104, 17)
+        Me.lblPRNewPass.TabIndex = 1
+        Me.lblPRNewPass.Text = "New Password:"
         '
-        'txtPRic
+        'txtPRIC
         '
-        Me.txtPRic.Location = New System.Drawing.Point(256, 110)
-        Me.txtPRic.Name = "txtPRic"
-        Me.txtPRic.Size = New System.Drawing.Size(203, 22)
-        Me.txtPRic.TabIndex = 2
+        Me.txtPRIC.Location = New System.Drawing.Point(256, 110)
+        Me.txtPRIC.Name = "txtPRIC"
+        Me.txtPRIC.Size = New System.Drawing.Size(203, 22)
+        Me.txtPRIC.TabIndex = 2
         '
-        'Label15
+        'lblPRIC
         '
-        Me.Label15.AutoSize = True
-        Me.Label15.Location = New System.Drawing.Point(185, 115)
-        Me.Label15.Name = "Label15"
-        Me.Label15.Size = New System.Drawing.Size(44, 17)
-        Me.Label15.TabIndex = 1
-        Me.Label15.Text = "IC.no:"
+        Me.lblPRIC.AutoSize = True
+        Me.lblPRIC.Location = New System.Drawing.Point(185, 115)
+        Me.lblPRIC.Name = "lblPRIC"
+        Me.lblPRIC.Size = New System.Drawing.Size(44, 17)
+        Me.lblPRIC.TabIndex = 1
+        Me.lblPRIC.Text = "IC.no:"
         '
-        'txtPRusername
+        'txtPRUsername
         '
-        Me.txtPRusername.Location = New System.Drawing.Point(256, 66)
-        Me.txtPRusername.Name = "txtPRusername"
-        Me.txtPRusername.Size = New System.Drawing.Size(203, 22)
-        Me.txtPRusername.TabIndex = 2
+        Me.txtPRUsername.Location = New System.Drawing.Point(256, 66)
+        Me.txtPRUsername.Name = "txtPRUsername"
+        Me.txtPRUsername.Size = New System.Drawing.Size(203, 22)
+        Me.txtPRUsername.TabIndex = 2
         '
-        'Label14
+        'lblPRUsername
         '
-        Me.Label14.AutoSize = True
-        Me.Label14.Location = New System.Drawing.Point(152, 69)
-        Me.Label14.Name = "Label14"
-        Me.Label14.Size = New System.Drawing.Size(77, 17)
-        Me.Label14.TabIndex = 1
-        Me.Label14.Text = "Username:"
+        Me.lblPRUsername.AutoSize = True
+        Me.lblPRUsername.Location = New System.Drawing.Point(152, 69)
+        Me.lblPRUsername.Name = "lblPRUsername"
+        Me.lblPRUsername.Size = New System.Drawing.Size(77, 17)
+        Me.lblPRUsername.TabIndex = 1
+        Me.lblPRUsername.Text = "Username:"
         '
-        'Label13
+        'lblPRTitle
         '
-        Me.Label13.AutoSize = True
-        Me.Label13.Location = New System.Drawing.Point(274, 30)
-        Me.Label13.Name = "Label13"
-        Me.Label13.Size = New System.Drawing.Size(133, 17)
-        Me.Label13.TabIndex = 0
-        Me.Label13.Text = "Password Recovery"
+        Me.lblPRTitle.AutoSize = True
+        Me.lblPRTitle.Location = New System.Drawing.Point(274, 30)
+        Me.lblPRTitle.Name = "lblPRTitle"
+        Me.lblPRTitle.Size = New System.Drawing.Size(133, 17)
+        Me.lblPRTitle.TabIndex = 0
+        Me.lblPRTitle.Text = "Password Recovery"
         '
         'LoginRegister
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(870, 501)
-        Me.Controls.Add(Me.Recovery)
-        Me.Controls.Add(Me.login)
         Me.Controls.Add(Me.register)
+        Me.Controls.Add(Me.login)
+        Me.Controls.Add(Me.Recovery)
         Me.Controls.Add(Me.navigation)
         Me.Controls.Add(Me.navbutton)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
@@ -504,30 +504,30 @@ Partial Class LoginRegister
     Friend WithEvents register As Panel
     Friend WithEvents btnRegister As Button
     Friend WithEvents txtRpassword As TextBox
-    Friend WithEvents Label12 As Label
-    Friend WithEvents txtRic As TextBox
-    Friend WithEvents Label11 As Label
-    Friend WithEvents txtRusername As TextBox
-    Friend WithEvents Label10 As Label
-    Friend WithEvents txtRage As TextBox
-    Friend WithEvents Label9 As Label
-    Friend WithEvents txtRlname As TextBox
-    Friend WithEvents Label8 As Label
-    Friend WithEvents txtRfname As TextBox
+    Friend WithEvents lblRPass As Label
+    Friend WithEvents txtRIC As TextBox
+    Friend WithEvents lblRIC As Label
+    Friend WithEvents txtRUserName As TextBox
+    Friend WithEvents lblRUserName As Label
+    Friend WithEvents txtRAge As TextBox
+    Friend WithEvents lblRAge As Label
+    Friend WithEvents txtRLName As TextBox
+    Friend WithEvents lblRLName As Label
+    Friend WithEvents txtRFName As TextBox
     Friend WithEvents Label7 As Label
     Friend WithEvents Label6 As Label
     Friend WithEvents Recovery As Panel
     Friend WithEvents btnconchanges As Button
-    Friend WithEvents txtPRconpass As TextBox
-    Friend WithEvents Label17 As Label
-    Friend WithEvents txtPRnewpass As TextBox
-    Friend WithEvents Label16 As Label
-    Friend WithEvents txtPRic As TextBox
-    Friend WithEvents Label15 As Label
-    Friend WithEvents txtPRusername As TextBox
-    Friend WithEvents Label14 As Label
-    Friend WithEvents Label13 As Label
+    Friend WithEvents txtPRConPass As TextBox
+    Friend WithEvents lblPRConPass As Label
+    Friend WithEvents txtPRNewPass As TextBox
+    Friend WithEvents lblPRNewPass As Label
+    Friend WithEvents txtPRIC As TextBox
+    Friend WithEvents lblPRIC As Label
+    Friend WithEvents txtPRUsername As TextBox
+    Friend WithEvents lblPRUsername As Label
+    Friend WithEvents lblPRTitle As Label
     Friend WithEvents btncheckconnect As Button
-    Friend WithEvents Label18 As Label
-    Friend WithEvents Label2 As Label
+    Friend WithEvents lblRTipsIC As Label
+    Friend WithEvents lblRTipsAge As Label
 End Class
