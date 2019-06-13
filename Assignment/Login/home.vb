@@ -1,4 +1,14 @@
-﻿Imports System.Data.SqlClient
+﻿'References
+'SQL Replacing All '\N' to NULL: https://www.essentialsql.com/sql-update-statement/
+'Creating View (SQL): https://www.w3schools.com/sql/sql_view.asp
+'Null Value Filter: https://stackoverflow.com/questions/26719598/sql-vb-net-search-function-looking-for-at-least-one-correct-input
+'Data Grid View Page Function: http://vb.net-informations.com/datagridview/vb.net_datagridview_paging.htm
+'SQL Ending Existing Connection to Detach: https://stackoverflow.com/questions/7197574/script-to-kill-all-connections-to-a-database-more-than-restricted-user-rollback
+'Invalid Object Fix: https://support.microsoft.com/en-my/help/238750/fix-invalid-object-name-error-when-updating-by-stored-procedure-in-dif
+'Importing Guideline: https://support.discountasp.net/kb/a1179/how-to-import-a-csv-file-into-a-database-using-sql-server-management-studio.aspx
+'Importing Guideline 2: https://docs.microsoft.com/en-us/sql/relational-databases/import-export/import-flat-file-wizard?view=sql-server-2017
+
+Imports System.Data.SqlClient
 
 Public Class home
     'Maximize and Minimize or close
@@ -85,7 +95,6 @@ Public Class home
         cboYearMod.SelectedIndex = 0
         cboCrewBYearMOD.SelectedIndex = 0
         radMovie.Checked = 1
-
     End Sub
 
     Private Sub Search_button(sender As Object, e As EventArgs) Handles btnpnlSearch.Click
@@ -93,7 +102,6 @@ Public Class home
         pnlMovie.Visible = False
         pnlLogin.Visible = False
         pnlAbout.Visible = False
-
         pnlSearch.Visible = True
         pnlPreSearch.Visible = True
         pnlAfterSearch.Visible = False
@@ -174,13 +182,10 @@ Public Class home
     End Sub
 
     Private Sub btnSearch_Click(sender As Object, e As EventArgs) Handles btnSearch.Click
-        'Connected 
-        ''Con = New SqlConnection
         Dim con As New SqlConnection("Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Games\vbimdb.mdf;Integrated Security=True;Connect Timeout=30")
-        'Dim rowcount As Integer
-        'rowcount = 100
+        Dim sql As String
         If radMovie.Checked Then
-            Dim sql As String = "SELECT * FROM [MovieFilter] WHERE "
+            sql = "SELECT * FROM [MovieFilter] WHERE "
             If Not String.IsNullOrWhiteSpace(txtMSearchName.Text) Then
                 sql = sql & "[movie title] LIKE '%" & txtMSearchName.Text & "%' AND "
             End If
@@ -199,71 +204,69 @@ Public Class home
             If Not String.IsNullOrWhiteSpace(txtRatings.Text) Then
                 sql = sql & "[rating] " & cboRatingsMod.Text & " '" & txtRatings.Text & "' AND "
             End If
-            ' Remove Last AND if Empty
             If sql.EndsWith(" AND ") Then
                 sql = sql.Substring(0, sql.Length - 5)
             End If
             If sql.EndsWith(" WHERE ") Then
                 sql = sql.Substring(0, sql.Length - 7)
             End If
-            pageadapter = New SqlDataAdapter(Sql, con)
-            pagingds = New DataSet()
-            pageadapter.SelectCommand.CommandTimeout = 0
-            pageadapter.Fill(pagingds, scrollval, 100, "[MovieFilter]")
-            dgvSearchResult.DataSource = pagingds
-            dgvSearchResult.DataMember = "[MovieFilter]"
+            If Not IsNumeric(txtMSearchSYear.Text) And Not String.IsNullOrWhiteSpace(txtMSearchSYear.Text) Or Not IsNumeric(txtMSearchEYear.Text) And Not String.IsNullOrWhiteSpace(txtMSearchEYear.Text) Or Not IsNumeric(txtRTM.Text) And Not String.IsNullOrWhiteSpace(txtRTM.Text) Or Not IsNumeric(txtRatings.Text) And Not String.IsNullOrWhiteSpace(txtRatings.Text) Then
+                If Not IsNumeric(txtMSearchSYear.Text) And Not String.IsNullOrWhiteSpace(txtMSearchSYear.Text) Or Not IsNumeric(txtMSearchEYear.Text) And Not String.IsNullOrWhiteSpace(txtMSearchEYear.Text) Then
+                    MsgBox("Please enter year only.")
+                End If
+                If Not IsNumeric(txtRTM.Text) And Not String.IsNullOrWhiteSpace(txtRTM.Text) Or Not IsNumeric(txtRatings.Text) And Not String.IsNullOrWhiteSpace(txtRatings.Text) Then
+                    MsgBox("Please enter a value.")
+                Else
+                End If
+            Else
+                pageadapter = New SqlDataAdapter(sql, con)
+                pagingds = New DataSet()
+                pageadapter.SelectCommand.CommandTimeout = 0
+                pageadapter.Fill(pagingds, scrollval, 100, "[MovieFilter]")
+                dgvSearchResult.DataSource = pagingds
+                dgvSearchResult.DataMember = "[MovieFilter]"
+                pnlPreSearch.Visible = False
+                pnlAfterSearch.Visible = True
+            End If
         End If
+
         If radCrew.Checked Then
-            Dim sql2 As String = "SELECT * FROM [FilterView] WHERE "
+            sql = "SELECT * FROM [FilterView] WHERE "
             If Not String.IsNullOrWhiteSpace(txtCrewName.Text) Then
-                sql2 = sql2 & "[crew's name] LIKE '%" & txtCrewName.Text & "%' AND "
+                sql = sql & "[crew's name] LIKE '%" & txtCrewName.Text & "%' AND "
             End If
             If Not String.IsNullOrWhiteSpace(txtCrewPos.Text) Then
-                sql2 = sql2 & "[crew's position] LIKE '%" & txtCrewPos.Text & "%' AND "
+                sql = sql & "[crew's position] LIKE '%" & txtCrewPos.Text & "%' AND "
             End If
             If Not String.IsNullOrWhiteSpace(txtCrewBYear.Text) Then
-                sql2 = sql2 & "[Crew's Birth Year] " & cboCrewBYearMOD.Text & " '" & txtCrewBYear.Text & "' AND "
+                sql = sql & "[Crew's Birth Year] " & cboCrewBYearMOD.Text & " '" & txtCrewBYear.Text & "' AND "
             End If
             If Not String.IsNullOrWhiteSpace(txtCrewDYear.Text) Then
-                sql2 = sql2 & "[Crew's Death Year] = '" & txtCrewDYear.Text & "' AND "
+                sql = sql & "[Crew's Death Year] = '" & txtCrewDYear.Text & "' AND "
             End If
             If Not String.IsNullOrWhiteSpace(txtCrewProf.Text) Then
-                sql2 = sql2 & "[crew's profession] LIKE '%" & txtCrewProf.Text & "%' AND "
+                sql = sql & "[crew's profession] LIKE '%" & txtCrewProf.Text & "%' AND "
             End If
-            If sql2.EndsWith(" AND ") Then
-                sql2 = sql2.Substring(0, sql2.Length - 5)
+            If sql.EndsWith(" AND ") Then
+                sql = sql.Substring(0, sql.Length - 5)
             End If
-            If sql2.EndsWith(" WHERE ") Then
-                sql2 = sql2.Substring(0, sql2.Length - 7)
+            If sql.EndsWith(" WHERE ") Then
+                sql = sql.Substring(0, sql.Length - 7)
             End If
-            pageadapter = New SqlDataAdapter(sql2, con)
-            pagingds = New DataSet()
-            pageadapter.SelectCommand.CommandTimeout = 0
-            pageadapter.Fill(pagingds, scrollval, 100, "[FilterView]")
-            dgvSearchResult.DataSource = pagingds
-            dgvSearchResult.DataMember = "[FilterView]"
+
+            If Not IsNumeric(txtCrewBYear.Text) And Not String.IsNullOrWhiteSpace(txtCrewBYear.Text) Or Not IsNumeric(txtCrewDYear.Text) And Not String.IsNullOrWhiteSpace(txtCrewDYear.Text) Then
+                MsgBox("Please enter year only.")
+            Else
+                pageadapter = New SqlDataAdapter(sql, con)
+                pagingds = New DataSet()
+                pageadapter.SelectCommand.CommandTimeout = 0
+                pageadapter.Fill(pagingds, scrollval, 100, "[FilterView]")
+                dgvSearchResult.DataSource = pagingds
+                dgvSearchResult.DataMember = "[FilterView]"
+                pnlPreSearch.Visible = False
+                pnlAfterSearch.Visible = True
+            End If
         End If
-        'Dim cmd As New SqlCommand(Sql, con)
-        'Dim DBDA As New SqlDataAdapter(cmd)
-        'Dim table As New DataTable
-        'DBDA.Fill(table)
-        'dgvSearchResult.DataSource = table
-
-
-        'Test Connection
-
-        'Try
-        '    con.Open()
-        '    MessageBox.Show("Connected!")
-        '    con.Close()
-        '    MessageBox.Show("Closed")
-        'Catch ex As SqlException
-        '    MessageBox.Show(ex.Message)
-        'Finally
-        '    con.Dispose()
-        'End Try
-        pnlPreSearch.Visible = False
-        pnlAfterSearch.Visible = True
     End Sub
 
     Private Sub btnBack_Click(sender As Object, e As EventArgs) Handles btnBack.Click
@@ -340,18 +343,13 @@ Public Class home
 
     Private Sub Button6_Click(sender As Object, e As EventArgs) Handles btnLoadMovie.Click
         Dim con As New SqlConnection("Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\ryuko\Desktop\vb\vbimdb.mdf;Integrated Security=True;Connect Timeout=30")
-        'Dim rowcount As Integer
-        'rowcount = 100
-
         Dim sql As String = "SELECT * FROM [FilterView]"
-
         pageadapter = New SqlDataAdapter(sql, con)
         pagingds = New DataSet()
         pageadapter.SelectCommand.CommandTimeout = 0
         pageadapter.Fill(pagingds, scrollval, 100, "[FilterView]")
         dgvMovieList.DataSource = pagingds
         dgvMovieList.DataMember = "[FilterView]"
-
     End Sub
 
     Private Sub BtnPreviousMovie_Click(sender As Object, e As EventArgs) Handles btnPreviousMovie.Click
@@ -371,7 +369,6 @@ Public Class home
 
     Private Sub radMovie_CheckedChanged(sender As Object, e As EventArgs) Handles radMovie.CheckedChanged
         If radMovie.Checked Then
-
             pnlMovieSearch.Visible = True
             txtCrewName.Clear()
             txtCrewBYear.Clear()
@@ -385,7 +382,6 @@ Public Class home
 
     Private Sub radCrew_CheckedChanged(sender As Object, e As EventArgs) Handles radCrew.CheckedChanged
         If radCrew.Checked Then
-
             pnlCrewSearch.Visible = True
             txtMSearchName.Clear()
             txtMSearchSYear.Clear()
