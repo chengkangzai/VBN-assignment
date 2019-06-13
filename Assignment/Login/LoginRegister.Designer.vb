@@ -163,6 +163,7 @@ Partial Class LoginRegister
         Me.txtLpassword.Location = New System.Drawing.Point(300, 181)
         Me.txtLpassword.MaxLength = 12
         Me.txtLpassword.Name = "txtLpassword"
+        Me.txtLpassword.PasswordChar = Global.Microsoft.VisualBasic.ChrW(42)
         Me.txtLpassword.Size = New System.Drawing.Size(151, 22)
         Me.txtLpassword.TabIndex = 3
         '
@@ -414,6 +415,7 @@ Partial Class LoginRegister
         Me.txtPRConPass.Location = New System.Drawing.Point(256, 196)
         Me.txtPRConPass.MaxLength = 12
         Me.txtPRConPass.Name = "txtPRConPass"
+        Me.txtPRConPass.PasswordChar = Global.Microsoft.VisualBasic.ChrW(42)
         Me.txtPRConPass.Size = New System.Drawing.Size(203, 22)
         Me.txtPRConPass.TabIndex = 2
         '
@@ -491,9 +493,9 @@ Partial Class LoginRegister
         Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(870, 501)
-        Me.Controls.Add(Me.pnlRegister)
-        Me.Controls.Add(Me.pnlRecovery)
         Me.Controls.Add(Me.pnlLogin)
+        Me.Controls.Add(Me.pnlRecovery)
+        Me.Controls.Add(Me.pnlRegister)
         Me.Controls.Add(Me.pnlNavigation)
         Me.Controls.Add(Me.pnlNavButton)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
