@@ -1,4 +1,6 @@
-﻿
+﻿'References
+'Login Windows Form=https://www.youtube.com/watch?v=1TqHEsK9ncI&t=320s
+'Register Windows Form=https://www.youtube.com/watch?v=zlUA458CGUU&t=720s
 
 Imports System.ComponentModel
 Imports System.Data.SqlClient
@@ -16,8 +18,8 @@ Public Class LoginRegister
 
         con = New SqlConnection("Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\Chin Wei\Desktop\VBimdb.mdf;Integrated Security=True;Connect Timeout=30")
         con.Open()
-        Dim stmt As String = "select * from [User] where U_Username='" & txtLusername.Text & "' And U_Password='" & txtLpassword.Text & "' "
-        cmd = New SqlCommand(stmt, con)
+        Dim stm As String = "select * from [User] where U_Username='" & txtLusername.Text & "' And U_Password='" & txtLpassword.Text & "' "
+        cmd = New SqlCommand(stm, con)
         Dim reader As SqlDataReader = cmd.ExecuteReader
 
         If reader.Read Then
