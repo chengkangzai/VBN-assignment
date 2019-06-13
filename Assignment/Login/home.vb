@@ -176,56 +176,37 @@ Public Class home
     Private Sub btnSearch_Click(sender As Object, e As EventArgs) Handles btnSearch.Click
         'Connected 
         ''Con = New SqlConnection
-        Dim con As New SqlConnection("Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\ryuko\Desktop\vb\vbimdb.mdf;Integrated Security=True;Connect Timeout=30")
+        Dim con As New SqlConnection("Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Games\vbimdb.mdf;Integrated Security=True;Connect Timeout=30")
         'Dim rowcount As Integer
         'rowcount = 100
-
-        Dim sql As String = "SELECT * FROM [MovieFilter] WHERE "
-        If Not String.IsNullOrWhiteSpace(txtMSearchName.Text) Then
-            sql = sql & "[movie title] LIKE '%" & txtMSearchName.Text & "%' AND "
-        End If
-        If Not String.IsNullOrWhiteSpace(txtMSearchSYear.Text) Then
-            sql = sql & "[release year] " & cboYearMod.Text & " '" & txtMSearchSYear.Text & "' AND "
-        End If
-        If Not String.IsNullOrWhiteSpace(txtMSearchEYear.Text) Then
-            sql = sql & "[ending year] ='" & txtMSearchEYear.Text & "' AND "
-        End If
-        If Not String.IsNullOrWhiteSpace(txtRTM.Text) Then
-            sql = sql & "[runtime min(s)] " & cboRTMMod.Text & " '" & txtRTM.Text & "' AND "
-        End If
-        If Not String.IsNullOrWhiteSpace(cboSearchGenre.Text) Then
-            sql = sql & "[genre] LIKE '%" & cboSearchGenre.Text & "%' AND "
-        End If
-        If Not String.IsNullOrWhiteSpace(txtRatings.Text) Then
-            sql = sql & "[rating] " & cboRatingsMod.Text & " '" & txtRatings.Text & "' AND "
-        End If
-        ' Remove Last AND if Empty
-        If sql.EndsWith(" AND ") Then
-            sql = sql.Substring(0, sql.Length - 5)
-        End If
-        If sql.EndsWith(" WHERE ") Then
-            sql = sql.Substring(0, sql.Length - 7)
-        End If
-
-        Dim sql2 As String = "SELECT * FROM [CrewFilter] WHERE "
-        If Not String.IsNullOrWhiteSpace(txtCrewName.Text) Then
-            sql2 = sql2 & "[crew's name] LIKE '%" & txtCrewName.Text & "%' AND "
-        End If
-        If Not String.IsNullOrWhiteSpace(txtCrewPos.Text) Then
-            sql2 = sql2 & "[crew's position] LIKE '%" & txtCrewPos.Text & "%' AND "
-        End If
-        If Not String.IsNullOrWhiteSpace(txtCrewBYear.Text) Then
-            sql2 = sql2 & "[Crew's Birth Year] " & cboCrewBYearMOD.Text & " '" & txtCrewBYear.Text & "' AND "
-        End If
-        If Not String.IsNullOrWhiteSpace(txtCrewDYear.Text) Then
-            sql2 = sql2 & "[Crew's Death Year] = '" & txtCrewDYear.Text & "' AND "
-        End If
-        If Not String.IsNullOrWhiteSpace(txtCrewProf.Text) Then
-            sql2 = sql2 & "[crew's profession] LIKE '%" & txtCrewProf.Text & "%' AND "
-        End If
-
         If radMovie.Checked Then
-            pageadapter = New SqlDataAdapter(sql, con)
+            Dim sql As String = "SELECT * FROM [MovieFilter] WHERE "
+            If Not String.IsNullOrWhiteSpace(txtMSearchName.Text) Then
+                sql = sql & "[movie title] LIKE '%" & txtMSearchName.Text & "%' AND "
+            End If
+            If Not String.IsNullOrWhiteSpace(txtMSearchSYear.Text) Then
+                sql = sql & "[release year] " & cboYearMod.Text & " '" & txtMSearchSYear.Text & "' AND "
+            End If
+            If Not String.IsNullOrWhiteSpace(txtMSearchEYear.Text) Then
+                sql = sql & "[ending year] ='" & txtMSearchEYear.Text & "' AND "
+            End If
+            If Not String.IsNullOrWhiteSpace(txtRTM.Text) Then
+                sql = sql & "[runtime min(s)] " & cboRTMMod.Text & " '" & txtRTM.Text & "' AND "
+            End If
+            If Not String.IsNullOrWhiteSpace(cboSearchGenre.Text) Then
+                sql = sql & "[genre] LIKE '%" & cboSearchGenre.Text & "%' AND "
+            End If
+            If Not String.IsNullOrWhiteSpace(txtRatings.Text) Then
+                sql = sql & "[rating] " & cboRatingsMod.Text & " '" & txtRatings.Text & "' AND "
+            End If
+            ' Remove Last AND if Empty
+            If sql.EndsWith(" AND ") Then
+                sql = sql.Substring(0, sql.Length - 5)
+            End If
+            If sql.EndsWith(" WHERE ") Then
+                sql = sql.Substring(0, sql.Length - 7)
+            End If
+            pageadapter = New SqlDataAdapter(Sql, con)
             pagingds = New DataSet()
             pageadapter.SelectCommand.CommandTimeout = 0
             pageadapter.Fill(pagingds, scrollval, 100, "[MovieFilter]")
@@ -233,12 +214,34 @@ Public Class home
             dgvSearchResult.DataMember = "[MovieFilter]"
         End If
         If radCrew.Checked Then
+            Dim sql2 As String = "SELECT * FROM [FilterView] WHERE "
+            If Not String.IsNullOrWhiteSpace(txtCrewName.Text) Then
+                sql2 = sql2 & "[crew's name] LIKE '%" & txtCrewName.Text & "%' AND "
+            End If
+            If Not String.IsNullOrWhiteSpace(txtCrewPos.Text) Then
+                sql2 = sql2 & "[crew's position] LIKE '%" & txtCrewPos.Text & "%' AND "
+            End If
+            If Not String.IsNullOrWhiteSpace(txtCrewBYear.Text) Then
+                sql2 = sql2 & "[Crew's Birth Year] " & cboCrewBYearMOD.Text & " '" & txtCrewBYear.Text & "' AND "
+            End If
+            If Not String.IsNullOrWhiteSpace(txtCrewDYear.Text) Then
+                sql2 = sql2 & "[Crew's Death Year] = '" & txtCrewDYear.Text & "' AND "
+            End If
+            If Not String.IsNullOrWhiteSpace(txtCrewProf.Text) Then
+                sql2 = sql2 & "[crew's profession] LIKE '%" & txtCrewProf.Text & "%' AND "
+            End If
+            If sql2.EndsWith(" AND ") Then
+                sql2 = sql2.Substring(0, sql2.Length - 5)
+            End If
+            If sql2.EndsWith(" WHERE ") Then
+                sql2 = sql2.Substring(0, sql2.Length - 7)
+            End If
             pageadapter = New SqlDataAdapter(sql2, con)
             pagingds = New DataSet()
             pageadapter.SelectCommand.CommandTimeout = 0
-            pageadapter.Fill(pagingds, scrollval, 100, "[CrewFilter]")
+            pageadapter.Fill(pagingds, scrollval, 100, "[FilterView]")
             dgvSearchResult.DataSource = pagingds
-            dgvSearchResult.DataMember = "[CrewFilter]"
+            dgvSearchResult.DataMember = "[FilterView]"
         End If
         'Dim cmd As New SqlCommand(Sql, con)
         'Dim DBDA As New SqlDataAdapter(cmd)
@@ -317,7 +320,7 @@ Public Class home
             pageadapter.Fill(pagingds, scrollval, 100, "[MovieFilter]")
         End If
         If radCrew.Checked Then
-            pageadapter.Fill(pagingds, scrollval, 100, "[CrewFilter]")
+            pageadapter.Fill(pagingds, scrollval, 100, "[FilterView]")
         End If
     End Sub
 
@@ -331,7 +334,7 @@ Public Class home
             pageadapter.Fill(pagingds, scrollval, 100, "[MovieFilter]")
         End If
         If radCrew.Checked Then
-            pageadapter.Fill(pagingds, scrollval, 100, "[CrewFilter]")
+            pageadapter.Fill(pagingds, scrollval, 100, "[FilterView]")
         End If
     End Sub
 
@@ -370,6 +373,11 @@ Public Class home
         If radMovie.Checked Then
 
             pnlMovieSearch.Visible = True
+            txtCrewName.Clear()
+            txtCrewBYear.Clear()
+            txtCrewDYear.Clear()
+            txtCrewPos.Clear()
+            txtCrewProf.Clear()
         Else
             pnlMovieSearch.Visible = False
         End If
@@ -379,6 +387,12 @@ Public Class home
         If radCrew.Checked Then
 
             pnlCrewSearch.Visible = True
+            txtMSearchName.Clear()
+            txtMSearchSYear.Clear()
+            txtMSearchEYear.Clear()
+            txtRatings.Clear()
+            txtRTM.Clear()
+            cboSearchGenre.SelectedIndex = 0
         Else
             pnlCrewSearch.Visible = False
         End If

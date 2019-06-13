@@ -41,28 +41,45 @@ Partial Class home
         Me.Button2 = New System.Windows.Forms.Button()
         Me.Button1 = New System.Windows.Forms.Button()
         Me.pnlSearch = New System.Windows.Forms.Panel()
+        Me.pnlPreSearch = New System.Windows.Forms.Panel()
+        Me.pnlCrewSearch = New System.Windows.Forms.Panel()
+        Me.lblCrewProf = New System.Windows.Forms.Label()
+        Me.txtCrewProf = New System.Windows.Forms.TextBox()
+        Me.txtCrewDYear = New System.Windows.Forms.TextBox()
+        Me.lblCrewDYear = New System.Windows.Forms.Label()
+        Me.txtCrewBYear = New System.Windows.Forms.TextBox()
+        Me.lblCrewPos = New System.Windows.Forms.Label()
+        Me.cboCrewBYearMOD = New System.Windows.Forms.ComboBox()
+        Me.txtCrewPos = New System.Windows.Forms.TextBox()
+        Me.lblCrewBYear = New System.Windows.Forms.Label()
+        Me.lblCrewName = New System.Windows.Forms.Label()
+        Me.txtCrewName = New System.Windows.Forms.TextBox()
+        Me.lblCrew = New System.Windows.Forms.Label()
+        Me.pnlMovieSearch = New System.Windows.Forms.Panel()
+        Me.lblSearchMovieTitle = New System.Windows.Forms.Label()
+        Me.cboSearchGenre = New System.Windows.Forms.ComboBox()
+        Me.txtMSearchSYear = New System.Windows.Forms.TextBox()
+        Me.cboYearMod = New System.Windows.Forms.ComboBox()
+        Me.txtMSearchName = New System.Windows.Forms.TextBox()
+        Me.lblMTitle = New System.Windows.Forms.Label()
+        Me.lblMYear = New System.Windows.Forms.Label()
+        Me.cboRatingsMod = New System.Windows.Forms.ComboBox()
+        Me.lblMGenre = New System.Windows.Forms.Label()
+        Me.txtRatings = New System.Windows.Forms.TextBox()
+        Me.txtMSearchEYear = New System.Windows.Forms.TextBox()
+        Me.lblFRating = New System.Windows.Forms.Label()
+        Me.lblMRTM = New System.Windows.Forms.Label()
+        Me.lblEYear = New System.Windows.Forms.Label()
+        Me.txtRTM = New System.Windows.Forms.TextBox()
+        Me.cboRTMMod = New System.Windows.Forms.ComboBox()
+        Me.radCrew = New System.Windows.Forms.RadioButton()
+        Me.radMovie = New System.Windows.Forms.RadioButton()
+        Me.btnSearch = New System.Windows.Forms.Button()
         Me.pnlAfterSearch = New System.Windows.Forms.Panel()
         Me.btnNext = New System.Windows.Forms.Button()
         Me.btnPrevious = New System.Windows.Forms.Button()
         Me.dgvSearchResult = New System.Windows.Forms.DataGridView()
         Me.btnBack = New System.Windows.Forms.Button()
-        Me.pnlPreSearch = New System.Windows.Forms.Panel()
-        Me.cboRatingsMod = New System.Windows.Forms.ComboBox()
-        Me.txtRatings = New System.Windows.Forms.TextBox()
-        Me.lblFRating = New System.Windows.Forms.Label()
-        Me.lblEYear = New System.Windows.Forms.Label()
-        Me.btnSearch = New System.Windows.Forms.Button()
-        Me.cboRTMMod = New System.Windows.Forms.ComboBox()
-        Me.lblSearchMovieTitle = New System.Windows.Forms.Label()
-        Me.txtRTM = New System.Windows.Forms.TextBox()
-        Me.lblMRTM = New System.Windows.Forms.Label()
-        Me.txtMSearchEYear = New System.Windows.Forms.TextBox()
-        Me.lblMGenre = New System.Windows.Forms.Label()
-        Me.lblMYear = New System.Windows.Forms.Label()
-        Me.lblMTitle = New System.Windows.Forms.Label()
-        Me.txtMSearchName = New System.Windows.Forms.TextBox()
-        Me.txtMSearchSYear = New System.Windows.Forms.TextBox()
-        Me.cboSearchGenre = New System.Windows.Forms.ComboBox()
         Me.pnlLogin = New System.Windows.Forms.Panel()
         Me.Button7 = New System.Windows.Forms.Button()
         Me.Label7 = New System.Windows.Forms.Label()
@@ -123,29 +140,14 @@ Partial Class home
         Me._vb_net_imdbDataSet = New Login._vb_net_imdbDataSet()
         Me.VbnetimdbDataSetBindingSource = New System.Windows.Forms.BindingSource(Me.components)
         Me._vb_net_imdbDataSet1 = New Login._vb_net_imdbDataSet()
-        Me.cboYearMod = New System.Windows.Forms.ComboBox()
-        Me.radCrew = New System.Windows.Forms.RadioButton()
-        Me.radMovie = New System.Windows.Forms.RadioButton()
-        Me.pnlMovieSearch = New System.Windows.Forms.Panel()
-        Me.pnlCrewSearch = New System.Windows.Forms.Panel()
-        Me.lblCrew = New System.Windows.Forms.Label()
-        Me.lblCrewName = New System.Windows.Forms.Label()
-        Me.txtCrewName = New System.Windows.Forms.TextBox()
-        Me.lblCrewPos = New System.Windows.Forms.Label()
-        Me.txtCrewPos = New System.Windows.Forms.TextBox()
-        Me.txtCrewBYear = New System.Windows.Forms.TextBox()
-        Me.cboCrewBYearMOD = New System.Windows.Forms.ComboBox()
-        Me.lblCrewBYear = New System.Windows.Forms.Label()
-        Me.lblCrewDYear = New System.Windows.Forms.Label()
-        Me.txtCrewDYear = New System.Windows.Forms.TextBox()
-        Me.lblCrewProf = New System.Windows.Forms.Label()
-        Me.txtCrewProf = New System.Windows.Forms.TextBox()
         Me.Panel1.SuspendLayout()
         Me.Panel3.SuspendLayout()
         Me.pnlSearch.SuspendLayout()
+        Me.pnlPreSearch.SuspendLayout()
+        Me.pnlCrewSearch.SuspendLayout()
+        Me.pnlMovieSearch.SuspendLayout()
         Me.pnlAfterSearch.SuspendLayout()
         CType(Me.dgvSearchResult, System.ComponentModel.ISupportInitialize).BeginInit()
-        Me.pnlPreSearch.SuspendLayout()
         Me.pnlLogin.SuspendLayout()
         Me.pnlWelcome.SuspendLayout()
         CType(Me.PictureBox4, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -166,8 +168,6 @@ Partial Class home
         CType(Me._vb_net_imdbDataSet, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.VbnetimdbDataSetBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me._vb_net_imdbDataSet1, System.ComponentModel.ISupportInitialize).BeginInit()
-        Me.pnlMovieSearch.SuspendLayout()
-        Me.pnlCrewSearch.SuspendLayout()
         Me.SuspendLayout()
         '
         'Panel1
@@ -183,7 +183,7 @@ Partial Class home
         Me.Panel1.Controls.Add(Me.Button1)
         Me.Panel1.Dock = System.Windows.Forms.DockStyle.Left
         Me.Panel1.Location = New System.Drawing.Point(0, 0)
-        Me.Panel1.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.Panel1.Margin = New System.Windows.Forms.Padding(4)
         Me.Panel1.Name = "Panel1"
         Me.Panel1.Size = New System.Drawing.Size(268, 711)
         Me.Panel1.TabIndex = 0
@@ -200,7 +200,7 @@ Partial Class home
         Me.Panel3.Controls.Add(Me.btnpnlSearch)
         Me.Panel3.Dock = System.Windows.Forms.DockStyle.Left
         Me.Panel3.Location = New System.Drawing.Point(0, 0)
-        Me.Panel3.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.Panel3.Margin = New System.Windows.Forms.Padding(4)
         Me.Panel3.Name = "Panel3"
         Me.Panel3.Size = New System.Drawing.Size(268, 711)
         Me.Panel3.TabIndex = 3
@@ -208,7 +208,7 @@ Partial Class home
         'Panel5
         '
         Me.Panel5.Location = New System.Drawing.Point(268, 55)
-        Me.Panel5.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.Panel5.Margin = New System.Windows.Forms.Padding(4)
         Me.Panel5.Name = "Panel5"
         Me.Panel5.Size = New System.Drawing.Size(1141, 665)
         Me.Panel5.TabIndex = 2
@@ -318,7 +318,7 @@ Partial Class home
         'Panel4
         '
         Me.Panel4.Location = New System.Drawing.Point(268, 55)
-        Me.Panel4.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.Panel4.Margin = New System.Windows.Forms.Padding(4)
         Me.Panel4.Name = "Panel4"
         Me.Panel4.Size = New System.Drawing.Size(1141, 665)
         Me.Panel4.TabIndex = 2
@@ -435,6 +435,372 @@ Partial Class home
         Me.pnlSearch.Size = New System.Drawing.Size(1189, 661)
         Me.pnlSearch.TabIndex = 3
         '
+        'pnlPreSearch
+        '
+        Me.pnlPreSearch.Controls.Add(Me.pnlMovieSearch)
+        Me.pnlPreSearch.Controls.Add(Me.pnlCrewSearch)
+        Me.pnlPreSearch.Controls.Add(Me.radCrew)
+        Me.pnlPreSearch.Controls.Add(Me.radMovie)
+        Me.pnlPreSearch.Controls.Add(Me.btnSearch)
+        Me.pnlPreSearch.Location = New System.Drawing.Point(0, 0)
+        Me.pnlPreSearch.Margin = New System.Windows.Forms.Padding(4)
+        Me.pnlPreSearch.Name = "pnlPreSearch"
+        Me.pnlPreSearch.Size = New System.Drawing.Size(1179, 643)
+        Me.pnlPreSearch.TabIndex = 4
+        '
+        'pnlCrewSearch
+        '
+        Me.pnlCrewSearch.Controls.Add(Me.lblCrewProf)
+        Me.pnlCrewSearch.Controls.Add(Me.txtCrewProf)
+        Me.pnlCrewSearch.Controls.Add(Me.txtCrewDYear)
+        Me.pnlCrewSearch.Controls.Add(Me.lblCrewDYear)
+        Me.pnlCrewSearch.Controls.Add(Me.txtCrewBYear)
+        Me.pnlCrewSearch.Controls.Add(Me.lblCrewPos)
+        Me.pnlCrewSearch.Controls.Add(Me.cboCrewBYearMOD)
+        Me.pnlCrewSearch.Controls.Add(Me.txtCrewPos)
+        Me.pnlCrewSearch.Controls.Add(Me.lblCrewBYear)
+        Me.pnlCrewSearch.Controls.Add(Me.lblCrewName)
+        Me.pnlCrewSearch.Controls.Add(Me.txtCrewName)
+        Me.pnlCrewSearch.Controls.Add(Me.lblCrew)
+        Me.pnlCrewSearch.Location = New System.Drawing.Point(3, 7)
+        Me.pnlCrewSearch.Name = "pnlCrewSearch"
+        Me.pnlCrewSearch.Size = New System.Drawing.Size(525, 510)
+        Me.pnlCrewSearch.TabIndex = 27
+        '
+        'lblCrewProf
+        '
+        Me.lblCrewProf.AutoSize = True
+        Me.lblCrewProf.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblCrewProf.Location = New System.Drawing.Point(64, 323)
+        Me.lblCrewProf.Name = "lblCrewProf"
+        Me.lblCrewProf.Size = New System.Drawing.Size(110, 25)
+        Me.lblCrewProf.TabIndex = 28
+        Me.lblCrewProf.Text = "Profession:"
+        '
+        'txtCrewProf
+        '
+        Me.txtCrewProf.Font = New System.Drawing.Font("Microsoft Sans Serif", 20.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txtCrewProf.Location = New System.Drawing.Point(184, 315)
+        Me.txtCrewProf.Margin = New System.Windows.Forms.Padding(4)
+        Me.txtCrewProf.Name = "txtCrewProf"
+        Me.txtCrewProf.Size = New System.Drawing.Size(249, 46)
+        Me.txtCrewProf.TabIndex = 27
+        '
+        'txtCrewDYear
+        '
+        Me.txtCrewDYear.Font = New System.Drawing.Font("Microsoft Sans Serif", 20.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txtCrewDYear.Location = New System.Drawing.Point(184, 258)
+        Me.txtCrewDYear.Margin = New System.Windows.Forms.Padding(4)
+        Me.txtCrewDYear.Name = "txtCrewDYear"
+        Me.txtCrewDYear.Size = New System.Drawing.Size(89, 46)
+        Me.txtCrewDYear.TabIndex = 26
+        '
+        'lblCrewDYear
+        '
+        Me.lblCrewDYear.AutoSize = True
+        Me.lblCrewDYear.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblCrewDYear.Location = New System.Drawing.Point(58, 270)
+        Me.lblCrewDYear.Name = "lblCrewDYear"
+        Me.lblCrewDYear.Size = New System.Drawing.Size(116, 25)
+        Me.lblCrewDYear.TabIndex = 25
+        Me.lblCrewDYear.Text = "Death Year:"
+        '
+        'txtCrewBYear
+        '
+        Me.txtCrewBYear.Font = New System.Drawing.Font("Microsoft Sans Serif", 20.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txtCrewBYear.Location = New System.Drawing.Point(277, 195)
+        Me.txtCrewBYear.Margin = New System.Windows.Forms.Padding(4)
+        Me.txtCrewBYear.Name = "txtCrewBYear"
+        Me.txtCrewBYear.Size = New System.Drawing.Size(89, 46)
+        Me.txtCrewBYear.TabIndex = 22
+        '
+        'lblCrewPos
+        '
+        Me.lblCrewPos.AutoSize = True
+        Me.lblCrewPos.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblCrewPos.Location = New System.Drawing.Point(87, 145)
+        Me.lblCrewPos.Name = "lblCrewPos"
+        Me.lblCrewPos.Size = New System.Drawing.Size(87, 25)
+        Me.lblCrewPos.TabIndex = 24
+        Me.lblCrewPos.Text = "Position:"
+        '
+        'cboCrewBYearMOD
+        '
+        Me.cboCrewBYearMOD.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
+        Me.cboCrewBYearMOD.Font = New System.Drawing.Font("Microsoft Sans Serif", 20.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.cboCrewBYearMOD.FormattingEnabled = True
+        Me.cboCrewBYearMOD.Location = New System.Drawing.Point(184, 194)
+        Me.cboCrewBYearMOD.Margin = New System.Windows.Forms.Padding(4)
+        Me.cboCrewBYearMOD.Name = "cboCrewBYearMOD"
+        Me.cboCrewBYearMOD.Size = New System.Drawing.Size(85, 47)
+        Me.cboCrewBYearMOD.TabIndex = 24
+        '
+        'txtCrewPos
+        '
+        Me.txtCrewPos.Font = New System.Drawing.Font("Microsoft Sans Serif", 20.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txtCrewPos.Location = New System.Drawing.Point(184, 130)
+        Me.txtCrewPos.Margin = New System.Windows.Forms.Padding(4)
+        Me.txtCrewPos.Name = "txtCrewPos"
+        Me.txtCrewPos.Size = New System.Drawing.Size(249, 46)
+        Me.txtCrewPos.TabIndex = 23
+        '
+        'lblCrewBYear
+        '
+        Me.lblCrewBYear.AutoSize = True
+        Me.lblCrewBYear.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblCrewBYear.Location = New System.Drawing.Point(71, 209)
+        Me.lblCrewBYear.Name = "lblCrewBYear"
+        Me.lblCrewBYear.Size = New System.Drawing.Size(103, 25)
+        Me.lblCrewBYear.TabIndex = 23
+        Me.lblCrewBYear.Text = "Birth Year:"
+        '
+        'lblCrewName
+        '
+        Me.lblCrewName.AutoSize = True
+        Me.lblCrewName.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblCrewName.Location = New System.Drawing.Point(104, 84)
+        Me.lblCrewName.Name = "lblCrewName"
+        Me.lblCrewName.Size = New System.Drawing.Size(70, 25)
+        Me.lblCrewName.TabIndex = 22
+        Me.lblCrewName.Text = "Name:"
+        '
+        'txtCrewName
+        '
+        Me.txtCrewName.Font = New System.Drawing.Font("Microsoft Sans Serif", 20.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txtCrewName.Location = New System.Drawing.Point(184, 69)
+        Me.txtCrewName.Margin = New System.Windows.Forms.Padding(4)
+        Me.txtCrewName.Name = "txtCrewName"
+        Me.txtCrewName.Size = New System.Drawing.Size(249, 46)
+        Me.txtCrewName.TabIndex = 21
+        '
+        'lblCrew
+        '
+        Me.lblCrew.AutoSize = True
+        Me.lblCrew.Font = New System.Drawing.Font("Microsoft Sans Serif", 22.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblCrew.Location = New System.Drawing.Point(23, 17)
+        Me.lblCrew.Name = "lblCrew"
+        Me.lblCrew.Size = New System.Drawing.Size(108, 44)
+        Me.lblCrew.TabIndex = 14
+        Me.lblCrew.Text = "Crew"
+        '
+        'pnlMovieSearch
+        '
+        Me.pnlMovieSearch.Controls.Add(Me.lblSearchMovieTitle)
+        Me.pnlMovieSearch.Controls.Add(Me.cboSearchGenre)
+        Me.pnlMovieSearch.Controls.Add(Me.txtMSearchSYear)
+        Me.pnlMovieSearch.Controls.Add(Me.cboYearMod)
+        Me.pnlMovieSearch.Controls.Add(Me.txtMSearchName)
+        Me.pnlMovieSearch.Controls.Add(Me.lblMTitle)
+        Me.pnlMovieSearch.Controls.Add(Me.lblMYear)
+        Me.pnlMovieSearch.Controls.Add(Me.cboRatingsMod)
+        Me.pnlMovieSearch.Controls.Add(Me.lblMGenre)
+        Me.pnlMovieSearch.Controls.Add(Me.txtRatings)
+        Me.pnlMovieSearch.Controls.Add(Me.txtMSearchEYear)
+        Me.pnlMovieSearch.Controls.Add(Me.lblFRating)
+        Me.pnlMovieSearch.Controls.Add(Me.lblMRTM)
+        Me.pnlMovieSearch.Controls.Add(Me.lblEYear)
+        Me.pnlMovieSearch.Controls.Add(Me.txtRTM)
+        Me.pnlMovieSearch.Controls.Add(Me.cboRTMMod)
+        Me.pnlMovieSearch.Location = New System.Drawing.Point(3, 7)
+        Me.pnlMovieSearch.Name = "pnlMovieSearch"
+        Me.pnlMovieSearch.Size = New System.Drawing.Size(525, 510)
+        Me.pnlMovieSearch.TabIndex = 26
+        '
+        'lblSearchMovieTitle
+        '
+        Me.lblSearchMovieTitle.AutoSize = True
+        Me.lblSearchMovieTitle.Font = New System.Drawing.Font("Microsoft Sans Serif", 22.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblSearchMovieTitle.Location = New System.Drawing.Point(23, 17)
+        Me.lblSearchMovieTitle.Name = "lblSearchMovieTitle"
+        Me.lblSearchMovieTitle.Size = New System.Drawing.Size(122, 44)
+        Me.lblSearchMovieTitle.TabIndex = 13
+        Me.lblSearchMovieTitle.Text = "Movie"
+        '
+        'cboSearchGenre
+        '
+        Me.cboSearchGenre.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
+        Me.cboSearchGenre.Font = New System.Drawing.Font("Microsoft Sans Serif", 20.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.cboSearchGenre.FormattingEnabled = True
+        Me.cboSearchGenre.Location = New System.Drawing.Point(211, 314)
+        Me.cboSearchGenre.Margin = New System.Windows.Forms.Padding(4)
+        Me.cboSearchGenre.Name = "cboSearchGenre"
+        Me.cboSearchGenre.Size = New System.Drawing.Size(249, 47)
+        Me.cboSearchGenre.TabIndex = 2
+        '
+        'txtMSearchSYear
+        '
+        Me.txtMSearchSYear.Font = New System.Drawing.Font("Microsoft Sans Serif", 20.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txtMSearchSYear.Location = New System.Drawing.Point(304, 131)
+        Me.txtMSearchSYear.Margin = New System.Windows.Forms.Padding(4)
+        Me.txtMSearchSYear.Name = "txtMSearchSYear"
+        Me.txtMSearchSYear.Size = New System.Drawing.Size(89, 46)
+        Me.txtMSearchSYear.TabIndex = 0
+        '
+        'cboYearMod
+        '
+        Me.cboYearMod.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
+        Me.cboYearMod.Font = New System.Drawing.Font("Microsoft Sans Serif", 20.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.cboYearMod.FormattingEnabled = True
+        Me.cboYearMod.Location = New System.Drawing.Point(211, 130)
+        Me.cboYearMod.Margin = New System.Windows.Forms.Padding(4)
+        Me.cboYearMod.Name = "cboYearMod"
+        Me.cboYearMod.Size = New System.Drawing.Size(85, 47)
+        Me.cboYearMod.TabIndex = 21
+        '
+        'txtMSearchName
+        '
+        Me.txtMSearchName.Font = New System.Drawing.Font("Microsoft Sans Serif", 20.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txtMSearchName.Location = New System.Drawing.Point(211, 72)
+        Me.txtMSearchName.Margin = New System.Windows.Forms.Padding(4)
+        Me.txtMSearchName.Name = "txtMSearchName"
+        Me.txtMSearchName.Size = New System.Drawing.Size(249, 46)
+        Me.txtMSearchName.TabIndex = 0
+        '
+        'lblMTitle
+        '
+        Me.lblMTitle.AutoSize = True
+        Me.lblMTitle.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblMTitle.Location = New System.Drawing.Point(88, 84)
+        Me.lblMTitle.Name = "lblMTitle"
+        Me.lblMTitle.Size = New System.Drawing.Size(113, 25)
+        Me.lblMTitle.TabIndex = 4
+        Me.lblMTitle.Text = "Movie Title:"
+        '
+        'lblMYear
+        '
+        Me.lblMYear.AutoSize = True
+        Me.lblMYear.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblMYear.Location = New System.Drawing.Point(66, 145)
+        Me.lblMYear.Name = "lblMYear"
+        Me.lblMYear.Size = New System.Drawing.Size(135, 25)
+        Me.lblMYear.TabIndex = 5
+        Me.lblMYear.Text = "Release Year:"
+        '
+        'cboRatingsMod
+        '
+        Me.cboRatingsMod.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
+        Me.cboRatingsMod.Font = New System.Drawing.Font("Microsoft Sans Serif", 20.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.cboRatingsMod.FormattingEnabled = True
+        Me.cboRatingsMod.Location = New System.Drawing.Point(211, 369)
+        Me.cboRatingsMod.Margin = New System.Windows.Forms.Padding(4)
+        Me.cboRatingsMod.Name = "cboRatingsMod"
+        Me.cboRatingsMod.Size = New System.Drawing.Size(85, 47)
+        Me.cboRatingsMod.TabIndex = 18
+        '
+        'lblMGenre
+        '
+        Me.lblMGenre.AutoSize = True
+        Me.lblMGenre.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblMGenre.Location = New System.Drawing.Point(130, 324)
+        Me.lblMGenre.Name = "lblMGenre"
+        Me.lblMGenre.Size = New System.Drawing.Size(72, 25)
+        Me.lblMGenre.TabIndex = 6
+        Me.lblMGenre.Text = "Genre:"
+        '
+        'txtRatings
+        '
+        Me.txtRatings.Font = New System.Drawing.Font("Microsoft Sans Serif", 20.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txtRatings.Location = New System.Drawing.Point(306, 370)
+        Me.txtRatings.Margin = New System.Windows.Forms.Padding(4)
+        Me.txtRatings.Name = "txtRatings"
+        Me.txtRatings.Size = New System.Drawing.Size(89, 46)
+        Me.txtRatings.TabIndex = 17
+        '
+        'txtMSearchEYear
+        '
+        Me.txtMSearchEYear.Font = New System.Drawing.Font("Microsoft Sans Serif", 20.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txtMSearchEYear.Location = New System.Drawing.Point(211, 194)
+        Me.txtMSearchEYear.Margin = New System.Windows.Forms.Padding(4)
+        Me.txtMSearchEYear.Name = "txtMSearchEYear"
+        Me.txtMSearchEYear.Size = New System.Drawing.Size(89, 46)
+        Me.txtMSearchEYear.TabIndex = 7
+        '
+        'lblFRating
+        '
+        Me.lblFRating.AutoSize = True
+        Me.lblFRating.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblFRating.Location = New System.Drawing.Point(118, 384)
+        Me.lblFRating.Name = "lblFRating"
+        Me.lblFRating.Size = New System.Drawing.Size(83, 25)
+        Me.lblFRating.TabIndex = 16
+        Me.lblFRating.Text = "Ratings:"
+        '
+        'lblMRTM
+        '
+        Me.lblMRTM.AutoSize = True
+        Me.lblMRTM.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblMRTM.Location = New System.Drawing.Point(38, 270)
+        Me.lblMRTM.Name = "lblMRTM"
+        Me.lblMRTM.Size = New System.Drawing.Size(163, 25)
+        Me.lblMRTM.TabIndex = 9
+        Me.lblMRTM.Text = "Runtime Minutes:"
+        '
+        'lblEYear
+        '
+        Me.lblEYear.AutoSize = True
+        Me.lblEYear.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblEYear.Location = New System.Drawing.Point(76, 209)
+        Me.lblEYear.Name = "lblEYear"
+        Me.lblEYear.Size = New System.Drawing.Size(125, 25)
+        Me.lblEYear.TabIndex = 15
+        Me.lblEYear.Text = "Ending Year:"
+        '
+        'txtRTM
+        '
+        Me.txtRTM.Font = New System.Drawing.Font("Microsoft Sans Serif", 20.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txtRTM.Location = New System.Drawing.Point(306, 258)
+        Me.txtRTM.Margin = New System.Windows.Forms.Padding(4)
+        Me.txtRTM.Name = "txtRTM"
+        Me.txtRTM.Size = New System.Drawing.Size(89, 46)
+        Me.txtRTM.TabIndex = 11
+        '
+        'cboRTMMod
+        '
+        Me.cboRTMMod.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
+        Me.cboRTMMod.Font = New System.Drawing.Font("Microsoft Sans Serif", 20.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.cboRTMMod.FormattingEnabled = True
+        Me.cboRTMMod.Location = New System.Drawing.Point(211, 257)
+        Me.cboRTMMod.Margin = New System.Windows.Forms.Padding(4)
+        Me.cboRTMMod.Name = "cboRTMMod"
+        Me.cboRTMMod.Size = New System.Drawing.Size(85, 47)
+        Me.cboRTMMod.TabIndex = 14
+        '
+        'radCrew
+        '
+        Me.radCrew.AutoSize = True
+        Me.radCrew.Font = New System.Drawing.Font("Microsoft Sans Serif", 13.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.radCrew.Location = New System.Drawing.Point(890, 99)
+        Me.radCrew.Name = "radCrew"
+        Me.radCrew.Size = New System.Drawing.Size(91, 33)
+        Me.radCrew.TabIndex = 25
+        Me.radCrew.TabStop = True
+        Me.radCrew.Text = "Crew"
+        Me.radCrew.UseVisualStyleBackColor = True
+        '
+        'radMovie
+        '
+        Me.radMovie.AutoSize = True
+        Me.radMovie.Font = New System.Drawing.Font("Microsoft Sans Serif", 13.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.radMovie.Location = New System.Drawing.Point(890, 54)
+        Me.radMovie.Name = "radMovie"
+        Me.radMovie.Size = New System.Drawing.Size(99, 33)
+        Me.radMovie.TabIndex = 24
+        Me.radMovie.TabStop = True
+        Me.radMovie.Text = "Movie"
+        Me.radMovie.UseVisualStyleBackColor = True
+        '
+        'btnSearch
+        '
+        Me.btnSearch.BackColor = System.Drawing.Color.Aquamarine
+        Me.btnSearch.Font = New System.Drawing.Font("Microsoft Sans Serif", 20.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnSearch.Location = New System.Drawing.Point(27, 531)
+        Me.btnSearch.Margin = New System.Windows.Forms.Padding(4)
+        Me.btnSearch.Name = "btnSearch"
+        Me.btnSearch.Size = New System.Drawing.Size(211, 80)
+        Me.btnSearch.TabIndex = 3
+        Me.btnSearch.Text = "Search"
+        Me.btnSearch.UseVisualStyleBackColor = False
+        '
         'pnlAfterSearch
         '
         Me.pnlAfterSearch.Controls.Add(Me.btnNext)
@@ -442,7 +808,7 @@ Partial Class home
         Me.pnlAfterSearch.Controls.Add(Me.dgvSearchResult)
         Me.pnlAfterSearch.Controls.Add(Me.btnBack)
         Me.pnlAfterSearch.Location = New System.Drawing.Point(0, 0)
-        Me.pnlAfterSearch.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.pnlAfterSearch.Margin = New System.Windows.Forms.Padding(4)
         Me.pnlAfterSearch.Name = "pnlAfterSearch"
         Me.pnlAfterSearch.Size = New System.Drawing.Size(1189, 602)
         Me.pnlAfterSearch.TabIndex = 4
@@ -452,7 +818,7 @@ Partial Class home
         Me.btnNext.BackColor = System.Drawing.Color.Aquamarine
         Me.btnNext.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.btnNext.Location = New System.Drawing.Point(896, 48)
-        Me.btnNext.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.btnNext.Margin = New System.Windows.Forms.Padding(4)
         Me.btnNext.Name = "btnNext"
         Me.btnNext.Size = New System.Drawing.Size(184, 43)
         Me.btnNext.TabIndex = 5
@@ -464,7 +830,7 @@ Partial Class home
         Me.btnPrevious.BackColor = System.Drawing.Color.Aquamarine
         Me.btnPrevious.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.btnPrevious.Location = New System.Drawing.Point(704, 48)
-        Me.btnPrevious.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.btnPrevious.Margin = New System.Windows.Forms.Padding(4)
         Me.btnPrevious.Name = "btnPrevious"
         Me.btnPrevious.Size = New System.Drawing.Size(184, 43)
         Me.btnPrevious.TabIndex = 4
@@ -492,185 +858,12 @@ Partial Class home
         'btnBack
         '
         Me.btnBack.Location = New System.Drawing.Point(39, 30)
-        Me.btnBack.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.btnBack.Margin = New System.Windows.Forms.Padding(4)
         Me.btnBack.Name = "btnBack"
         Me.btnBack.Size = New System.Drawing.Size(183, 60)
         Me.btnBack.TabIndex = 0
         Me.btnBack.Text = "Back Button"
         Me.btnBack.UseVisualStyleBackColor = True
-        '
-        'pnlPreSearch
-        '
-        Me.pnlPreSearch.Controls.Add(Me.pnlCrewSearch)
-        Me.pnlPreSearch.Controls.Add(Me.pnlMovieSearch)
-        Me.pnlPreSearch.Controls.Add(Me.radCrew)
-        Me.pnlPreSearch.Controls.Add(Me.radMovie)
-        Me.pnlPreSearch.Controls.Add(Me.btnSearch)
-        Me.pnlPreSearch.Location = New System.Drawing.Point(0, 0)
-        Me.pnlPreSearch.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
-        Me.pnlPreSearch.Name = "pnlPreSearch"
-        Me.pnlPreSearch.Size = New System.Drawing.Size(1179, 643)
-        Me.pnlPreSearch.TabIndex = 4
-        '
-        'cboRatingsMod
-        '
-        Me.cboRatingsMod.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
-        Me.cboRatingsMod.Font = New System.Drawing.Font("Microsoft Sans Serif", 20.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.cboRatingsMod.FormattingEnabled = True
-        Me.cboRatingsMod.Location = New System.Drawing.Point(211, 369)
-        Me.cboRatingsMod.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
-        Me.cboRatingsMod.Name = "cboRatingsMod"
-        Me.cboRatingsMod.Size = New System.Drawing.Size(85, 47)
-        Me.cboRatingsMod.TabIndex = 18
-        '
-        'txtRatings
-        '
-        Me.txtRatings.Font = New System.Drawing.Font("Microsoft Sans Serif", 20.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txtRatings.Location = New System.Drawing.Point(306, 370)
-        Me.txtRatings.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
-        Me.txtRatings.Name = "txtRatings"
-        Me.txtRatings.Size = New System.Drawing.Size(89, 46)
-        Me.txtRatings.TabIndex = 17
-        '
-        'lblFRating
-        '
-        Me.lblFRating.AutoSize = True
-        Me.lblFRating.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lblFRating.Location = New System.Drawing.Point(118, 384)
-        Me.lblFRating.Name = "lblFRating"
-        Me.lblFRating.Size = New System.Drawing.Size(83, 25)
-        Me.lblFRating.TabIndex = 16
-        Me.lblFRating.Text = "Ratings:"
-        '
-        'lblEYear
-        '
-        Me.lblEYear.AutoSize = True
-        Me.lblEYear.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lblEYear.Location = New System.Drawing.Point(76, 209)
-        Me.lblEYear.Name = "lblEYear"
-        Me.lblEYear.Size = New System.Drawing.Size(125, 25)
-        Me.lblEYear.TabIndex = 15
-        Me.lblEYear.Text = "Ending Year:"
-        '
-        'btnSearch
-        '
-        Me.btnSearch.BackColor = System.Drawing.Color.Aquamarine
-        Me.btnSearch.Font = New System.Drawing.Font("Microsoft Sans Serif", 20.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btnSearch.Location = New System.Drawing.Point(27, 531)
-        Me.btnSearch.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
-        Me.btnSearch.Name = "btnSearch"
-        Me.btnSearch.Size = New System.Drawing.Size(211, 80)
-        Me.btnSearch.TabIndex = 3
-        Me.btnSearch.Text = "Search"
-        Me.btnSearch.UseVisualStyleBackColor = False
-        '
-        'cboRTMMod
-        '
-        Me.cboRTMMod.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
-        Me.cboRTMMod.Font = New System.Drawing.Font("Microsoft Sans Serif", 20.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.cboRTMMod.FormattingEnabled = True
-        Me.cboRTMMod.Location = New System.Drawing.Point(211, 257)
-        Me.cboRTMMod.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
-        Me.cboRTMMod.Name = "cboRTMMod"
-        Me.cboRTMMod.Size = New System.Drawing.Size(85, 47)
-        Me.cboRTMMod.TabIndex = 14
-        '
-        'lblSearchMovieTitle
-        '
-        Me.lblSearchMovieTitle.AutoSize = True
-        Me.lblSearchMovieTitle.Font = New System.Drawing.Font("Microsoft Sans Serif", 22.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lblSearchMovieTitle.Location = New System.Drawing.Point(23, 17)
-        Me.lblSearchMovieTitle.Name = "lblSearchMovieTitle"
-        Me.lblSearchMovieTitle.Size = New System.Drawing.Size(122, 44)
-        Me.lblSearchMovieTitle.TabIndex = 13
-        Me.lblSearchMovieTitle.Text = "Movie"
-        '
-        'txtRTM
-        '
-        Me.txtRTM.Font = New System.Drawing.Font("Microsoft Sans Serif", 20.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txtRTM.Location = New System.Drawing.Point(306, 258)
-        Me.txtRTM.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
-        Me.txtRTM.Name = "txtRTM"
-        Me.txtRTM.Size = New System.Drawing.Size(89, 46)
-        Me.txtRTM.TabIndex = 11
-        '
-        'lblMRTM
-        '
-        Me.lblMRTM.AutoSize = True
-        Me.lblMRTM.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lblMRTM.Location = New System.Drawing.Point(38, 270)
-        Me.lblMRTM.Name = "lblMRTM"
-        Me.lblMRTM.Size = New System.Drawing.Size(163, 25)
-        Me.lblMRTM.TabIndex = 9
-        Me.lblMRTM.Text = "Runtime Minutes:"
-        '
-        'txtMSearchEYear
-        '
-        Me.txtMSearchEYear.Font = New System.Drawing.Font("Microsoft Sans Serif", 20.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txtMSearchEYear.Location = New System.Drawing.Point(211, 194)
-        Me.txtMSearchEYear.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
-        Me.txtMSearchEYear.Name = "txtMSearchEYear"
-        Me.txtMSearchEYear.Size = New System.Drawing.Size(89, 46)
-        Me.txtMSearchEYear.TabIndex = 7
-        '
-        'lblMGenre
-        '
-        Me.lblMGenre.AutoSize = True
-        Me.lblMGenre.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lblMGenre.Location = New System.Drawing.Point(130, 324)
-        Me.lblMGenre.Name = "lblMGenre"
-        Me.lblMGenre.Size = New System.Drawing.Size(72, 25)
-        Me.lblMGenre.TabIndex = 6
-        Me.lblMGenre.Text = "Genre:"
-        '
-        'lblMYear
-        '
-        Me.lblMYear.AutoSize = True
-        Me.lblMYear.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lblMYear.Location = New System.Drawing.Point(66, 145)
-        Me.lblMYear.Name = "lblMYear"
-        Me.lblMYear.Size = New System.Drawing.Size(135, 25)
-        Me.lblMYear.TabIndex = 5
-        Me.lblMYear.Text = "Release Year:"
-        '
-        'lblMTitle
-        '
-        Me.lblMTitle.AutoSize = True
-        Me.lblMTitle.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lblMTitle.Location = New System.Drawing.Point(88, 84)
-        Me.lblMTitle.Name = "lblMTitle"
-        Me.lblMTitle.Size = New System.Drawing.Size(113, 25)
-        Me.lblMTitle.TabIndex = 4
-        Me.lblMTitle.Text = "Movie Title:"
-        '
-        'txtMSearchName
-        '
-        Me.txtMSearchName.Font = New System.Drawing.Font("Microsoft Sans Serif", 20.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txtMSearchName.Location = New System.Drawing.Point(211, 72)
-        Me.txtMSearchName.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
-        Me.txtMSearchName.Name = "txtMSearchName"
-        Me.txtMSearchName.Size = New System.Drawing.Size(249, 46)
-        Me.txtMSearchName.TabIndex = 0
-        '
-        'txtMSearchSYear
-        '
-        Me.txtMSearchSYear.Font = New System.Drawing.Font("Microsoft Sans Serif", 20.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txtMSearchSYear.Location = New System.Drawing.Point(304, 131)
-        Me.txtMSearchSYear.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
-        Me.txtMSearchSYear.Name = "txtMSearchSYear"
-        Me.txtMSearchSYear.Size = New System.Drawing.Size(89, 46)
-        Me.txtMSearchSYear.TabIndex = 0
-        '
-        'cboSearchGenre
-        '
-        Me.cboSearchGenre.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
-        Me.cboSearchGenre.Font = New System.Drawing.Font("Microsoft Sans Serif", 20.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.cboSearchGenre.FormattingEnabled = True
-        Me.cboSearchGenre.Location = New System.Drawing.Point(211, 314)
-        Me.cboSearchGenre.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
-        Me.cboSearchGenre.Name = "cboSearchGenre"
-        Me.cboSearchGenre.Size = New System.Drawing.Size(249, 47)
-        Me.cboSearchGenre.TabIndex = 2
         '
         'pnlLogin
         '
@@ -691,7 +884,7 @@ Partial Class home
         Me.Button7.BackColor = System.Drawing.Color.Aquamarine
         Me.Button7.Font = New System.Drawing.Font("Microsoft Sans Serif", 20.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Button7.Location = New System.Drawing.Point(299, 372)
-        Me.Button7.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.Button7.Margin = New System.Windows.Forms.Padding(4)
         Me.Button7.Name = "Button7"
         Me.Button7.Size = New System.Drawing.Size(211, 80)
         Me.Button7.TabIndex = 3
@@ -725,7 +918,7 @@ Partial Class home
         '
         Me.TextBox3.Font = New System.Drawing.Font("Microsoft Sans Serif", 20.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.TextBox3.Location = New System.Drawing.Point(269, 213)
-        Me.TextBox3.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.TextBox3.Margin = New System.Windows.Forms.Padding(4)
         Me.TextBox3.Name = "TextBox3"
         Me.TextBox3.Size = New System.Drawing.Size(385, 46)
         Me.TextBox3.TabIndex = 0
@@ -747,7 +940,7 @@ Partial Class home
         '
         Me.TextBox4.Font = New System.Drawing.Font("Microsoft Sans Serif", 20.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.TextBox4.Location = New System.Drawing.Point(269, 162)
-        Me.TextBox4.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.TextBox4.Margin = New System.Windows.Forms.Padding(4)
         Me.TextBox4.Name = "TextBox4"
         Me.TextBox4.Size = New System.Drawing.Size(385, 46)
         Me.TextBox4.TabIndex = 0
@@ -765,7 +958,7 @@ Partial Class home
         '
         Me.PictureBox4.Image = CType(resources.GetObject("PictureBox4.Image"), System.Drawing.Image)
         Me.PictureBox4.Location = New System.Drawing.Point(0, 0)
-        Me.PictureBox4.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.PictureBox4.Margin = New System.Windows.Forms.Padding(4)
         Me.PictureBox4.Name = "PictureBox4"
         Me.PictureBox4.Size = New System.Drawing.Size(1189, 718)
         Me.PictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
@@ -779,7 +972,7 @@ Partial Class home
         Me.WinControl.Controls.Add(Me.PictureBox1)
         Me.WinControl.Dock = System.Windows.Forms.DockStyle.Right
         Me.WinControl.Location = New System.Drawing.Point(1021, 0)
-        Me.WinControl.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.WinControl.Margin = New System.Windows.Forms.Padding(4)
         Me.WinControl.Name = "WinControl"
         Me.WinControl.Size = New System.Drawing.Size(171, 55)
         Me.WinControl.TabIndex = 3
@@ -788,7 +981,7 @@ Partial Class home
         '
         Me.PictureBox3.Image = CType(resources.GetObject("PictureBox3.Image"), System.Drawing.Image)
         Me.PictureBox3.Location = New System.Drawing.Point(115, 5)
-        Me.PictureBox3.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.PictureBox3.Margin = New System.Windows.Forms.Padding(4)
         Me.PictureBox3.Name = "PictureBox3"
         Me.PictureBox3.Size = New System.Drawing.Size(47, 43)
         Me.PictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
@@ -799,7 +992,7 @@ Partial Class home
         '
         Me.PictureBox2.Image = CType(resources.GetObject("PictureBox2.Image"), System.Drawing.Image)
         Me.PictureBox2.Location = New System.Drawing.Point(5, 5)
-        Me.PictureBox2.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.PictureBox2.Margin = New System.Windows.Forms.Padding(4)
         Me.PictureBox2.Name = "PictureBox2"
         Me.PictureBox2.Size = New System.Drawing.Size(47, 43)
         Me.PictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
@@ -810,7 +1003,7 @@ Partial Class home
         '
         Me.PictureBox1.Image = CType(resources.GetObject("PictureBox1.Image"), System.Drawing.Image)
         Me.PictureBox1.Location = New System.Drawing.Point(60, 5)
-        Me.PictureBox1.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.PictureBox1.Margin = New System.Windows.Forms.Padding(4)
         Me.PictureBox1.Name = "PictureBox1"
         Me.PictureBox1.Size = New System.Drawing.Size(47, 43)
         Me.PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
@@ -823,7 +1016,7 @@ Partial Class home
         Me.Panel2.Controls.Add(Me.WinControl)
         Me.Panel2.Dock = System.Windows.Forms.DockStyle.Top
         Me.Panel2.Location = New System.Drawing.Point(268, 0)
-        Me.Panel2.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.Panel2.Margin = New System.Windows.Forms.Padding(4)
         Me.Panel2.Name = "Panel2"
         Me.Panel2.Size = New System.Drawing.Size(1192, 55)
         Me.Panel2.TabIndex = 1
@@ -845,7 +1038,7 @@ Partial Class home
         Me.btnNextMovie.BackColor = System.Drawing.Color.Aquamarine
         Me.btnNextMovie.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.btnNextMovie.Location = New System.Drawing.Point(932, 32)
-        Me.btnNextMovie.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.btnNextMovie.Margin = New System.Windows.Forms.Padding(4)
         Me.btnNextMovie.Name = "btnNextMovie"
         Me.btnNextMovie.Size = New System.Drawing.Size(184, 43)
         Me.btnNextMovie.TabIndex = 7
@@ -857,7 +1050,7 @@ Partial Class home
         Me.btnPreviousMovie.BackColor = System.Drawing.Color.Aquamarine
         Me.btnPreviousMovie.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.btnPreviousMovie.Location = New System.Drawing.Point(739, 32)
-        Me.btnPreviousMovie.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.btnPreviousMovie.Margin = New System.Windows.Forms.Padding(4)
         Me.btnPreviousMovie.Name = "btnPreviousMovie"
         Me.btnPreviousMovie.Size = New System.Drawing.Size(184, 43)
         Me.btnPreviousMovie.TabIndex = 6
@@ -869,7 +1062,7 @@ Partial Class home
         Me.btnLoadMovie.BackColor = System.Drawing.Color.Aquamarine
         Me.btnLoadMovie.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.btnLoadMovie.Location = New System.Drawing.Point(33, 32)
-        Me.btnLoadMovie.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.btnLoadMovie.Margin = New System.Windows.Forms.Padding(4)
         Me.btnLoadMovie.Name = "btnLoadMovie"
         Me.btnLoadMovie.Size = New System.Drawing.Size(184, 43)
         Me.btnLoadMovie.TabIndex = 5
@@ -880,7 +1073,7 @@ Partial Class home
         '
         Me.dgvMovieList.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         Me.dgvMovieList.Location = New System.Drawing.Point(33, 82)
-        Me.dgvMovieList.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.dgvMovieList.Margin = New System.Windows.Forms.Padding(4)
         Me.dgvMovieList.Name = "dgvMovieList"
         Me.dgvMovieList.Size = New System.Drawing.Size(1083, 486)
         Me.dgvMovieList.TabIndex = 0
@@ -923,7 +1116,7 @@ Partial Class home
         Me.Panel9.Controls.Add(Me.Label38)
         Me.Panel9.Controls.Add(Me.Label39)
         Me.Panel9.Location = New System.Drawing.Point(747, 71)
-        Me.Panel9.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.Panel9.Margin = New System.Windows.Forms.Padding(4)
         Me.Panel9.Name = "Panel9"
         Me.Panel9.Size = New System.Drawing.Size(352, 559)
         Me.Panel9.TabIndex = 0
@@ -983,7 +1176,7 @@ Partial Class home
         Me.PictureBox9.Dock = System.Windows.Forms.DockStyle.Top
         Me.PictureBox9.Image = CType(resources.GetObject("PictureBox9.Image"), System.Drawing.Image)
         Me.PictureBox9.Location = New System.Drawing.Point(0, 0)
-        Me.PictureBox9.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.PictureBox9.Margin = New System.Windows.Forms.Padding(4)
         Me.PictureBox9.Name = "PictureBox9"
         Me.PictureBox9.Size = New System.Drawing.Size(352, 218)
         Me.PictureBox9.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
@@ -1075,7 +1268,7 @@ Partial Class home
         Me.Panel8.Controls.Add(Me.Label30)
         Me.Panel8.Controls.Add(Me.Label21)
         Me.Panel8.Location = New System.Drawing.Point(387, 68)
-        Me.Panel8.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.Panel8.Margin = New System.Windows.Forms.Padding(4)
         Me.Panel8.Name = "Panel8"
         Me.Panel8.Size = New System.Drawing.Size(352, 559)
         Me.Panel8.TabIndex = 0
@@ -1135,7 +1328,7 @@ Partial Class home
         Me.PictureBox7.Dock = System.Windows.Forms.DockStyle.Top
         Me.PictureBox7.Image = CType(resources.GetObject("PictureBox7.Image"), System.Drawing.Image)
         Me.PictureBox7.Location = New System.Drawing.Point(0, 0)
-        Me.PictureBox7.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.PictureBox7.Margin = New System.Windows.Forms.Padding(4)
         Me.PictureBox7.Name = "PictureBox7"
         Me.PictureBox7.Size = New System.Drawing.Size(352, 218)
         Me.PictureBox7.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
@@ -1205,7 +1398,7 @@ Partial Class home
         Me.Panel10.Controls.Add(Me.Label18)
         Me.Panel10.Controls.Add(Me.PictureBox8)
         Me.Panel10.Location = New System.Drawing.Point(27, 69)
-        Me.Panel10.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.Panel10.Margin = New System.Windows.Forms.Padding(4)
         Me.Panel10.Name = "Panel10"
         Me.Panel10.Size = New System.Drawing.Size(352, 559)
         Me.Panel10.TabIndex = 0
@@ -1296,7 +1489,7 @@ Partial Class home
         Me.PictureBox8.Dock = System.Windows.Forms.DockStyle.Top
         Me.PictureBox8.Image = CType(resources.GetObject("PictureBox8.Image"), System.Drawing.Image)
         Me.PictureBox8.Location = New System.Drawing.Point(0, 0)
-        Me.PictureBox8.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.PictureBox8.Margin = New System.Windows.Forms.Padding(4)
         Me.PictureBox8.Name = "PictureBox8"
         Me.PictureBox8.Size = New System.Drawing.Size(352, 218)
         Me.PictureBox8.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
@@ -1318,199 +1511,6 @@ Partial Class home
         Me._vb_net_imdbDataSet1.DataSetName = "_vb_net_imdbDataSet"
         Me._vb_net_imdbDataSet1.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
         '
-        'cboYearMod
-        '
-        Me.cboYearMod.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
-        Me.cboYearMod.Font = New System.Drawing.Font("Microsoft Sans Serif", 20.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.cboYearMod.FormattingEnabled = True
-        Me.cboYearMod.Location = New System.Drawing.Point(211, 130)
-        Me.cboYearMod.Margin = New System.Windows.Forms.Padding(4)
-        Me.cboYearMod.Name = "cboYearMod"
-        Me.cboYearMod.Size = New System.Drawing.Size(85, 47)
-        Me.cboYearMod.TabIndex = 21
-        '
-        'radCrew
-        '
-        Me.radCrew.AutoSize = True
-        Me.radCrew.Font = New System.Drawing.Font("Microsoft Sans Serif", 13.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.radCrew.Location = New System.Drawing.Point(890, 99)
-        Me.radCrew.Name = "radCrew"
-        Me.radCrew.Size = New System.Drawing.Size(91, 33)
-        Me.radCrew.TabIndex = 25
-        Me.radCrew.TabStop = True
-        Me.radCrew.Text = "Crew"
-        Me.radCrew.UseVisualStyleBackColor = True
-        '
-        'radMovie
-        '
-        Me.radMovie.AutoSize = True
-        Me.radMovie.Font = New System.Drawing.Font("Microsoft Sans Serif", 13.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.radMovie.Location = New System.Drawing.Point(890, 54)
-        Me.radMovie.Name = "radMovie"
-        Me.radMovie.Size = New System.Drawing.Size(99, 33)
-        Me.radMovie.TabIndex = 24
-        Me.radMovie.TabStop = True
-        Me.radMovie.Text = "Movie"
-        Me.radMovie.UseVisualStyleBackColor = True
-        '
-        'pnlMovieSearch
-        '
-        Me.pnlMovieSearch.Controls.Add(Me.lblSearchMovieTitle)
-        Me.pnlMovieSearch.Controls.Add(Me.cboSearchGenre)
-        Me.pnlMovieSearch.Controls.Add(Me.txtMSearchSYear)
-        Me.pnlMovieSearch.Controls.Add(Me.cboYearMod)
-        Me.pnlMovieSearch.Controls.Add(Me.txtMSearchName)
-        Me.pnlMovieSearch.Controls.Add(Me.lblMTitle)
-        Me.pnlMovieSearch.Controls.Add(Me.lblMYear)
-        Me.pnlMovieSearch.Controls.Add(Me.cboRatingsMod)
-        Me.pnlMovieSearch.Controls.Add(Me.lblMGenre)
-        Me.pnlMovieSearch.Controls.Add(Me.txtRatings)
-        Me.pnlMovieSearch.Controls.Add(Me.txtMSearchEYear)
-        Me.pnlMovieSearch.Controls.Add(Me.lblFRating)
-        Me.pnlMovieSearch.Controls.Add(Me.lblMRTM)
-        Me.pnlMovieSearch.Controls.Add(Me.lblEYear)
-        Me.pnlMovieSearch.Controls.Add(Me.txtRTM)
-        Me.pnlMovieSearch.Controls.Add(Me.cboRTMMod)
-        Me.pnlMovieSearch.Location = New System.Drawing.Point(3, 7)
-        Me.pnlMovieSearch.Name = "pnlMovieSearch"
-        Me.pnlMovieSearch.Size = New System.Drawing.Size(525, 510)
-        Me.pnlMovieSearch.TabIndex = 26
-        '
-        'pnlCrewSearch
-        '
-        Me.pnlCrewSearch.Controls.Add(Me.lblCrewProf)
-        Me.pnlCrewSearch.Controls.Add(Me.txtCrewProf)
-        Me.pnlCrewSearch.Controls.Add(Me.txtCrewDYear)
-        Me.pnlCrewSearch.Controls.Add(Me.lblCrewDYear)
-        Me.pnlCrewSearch.Controls.Add(Me.txtCrewBYear)
-        Me.pnlCrewSearch.Controls.Add(Me.lblCrewPos)
-        Me.pnlCrewSearch.Controls.Add(Me.cboCrewBYearMOD)
-        Me.pnlCrewSearch.Controls.Add(Me.txtCrewPos)
-        Me.pnlCrewSearch.Controls.Add(Me.lblCrewBYear)
-        Me.pnlCrewSearch.Controls.Add(Me.lblCrewName)
-        Me.pnlCrewSearch.Controls.Add(Me.txtCrewName)
-        Me.pnlCrewSearch.Controls.Add(Me.lblCrew)
-        Me.pnlCrewSearch.Location = New System.Drawing.Point(3, 7)
-        Me.pnlCrewSearch.Name = "pnlCrewSearch"
-        Me.pnlCrewSearch.Size = New System.Drawing.Size(525, 510)
-        Me.pnlCrewSearch.TabIndex = 27
-        '
-        'lblCrew
-        '
-        Me.lblCrew.AutoSize = True
-        Me.lblCrew.Font = New System.Drawing.Font("Microsoft Sans Serif", 22.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lblCrew.Location = New System.Drawing.Point(23, 17)
-        Me.lblCrew.Name = "lblCrew"
-        Me.lblCrew.Size = New System.Drawing.Size(108, 44)
-        Me.lblCrew.TabIndex = 14
-        Me.lblCrew.Text = "Crew"
-        '
-        'lblCrewName
-        '
-        Me.lblCrewName.AutoSize = True
-        Me.lblCrewName.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lblCrewName.Location = New System.Drawing.Point(104, 84)
-        Me.lblCrewName.Name = "lblCrewName"
-        Me.lblCrewName.Size = New System.Drawing.Size(70, 25)
-        Me.lblCrewName.TabIndex = 22
-        Me.lblCrewName.Text = "Name:"
-        '
-        'txtCrewName
-        '
-        Me.txtCrewName.Font = New System.Drawing.Font("Microsoft Sans Serif", 20.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txtCrewName.Location = New System.Drawing.Point(184, 69)
-        Me.txtCrewName.Margin = New System.Windows.Forms.Padding(4)
-        Me.txtCrewName.Name = "txtCrewName"
-        Me.txtCrewName.Size = New System.Drawing.Size(249, 46)
-        Me.txtCrewName.TabIndex = 21
-        '
-        'lblCrewPos
-        '
-        Me.lblCrewPos.AutoSize = True
-        Me.lblCrewPos.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lblCrewPos.Location = New System.Drawing.Point(87, 145)
-        Me.lblCrewPos.Name = "lblCrewPos"
-        Me.lblCrewPos.Size = New System.Drawing.Size(87, 25)
-        Me.lblCrewPos.TabIndex = 24
-        Me.lblCrewPos.Text = "Position:"
-        '
-        'txtCrewPos
-        '
-        Me.txtCrewPos.Font = New System.Drawing.Font("Microsoft Sans Serif", 20.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txtCrewPos.Location = New System.Drawing.Point(184, 130)
-        Me.txtCrewPos.Margin = New System.Windows.Forms.Padding(4)
-        Me.txtCrewPos.Name = "txtCrewPos"
-        Me.txtCrewPos.Size = New System.Drawing.Size(249, 46)
-        Me.txtCrewPos.TabIndex = 23
-        '
-        'txtCrewBYear
-        '
-        Me.txtCrewBYear.Font = New System.Drawing.Font("Microsoft Sans Serif", 20.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txtCrewBYear.Location = New System.Drawing.Point(277, 195)
-        Me.txtCrewBYear.Margin = New System.Windows.Forms.Padding(4)
-        Me.txtCrewBYear.Name = "txtCrewBYear"
-        Me.txtCrewBYear.Size = New System.Drawing.Size(89, 46)
-        Me.txtCrewBYear.TabIndex = 22
-        '
-        'cboCrewBYearMOD
-        '
-        Me.cboCrewBYearMOD.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
-        Me.cboCrewBYearMOD.Font = New System.Drawing.Font("Microsoft Sans Serif", 20.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.cboCrewBYearMOD.FormattingEnabled = True
-        Me.cboCrewBYearMOD.Location = New System.Drawing.Point(184, 194)
-        Me.cboCrewBYearMOD.Margin = New System.Windows.Forms.Padding(4)
-        Me.cboCrewBYearMOD.Name = "cboCrewBYearMOD"
-        Me.cboCrewBYearMOD.Size = New System.Drawing.Size(85, 47)
-        Me.cboCrewBYearMOD.TabIndex = 24
-        '
-        'lblCrewBYear
-        '
-        Me.lblCrewBYear.AutoSize = True
-        Me.lblCrewBYear.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lblCrewBYear.Location = New System.Drawing.Point(71, 209)
-        Me.lblCrewBYear.Name = "lblCrewBYear"
-        Me.lblCrewBYear.Size = New System.Drawing.Size(103, 25)
-        Me.lblCrewBYear.TabIndex = 23
-        Me.lblCrewBYear.Text = "Birth Year:"
-        '
-        'lblCrewDYear
-        '
-        Me.lblCrewDYear.AutoSize = True
-        Me.lblCrewDYear.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lblCrewDYear.Location = New System.Drawing.Point(58, 270)
-        Me.lblCrewDYear.Name = "lblCrewDYear"
-        Me.lblCrewDYear.Size = New System.Drawing.Size(116, 25)
-        Me.lblCrewDYear.TabIndex = 25
-        Me.lblCrewDYear.Text = "Death Year:"
-        '
-        'txtCrewDYear
-        '
-        Me.txtCrewDYear.Font = New System.Drawing.Font("Microsoft Sans Serif", 20.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txtCrewDYear.Location = New System.Drawing.Point(184, 258)
-        Me.txtCrewDYear.Margin = New System.Windows.Forms.Padding(4)
-        Me.txtCrewDYear.Name = "txtCrewDYear"
-        Me.txtCrewDYear.Size = New System.Drawing.Size(89, 46)
-        Me.txtCrewDYear.TabIndex = 26
-        '
-        'lblCrewProf
-        '
-        Me.lblCrewProf.AutoSize = True
-        Me.lblCrewProf.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lblCrewProf.Location = New System.Drawing.Point(64, 323)
-        Me.lblCrewProf.Name = "lblCrewProf"
-        Me.lblCrewProf.Size = New System.Drawing.Size(110, 25)
-        Me.lblCrewProf.TabIndex = 28
-        Me.lblCrewProf.Text = "Profession:"
-        '
-        'txtCrewProf
-        '
-        Me.txtCrewProf.Font = New System.Drawing.Font("Microsoft Sans Serif", 20.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txtCrewProf.Location = New System.Drawing.Point(184, 315)
-        Me.txtCrewProf.Margin = New System.Windows.Forms.Padding(4)
-        Me.txtCrewProf.Name = "txtCrewProf"
-        Me.txtCrewProf.Size = New System.Drawing.Size(249, 46)
-        Me.txtCrewProf.TabIndex = 27
-        '
         'home
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
@@ -1524,7 +1524,7 @@ Partial Class home
         Me.Controls.Add(Me.Panel2)
         Me.Controls.Add(Me.Panel1)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
-        Me.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.Margin = New System.Windows.Forms.Padding(4)
         Me.Name = "home"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "New_UI"
@@ -1533,10 +1533,14 @@ Partial Class home
         Me.Panel3.ResumeLayout(False)
         Me.Panel3.PerformLayout()
         Me.pnlSearch.ResumeLayout(False)
-        Me.pnlAfterSearch.ResumeLayout(False)
-        CType(Me.dgvSearchResult, System.ComponentModel.ISupportInitialize).EndInit()
         Me.pnlPreSearch.ResumeLayout(False)
         Me.pnlPreSearch.PerformLayout()
+        Me.pnlCrewSearch.ResumeLayout(False)
+        Me.pnlCrewSearch.PerformLayout()
+        Me.pnlMovieSearch.ResumeLayout(False)
+        Me.pnlMovieSearch.PerformLayout()
+        Me.pnlAfterSearch.ResumeLayout(False)
+        CType(Me.dgvSearchResult, System.ComponentModel.ISupportInitialize).EndInit()
         Me.pnlLogin.ResumeLayout(False)
         Me.pnlLogin.PerformLayout()
         Me.pnlWelcome.ResumeLayout(False)
@@ -1562,10 +1566,6 @@ Partial Class home
         CType(Me._vb_net_imdbDataSet, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.VbnetimdbDataSetBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me._vb_net_imdbDataSet1, System.ComponentModel.ISupportInitialize).EndInit()
-        Me.pnlMovieSearch.ResumeLayout(False)
-        Me.pnlMovieSearch.PerformLayout()
-        Me.pnlCrewSearch.ResumeLayout(False)
-        Me.pnlCrewSearch.PerformLayout()
         Me.ResumeLayout(False)
 
     End Sub
