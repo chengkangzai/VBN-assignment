@@ -22,14 +22,18 @@ Public Class LoginRegister
         cmd = New SqlCommand(stm, con)
         Dim reader As SqlDataReader = cmd.ExecuteReader
 
-        If reader.Read Then
-            MessageBox.Show("Login Successfully")
-            Me.Hide()
-            home.Show()
-        Else
-            MessageBox.Show("Invalid Account/exist")
-            txtLusername.Clear()
-            txtLpassword.Clear()
+        If (txtRFName.Text = "" Or txtRLName.Text = "" Or txtRAge.Text = "" Or txtRUserName.Text = "" Or txtRpassword.Text = "" Or txtRIC.Text = "") Then
+            MessageBox.Show("Please Enter Every Details", "Incomplete Data/Details")
+            Else
+            If reader.Read Then
+                MessageBox.Show("Welcome", "Login Successfully")
+                Me.Hide()
+                home.Show()
+            Else
+                MessageBox.Show("Invalid Account/exist", "Error")
+                txtLusername.Clear()
+                txtLpassword.Clear()
+            End If
         End If
     End Sub
 
@@ -38,70 +42,86 @@ Public Class LoginRegister
 
         con = New SqlConnection("Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\Chin Wei\Desktop\VBimdb.mdf;Integrated Security=True;Connect Timeout=30")
         con.Open()
-        MsgBox("Connection Open")
         cmd.Connection = con
         cmd.CommandType = CommandType.Text
         cmd.CommandText = "Select * from [User] where U_Username='" & txtRUserName.Text & "' "
         Try
             dr = cmd.ExecuteReader
             If dr.HasRows Then
-                MsgBox("Username Already Exist")
+                MessageBox.Show("Username Already Exist", "Existed Username")
                 con.Close()
+                txtRFName.Clear()
+                txtRLName.Clear()
+                txtRAge.Clear()
+                txtRUserName.Clear()
+                txtRpassword.Clear()
+                txtRIC.Clear()
             Else
                 con.Close()
                 con.Open()
                 cmd = New SqlCommand("insert into [User] (U_Fname, U_Lname, U_Age, U_Username, U_Password, U_ICnumber) values ('" & txtRFName.Text & "', '" & txtRLName.Text & "', '" & txtRAge.Text & "', '" & txtRUserName.Text & "', '" & txtRpassword.Text & "', '" & txtRIC.Text & "')", con)
-                If Not IsNumeric(txtRAge.Text) Or Not IsNumeric(txtRIC.Text) Then
-                    MsgBox("Please Enter Value Only")
-                End If
-                If (txtRFName.Text = "" And txtRLName.Text = "" And txtRAge.Text = "" And txtRUserName.Text = "" And txtRpassword.Text = "" And txtRIC.Text = "") Then
-                    MsgBox("Please enter the details")
+                If (txtRFName.Text = "" Or txtRLName.Text = "" Or txtRAge.Text = "" Or txtRUserName.Text = "" Or txtRpassword.Text = "" Or txtRIC.Text = "") Then
+                    MessageBox.Show("Please Enter Every Details", "Incomplete Data/Details")
                 Else
-                    cmd.ExecuteNonQuery()
-                    MsgBox("Successfully Registered")
+                    If Not IsNumeric(txtRAge.Text) Or Not IsNumeric(txtRIC.Text) Then
+                        MessageBox.Show("Please Enter Value Only", "Invalid Alphabetical and Special Case")
+                    Else
+                        cmd.ExecuteNonQuery()
+                        MessageBox.Show("Account Has Created", "Successfully Registered")
+                    End If
+                    con.Close()
+                    txtRFName.Clear()
+                    txtRLName.Clear()
+                    txtRAge.Clear()
+                    txtRUserName.Clear()
+                    txtRpassword.Clear()
+                    txtRIC.Clear()
                 End If
-                con.Close()
             End If
             con.Close()
         Catch ex As Exception
-            MsgBox("Unsuccessful Register")
+            MessageBox.Show("Unsuccessful Register", "Error")
         End Try
     End Sub
 
-    Private Sub Button8_Click(sender As Object, e As EventArgs) Handles btncheckconnect.Click
+    Private Sub Button8_Click(sender As Object, e As EventArgs) Handles btncheckstrength.Click
         If txtRpassword.Text.Length <= 6 Then
-            MsgBox("Weak Password")
+            MessageBox.Show("Weak Password", "Password Strength")
         Else
-            MsgBox("Strong Password")
+            MessageBox.Show("Strong Password", "Password Strength")
         End If
     End Sub
 
     'Recovery
     Private Sub Button7_Click(sender As Object, e As EventArgs) Handles btnconchanges.Click
         If txtPRNewPass.Text <> txtPRConPass.Text Then
-            MsgBox("Password does not match")
+            MessageBox.Show("Please Match Your Password", "Password Does Not Match")
         End If
 
         con = New SqlConnection("Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\Chin Wei\Desktop\VBimdb.mdf;Integrated Security=True;Connect Timeout=30")
-        If txtRFName.Text = txtRLName.Text Then
+        If txtPRNewPass.Text = txtPRConPass.Text Then
             Try
                 con.Open()
                 cmd = New SqlCommand("update [User] set U_Password = '" & txtPRNewPass.Text & "' where U_Username= '" & txtPRUsername.Text & "' And U_ICnumber='" & txtPRIC.Text & "'", con)
-                If (txtPRUsername.Text = "" And txtPRIC.Text = "" And txtPRNewPass.Text = "" And txtPRConPass.Text = "") Then
-                    MsgBox("Please enter every info in the textbox")
+                If (txtPRUsername.Text = "" Or txtPRIC.Text = "" Or txtPRNewPass.Text = "" Or txtPRConPass.Text = "") Then
+                    MessageBox.Show("Please enter every info in the textbox", "Incomplete data")
                 Else
                     If Not IsNumeric(txtPRIC.Text) Then
-                        MsgBox("Please Enter Value Only")
+                        MessageBox.Show("Please Enter Value Only", "Invalid Word and Special Cases")
                     End If
                     If (cmd.ExecuteNonQuery() > 0) Then
-                        MessageBox.Show("Password Successfully Recover")
+                        MessageBox.Show("Password Successfully Recover", "Successful")
                         con.Close()
+                        txtPRUsername.Clear()
+                        txtPRIC.Clear()
+                        txtPRNewPass.Clear()
+                        txtPRConPass.Clear()
                     Else
-                        MsgBox("Wrong Username or IC number")
+                        MessageBox.Show("Wrong Username or IC number", "Wrong Details")
                     End If
                 End If
             Catch ex As Exception
-                MsgBox("Recovery Unsuccessful")
+                MessageBox.Show("Recovery Unsuccessful", "Error")
             End Try
         End If
     End Sub

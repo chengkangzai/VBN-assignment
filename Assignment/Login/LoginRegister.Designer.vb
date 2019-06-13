@@ -39,7 +39,7 @@ Partial Class LoginRegister
         Me.pnlRegister = New System.Windows.Forms.Panel()
         Me.lblRTipsIC = New System.Windows.Forms.Label()
         Me.lblRTipsAge = New System.Windows.Forms.Label()
-        Me.btncheckconnect = New System.Windows.Forms.Button()
+        Me.btncheckstrength = New System.Windows.Forms.Button()
         Me.btnRegister = New System.Windows.Forms.Button()
         Me.txtRpassword = New System.Windows.Forms.TextBox()
         Me.lblRPass = New System.Windows.Forms.Label()
@@ -205,7 +205,7 @@ Partial Class LoginRegister
         '
         Me.pnlRegister.Controls.Add(Me.lblRTipsIC)
         Me.pnlRegister.Controls.Add(Me.lblRTipsAge)
-        Me.pnlRegister.Controls.Add(Me.btncheckconnect)
+        Me.pnlRegister.Controls.Add(Me.btncheckstrength)
         Me.pnlRegister.Controls.Add(Me.btnRegister)
         Me.pnlRegister.Controls.Add(Me.txtRpassword)
         Me.pnlRegister.Controls.Add(Me.lblRPass)
@@ -243,14 +243,14 @@ Partial Class LoginRegister
         Me.lblRTipsAge.TabIndex = 5
         Me.lblRTipsAge.Text = "Please Put Only Numeric"
         '
-        'btncheckconnect
+        'btncheckstrength
         '
-        Me.btncheckconnect.Location = New System.Drawing.Point(465, 351)
-        Me.btncheckconnect.Name = "btncheckconnect"
-        Me.btncheckconnect.Size = New System.Drawing.Size(136, 45)
-        Me.btncheckconnect.TabIndex = 4
-        Me.btncheckconnect.Text = "Check Connection"
-        Me.btncheckconnect.UseVisualStyleBackColor = True
+        Me.btncheckstrength.Location = New System.Drawing.Point(465, 351)
+        Me.btncheckstrength.Name = "btncheckstrength"
+        Me.btncheckstrength.Size = New System.Drawing.Size(136, 45)
+        Me.btncheckstrength.TabIndex = 4
+        Me.btncheckstrength.Text = "Password Strength"
+        Me.btncheckstrength.UseVisualStyleBackColor = True
         '
         'btnRegister
         '
@@ -491,9 +491,9 @@ Partial Class LoginRegister
         Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(870, 501)
-        Me.Controls.Add(Me.pnlLogin)
         Me.Controls.Add(Me.pnlRegister)
         Me.Controls.Add(Me.pnlRecovery)
+        Me.Controls.Add(Me.pnlLogin)
         Me.Controls.Add(Me.pnlNavigation)
         Me.Controls.Add(Me.pnlNavButton)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
@@ -551,7 +551,7 @@ Partial Class LoginRegister
     Friend WithEvents txtPRUsername As TextBox
     Friend WithEvents lblPRUsername As Label
     Friend WithEvents lblPRTitle As Label
-    Friend WithEvents btncheckconnect As Button
+    Friend WithEvents btncheckstrength As Button
     Friend WithEvents lblRTipsIC As Label
     Friend WithEvents lblRTipsAge As Label
     Friend WithEvents lblPRTipsIC As Label
