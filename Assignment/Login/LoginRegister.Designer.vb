@@ -37,6 +37,8 @@ Partial Class LoginRegister
         Me.Label4 = New System.Windows.Forms.Label()
         Me.Label3 = New System.Windows.Forms.Label()
         Me.register = New System.Windows.Forms.Panel()
+        Me.Label18 = New System.Windows.Forms.Label()
+        Me.Label2 = New System.Windows.Forms.Label()
         Me.btncheckconnect = New System.Windows.Forms.Button()
         Me.btnRegister = New System.Windows.Forms.Button()
         Me.txtRpassword = New System.Windows.Forms.TextBox()
@@ -128,7 +130,7 @@ Partial Class LoginRegister
         '
         'navbutton
         '
-        Me.navbutton.Location = New System.Drawing.Point(198, 0)
+        Me.navbutton.Location = New System.Drawing.Point(201, 0)
         Me.navbutton.Name = "navbutton"
         Me.navbutton.Size = New System.Drawing.Size(672, 58)
         Me.navbutton.TabIndex = 0
@@ -198,6 +200,8 @@ Partial Class LoginRegister
         '
         'register
         '
+        Me.register.Controls.Add(Me.Label18)
+        Me.register.Controls.Add(Me.Label2)
         Me.register.Controls.Add(Me.btncheckconnect)
         Me.register.Controls.Add(Me.btnRegister)
         Me.register.Controls.Add(Me.txtRpassword)
@@ -217,6 +221,24 @@ Partial Class LoginRegister
         Me.register.Name = "register"
         Me.register.Size = New System.Drawing.Size(669, 447)
         Me.register.TabIndex = 3
+        '
+        'Label18
+        '
+        Me.Label18.AutoSize = True
+        Me.Label18.Location = New System.Drawing.Point(484, 292)
+        Me.Label18.Name = "Label18"
+        Me.Label18.Size = New System.Drawing.Size(165, 17)
+        Me.Label18.TabIndex = 6
+        Me.Label18.Text = "Please Put Only Numeric"
+        '
+        'Label2
+        '
+        Me.Label2.AutoSize = True
+        Me.Label2.Location = New System.Drawing.Point(484, 157)
+        Me.Label2.Name = "Label2"
+        Me.Label2.Size = New System.Drawing.Size(165, 17)
+        Me.Label2.TabIndex = 5
+        Me.Label2.Text = "Please Put Only Numeric"
         '
         'btncheckconnect
         '
@@ -445,9 +467,9 @@ Partial Class LoginRegister
         Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(870, 501)
+        Me.Controls.Add(Me.Recovery)
         Me.Controls.Add(Me.login)
         Me.Controls.Add(Me.register)
-        Me.Controls.Add(Me.Recovery)
         Me.Controls.Add(Me.navigation)
         Me.Controls.Add(Me.navbutton)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
@@ -506,4 +528,6 @@ Partial Class LoginRegister
     Friend WithEvents Label14 As Label
     Friend WithEvents Label13 As Label
     Friend WithEvents btncheckconnect As Button
+    Friend WithEvents Label18 As Label
+    Friend WithEvents Label2 As Label
 End Class
