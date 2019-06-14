@@ -41,7 +41,6 @@ Public Class home
 
     Private Sub New_UI_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         pnlSearch.Visible = False
-        pnlLogin.Visible = False
         pnlMovie.Visible = False
         pnlWelcome.Visible = True
         pnlAbout.Visible = False
@@ -100,7 +99,6 @@ Public Class home
     Private Sub Search_button(sender As Object, e As EventArgs) Handles btnpnlSearch.Click
         pnlWelcome.Visible = False
         pnlMovie.Visible = False
-        pnlLogin.Visible = False
         pnlAbout.Visible = False
         pnlSearch.Visible = True
         pnlPreSearch.Visible = True
@@ -109,11 +107,10 @@ Public Class home
         pnlSearchCrew.Visible = False
     End Sub
 
-    Private Sub btnpnlLogin_Click(sender As Object, e As EventArgs) Handles btnpnlLogin.Click
+    Private Sub btnpnlLogin_Click(sender As Object, e As EventArgs)
         pnlWelcome.Visible = False
         pnlSearch.Visible = False
         pnlMovie.Visible = False
-        pnlLogin.Visible = True
         pnlAbout.Visible = False
         pnlAfterSearch.Visible = False
 
@@ -123,7 +120,6 @@ Public Class home
         pnlWelcome.Visible = False
         pnlSearch.Visible = False
         pnlMovie.Visible = True
-        pnlLogin.Visible = False
         pnlAbout.Visible = False
         pnlAfterSearch.Visible = False
 
@@ -132,53 +128,9 @@ Public Class home
         pnlWelcome.Visible = False
         pnlSearch.Visible = False
         pnlMovie.Visible = False
-        pnlLogin.Visible = False
         pnlAbout.Visible = True
         pnlAfterSearch.Visible = False
 
-    End Sub
-
-
-    ' Panel Button Hover Effect 
-    ' Search
-    Private Sub btnpnlSearch_MouseHover(sender As Object, e As EventArgs) Handles btnpnlSearch.MouseHover
-        Button1.BackColor = Color.DarkGreen
-    End Sub
-
-    Private Sub btnpnlSearch_MouseLeave(sender As Object, e As EventArgs) Handles btnpnlSearch.MouseLeave
-        Button1.BackColor = Color.MediumAquamarine
-    End Sub
-    ' Login
-    Private Sub btnpnlLogin_MouseHover(sender As Object, e As EventArgs) Handles btnpnlLogin.MouseHover
-        Button1.BackColor = Color.DarkGreen
-    End Sub
-
-    Private Sub btnpnlLogin_MouseLeave(sender As Object, e As EventArgs) Handles btnpnlLogin.MouseLeave
-        Button1.BackColor = Color.MediumAquamarine
-    End Sub
-    'Movie
-    Private Sub btnpnlMovie_MouseHover(sender As Object, e As EventArgs) Handles btnpnlMovie.MouseHover
-        Button1.BackColor = Color.DarkGreen
-    End Sub
-
-    Private Sub btnpnlMovie_MouseLeave(sender As Object, e As EventArgs) Handles btnpnlMovie.MouseLeave
-        Button1.BackColor = Color.MediumAquamarine
-    End Sub
-    'About 
-    Private Sub btnpnlAbout_MouseHover(sender As Object, e As EventArgs) Handles btnpnlAbout.MouseHover
-        Button1.BackColor = Color.DarkGreen
-    End Sub
-
-    Private Sub btnpnlAbout_MouseLeave(sender As Object, e As EventArgs) Handles btnpnlAbout.MouseLeave
-        Button1.BackColor = Color.MediumAquamarine
-    End Sub
-    'Exit
-    Private Sub btnpnlExit_MouseHover(sender As Object, e As EventArgs) Handles btnpnlExit.MouseHover
-        Button1.BackColor = Color.DarkGreen
-    End Sub
-
-    Private Sub btnpnlExit_MouseLeave(sender As Object, e As EventArgs) Handles btnpnlExit.MouseLeave
-        Button1.BackColor = Color.MediumAquamarine
     End Sub
     Private Sub btnSearch_Click(sender As Object, e As EventArgs) Handles btnPreSearch.Click
         Dim con As New SqlConnection("Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=E:\Assignments\Semester 3\VB.Net\vbimdb.mdf;Integrated Security=True;Connect Timeout=30")
