@@ -10,11 +10,8 @@
 
 Imports System.Data.SqlClient
 
-Public Class home
+Public Class Home
     'Maximize and Minimize or close
-
-    'Data Source Below
-    'Data Source = (LocalDB) \ MSSQLLocalDB;AttachDbFilename="D:\Program Files\Microsoft SQL Server\MSSQL13.SQLEXP2016\MSSQL\DATA\vb.net imdb.mdf";Integrated Security = True;Connect Timeout=30
     Private Sub PictureBox1_Click(sender As Object, e As EventArgs) Handles picWinCtrlMaximize.Click
         If Me.WindowState = FormWindowState.Normal Then
             Me.WindowState = FormWindowState.Maximized

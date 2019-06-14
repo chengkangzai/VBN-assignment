@@ -1,5 +1,5 @@
 ﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()> _
-Partial Class home
+Partial Class Home
     Inherits System.Windows.Forms.Form
 
     'Form overrides dispose to clean up the component list.
@@ -23,31 +23,18 @@ Partial Class home
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
         Me.components = New System.ComponentModel.Container()
-        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(home))
+        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(Home))
         Me.pnlMainPanel = New System.Windows.Forms.Panel()
         Me.lblProgramName = New System.Windows.Forms.Label()
+        Me.btnpnlSearch = New System.Windows.Forms.Button()
+        Me.btnpnlAbout = New System.Windows.Forms.Button()
         Me.btnpnlExit = New System.Windows.Forms.Button()
         Me.btnpnlMovie = New System.Windows.Forms.Button()
-        Me.btnpnlAbout = New System.Windows.Forms.Button()
-        Me.btnpnlSearch = New System.Windows.Forms.Button()
         Me.pnlSearch = New System.Windows.Forms.Panel()
         Me.pnlPreSearch = New System.Windows.Forms.Panel()
         Me.lblPreSearchBy = New System.Windows.Forms.Label()
         Me.radPreSearchByMovie = New System.Windows.Forms.RadioButton()
         Me.radPreSearchByCrew = New System.Windows.Forms.RadioButton()
-        Me.pnlSearchCrew = New System.Windows.Forms.Panel()
-        Me.lblSearchCTitle = New System.Windows.Forms.Label()
-        Me.lblSearchCName = New System.Windows.Forms.Label()
-        Me.txtSearchCName = New System.Windows.Forms.TextBox()
-        Me.lblSearchCPos = New System.Windows.Forms.Label()
-        Me.txtSearchCPos = New System.Windows.Forms.TextBox()
-        Me.lblSearchCBYear = New System.Windows.Forms.Label()
-        Me.cboSearchCBYearMod = New System.Windows.Forms.ComboBox()
-        Me.txtSearchCBYear = New System.Windows.Forms.TextBox()
-        Me.lblSearchCDYear = New System.Windows.Forms.Label()
-        Me.txtSearchCDYear = New System.Windows.Forms.TextBox()
-        Me.lblSearchCProf = New System.Windows.Forms.Label()
-        Me.txtSearchCProf = New System.Windows.Forms.TextBox()
         Me.pnlSearchMovie = New System.Windows.Forms.Panel()
         Me.lblSearchMTitle = New System.Windows.Forms.Label()
         Me.lblSearchMName = New System.Windows.Forms.Label()
@@ -65,6 +52,19 @@ Partial Class home
         Me.lblSearchMRating = New System.Windows.Forms.Label()
         Me.cboSearchMRatingMod = New System.Windows.Forms.ComboBox()
         Me.txtSearchMRating = New System.Windows.Forms.TextBox()
+        Me.pnlSearchCrew = New System.Windows.Forms.Panel()
+        Me.lblSearchCTitle = New System.Windows.Forms.Label()
+        Me.lblSearchCName = New System.Windows.Forms.Label()
+        Me.txtSearchCName = New System.Windows.Forms.TextBox()
+        Me.lblSearchCPos = New System.Windows.Forms.Label()
+        Me.txtSearchCPos = New System.Windows.Forms.TextBox()
+        Me.lblSearchCBYear = New System.Windows.Forms.Label()
+        Me.cboSearchCBYearMod = New System.Windows.Forms.ComboBox()
+        Me.txtSearchCBYear = New System.Windows.Forms.TextBox()
+        Me.lblSearchCDYear = New System.Windows.Forms.Label()
+        Me.txtSearchCDYear = New System.Windows.Forms.TextBox()
+        Me.lblSearchCProf = New System.Windows.Forms.Label()
+        Me.txtSearchCProf = New System.Windows.Forms.TextBox()
         Me.btnPreSearch = New System.Windows.Forms.Button()
         Me.pnlAfterSearch = New System.Windows.Forms.Panel()
         Me.btnAfterSearchBack = New System.Windows.Forms.Button()
@@ -84,51 +84,37 @@ Partial Class home
         Me.btnLoadMovie = New System.Windows.Forms.Button()
         Me.dgvMovieList = New System.Windows.Forms.DataGridView()
         Me.pnlAbout = New System.Windows.Forms.Panel()
-        Me.Label22 = New System.Windows.Forms.Label()
-        Me.Panel9 = New System.Windows.Forms.Panel()
-        Me.Label45 = New System.Windows.Forms.Label()
-        Me.Label23 = New System.Windows.Forms.Label()
-        Me.Label44 = New System.Windows.Forms.Label()
-        Me.Label24 = New System.Windows.Forms.Label()
-        Me.Label43 = New System.Windows.Forms.Label()
-        Me.PictureBox9 = New System.Windows.Forms.PictureBox()
-        Me.Label42 = New System.Windows.Forms.Label()
-        Me.Label40 = New System.Windows.Forms.Label()
-        Me.Label41 = New System.Windows.Forms.Label()
-        Me.Label36 = New System.Windows.Forms.Label()
-        Me.Label37 = New System.Windows.Forms.Label()
-        Me.Label38 = New System.Windows.Forms.Label()
-        Me.Label39 = New System.Windows.Forms.Label()
-        Me.Panel8 = New System.Windows.Forms.Panel()
-        Me.Label35 = New System.Windows.Forms.Label()
-        Me.Label8 = New System.Windows.Forms.Label()
-        Me.Label34 = New System.Windows.Forms.Label()
-        Me.Label16 = New System.Windows.Forms.Label()
-        Me.Label33 = New System.Windows.Forms.Label()
-        Me.PictureBox7 = New System.Windows.Forms.PictureBox()
-        Me.Label32 = New System.Windows.Forms.Label()
-        Me.Label31 = New System.Windows.Forms.Label()
-        Me.Label20 = New System.Windows.Forms.Label()
-        Me.Label30 = New System.Windows.Forms.Label()
-        Me.Label21 = New System.Windows.Forms.Label()
-        Me.Panel10 = New System.Windows.Forms.Panel()
-        Me.Label29 = New System.Windows.Forms.Label()
-        Me.Label28 = New System.Windows.Forms.Label()
-        Me.Label27 = New System.Windows.Forms.Label()
-        Me.Label26 = New System.Windows.Forms.Label()
-        Me.Label25 = New System.Windows.Forms.Label()
-        Me.Label19 = New System.Windows.Forms.Label()
-        Me.Label17 = New System.Windows.Forms.Label()
-        Me.Label18 = New System.Windows.Forms.Label()
-        Me.PictureBox8 = New System.Windows.Forms.PictureBox()
-        Me._vb_net_imdbDataSet = New Login._vb_net_imdbDataSet()
+        Me.lblAbout = New System.Windows.Forms.Label()
+        Me.pnlAbout1 = New System.Windows.Forms.Panel()
+        Me.picAbout1 = New System.Windows.Forms.PictureBox()
+        Me.lblAbout1Name = New System.Windows.Forms.Label()
+        Me.lblAbout1NameAns = New System.Windows.Forms.Label()
+        Me.lblAbout1Age = New System.Windows.Forms.Label()
+        Me.lblAbout1AgeAns = New System.Windows.Forms.Label()
+        Me.lblAbout1TP = New System.Windows.Forms.Label()
+        Me.lblAbout1TPAns = New System.Windows.Forms.Label()
+        Me.pnlAbout2 = New System.Windows.Forms.Panel()
+        Me.picAbout2 = New System.Windows.Forms.PictureBox()
+        Me.lblAbout2Name = New System.Windows.Forms.Label()
+        Me.lblAbout2NameAns = New System.Windows.Forms.Label()
+        Me.lblAbout2Age = New System.Windows.Forms.Label()
+        Me.lblAbout2AgeAns = New System.Windows.Forms.Label()
+        Me.lblAbout2TP = New System.Windows.Forms.Label()
+        Me.lblAbout2TPAns = New System.Windows.Forms.Label()
+        Me.pnlAbout3 = New System.Windows.Forms.Panel()
+        Me.picAbout3 = New System.Windows.Forms.PictureBox()
+        Me.lblAbout3Name = New System.Windows.Forms.Label()
+        Me.lblAbout3NameAns = New System.Windows.Forms.Label()
+        Me.lblAbout3Age = New System.Windows.Forms.Label()
+        Me.lblAbout3AgeAns = New System.Windows.Forms.Label()
+        Me.lblAbout3AgeTP = New System.Windows.Forms.Label()
+        Me.lblAbout3AgeTPAns = New System.Windows.Forms.Label()
         Me.VbnetimdbDataSetBindingSource = New System.Windows.Forms.BindingSource(Me.components)
-        Me._vb_net_imdbDataSet1 = New Login._vb_net_imdbDataSet()
         Me.pnlMainPanel.SuspendLayout()
         Me.pnlSearch.SuspendLayout()
         Me.pnlPreSearch.SuspendLayout()
-        Me.pnlSearchCrew.SuspendLayout()
         Me.pnlSearchMovie.SuspendLayout()
+        Me.pnlSearchCrew.SuspendLayout()
         Me.pnlAfterSearch.SuspendLayout()
         CType(Me.dgvSearchResult, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.pnlWelcome.SuspendLayout()
@@ -141,15 +127,13 @@ Partial Class home
         Me.pnlMovie.SuspendLayout()
         CType(Me.dgvMovieList, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.pnlAbout.SuspendLayout()
-        Me.Panel9.SuspendLayout()
-        CType(Me.PictureBox9, System.ComponentModel.ISupportInitialize).BeginInit()
-        Me.Panel8.SuspendLayout()
-        CType(Me.PictureBox7, System.ComponentModel.ISupportInitialize).BeginInit()
-        Me.Panel10.SuspendLayout()
-        CType(Me.PictureBox8, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me._vb_net_imdbDataSet, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.pnlAbout1.SuspendLayout()
+        CType(Me.picAbout1, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.pnlAbout2.SuspendLayout()
+        CType(Me.picAbout2, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.pnlAbout3.SuspendLayout()
+        CType(Me.picAbout3, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.VbnetimdbDataSetBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me._vb_net_imdbDataSet1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'pnlMainPanel
@@ -177,6 +161,42 @@ Partial Class home
         Me.lblProgramName.Size = New System.Drawing.Size(166, 34)
         Me.lblProgramName.TabIndex = 1
         Me.lblProgramName.Text = "Power Apps"
+        '
+        'btnpnlSearch
+        '
+        Me.btnpnlSearch.BackColor = System.Drawing.Color.MediumAquamarine
+        Me.btnpnlSearch.CausesValidation = False
+        Me.btnpnlSearch.FlatAppearance.BorderSize = 0
+        Me.btnpnlSearch.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.btnpnlSearch.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(134, Byte))
+        Me.btnpnlSearch.ForeColor = System.Drawing.Color.Black
+        Me.btnpnlSearch.Image = CType(resources.GetObject("btnpnlSearch.Image"), System.Drawing.Image)
+        Me.btnpnlSearch.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.btnpnlSearch.Location = New System.Drawing.Point(0, 111)
+        Me.btnpnlSearch.Margin = New System.Windows.Forms.Padding(0)
+        Me.btnpnlSearch.Name = "btnpnlSearch"
+        Me.btnpnlSearch.Size = New System.Drawing.Size(201, 53)
+        Me.btnpnlSearch.TabIndex = 0
+        Me.btnpnlSearch.Text = "Search "
+        Me.btnpnlSearch.UseVisualStyleBackColor = False
+        '
+        'btnpnlAbout
+        '
+        Me.btnpnlAbout.BackColor = System.Drawing.Color.MediumAquamarine
+        Me.btnpnlAbout.CausesValidation = False
+        Me.btnpnlAbout.FlatAppearance.BorderSize = 0
+        Me.btnpnlAbout.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.btnpnlAbout.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(134, Byte))
+        Me.btnpnlAbout.ForeColor = System.Drawing.Color.Black
+        Me.btnpnlAbout.Image = CType(resources.GetObject("btnpnlAbout.Image"), System.Drawing.Image)
+        Me.btnpnlAbout.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.btnpnlAbout.Location = New System.Drawing.Point(0, 251)
+        Me.btnpnlAbout.Margin = New System.Windows.Forms.Padding(0)
+        Me.btnpnlAbout.Name = "btnpnlAbout"
+        Me.btnpnlAbout.Size = New System.Drawing.Size(201, 53)
+        Me.btnpnlAbout.TabIndex = 0
+        Me.btnpnlAbout.Text = "About"
+        Me.btnpnlAbout.UseVisualStyleBackColor = False
         '
         'btnpnlExit
         '
@@ -213,42 +233,6 @@ Partial Class home
         Me.btnpnlMovie.Text = "Movie"
         Me.btnpnlMovie.UseVisualStyleBackColor = False
         '
-        'btnpnlAbout
-        '
-        Me.btnpnlAbout.BackColor = System.Drawing.Color.MediumAquamarine
-        Me.btnpnlAbout.CausesValidation = False
-        Me.btnpnlAbout.FlatAppearance.BorderSize = 0
-        Me.btnpnlAbout.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.btnpnlAbout.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(134, Byte))
-        Me.btnpnlAbout.ForeColor = System.Drawing.Color.Black
-        Me.btnpnlAbout.Image = CType(resources.GetObject("btnpnlAbout.Image"), System.Drawing.Image)
-        Me.btnpnlAbout.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.btnpnlAbout.Location = New System.Drawing.Point(0, 251)
-        Me.btnpnlAbout.Margin = New System.Windows.Forms.Padding(0)
-        Me.btnpnlAbout.Name = "btnpnlAbout"
-        Me.btnpnlAbout.Size = New System.Drawing.Size(201, 53)
-        Me.btnpnlAbout.TabIndex = 0
-        Me.btnpnlAbout.Text = "About"
-        Me.btnpnlAbout.UseVisualStyleBackColor = False
-        '
-        'btnpnlSearch
-        '
-        Me.btnpnlSearch.BackColor = System.Drawing.Color.MediumAquamarine
-        Me.btnpnlSearch.CausesValidation = False
-        Me.btnpnlSearch.FlatAppearance.BorderSize = 0
-        Me.btnpnlSearch.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.btnpnlSearch.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(134, Byte))
-        Me.btnpnlSearch.ForeColor = System.Drawing.Color.Black
-        Me.btnpnlSearch.Image = CType(resources.GetObject("btnpnlSearch.Image"), System.Drawing.Image)
-        Me.btnpnlSearch.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.btnpnlSearch.Location = New System.Drawing.Point(0, 111)
-        Me.btnpnlSearch.Margin = New System.Windows.Forms.Padding(0)
-        Me.btnpnlSearch.Name = "btnpnlSearch"
-        Me.btnpnlSearch.Size = New System.Drawing.Size(201, 53)
-        Me.btnpnlSearch.TabIndex = 0
-        Me.btnpnlSearch.Text = "Search "
-        Me.btnpnlSearch.UseVisualStyleBackColor = False
-        '
         'pnlSearch
         '
         Me.pnlSearch.Controls.Add(Me.pnlPreSearch)
@@ -264,8 +248,8 @@ Partial Class home
         Me.pnlPreSearch.Controls.Add(Me.lblPreSearchBy)
         Me.pnlPreSearch.Controls.Add(Me.radPreSearchByMovie)
         Me.pnlPreSearch.Controls.Add(Me.radPreSearchByCrew)
-        Me.pnlPreSearch.Controls.Add(Me.pnlSearchCrew)
         Me.pnlPreSearch.Controls.Add(Me.pnlSearchMovie)
+        Me.pnlPreSearch.Controls.Add(Me.pnlSearchCrew)
         Me.pnlPreSearch.Controls.Add(Me.btnPreSearch)
         Me.pnlPreSearch.Location = New System.Drawing.Point(0, 0)
         Me.pnlPreSearch.Name = "pnlPreSearch"
@@ -307,142 +291,6 @@ Partial Class home
         Me.radPreSearchByCrew.TabStop = True
         Me.radPreSearchByCrew.Text = "Crew"
         Me.radPreSearchByCrew.UseVisualStyleBackColor = True
-        '
-        'pnlSearchCrew
-        '
-        Me.pnlSearchCrew.Controls.Add(Me.lblSearchCTitle)
-        Me.pnlSearchCrew.Controls.Add(Me.lblSearchCName)
-        Me.pnlSearchCrew.Controls.Add(Me.txtSearchCName)
-        Me.pnlSearchCrew.Controls.Add(Me.lblSearchCPos)
-        Me.pnlSearchCrew.Controls.Add(Me.txtSearchCPos)
-        Me.pnlSearchCrew.Controls.Add(Me.lblSearchCBYear)
-        Me.pnlSearchCrew.Controls.Add(Me.cboSearchCBYearMod)
-        Me.pnlSearchCrew.Controls.Add(Me.txtSearchCBYear)
-        Me.pnlSearchCrew.Controls.Add(Me.lblSearchCDYear)
-        Me.pnlSearchCrew.Controls.Add(Me.txtSearchCDYear)
-        Me.pnlSearchCrew.Controls.Add(Me.lblSearchCProf)
-        Me.pnlSearchCrew.Controls.Add(Me.txtSearchCProf)
-        Me.pnlSearchCrew.Location = New System.Drawing.Point(18, 56)
-        Me.pnlSearchCrew.Margin = New System.Windows.Forms.Padding(2)
-        Me.pnlSearchCrew.Name = "pnlSearchCrew"
-        Me.pnlSearchCrew.Size = New System.Drawing.Size(577, 364)
-        Me.pnlSearchCrew.TabIndex = 27
-        '
-        'lblSearchCTitle
-        '
-        Me.lblSearchCTitle.AutoSize = True
-        Me.lblSearchCTitle.Font = New System.Drawing.Font("Microsoft Sans Serif", 22.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lblSearchCTitle.Location = New System.Drawing.Point(17, 14)
-        Me.lblSearchCTitle.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
-        Me.lblSearchCTitle.Name = "lblSearchCTitle"
-        Me.lblSearchCTitle.Size = New System.Drawing.Size(84, 36)
-        Me.lblSearchCTitle.TabIndex = 14
-        Me.lblSearchCTitle.Text = "Crew"
-        '
-        'lblSearchCName
-        '
-        Me.lblSearchCName.AutoSize = True
-        Me.lblSearchCName.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lblSearchCName.Location = New System.Drawing.Point(118, 68)
-        Me.lblSearchCName.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
-        Me.lblSearchCName.Name = "lblSearchCName"
-        Me.lblSearchCName.Size = New System.Drawing.Size(55, 20)
-        Me.lblSearchCName.TabIndex = 22
-        Me.lblSearchCName.Text = "Name:"
-        '
-        'txtSearchCName
-        '
-        Me.txtSearchCName.Font = New System.Drawing.Font("Microsoft Sans Serif", 20.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txtSearchCName.Location = New System.Drawing.Point(181, 58)
-        Me.txtSearchCName.Name = "txtSearchCName"
-        Me.txtSearchCName.Size = New System.Drawing.Size(306, 38)
-        Me.txtSearchCName.TabIndex = 21
-        '
-        'lblSearchCPos
-        '
-        Me.lblSearchCPos.AutoSize = True
-        Me.lblSearchCPos.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lblSearchCPos.Location = New System.Drawing.Point(104, 118)
-        Me.lblSearchCPos.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
-        Me.lblSearchCPos.Name = "lblSearchCPos"
-        Me.lblSearchCPos.Size = New System.Drawing.Size(69, 20)
-        Me.lblSearchCPos.TabIndex = 24
-        Me.lblSearchCPos.Text = "Position:"
-        '
-        'txtSearchCPos
-        '
-        Me.txtSearchCPos.Font = New System.Drawing.Font("Microsoft Sans Serif", 20.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txtSearchCPos.Location = New System.Drawing.Point(181, 108)
-        Me.txtSearchCPos.Name = "txtSearchCPos"
-        Me.txtSearchCPos.Size = New System.Drawing.Size(306, 38)
-        Me.txtSearchCPos.TabIndex = 23
-        '
-        'lblSearchCBYear
-        '
-        Me.lblSearchCBYear.AutoSize = True
-        Me.lblSearchCBYear.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lblSearchCBYear.Location = New System.Drawing.Point(89, 168)
-        Me.lblSearchCBYear.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
-        Me.lblSearchCBYear.Name = "lblSearchCBYear"
-        Me.lblSearchCBYear.Size = New System.Drawing.Size(84, 20)
-        Me.lblSearchCBYear.TabIndex = 23
-        Me.lblSearchCBYear.Text = "Birth Year:"
-        '
-        'cboSearchCBYearMod
-        '
-        Me.cboSearchCBYearMod.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
-        Me.cboSearchCBYearMod.Font = New System.Drawing.Font("Microsoft Sans Serif", 20.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.cboSearchCBYearMod.FormattingEnabled = True
-        Me.cboSearchCBYearMod.Location = New System.Drawing.Point(181, 158)
-        Me.cboSearchCBYearMod.Name = "cboSearchCBYearMod"
-        Me.cboSearchCBYearMod.Size = New System.Drawing.Size(65, 39)
-        Me.cboSearchCBYearMod.TabIndex = 24
-        '
-        'txtSearchCBYear
-        '
-        Me.txtSearchCBYear.Font = New System.Drawing.Font("Microsoft Sans Serif", 20.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txtSearchCBYear.Location = New System.Drawing.Point(255, 158)
-        Me.txtSearchCBYear.Name = "txtSearchCBYear"
-        Me.txtSearchCBYear.Size = New System.Drawing.Size(118, 38)
-        Me.txtSearchCBYear.TabIndex = 22
-        '
-        'lblSearchCDYear
-        '
-        Me.lblSearchCDYear.AutoSize = True
-        Me.lblSearchCDYear.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lblSearchCDYear.Location = New System.Drawing.Point(78, 218)
-        Me.lblSearchCDYear.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
-        Me.lblSearchCDYear.Name = "lblSearchCDYear"
-        Me.lblSearchCDYear.Size = New System.Drawing.Size(95, 20)
-        Me.lblSearchCDYear.TabIndex = 25
-        Me.lblSearchCDYear.Text = "Death Year:"
-        '
-        'txtSearchCDYear
-        '
-        Me.txtSearchCDYear.Font = New System.Drawing.Font("Microsoft Sans Serif", 20.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txtSearchCDYear.Location = New System.Drawing.Point(181, 210)
-        Me.txtSearchCDYear.Name = "txtSearchCDYear"
-        Me.txtSearchCDYear.Size = New System.Drawing.Size(118, 38)
-        Me.txtSearchCDYear.TabIndex = 26
-        '
-        'lblSearchCProf
-        '
-        Me.lblSearchCProf.AutoSize = True
-        Me.lblSearchCProf.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lblSearchCProf.Location = New System.Drawing.Point(85, 268)
-        Me.lblSearchCProf.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
-        Me.lblSearchCProf.Name = "lblSearchCProf"
-        Me.lblSearchCProf.Size = New System.Drawing.Size(88, 20)
-        Me.lblSearchCProf.TabIndex = 28
-        Me.lblSearchCProf.Text = "Profession:"
-        '
-        'txtSearchCProf
-        '
-        Me.txtSearchCProf.Font = New System.Drawing.Font("Microsoft Sans Serif", 20.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txtSearchCProf.Location = New System.Drawing.Point(181, 256)
-        Me.txtSearchCProf.Name = "txtSearchCProf"
-        Me.txtSearchCProf.Size = New System.Drawing.Size(306, 38)
-        Me.txtSearchCProf.TabIndex = 27
         '
         'pnlSearchMovie
         '
@@ -624,6 +472,142 @@ Partial Class home
         Me.txtSearchMRating.Name = "txtSearchMRating"
         Me.txtSearchMRating.Size = New System.Drawing.Size(72, 38)
         Me.txtSearchMRating.TabIndex = 17
+        '
+        'pnlSearchCrew
+        '
+        Me.pnlSearchCrew.Controls.Add(Me.lblSearchCTitle)
+        Me.pnlSearchCrew.Controls.Add(Me.lblSearchCName)
+        Me.pnlSearchCrew.Controls.Add(Me.txtSearchCName)
+        Me.pnlSearchCrew.Controls.Add(Me.lblSearchCPos)
+        Me.pnlSearchCrew.Controls.Add(Me.txtSearchCPos)
+        Me.pnlSearchCrew.Controls.Add(Me.lblSearchCBYear)
+        Me.pnlSearchCrew.Controls.Add(Me.cboSearchCBYearMod)
+        Me.pnlSearchCrew.Controls.Add(Me.txtSearchCBYear)
+        Me.pnlSearchCrew.Controls.Add(Me.lblSearchCDYear)
+        Me.pnlSearchCrew.Controls.Add(Me.txtSearchCDYear)
+        Me.pnlSearchCrew.Controls.Add(Me.lblSearchCProf)
+        Me.pnlSearchCrew.Controls.Add(Me.txtSearchCProf)
+        Me.pnlSearchCrew.Location = New System.Drawing.Point(18, 56)
+        Me.pnlSearchCrew.Margin = New System.Windows.Forms.Padding(2)
+        Me.pnlSearchCrew.Name = "pnlSearchCrew"
+        Me.pnlSearchCrew.Size = New System.Drawing.Size(577, 364)
+        Me.pnlSearchCrew.TabIndex = 27
+        '
+        'lblSearchCTitle
+        '
+        Me.lblSearchCTitle.AutoSize = True
+        Me.lblSearchCTitle.Font = New System.Drawing.Font("Microsoft Sans Serif", 22.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblSearchCTitle.Location = New System.Drawing.Point(17, 14)
+        Me.lblSearchCTitle.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
+        Me.lblSearchCTitle.Name = "lblSearchCTitle"
+        Me.lblSearchCTitle.Size = New System.Drawing.Size(84, 36)
+        Me.lblSearchCTitle.TabIndex = 14
+        Me.lblSearchCTitle.Text = "Crew"
+        '
+        'lblSearchCName
+        '
+        Me.lblSearchCName.AutoSize = True
+        Me.lblSearchCName.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblSearchCName.Location = New System.Drawing.Point(118, 68)
+        Me.lblSearchCName.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
+        Me.lblSearchCName.Name = "lblSearchCName"
+        Me.lblSearchCName.Size = New System.Drawing.Size(55, 20)
+        Me.lblSearchCName.TabIndex = 22
+        Me.lblSearchCName.Text = "Name:"
+        '
+        'txtSearchCName
+        '
+        Me.txtSearchCName.Font = New System.Drawing.Font("Microsoft Sans Serif", 20.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txtSearchCName.Location = New System.Drawing.Point(181, 58)
+        Me.txtSearchCName.Name = "txtSearchCName"
+        Me.txtSearchCName.Size = New System.Drawing.Size(306, 38)
+        Me.txtSearchCName.TabIndex = 21
+        '
+        'lblSearchCPos
+        '
+        Me.lblSearchCPos.AutoSize = True
+        Me.lblSearchCPos.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblSearchCPos.Location = New System.Drawing.Point(104, 118)
+        Me.lblSearchCPos.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
+        Me.lblSearchCPos.Name = "lblSearchCPos"
+        Me.lblSearchCPos.Size = New System.Drawing.Size(69, 20)
+        Me.lblSearchCPos.TabIndex = 24
+        Me.lblSearchCPos.Text = "Position:"
+        '
+        'txtSearchCPos
+        '
+        Me.txtSearchCPos.Font = New System.Drawing.Font("Microsoft Sans Serif", 20.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txtSearchCPos.Location = New System.Drawing.Point(181, 108)
+        Me.txtSearchCPos.Name = "txtSearchCPos"
+        Me.txtSearchCPos.Size = New System.Drawing.Size(306, 38)
+        Me.txtSearchCPos.TabIndex = 23
+        '
+        'lblSearchCBYear
+        '
+        Me.lblSearchCBYear.AutoSize = True
+        Me.lblSearchCBYear.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblSearchCBYear.Location = New System.Drawing.Point(89, 168)
+        Me.lblSearchCBYear.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
+        Me.lblSearchCBYear.Name = "lblSearchCBYear"
+        Me.lblSearchCBYear.Size = New System.Drawing.Size(84, 20)
+        Me.lblSearchCBYear.TabIndex = 23
+        Me.lblSearchCBYear.Text = "Birth Year:"
+        '
+        'cboSearchCBYearMod
+        '
+        Me.cboSearchCBYearMod.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
+        Me.cboSearchCBYearMod.Font = New System.Drawing.Font("Microsoft Sans Serif", 20.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.cboSearchCBYearMod.FormattingEnabled = True
+        Me.cboSearchCBYearMod.Location = New System.Drawing.Point(181, 158)
+        Me.cboSearchCBYearMod.Name = "cboSearchCBYearMod"
+        Me.cboSearchCBYearMod.Size = New System.Drawing.Size(65, 39)
+        Me.cboSearchCBYearMod.TabIndex = 24
+        '
+        'txtSearchCBYear
+        '
+        Me.txtSearchCBYear.Font = New System.Drawing.Font("Microsoft Sans Serif", 20.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txtSearchCBYear.Location = New System.Drawing.Point(255, 158)
+        Me.txtSearchCBYear.Name = "txtSearchCBYear"
+        Me.txtSearchCBYear.Size = New System.Drawing.Size(118, 38)
+        Me.txtSearchCBYear.TabIndex = 22
+        '
+        'lblSearchCDYear
+        '
+        Me.lblSearchCDYear.AutoSize = True
+        Me.lblSearchCDYear.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblSearchCDYear.Location = New System.Drawing.Point(78, 218)
+        Me.lblSearchCDYear.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
+        Me.lblSearchCDYear.Name = "lblSearchCDYear"
+        Me.lblSearchCDYear.Size = New System.Drawing.Size(95, 20)
+        Me.lblSearchCDYear.TabIndex = 25
+        Me.lblSearchCDYear.Text = "Death Year:"
+        '
+        'txtSearchCDYear
+        '
+        Me.txtSearchCDYear.Font = New System.Drawing.Font("Microsoft Sans Serif", 20.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txtSearchCDYear.Location = New System.Drawing.Point(181, 210)
+        Me.txtSearchCDYear.Name = "txtSearchCDYear"
+        Me.txtSearchCDYear.Size = New System.Drawing.Size(118, 38)
+        Me.txtSearchCDYear.TabIndex = 26
+        '
+        'lblSearchCProf
+        '
+        Me.lblSearchCProf.AutoSize = True
+        Me.lblSearchCProf.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblSearchCProf.Location = New System.Drawing.Point(85, 268)
+        Me.lblSearchCProf.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
+        Me.lblSearchCProf.Name = "lblSearchCProf"
+        Me.lblSearchCProf.Size = New System.Drawing.Size(88, 20)
+        Me.lblSearchCProf.TabIndex = 28
+        Me.lblSearchCProf.Text = "Profession:"
+        '
+        'txtSearchCProf
+        '
+        Me.txtSearchCProf.Font = New System.Drawing.Font("Microsoft Sans Serif", 20.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txtSearchCProf.Location = New System.Drawing.Point(181, 256)
+        Me.txtSearchCProf.Name = "txtSearchCProf"
+        Me.txtSearchCProf.Size = New System.Drawing.Size(306, 38)
+        Me.txtSearchCProf.TabIndex = 27
         '
         'btnPreSearch
         '
@@ -821,445 +805,310 @@ Partial Class home
         '
         'pnlAbout
         '
-        Me.pnlAbout.Controls.Add(Me.Label22)
-        Me.pnlAbout.Controls.Add(Me.Panel9)
-        Me.pnlAbout.Controls.Add(Me.Panel8)
-        Me.pnlAbout.Controls.Add(Me.Panel10)
+        Me.pnlAbout.Controls.Add(Me.lblAbout)
+        Me.pnlAbout.Controls.Add(Me.pnlAbout1)
+        Me.pnlAbout.Controls.Add(Me.pnlAbout2)
+        Me.pnlAbout.Controls.Add(Me.pnlAbout3)
         Me.pnlAbout.Location = New System.Drawing.Point(201, 42)
         Me.pnlAbout.Margin = New System.Windows.Forms.Padding(0)
         Me.pnlAbout.Name = "pnlAbout"
         Me.pnlAbout.Size = New System.Drawing.Size(894, 536)
         Me.pnlAbout.TabIndex = 6
         '
-        'Label22
-        '
-        Me.Label22.AutoSize = True
-        Me.Label22.Font = New System.Drawing.Font("Microsoft YaHei", 16.2!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label22.Location = New System.Drawing.Point(361, 11)
-        Me.Label22.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
-        Me.Label22.Name = "Label22"
-        Me.Label22.Size = New System.Drawing.Size(119, 30)
-        Me.Label22.TabIndex = 3
-        Me.Label22.Text = "About US"
-        '
-        'Panel9
-        '
-        Me.Panel9.Controls.Add(Me.Label45)
-        Me.Panel9.Controls.Add(Me.Label23)
-        Me.Panel9.Controls.Add(Me.Label44)
-        Me.Panel9.Controls.Add(Me.Label24)
-        Me.Panel9.Controls.Add(Me.Label43)
-        Me.Panel9.Controls.Add(Me.PictureBox9)
-        Me.Panel9.Controls.Add(Me.Label42)
-        Me.Panel9.Controls.Add(Me.Label40)
-        Me.Panel9.Controls.Add(Me.Label41)
-        Me.Panel9.Controls.Add(Me.Label36)
-        Me.Panel9.Controls.Add(Me.Label37)
-        Me.Panel9.Controls.Add(Me.Label38)
-        Me.Panel9.Controls.Add(Me.Label39)
-        Me.Panel9.Location = New System.Drawing.Point(560, 58)
-        Me.Panel9.Name = "Panel9"
-        Me.Panel9.Size = New System.Drawing.Size(264, 454)
-        Me.Panel9.TabIndex = 0
-        '
-        'Label45
-        '
-        Me.Label45.AutoSize = True
-        Me.Label45.Font = New System.Drawing.Font("Comic Sans MS", 13.8!, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label45.Location = New System.Drawing.Point(25, 218)
-        Me.Label45.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
-        Me.Label45.Name = "Label45"
-        Me.Label45.Size = New System.Drawing.Size(68, 27)
-        Me.Label45.TabIndex = 6
-        Me.Label45.Text = "Name:"
-        '
-        'Label23
-        '
-        Me.Label23.AutoSize = True
-        Me.Label23.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.75!, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label23.Location = New System.Drawing.Point(146, 282)
-        Me.Label23.Name = "Label23"
-        Me.Label23.Size = New System.Drawing.Size(0, 25)
-        Me.Label23.TabIndex = 1
-        '
-        'Label44
-        '
-        Me.Label44.AutoSize = True
-        Me.Label44.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.75!, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label44.Location = New System.Drawing.Point(152, 280)
-        Me.Label44.Name = "Label44"
-        Me.Label44.Size = New System.Drawing.Size(0, 25)
-        Me.Label44.TabIndex = 1
-        '
-        'Label24
-        '
-        Me.Label24.AutoSize = True
-        Me.Label24.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.75!, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label24.Location = New System.Drawing.Point(146, 241)
-        Me.Label24.Name = "Label24"
-        Me.Label24.Size = New System.Drawing.Size(0, 25)
-        Me.Label24.TabIndex = 1
-        '
-        'Label43
-        '
-        Me.Label43.AutoSize = True
-        Me.Label43.Font = New System.Drawing.Font("Comic Sans MS", 13.8!, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label43.Location = New System.Drawing.Point(87, 284)
-        Me.Label43.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
-        Me.Label43.Name = "Label43"
-        Me.Label43.Size = New System.Drawing.Size(101, 27)
-        Me.Label43.TabIndex = 5
-        Me.Label43.Text = "TP051210"
-        '
-        'PictureBox9
-        '
-        Me.PictureBox9.Dock = System.Windows.Forms.DockStyle.Top
-        Me.PictureBox9.Image = CType(resources.GetObject("PictureBox9.Image"), System.Drawing.Image)
-        Me.PictureBox9.Location = New System.Drawing.Point(0, 0)
-        Me.PictureBox9.Name = "PictureBox9"
-        Me.PictureBox9.Size = New System.Drawing.Size(264, 177)
-        Me.PictureBox9.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
-        Me.PictureBox9.TabIndex = 0
-        Me.PictureBox9.TabStop = False
-        '
-        'Label42
-        '
-        Me.Label42.AutoSize = True
-        Me.Label42.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.75!, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label42.Location = New System.Drawing.Point(152, 239)
-        Me.Label42.Name = "Label42"
-        Me.Label42.Size = New System.Drawing.Size(0, 25)
-        Me.Label42.TabIndex = 1
-        '
-        'Label40
-        '
-        Me.Label40.AutoSize = True
-        Me.Label40.Font = New System.Drawing.Font("Comic Sans MS", 13.8!, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label40.Location = New System.Drawing.Point(87, 250)
-        Me.Label40.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
-        Me.Label40.Name = "Label40"
-        Me.Label40.Size = New System.Drawing.Size(33, 27)
-        Me.Label40.TabIndex = 4
-        Me.Label40.Text = "19"
-        '
-        'Label41
-        '
-        Me.Label41.AutoSize = True
-        Me.Label41.Font = New System.Drawing.Font("Comic Sans MS", 13.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label41.Location = New System.Drawing.Point(26, 283)
-        Me.Label41.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
-        Me.Label41.Name = "Label41"
-        Me.Label41.Size = New System.Drawing.Size(65, 26)
-        Me.Label41.TabIndex = 5
-        Me.Label41.Text = "TP.no:"
-        '
-        'Label36
-        '
-        Me.Label36.AutoSize = True
-        Me.Label36.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.75!, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label36.Location = New System.Drawing.Point(154, 284)
-        Me.Label36.Name = "Label36"
-        Me.Label36.Size = New System.Drawing.Size(0, 25)
-        Me.Label36.TabIndex = 1
-        '
-        'Label37
-        '
-        Me.Label37.AutoSize = True
-        Me.Label37.Font = New System.Drawing.Font("Comic Sans MS", 13.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label37.Location = New System.Drawing.Point(87, 219)
-        Me.Label37.Name = "Label37"
-        Me.Label37.Size = New System.Drawing.Size(126, 26)
-        Me.Label37.TabIndex = 2
-        Me.Label37.Text = "Kok Hua Chin"
-        '
-        'Label38
-        '
-        Me.Label38.AutoSize = True
-        Me.Label38.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.75!, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label38.Location = New System.Drawing.Point(154, 243)
-        Me.Label38.Name = "Label38"
-        Me.Label38.Size = New System.Drawing.Size(0, 25)
-        Me.Label38.TabIndex = 1
-        '
-        'Label39
-        '
-        Me.Label39.AutoSize = True
-        Me.Label39.Font = New System.Drawing.Font("Comic Sans MS", 13.8!, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label39.Location = New System.Drawing.Point(39, 250)
-        Me.Label39.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
-        Me.Label39.Name = "Label39"
-        Me.Label39.Size = New System.Drawing.Size(52, 27)
-        Me.Label39.TabIndex = 4
-        Me.Label39.Text = "Age:"
-        '
-        'Panel8
-        '
-        Me.Panel8.Controls.Add(Me.Label35)
-        Me.Panel8.Controls.Add(Me.Label8)
-        Me.Panel8.Controls.Add(Me.Label34)
-        Me.Panel8.Controls.Add(Me.Label16)
-        Me.Panel8.Controls.Add(Me.Label33)
-        Me.Panel8.Controls.Add(Me.PictureBox7)
-        Me.Panel8.Controls.Add(Me.Label32)
-        Me.Panel8.Controls.Add(Me.Label31)
-        Me.Panel8.Controls.Add(Me.Label20)
-        Me.Panel8.Controls.Add(Me.Label30)
-        Me.Panel8.Controls.Add(Me.Label21)
-        Me.Panel8.Location = New System.Drawing.Point(290, 55)
-        Me.Panel8.Name = "Panel8"
-        Me.Panel8.Size = New System.Drawing.Size(264, 454)
-        Me.Panel8.TabIndex = 0
-        '
-        'Label35
-        '
-        Me.Label35.AutoSize = True
-        Me.Label35.Font = New System.Drawing.Font("Comic Sans MS", 13.8!, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label35.Location = New System.Drawing.Point(20, 220)
-        Me.Label35.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
-        Me.Label35.Name = "Label35"
-        Me.Label35.Size = New System.Drawing.Size(68, 27)
-        Me.Label35.TabIndex = 6
-        Me.Label35.Text = "Name:"
-        '
-        'Label8
-        '
-        Me.Label8.AutoSize = True
-        Me.Label8.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.75!, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label8.Location = New System.Drawing.Point(146, 282)
-        Me.Label8.Name = "Label8"
-        Me.Label8.Size = New System.Drawing.Size(0, 25)
-        Me.Label8.TabIndex = 1
-        '
-        'Label34
-        '
-        Me.Label34.AutoSize = True
-        Me.Label34.Font = New System.Drawing.Font("Comic Sans MS", 13.8!, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label34.Location = New System.Drawing.Point(82, 286)
-        Me.Label34.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
-        Me.Label34.Name = "Label34"
-        Me.Label34.Size = New System.Drawing.Size(104, 27)
-        Me.Label34.TabIndex = 5
-        Me.Label34.Text = "TP051429"
-        '
-        'Label16
-        '
-        Me.Label16.AutoSize = True
-        Me.Label16.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.75!, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label16.Location = New System.Drawing.Point(146, 241)
-        Me.Label16.Name = "Label16"
-        Me.Label16.Size = New System.Drawing.Size(0, 25)
-        Me.Label16.TabIndex = 1
-        '
-        'Label33
-        '
-        Me.Label33.AutoSize = True
-        Me.Label33.Font = New System.Drawing.Font("Comic Sans MS", 13.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label33.Location = New System.Drawing.Point(21, 285)
-        Me.Label33.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
-        Me.Label33.Name = "Label33"
-        Me.Label33.Size = New System.Drawing.Size(65, 26)
-        Me.Label33.TabIndex = 5
-        Me.Label33.Text = "TP.no:"
-        '
-        'PictureBox7
-        '
-        Me.PictureBox7.Dock = System.Windows.Forms.DockStyle.Top
-        Me.PictureBox7.Image = CType(resources.GetObject("PictureBox7.Image"), System.Drawing.Image)
-        Me.PictureBox7.Location = New System.Drawing.Point(0, 0)
-        Me.PictureBox7.Name = "PictureBox7"
-        Me.PictureBox7.Size = New System.Drawing.Size(264, 177)
-        Me.PictureBox7.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
-        Me.PictureBox7.TabIndex = 0
-        Me.PictureBox7.TabStop = False
-        '
-        'Label32
-        '
-        Me.Label32.AutoSize = True
-        Me.Label32.Font = New System.Drawing.Font("Comic Sans MS", 13.8!, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label32.Location = New System.Drawing.Point(82, 253)
-        Me.Label32.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
-        Me.Label32.Name = "Label32"
-        Me.Label32.Size = New System.Drawing.Size(33, 27)
-        Me.Label32.TabIndex = 4
-        Me.Label32.Text = "19"
-        '
-        'Label31
-        '
-        Me.Label31.AutoSize = True
-        Me.Label31.Font = New System.Drawing.Font("Comic Sans MS", 13.8!, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label31.Location = New System.Drawing.Point(34, 253)
-        Me.Label31.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
-        Me.Label31.Name = "Label31"
-        Me.Label31.Size = New System.Drawing.Size(52, 27)
-        Me.Label31.TabIndex = 4
-        Me.Label31.Text = "Age:"
-        '
-        'Label20
-        '
-        Me.Label20.AutoSize = True
-        Me.Label20.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.75!, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label20.Location = New System.Drawing.Point(149, 245)
-        Me.Label20.Name = "Label20"
-        Me.Label20.Size = New System.Drawing.Size(0, 25)
-        Me.Label20.TabIndex = 1
-        '
-        'Label30
-        '
-        Me.Label30.AutoSize = True
-        Me.Label30.Font = New System.Drawing.Font("Comic Sans MS", 13.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label30.Location = New System.Drawing.Point(82, 221)
-        Me.Label30.Name = "Label30"
-        Me.Label30.Size = New System.Drawing.Size(133, 26)
-        Me.Label30.TabIndex = 2
-        Me.Label30.Text = "Chan Chin Wei"
-        '
-        'Label21
-        '
-        Me.Label21.AutoSize = True
-        Me.Label21.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.75!, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label21.Location = New System.Drawing.Point(149, 286)
-        Me.Label21.Name = "Label21"
-        Me.Label21.Size = New System.Drawing.Size(0, 25)
-        Me.Label21.TabIndex = 1
-        '
-        'Panel10
-        '
-        Me.Panel10.Controls.Add(Me.Label29)
-        Me.Panel10.Controls.Add(Me.Label28)
-        Me.Panel10.Controls.Add(Me.Label27)
-        Me.Panel10.Controls.Add(Me.Label26)
-        Me.Panel10.Controls.Add(Me.Label25)
-        Me.Panel10.Controls.Add(Me.Label19)
-        Me.Panel10.Controls.Add(Me.Label17)
-        Me.Panel10.Controls.Add(Me.Label18)
-        Me.Panel10.Controls.Add(Me.PictureBox8)
-        Me.Panel10.Location = New System.Drawing.Point(20, 56)
-        Me.Panel10.Name = "Panel10"
-        Me.Panel10.Size = New System.Drawing.Size(264, 454)
-        Me.Panel10.TabIndex = 0
-        '
-        'Label29
-        '
-        Me.Label29.AutoSize = True
-        Me.Label29.Font = New System.Drawing.Font("Comic Sans MS", 13.8!, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label29.Location = New System.Drawing.Point(16, 216)
-        Me.Label29.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
-        Me.Label29.Name = "Label29"
-        Me.Label29.Size = New System.Drawing.Size(68, 27)
-        Me.Label29.TabIndex = 6
-        Me.Label29.Text = "Name:"
-        '
-        'Label28
-        '
-        Me.Label28.AutoSize = True
-        Me.Label28.Font = New System.Drawing.Font("Comic Sans MS", 13.8!, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label28.Location = New System.Drawing.Point(79, 281)
-        Me.Label28.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
-        Me.Label28.Name = "Label28"
-        Me.Label28.Size = New System.Drawing.Size(104, 27)
-        Me.Label28.TabIndex = 5
-        Me.Label28.Text = "TP051436"
-        '
-        'Label27
-        '
-        Me.Label27.AutoSize = True
-        Me.Label27.Font = New System.Drawing.Font("Comic Sans MS", 13.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label27.Location = New System.Drawing.Point(18, 281)
-        Me.Label27.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
-        Me.Label27.Name = "Label27"
-        Me.Label27.Size = New System.Drawing.Size(65, 26)
-        Me.Label27.TabIndex = 5
-        Me.Label27.Text = "TP.no:"
-        '
-        'Label26
-        '
-        Me.Label26.AutoSize = True
-        Me.Label26.Font = New System.Drawing.Font("Comic Sans MS", 13.8!, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label26.Location = New System.Drawing.Point(79, 249)
-        Me.Label26.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
-        Me.Label26.Name = "Label26"
-        Me.Label26.Size = New System.Drawing.Size(36, 27)
-        Me.Label26.TabIndex = 4
-        Me.Label26.Text = "20"
-        '
-        'Label25
-        '
-        Me.Label25.AutoSize = True
-        Me.Label25.Font = New System.Drawing.Font("Comic Sans MS", 13.8!, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label25.Location = New System.Drawing.Point(31, 249)
-        Me.Label25.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
-        Me.Label25.Name = "Label25"
-        Me.Label25.Size = New System.Drawing.Size(52, 27)
-        Me.Label25.TabIndex = 4
-        Me.Label25.Text = "Age:"
-        '
-        'Label19
-        '
-        Me.Label19.AutoSize = True
-        Me.Label19.Font = New System.Drawing.Font("Comic Sans MS", 13.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label19.Location = New System.Drawing.Point(79, 217)
-        Me.Label19.Name = "Label19"
-        Me.Label19.Size = New System.Drawing.Size(162, 26)
-        Me.Label19.TabIndex = 2
-        Me.Label19.Text = "Ching Cheng Kang"
-        '
-        'Label17
-        '
-        Me.Label17.AutoSize = True
-        Me.Label17.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.75!, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label17.Location = New System.Drawing.Point(146, 282)
-        Me.Label17.Name = "Label17"
-        Me.Label17.Size = New System.Drawing.Size(0, 25)
-        Me.Label17.TabIndex = 1
-        '
-        'Label18
-        '
-        Me.Label18.AutoSize = True
-        Me.Label18.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.75!, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label18.Location = New System.Drawing.Point(146, 241)
-        Me.Label18.Name = "Label18"
-        Me.Label18.Size = New System.Drawing.Size(0, 25)
-        Me.Label18.TabIndex = 1
-        '
-        'PictureBox8
-        '
-        Me.PictureBox8.Dock = System.Windows.Forms.DockStyle.Top
-        Me.PictureBox8.Image = CType(resources.GetObject("PictureBox8.Image"), System.Drawing.Image)
-        Me.PictureBox8.Location = New System.Drawing.Point(0, 0)
-        Me.PictureBox8.Name = "PictureBox8"
-        Me.PictureBox8.Size = New System.Drawing.Size(264, 177)
-        Me.PictureBox8.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
-        Me.PictureBox8.TabIndex = 0
-        Me.PictureBox8.TabStop = False
-        '
-        '_vb_net_imdbDataSet
-        '
-        Me._vb_net_imdbDataSet.DataSetName = "_vb_net_imdbDataSet"
-        Me._vb_net_imdbDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
-        '
-        'VbnetimdbDataSetBindingSource
-        '
-        Me.VbnetimdbDataSetBindingSource.DataSource = Me._vb_net_imdbDataSet
-        Me.VbnetimdbDataSetBindingSource.Position = 0
-        '
-        '_vb_net_imdbDataSet1
-        '
-        Me._vb_net_imdbDataSet1.DataSetName = "_vb_net_imdbDataSet"
-        Me._vb_net_imdbDataSet1.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
-        '
-        'home
+        'lblAbout
+        '
+        Me.lblAbout.AutoSize = True
+        Me.lblAbout.Font = New System.Drawing.Font("Microsoft YaHei", 16.2!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblAbout.Location = New System.Drawing.Point(379, 11)
+        Me.lblAbout.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
+        Me.lblAbout.Name = "lblAbout"
+        Me.lblAbout.Size = New System.Drawing.Size(117, 30)
+        Me.lblAbout.TabIndex = 3
+        Me.lblAbout.Text = "About Us"
+        '
+        'pnlAbout1
+        '
+        Me.pnlAbout1.Controls.Add(Me.picAbout1)
+        Me.pnlAbout1.Controls.Add(Me.lblAbout1Name)
+        Me.pnlAbout1.Controls.Add(Me.lblAbout1NameAns)
+        Me.pnlAbout1.Controls.Add(Me.lblAbout1Age)
+        Me.pnlAbout1.Controls.Add(Me.lblAbout1AgeAns)
+        Me.pnlAbout1.Controls.Add(Me.lblAbout1TP)
+        Me.pnlAbout1.Controls.Add(Me.lblAbout1TPAns)
+        Me.pnlAbout1.Location = New System.Drawing.Point(44, 56)
+        Me.pnlAbout1.Name = "pnlAbout1"
+        Me.pnlAbout1.Size = New System.Drawing.Size(264, 454)
+        Me.pnlAbout1.TabIndex = 0
+        '
+        'picAbout1
+        '
+        Me.picAbout1.Dock = System.Windows.Forms.DockStyle.Top
+        Me.picAbout1.Image = CType(resources.GetObject("picAbout1.Image"), System.Drawing.Image)
+        Me.picAbout1.Location = New System.Drawing.Point(0, 0)
+        Me.picAbout1.Name = "picAbout1"
+        Me.picAbout1.Size = New System.Drawing.Size(264, 177)
+        Me.picAbout1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
+        Me.picAbout1.TabIndex = 0
+        Me.picAbout1.TabStop = False
+        '
+        'lblAbout1Name
+        '
+        Me.lblAbout1Name.AutoSize = True
+        Me.lblAbout1Name.Font = New System.Drawing.Font("Comic Sans MS", 13.8!, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblAbout1Name.Location = New System.Drawing.Point(16, 216)
+        Me.lblAbout1Name.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
+        Me.lblAbout1Name.Name = "lblAbout1Name"
+        Me.lblAbout1Name.Size = New System.Drawing.Size(68, 27)
+        Me.lblAbout1Name.TabIndex = 6
+        Me.lblAbout1Name.Text = "Name:"
+        '
+        'lblAbout1NameAns
+        '
+        Me.lblAbout1NameAns.AutoSize = True
+        Me.lblAbout1NameAns.Font = New System.Drawing.Font("Comic Sans MS", 13.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblAbout1NameAns.Location = New System.Drawing.Point(79, 217)
+        Me.lblAbout1NameAns.Name = "lblAbout1NameAns"
+        Me.lblAbout1NameAns.Size = New System.Drawing.Size(162, 26)
+        Me.lblAbout1NameAns.TabIndex = 2
+        Me.lblAbout1NameAns.Text = "Ching Cheng Kang"
+        '
+        'lblAbout1Age
+        '
+        Me.lblAbout1Age.AutoSize = True
+        Me.lblAbout1Age.Font = New System.Drawing.Font("Comic Sans MS", 13.8!, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblAbout1Age.Location = New System.Drawing.Point(31, 249)
+        Me.lblAbout1Age.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
+        Me.lblAbout1Age.Name = "lblAbout1Age"
+        Me.lblAbout1Age.Size = New System.Drawing.Size(52, 27)
+        Me.lblAbout1Age.TabIndex = 4
+        Me.lblAbout1Age.Text = "Age:"
+        '
+        'lblAbout1AgeAns
+        '
+        Me.lblAbout1AgeAns.AutoSize = True
+        Me.lblAbout1AgeAns.Font = New System.Drawing.Font("Comic Sans MS", 13.8!, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblAbout1AgeAns.Location = New System.Drawing.Point(79, 249)
+        Me.lblAbout1AgeAns.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
+        Me.lblAbout1AgeAns.Name = "lblAbout1AgeAns"
+        Me.lblAbout1AgeAns.Size = New System.Drawing.Size(36, 27)
+        Me.lblAbout1AgeAns.TabIndex = 4
+        Me.lblAbout1AgeAns.Text = "20"
+        '
+        'lblAbout1TP
+        '
+        Me.lblAbout1TP.AutoSize = True
+        Me.lblAbout1TP.Font = New System.Drawing.Font("Comic Sans MS", 13.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblAbout1TP.Location = New System.Drawing.Point(18, 281)
+        Me.lblAbout1TP.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
+        Me.lblAbout1TP.Name = "lblAbout1TP"
+        Me.lblAbout1TP.Size = New System.Drawing.Size(65, 26)
+        Me.lblAbout1TP.TabIndex = 5
+        Me.lblAbout1TP.Text = "TP.no:"
+        '
+        'lblAbout1TPAns
+        '
+        Me.lblAbout1TPAns.AutoSize = True
+        Me.lblAbout1TPAns.Font = New System.Drawing.Font("Comic Sans MS", 13.8!, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblAbout1TPAns.Location = New System.Drawing.Point(79, 281)
+        Me.lblAbout1TPAns.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
+        Me.lblAbout1TPAns.Name = "lblAbout1TPAns"
+        Me.lblAbout1TPAns.Size = New System.Drawing.Size(104, 27)
+        Me.lblAbout1TPAns.TabIndex = 5
+        Me.lblAbout1TPAns.Text = "TP051436"
+        '
+        'pnlAbout2
+        '
+        Me.pnlAbout2.Controls.Add(Me.picAbout2)
+        Me.pnlAbout2.Controls.Add(Me.lblAbout2Name)
+        Me.pnlAbout2.Controls.Add(Me.lblAbout2NameAns)
+        Me.pnlAbout2.Controls.Add(Me.lblAbout2Age)
+        Me.pnlAbout2.Controls.Add(Me.lblAbout2AgeAns)
+        Me.pnlAbout2.Controls.Add(Me.lblAbout2TP)
+        Me.pnlAbout2.Controls.Add(Me.lblAbout2TPAns)
+        Me.pnlAbout2.Location = New System.Drawing.Point(314, 56)
+        Me.pnlAbout2.Name = "pnlAbout2"
+        Me.pnlAbout2.Size = New System.Drawing.Size(264, 454)
+        Me.pnlAbout2.TabIndex = 0
+        '
+        'picAbout2
+        '
+        Me.picAbout2.Dock = System.Windows.Forms.DockStyle.Top
+        Me.picAbout2.Image = CType(resources.GetObject("picAbout2.Image"), System.Drawing.Image)
+        Me.picAbout2.Location = New System.Drawing.Point(0, 0)
+        Me.picAbout2.Name = "picAbout2"
+        Me.picAbout2.Size = New System.Drawing.Size(264, 177)
+        Me.picAbout2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
+        Me.picAbout2.TabIndex = 0
+        Me.picAbout2.TabStop = False
+        '
+        'lblAbout2Name
+        '
+        Me.lblAbout2Name.AutoSize = True
+        Me.lblAbout2Name.Font = New System.Drawing.Font("Comic Sans MS", 13.8!, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblAbout2Name.Location = New System.Drawing.Point(20, 220)
+        Me.lblAbout2Name.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
+        Me.lblAbout2Name.Name = "lblAbout2Name"
+        Me.lblAbout2Name.Size = New System.Drawing.Size(68, 27)
+        Me.lblAbout2Name.TabIndex = 6
+        Me.lblAbout2Name.Text = "Name:"
+        '
+        'lblAbout2NameAns
+        '
+        Me.lblAbout2NameAns.AutoSize = True
+        Me.lblAbout2NameAns.Font = New System.Drawing.Font("Comic Sans MS", 13.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblAbout2NameAns.Location = New System.Drawing.Point(82, 221)
+        Me.lblAbout2NameAns.Name = "lblAbout2NameAns"
+        Me.lblAbout2NameAns.Size = New System.Drawing.Size(133, 26)
+        Me.lblAbout2NameAns.TabIndex = 2
+        Me.lblAbout2NameAns.Text = "Chan Chin Wei"
+        '
+        'lblAbout2Age
+        '
+        Me.lblAbout2Age.AutoSize = True
+        Me.lblAbout2Age.Font = New System.Drawing.Font("Comic Sans MS", 13.8!, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblAbout2Age.Location = New System.Drawing.Point(34, 253)
+        Me.lblAbout2Age.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
+        Me.lblAbout2Age.Name = "lblAbout2Age"
+        Me.lblAbout2Age.Size = New System.Drawing.Size(52, 27)
+        Me.lblAbout2Age.TabIndex = 4
+        Me.lblAbout2Age.Text = "Age:"
+        '
+        'lblAbout2AgeAns
+        '
+        Me.lblAbout2AgeAns.AutoSize = True
+        Me.lblAbout2AgeAns.Font = New System.Drawing.Font("Comic Sans MS", 13.8!, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblAbout2AgeAns.Location = New System.Drawing.Point(82, 253)
+        Me.lblAbout2AgeAns.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
+        Me.lblAbout2AgeAns.Name = "lblAbout2AgeAns"
+        Me.lblAbout2AgeAns.Size = New System.Drawing.Size(33, 27)
+        Me.lblAbout2AgeAns.TabIndex = 4
+        Me.lblAbout2AgeAns.Text = "19"
+        '
+        'lblAbout2TP
+        '
+        Me.lblAbout2TP.AutoSize = True
+        Me.lblAbout2TP.Font = New System.Drawing.Font("Comic Sans MS", 13.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblAbout2TP.Location = New System.Drawing.Point(21, 285)
+        Me.lblAbout2TP.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
+        Me.lblAbout2TP.Name = "lblAbout2TP"
+        Me.lblAbout2TP.Size = New System.Drawing.Size(65, 26)
+        Me.lblAbout2TP.TabIndex = 5
+        Me.lblAbout2TP.Text = "TP.no:"
+        '
+        'lblAbout2TPAns
+        '
+        Me.lblAbout2TPAns.AutoSize = True
+        Me.lblAbout2TPAns.Font = New System.Drawing.Font("Comic Sans MS", 13.8!, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblAbout2TPAns.Location = New System.Drawing.Point(82, 286)
+        Me.lblAbout2TPAns.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
+        Me.lblAbout2TPAns.Name = "lblAbout2TPAns"
+        Me.lblAbout2TPAns.Size = New System.Drawing.Size(104, 27)
+        Me.lblAbout2TPAns.TabIndex = 5
+        Me.lblAbout2TPAns.Text = "TP051429"
+        '
+        'pnlAbout3
+        '
+        Me.pnlAbout3.Controls.Add(Me.picAbout3)
+        Me.pnlAbout3.Controls.Add(Me.lblAbout3Name)
+        Me.pnlAbout3.Controls.Add(Me.lblAbout3NameAns)
+        Me.pnlAbout3.Controls.Add(Me.lblAbout3Age)
+        Me.pnlAbout3.Controls.Add(Me.lblAbout3AgeAns)
+        Me.pnlAbout3.Controls.Add(Me.lblAbout3AgeTP)
+        Me.pnlAbout3.Controls.Add(Me.lblAbout3AgeTPAns)
+        Me.pnlAbout3.Location = New System.Drawing.Point(584, 56)
+        Me.pnlAbout3.Name = "pnlAbout3"
+        Me.pnlAbout3.Size = New System.Drawing.Size(264, 454)
+        Me.pnlAbout3.TabIndex = 0
+        '
+        'picAbout3
+        '
+        Me.picAbout3.Dock = System.Windows.Forms.DockStyle.Top
+        Me.picAbout3.Image = CType(resources.GetObject("picAbout3.Image"), System.Drawing.Image)
+        Me.picAbout3.Location = New System.Drawing.Point(0, 0)
+        Me.picAbout3.Name = "picAbout3"
+        Me.picAbout3.Size = New System.Drawing.Size(264, 177)
+        Me.picAbout3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
+        Me.picAbout3.TabIndex = 0
+        Me.picAbout3.TabStop = False
+        '
+        'lblAbout3Name
+        '
+        Me.lblAbout3Name.AutoSize = True
+        Me.lblAbout3Name.Font = New System.Drawing.Font("Comic Sans MS", 13.8!, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblAbout3Name.Location = New System.Drawing.Point(25, 218)
+        Me.lblAbout3Name.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
+        Me.lblAbout3Name.Name = "lblAbout3Name"
+        Me.lblAbout3Name.Size = New System.Drawing.Size(68, 27)
+        Me.lblAbout3Name.TabIndex = 6
+        Me.lblAbout3Name.Text = "Name:"
+        '
+        'lblAbout3NameAns
+        '
+        Me.lblAbout3NameAns.AutoSize = True
+        Me.lblAbout3NameAns.Font = New System.Drawing.Font("Comic Sans MS", 13.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblAbout3NameAns.Location = New System.Drawing.Point(87, 219)
+        Me.lblAbout3NameAns.Name = "lblAbout3NameAns"
+        Me.lblAbout3NameAns.Size = New System.Drawing.Size(126, 26)
+        Me.lblAbout3NameAns.TabIndex = 2
+        Me.lblAbout3NameAns.Text = "Kok Hua Chin"
+        '
+        'lblAbout3Age
+        '
+        Me.lblAbout3Age.AutoSize = True
+        Me.lblAbout3Age.Font = New System.Drawing.Font("Comic Sans MS", 13.8!, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblAbout3Age.Location = New System.Drawing.Point(39, 250)
+        Me.lblAbout3Age.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
+        Me.lblAbout3Age.Name = "lblAbout3Age"
+        Me.lblAbout3Age.Size = New System.Drawing.Size(52, 27)
+        Me.lblAbout3Age.TabIndex = 4
+        Me.lblAbout3Age.Text = "Age:"
+        '
+        'lblAbout3AgeAns
+        '
+        Me.lblAbout3AgeAns.AutoSize = True
+        Me.lblAbout3AgeAns.Font = New System.Drawing.Font("Comic Sans MS", 13.8!, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblAbout3AgeAns.Location = New System.Drawing.Point(87, 250)
+        Me.lblAbout3AgeAns.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
+        Me.lblAbout3AgeAns.Name = "lblAbout3AgeAns"
+        Me.lblAbout3AgeAns.Size = New System.Drawing.Size(33, 27)
+        Me.lblAbout3AgeAns.TabIndex = 4
+        Me.lblAbout3AgeAns.Text = "19"
+        '
+        'lblAbout3AgeTP
+        '
+        Me.lblAbout3AgeTP.AutoSize = True
+        Me.lblAbout3AgeTP.Font = New System.Drawing.Font("Comic Sans MS", 13.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblAbout3AgeTP.Location = New System.Drawing.Point(26, 283)
+        Me.lblAbout3AgeTP.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
+        Me.lblAbout3AgeTP.Name = "lblAbout3AgeTP"
+        Me.lblAbout3AgeTP.Size = New System.Drawing.Size(65, 26)
+        Me.lblAbout3AgeTP.TabIndex = 5
+        Me.lblAbout3AgeTP.Text = "TP.no:"
+        '
+        'lblAbout3AgeTPAns
+        '
+        Me.lblAbout3AgeTPAns.AutoSize = True
+        Me.lblAbout3AgeTPAns.Font = New System.Drawing.Font("Comic Sans MS", 13.8!, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblAbout3AgeTPAns.Location = New System.Drawing.Point(87, 284)
+        Me.lblAbout3AgeTPAns.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
+        Me.lblAbout3AgeTPAns.Name = "lblAbout3AgeTPAns"
+        Me.lblAbout3AgeTPAns.Size = New System.Drawing.Size(101, 27)
+        Me.lblAbout3AgeTPAns.TabIndex = 5
+        Me.lblAbout3AgeTPAns.Text = "TP051210"
+        '
+        'Home
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(1095, 578)
         Me.Controls.Add(Me.pnlMainPanel)
         Me.Controls.Add(Me.pnlWinCtrl)
-        Me.Controls.Add(Me.pnlSearch)
         Me.Controls.Add(Me.pnlWelcome)
-        Me.Controls.Add(Me.pnlMovie)
+        Me.Controls.Add(Me.pnlSearch)
         Me.Controls.Add(Me.pnlAbout)
+        Me.Controls.Add(Me.pnlMovie)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
-        Me.Name = "home"
+        Me.Name = "Home"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "New_UI"
         Me.pnlMainPanel.ResumeLayout(False)
@@ -1267,10 +1116,10 @@ Partial Class home
         Me.pnlSearch.ResumeLayout(False)
         Me.pnlPreSearch.ResumeLayout(False)
         Me.pnlPreSearch.PerformLayout()
-        Me.pnlSearchCrew.ResumeLayout(False)
-        Me.pnlSearchCrew.PerformLayout()
         Me.pnlSearchMovie.ResumeLayout(False)
         Me.pnlSearchMovie.PerformLayout()
+        Me.pnlSearchCrew.ResumeLayout(False)
+        Me.pnlSearchCrew.PerformLayout()
         Me.pnlAfterSearch.ResumeLayout(False)
         CType(Me.dgvSearchResult, System.ComponentModel.ISupportInitialize).EndInit()
         Me.pnlWelcome.ResumeLayout(False)
@@ -1284,18 +1133,16 @@ Partial Class home
         CType(Me.dgvMovieList, System.ComponentModel.ISupportInitialize).EndInit()
         Me.pnlAbout.ResumeLayout(False)
         Me.pnlAbout.PerformLayout()
-        Me.Panel9.ResumeLayout(False)
-        Me.Panel9.PerformLayout()
-        CType(Me.PictureBox9, System.ComponentModel.ISupportInitialize).EndInit()
-        Me.Panel8.ResumeLayout(False)
-        Me.Panel8.PerformLayout()
-        CType(Me.PictureBox7, System.ComponentModel.ISupportInitialize).EndInit()
-        Me.Panel10.ResumeLayout(False)
-        Me.Panel10.PerformLayout()
-        CType(Me.PictureBox8, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me._vb_net_imdbDataSet, System.ComponentModel.ISupportInitialize).EndInit()
+        Me.pnlAbout1.ResumeLayout(False)
+        Me.pnlAbout1.PerformLayout()
+        CType(Me.picAbout1, System.ComponentModel.ISupportInitialize).EndInit()
+        Me.pnlAbout2.ResumeLayout(False)
+        Me.pnlAbout2.PerformLayout()
+        CType(Me.picAbout2, System.ComponentModel.ISupportInitialize).EndInit()
+        Me.pnlAbout3.ResumeLayout(False)
+        Me.pnlAbout3.PerformLayout()
+        CType(Me.picAbout3, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.VbnetimdbDataSetBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me._vb_net_imdbDataSet1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
 
     End Sub
@@ -1320,50 +1167,36 @@ Partial Class home
     Friend WithEvents pnlWinCtrl As Panel
     Friend WithEvents pnlMovie As Panel
     Friend WithEvents pnlAbout As Panel
-    Friend WithEvents Panel10 As Panel
-    Friend WithEvents Label17 As Label
-    Friend WithEvents Label18 As Label
-    Friend WithEvents PictureBox8 As PictureBox
-    Friend WithEvents Panel9 As Panel
-    Friend WithEvents Label23 As Label
-    Friend WithEvents Label24 As Label
-    Friend WithEvents PictureBox9 As PictureBox
-    Friend WithEvents Panel8 As Panel
-    Friend WithEvents Label8 As Label
-    Friend WithEvents Label16 As Label
-    Friend WithEvents PictureBox7 As PictureBox
-    Friend WithEvents Label19 As Label
-    Friend WithEvents Label22 As Label
-    Friend WithEvents Label29 As Label
-    Friend WithEvents Label28 As Label
-    Friend WithEvents Label27 As Label
-    Friend WithEvents Label26 As Label
-    Friend WithEvents Label25 As Label
-    Friend WithEvents Label45 As Label
-    Friend WithEvents Label44 As Label
-    Friend WithEvents Label43 As Label
-    Friend WithEvents Label42 As Label
-    Friend WithEvents Label40 As Label
-    Friend WithEvents Label41 As Label
-    Friend WithEvents Label36 As Label
-    Friend WithEvents Label37 As Label
-    Friend WithEvents Label38 As Label
-    Friend WithEvents Label39 As Label
-    Friend WithEvents Label35 As Label
-    Friend WithEvents Label34 As Label
-    Friend WithEvents Label33 As Label
-    Friend WithEvents Label32 As Label
-    Friend WithEvents Label31 As Label
-    Friend WithEvents Label20 As Label
-    Friend WithEvents Label30 As Label
-    Friend WithEvents Label21 As Label
+    Friend WithEvents pnlAbout1 As Panel
+    Friend WithEvents picAbout1 As PictureBox
+    Friend WithEvents pnlAbout3 As Panel
+    Friend WithEvents picAbout3 As PictureBox
+    Friend WithEvents pnlAbout2 As Panel
+    Friend WithEvents picAbout2 As PictureBox
+    Friend WithEvents lblAbout1NameAns As Label
+    Friend WithEvents lblAbout As Label
+    Friend WithEvents lblAbout1Name As Label
+    Friend WithEvents lblAbout1TPAns As Label
+    Friend WithEvents lblAbout1TP As Label
+    Friend WithEvents lblAbout1AgeAns As Label
+    Friend WithEvents lblAbout1Age As Label
+    Friend WithEvents lblAbout3Name As Label
+    Friend WithEvents lblAbout3AgeTPAns As Label
+    Friend WithEvents lblAbout3AgeAns As Label
+    Friend WithEvents lblAbout3AgeTP As Label
+    Friend WithEvents lblAbout3NameAns As Label
+    Friend WithEvents lblAbout3Age As Label
+    Friend WithEvents lblAbout2Name As Label
+    Friend WithEvents lblAbout2TPAns As Label
+    Friend WithEvents lblAbout2TP As Label
+    Friend WithEvents lblAbout2AgeAns As Label
+    Friend WithEvents lblAbout2Age As Label
+    Friend WithEvents lblAbout2NameAns As Label
     Friend WithEvents pnlPreSearch As Panel
     Friend WithEvents pnlAfterSearch As Panel
     Friend WithEvents btnAfterSearchBack As Button
-    Friend WithEvents _vb_net_imdbDataSet As _vb_net_imdbDataSet
     Friend WithEvents VbnetimdbDataSetBindingSource As BindingSource
     Friend WithEvents dgvSearchResult As DataGridView
-    Friend WithEvents _vb_net_imdbDataSet1 As _vb_net_imdbDataSet
     Friend WithEvents txtSearchMRTM As TextBox
     Friend WithEvents lblSearchMRTM As Label
     Friend WithEvents txtSearchMEYear As TextBox

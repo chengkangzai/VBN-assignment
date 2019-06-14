@@ -28,7 +28,7 @@ Public Class LoginRegister
             If reader.Read Then
                 MessageBox.Show("Welcome", "Login Successfully")
                 Me.Hide()
-                home.Show()
+                Home.Show()
             Else
                 MessageBox.Show("Invalid Account/exist", "Error")
                 txtLusername.Clear()
