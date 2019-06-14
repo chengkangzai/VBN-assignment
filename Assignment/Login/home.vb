@@ -15,7 +15,7 @@ Public Class home
 
     'Data Source Below
     'Data Source = (LocalDB) \ MSSQLLocalDB;AttachDbFilename="D:\Program Files\Microsoft SQL Server\MSSQL13.SQLEXP2016\MSSQL\DATA\vb.net imdb.mdf";Integrated Security = True;Connect Timeout=30
-    Private Sub PictureBox1_Click(sender As Object, e As EventArgs) Handles PictureBox1.Click
+    Private Sub PictureBox1_Click(sender As Object, e As EventArgs) Handles picWinCtrlMaximize.Click
         If Me.WindowState = FormWindowState.Normal Then
             Me.WindowState = FormWindowState.Maximized
         Else Me.WindowState = FormWindowState.Normal
@@ -26,11 +26,11 @@ Public Class home
     Dim scrollval As Integer
     Dim pageadapter As SqlDataAdapter
     Dim pagingds As DataSet
-    Private Sub PictureBox2_Click(sender As Object, e As EventArgs) Handles PictureBox2.Click
+    Private Sub PictureBox2_Click(sender As Object, e As EventArgs) Handles picWinCtrlMinimize.Click
         Me.WindowState = FormWindowState.Minimized
     End Sub
 
-    Private Sub PictureBox3_Click(sender As Object, e As EventArgs) Handles PictureBox3.Click, btnpnlExit.Click
+    Private Sub PictureBox3_Click(sender As Object, e As EventArgs) Handles picWinCtrlExit.Click, btnpnlExit.Click
         Dim result As Integer = MessageBox.Show("Are you sure ?", "Confirmation", MessageBoxButtons.YesNo)
         If result = DialogResult.Yes Then
             Me.Close()
@@ -46,55 +46,55 @@ Public Class home
         pnlWelcome.Visible = True
         pnlAbout.Visible = False
         pnlAfterSearch.Visible = False
-        cboSearchGenre.Items.Add("")
-        cboSearchGenre.Items.Add("Action")
-        cboSearchGenre.Items.Add("Adventurer")
-        cboSearchGenre.Items.Add("Animation")
-        cboSearchGenre.Items.Add("Biography")
-        cboSearchGenre.Items.Add("Comedy")
-        cboSearchGenre.Items.Add("Crime")
-        cboSearchGenre.Items.Add("Documentary")
-        cboSearchGenre.Items.Add("Drama")
-        cboSearchGenre.Items.Add("Family")
-        cboSearchGenre.Items.Add("Fantasy")
-        cboSearchGenre.Items.Add("Film Noir")
-        cboSearchGenre.Items.Add("History")
-        cboSearchGenre.Items.Add("Horror")
-        cboSearchGenre.Items.Add("Musical")
-        cboSearchGenre.Items.Add("Mystery")
-        cboSearchGenre.Items.Add("Romance")
-        cboSearchGenre.Items.Add("Sci-Fi")
-        cboSearchGenre.Items.Add("Short")
-        cboSearchGenre.Items.Add("Sport")
-        cboSearchGenre.Items.Add("Superhero")
-        cboSearchGenre.Items.Add("Thriller")
-        cboSearchGenre.Items.Add("War")
-        cboSearchGenre.Items.Add("Western")
-        cboRTMMod.Items.Add(">")
-        cboRTMMod.Items.Add(">=")
-        cboRTMMod.Items.Add("<")
-        cboRTMMod.Items.Add("<=")
-        cboRTMMod.Items.Add("=")
-        cboRatingsMod.Items.Add(">")
-        cboRatingsMod.Items.Add(">=")
-        cboRatingsMod.Items.Add("<")
-        cboRatingsMod.Items.Add("<=")
-        cboRatingsMod.Items.Add("=")
-        cboYearMod.Items.Add(">")
-        cboYearMod.Items.Add(">=")
-        cboYearMod.Items.Add("<")
-        cboYearMod.Items.Add("<=")
-        cboYearMod.Items.Add("=")
-        cboCrewBYearMOD.Items.Add(">")
-        cboCrewBYearMOD.Items.Add(">=")
-        cboCrewBYearMOD.Items.Add("<")
-        cboCrewBYearMOD.Items.Add("<=")
-        cboCrewBYearMOD.Items.Add("=")
-        cboRTMMod.SelectedIndex = 0
-        cboRatingsMod.SelectedIndex = 0
-        cboYearMod.SelectedIndex = 0
-        cboCrewBYearMOD.SelectedIndex = 0
-        radMovie.Checked = 1
+        cboSearchMGenre.Items.Add("")
+        cboSearchMGenre.Items.Add("Action")
+        cboSearchMGenre.Items.Add("Adventurer")
+        cboSearchMGenre.Items.Add("Animation")
+        cboSearchMGenre.Items.Add("Biography")
+        cboSearchMGenre.Items.Add("Comedy")
+        cboSearchMGenre.Items.Add("Crime")
+        cboSearchMGenre.Items.Add("Documentary")
+        cboSearchMGenre.Items.Add("Drama")
+        cboSearchMGenre.Items.Add("Family")
+        cboSearchMGenre.Items.Add("Fantasy")
+        cboSearchMGenre.Items.Add("Film Noir")
+        cboSearchMGenre.Items.Add("History")
+        cboSearchMGenre.Items.Add("Horror")
+        cboSearchMGenre.Items.Add("Musical")
+        cboSearchMGenre.Items.Add("Mystery")
+        cboSearchMGenre.Items.Add("Romance")
+        cboSearchMGenre.Items.Add("Sci-Fi")
+        cboSearchMGenre.Items.Add("Short")
+        cboSearchMGenre.Items.Add("Sport")
+        cboSearchMGenre.Items.Add("Superhero")
+        cboSearchMGenre.Items.Add("Thriller")
+        cboSearchMGenre.Items.Add("War")
+        cboSearchMGenre.Items.Add("Western")
+        cboSearchMRTMMod.Items.Add(">")
+        cboSearchMRTMMod.Items.Add(">=")
+        cboSearchMRTMMod.Items.Add("<")
+        cboSearchMRTMMod.Items.Add("<=")
+        cboSearchMRTMMod.Items.Add("=")
+        cboSearchMRatingMod.Items.Add(">")
+        cboSearchMRatingMod.Items.Add(">=")
+        cboSearchMRatingMod.Items.Add("<")
+        cboSearchMRatingMod.Items.Add("<=")
+        cboSearchMRatingMod.Items.Add("=")
+        cboSearchMRYearMod.Items.Add(">")
+        cboSearchMRYearMod.Items.Add(">=")
+        cboSearchMRYearMod.Items.Add("<")
+        cboSearchMRYearMod.Items.Add("<=")
+        cboSearchMRYearMod.Items.Add("=")
+        cboSearchCBYearMod.Items.Add(">")
+        cboSearchCBYearMod.Items.Add(">=")
+        cboSearchCBYearMod.Items.Add("<")
+        cboSearchCBYearMod.Items.Add("<=")
+        cboSearchCBYearMod.Items.Add("=")
+        cboSearchMRTMMod.SelectedIndex = 0
+        cboSearchMRatingMod.SelectedIndex = 0
+        cboSearchMRYearMod.SelectedIndex = 0
+        cboSearchCBYearMod.SelectedIndex = 0
+        radPreSearchByMovie.Checked = 1
     End Sub
 
     Private Sub Search_button(sender As Object, e As EventArgs) Handles btnpnlSearch.Click
@@ -105,8 +105,8 @@ Public Class home
         pnlSearch.Visible = True
         pnlPreSearch.Visible = True
         pnlAfterSearch.Visible = False
-        pnlMovieSearch.Visible = True
-        pnlCrewSearch.Visible = False
+        pnlSearchMovie.Visible = True
+        pnlSearchCrew.Visible = False
     End Sub
 
     Private Sub btnpnlLogin_Click(sender As Object, e As EventArgs) Handles btnpnlLogin.Click
@@ -180,29 +180,28 @@ Public Class home
     Private Sub btnpnlExit_MouseLeave(sender As Object, e As EventArgs) Handles btnpnlExit.MouseLeave
         Button1.BackColor = Color.MediumAquamarine
     End Sub
-
-    Private Sub btnSearch_Click(sender As Object, e As EventArgs) Handles btnSearch.Click
-        Dim con As New SqlConnection("Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Games\vbimdb.mdf;Integrated Security=True;Connect Timeout=30")
+    Private Sub btnSearch_Click(sender As Object, e As EventArgs) Handles btnPreSearch.Click
+        Dim con As New SqlConnection("Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=E:\Assignments\Semester 3\VB.Net\vbimdb.mdf;Integrated Security=True;Connect Timeout=30")
         Dim sql As String
-        If radMovie.Checked Then
+        If radPreSearchByMovie.Checked Then
             sql = "SELECT * FROM [MovieFilter] WHERE "
-            If Not String.IsNullOrWhiteSpace(txtMSearchName.Text) Then
-                sql = sql & "[movie title] LIKE '%" & txtMSearchName.Text & "%' AND "
+            If Not String.IsNullOrWhiteSpace(txtSearchMName.Text) Then
+                sql = sql & "[movie title] LIKE '%" & txtSearchMName.Text & "%' AND "
             End If
-            If Not String.IsNullOrWhiteSpace(txtMSearchSYear.Text) Then
-                sql = sql & "[release year] " & cboYearMod.Text & " '" & txtMSearchSYear.Text & "' AND "
+            If Not String.IsNullOrWhiteSpace(txtSearchMRYear.Text) Then
+                sql = sql & "[release year] " & cboSearchMRYearMod.Text & " '" & txtSearchMRYear.Text & "' AND "
             End If
-            If Not String.IsNullOrWhiteSpace(txtMSearchEYear.Text) Then
-                sql = sql & "[ending year] ='" & txtMSearchEYear.Text & "' AND "
+            If Not String.IsNullOrWhiteSpace(txtSearchMEYear.Text) Then
+                sql = sql & "[ending year] ='" & txtSearchMEYear.Text & "' AND "
             End If
-            If Not String.IsNullOrWhiteSpace(txtRTM.Text) Then
-                sql = sql & "[runtime min(s)] " & cboRTMMod.Text & " '" & txtRTM.Text & "' AND "
+            If Not String.IsNullOrWhiteSpace(txtSearchMRTM.Text) Then
+                sql = sql & "[runtime min(s)] " & cboSearchMRTMMod.Text & " '" & txtSearchMRTM.Text & "' AND "
             End If
-            If Not String.IsNullOrWhiteSpace(cboSearchGenre.Text) Then
-                sql = sql & "[genre] LIKE '%" & cboSearchGenre.Text & "%' AND "
+            If Not String.IsNullOrWhiteSpace(cboSearchMGenre.Text) Then
+                sql = sql & "[genre] LIKE '%" & cboSearchMGenre.Text & "%' AND "
             End If
-            If Not String.IsNullOrWhiteSpace(txtRatings.Text) Then
-                sql = sql & "[rating] " & cboRatingsMod.Text & " '" & txtRatings.Text & "' AND "
+            If Not String.IsNullOrWhiteSpace(txtSearchMRating.Text) Then
+                sql = sql & "[rating] " & cboSearchMRatingMod.Text & " '" & txtSearchMRating.Text & "' AND "
             End If
             If sql.EndsWith(" AND ") Then
                 sql = sql.Substring(0, sql.Length - 5)
@@ -210,12 +209,12 @@ Public Class home
             If sql.EndsWith(" WHERE ") Then
                 sql = sql.Substring(0, sql.Length - 7)
             End If
-            If Not IsNumeric(txtMSearchSYear.Text) And Not String.IsNullOrWhiteSpace(txtMSearchSYear.Text) Or Not IsNumeric(txtMSearchEYear.Text) And Not String.IsNullOrWhiteSpace(txtMSearchEYear.Text) Or Not IsNumeric(txtRTM.Text) And Not String.IsNullOrWhiteSpace(txtRTM.Text) Or Not IsNumeric(txtRatings.Text) And Not String.IsNullOrWhiteSpace(txtRatings.Text) Then
-                If Not IsNumeric(txtMSearchSYear.Text) And Not String.IsNullOrWhiteSpace(txtMSearchSYear.Text) Or Not IsNumeric(txtMSearchEYear.Text) And Not String.IsNullOrWhiteSpace(txtMSearchEYear.Text) Then
-                    MsgBox("Please enter year only.")
+            If Not IsNumeric(txtSearchMRYear.Text) And Not String.IsNullOrWhiteSpace(txtSearchMRYear.Text) Or Not IsNumeric(txtSearchMEYear.Text) And Not String.IsNullOrWhiteSpace(txtSearchMEYear.Text) Or Not IsNumeric(txtSearchMRTM.Text) And Not String.IsNullOrWhiteSpace(txtSearchMRTM.Text) Or Not IsNumeric(txtSearchMRating.Text) And Not String.IsNullOrWhiteSpace(txtSearchMRating.Text) Then
+                If Not IsNumeric(txtSearchMRYear.Text) And Not String.IsNullOrWhiteSpace(txtSearchMRYear.Text) Or Not IsNumeric(txtSearchMEYear.Text) And Not String.IsNullOrWhiteSpace(txtSearchMEYear.Text) Then
+                    MsgBox("Please Insert a Year.")
                 End If
-                If Not IsNumeric(txtRTM.Text) And Not String.IsNullOrWhiteSpace(txtRTM.Text) Or Not IsNumeric(txtRatings.Text) And Not String.IsNullOrWhiteSpace(txtRatings.Text) Then
-                    MsgBox("Please enter a value.")
+                If Not IsNumeric(txtSearchMRTM.Text) And Not String.IsNullOrWhiteSpace(txtSearchMRTM.Text) Or Not IsNumeric(txtSearchMRating.Text) And Not String.IsNullOrWhiteSpace(txtSearchMRating.Text) Then
+                    MsgBox("Please Insert a Value.")
                 Else
                 End If
             Else
@@ -230,22 +229,22 @@ Public Class home
             End If
         End If
 
-        If radCrew.Checked Then
+        If radPreSearchByCrew.Checked Then
             sql = "SELECT * FROM [FilterView] WHERE "
-            If Not String.IsNullOrWhiteSpace(txtCrewName.Text) Then
-                sql = sql & "[crew's name] LIKE '%" & txtCrewName.Text & "%' AND "
+            If Not String.IsNullOrWhiteSpace(txtSearchCName.Text) Then
+                sql = sql & "[crew's name] LIKE '%" & txtSearchCName.Text & "%' AND "
             End If
-            If Not String.IsNullOrWhiteSpace(txtCrewPos.Text) Then
-                sql = sql & "[crew's position] LIKE '%" & txtCrewPos.Text & "%' AND "
+            If Not String.IsNullOrWhiteSpace(txtSearchCPos.Text) Then
+                sql = sql & "[crew's position] LIKE '%" & txtSearchCPos.Text & "%' AND "
             End If
-            If Not String.IsNullOrWhiteSpace(txtCrewBYear.Text) Then
-                sql = sql & "[Crew's Birth Year] " & cboCrewBYearMOD.Text & " '" & txtCrewBYear.Text & "' AND "
+            If Not String.IsNullOrWhiteSpace(txtSearchCBYear.Text) Then
+                sql = sql & "[Crew's Birth Year] " & cboSearchCBYearMod.Text & " '" & txtSearchCBYear.Text & "' AND "
             End If
-            If Not String.IsNullOrWhiteSpace(txtCrewDYear.Text) Then
-                sql = sql & "[Crew's Death Year] = '" & txtCrewDYear.Text & "' AND "
+            If Not String.IsNullOrWhiteSpace(txtSearchCDYear.Text) Then
+                sql = sql & "[Crew's Death Year] = '" & txtSearchCDYear.Text & "' AND "
             End If
-            If Not String.IsNullOrWhiteSpace(txtCrewProf.Text) Then
-                sql = sql & "[crew's profession] LIKE '%" & txtCrewProf.Text & "%' AND "
+            If Not String.IsNullOrWhiteSpace(txtSearchCProf.Text) Then
+                sql = sql & "[crew's profession] LIKE '%" & txtSearchCProf.Text & "%' AND "
             End If
             If sql.EndsWith(" AND ") Then
                 sql = sql.Substring(0, sql.Length - 5)
@@ -254,8 +253,8 @@ Public Class home
                 sql = sql.Substring(0, sql.Length - 7)
             End If
 
-            If Not IsNumeric(txtCrewBYear.Text) And Not String.IsNullOrWhiteSpace(txtCrewBYear.Text) Or Not IsNumeric(txtCrewDYear.Text) And Not String.IsNullOrWhiteSpace(txtCrewDYear.Text) Then
-                MsgBox("Please enter year only.")
+            If Not IsNumeric(txtSearchCBYear.Text) And Not String.IsNullOrWhiteSpace(txtSearchCBYear.Text) Or Not IsNumeric(txtSearchCDYear.Text) And Not String.IsNullOrWhiteSpace(txtSearchCDYear.Text) Then
+                MsgBox("Please Insert a Year.")
             Else
                 pageadapter = New SqlDataAdapter(sql, con)
                 pagingds = New DataSet()
@@ -269,7 +268,7 @@ Public Class home
         End If
     End Sub
 
-    Private Sub btnBack_Click(sender As Object, e As EventArgs) Handles btnBack.Click
+    Private Sub btnBack_Click(sender As Object, e As EventArgs) Handles btnAfterSearchBack.Click
         pnlAfterSearch.Visible = False
         pnlPreSearch.Visible = True
 
@@ -279,25 +278,25 @@ Public Class home
     Dim mousex As Integer
     Dim mousey As Integer
     ' REF: https://www.dreamincode.net/forums/topic/135768-moving-a-borderless-form/
-    Private Sub Panel2_MouseDown(sender As Object, e As MouseEventArgs) Handles Panel2.MouseDown
+    Private Sub Panel2_MouseDown(sender As Object, e As MouseEventArgs) Handles pnlWinCtrl.MouseDown
         drag = True
         mousex = Windows.Forms.Cursor.Position.X - Me.Left
         mousey = Windows.Forms.Cursor.Position.Y - Me.Top
     End Sub
 
-    Private Sub Panel2_MouseMove(sender As Object, e As MouseEventArgs) Handles Panel2.MouseMove
+    Private Sub Panel2_MouseMove(sender As Object, e As MouseEventArgs) Handles pnlWinCtrl.MouseMove
         If drag = True Then
             Me.Top = Windows.Forms.Cursor.Position.Y - mousey
             Me.Left = Windows.Forms.Cursor.Position.X - mousex
         End If
     End Sub
 
-    Private Sub Panel2_MouseUp(sender As Object, e As MouseEventArgs) Handles Panel2.MouseUp
+    Private Sub Panel2_MouseUp(sender As Object, e As MouseEventArgs) Handles pnlWinCtrl.MouseUp
         drag = False
     End Sub
 
 
-    Private Sub Panel2_MouseDoubleClick(sender As Object, e As MouseEventArgs) Handles Panel2.MouseDoubleClick
+    Private Sub Panel2_MouseDoubleClick(sender As Object, e As MouseEventArgs) Handles pnlWinCtrl.MouseDoubleClick
         If Me.WindowState = FormWindowState.Normal Then
             Me.WindowState = FormWindowState.Maximized
         Else Me.WindowState = FormWindowState.Normal
@@ -313,36 +312,36 @@ Public Class home
         Process.Start(url)
     End Sub
 
-    Private Sub BtnPrevious_Click(sender As Object, e As EventArgs) Handles btnPrevious.Click
+    Private Sub BtnPrevious_Click(sender As Object, e As EventArgs) Handles btnAfterSearchPrevious.Click
         scrollval = scrollval - 100
-        If scrollVal <= 0 Then
-            scrollVal = 0
+        If scrollval <= 0 Then
+            scrollval = 0
         End If
         pagingds.Clear()
-        If radMovie.Checked Then
+        If radPreSearchByMovie.Checked Then
             pageadapter.Fill(pagingds, scrollval, 100, "[MovieFilter]")
         End If
-        If radCrew.Checked Then
+        If radPreSearchByCrew.Checked Then
             pageadapter.Fill(pagingds, scrollval, 100, "[FilterView]")
         End If
     End Sub
 
-    Private Sub BtnNext_Click(sender As Object, e As EventArgs) Handles btnNext.Click
+    Private Sub BtnNext_Click(sender As Object, e As EventArgs) Handles btnAfterSearchNext.Click
         scrollval = scrollval + 100
         If scrollval > 501 Then
             scrollval = 500
         End If
         pagingds.Clear()
-        If radMovie.Checked Then
+        If radPreSearchByMovie.Checked Then
             pageadapter.Fill(pagingds, scrollval, 100, "[MovieFilter]")
         End If
-        If radCrew.Checked Then
+        If radPreSearchByCrew.Checked Then
             pageadapter.Fill(pagingds, scrollval, 100, "[FilterView]")
         End If
     End Sub
 
     Private Sub Button6_Click(sender As Object, e As EventArgs) Handles btnLoadMovie.Click
-        Dim con As New SqlConnection("Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\ryuko\Desktop\vb\vbimdb.mdf;Integrated Security=True;Connect Timeout=30")
+        Dim con As New SqlConnection("Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=E:\Assignments\Semester 3\VB.Net\vbimdb.mdf;Integrated Security=True;Connect Timeout=30")
         Dim sql As String = "SELECT * FROM [FilterView]"
         pageadapter = New SqlDataAdapter(sql, con)
         pagingds = New DataSet()
@@ -367,30 +366,30 @@ Public Class home
         pageadapter.Fill(pagingds, scrollval, 100, "[FilterView]")
     End Sub
 
-    Private Sub radMovie_CheckedChanged(sender As Object, e As EventArgs) Handles radMovie.CheckedChanged
-        If radMovie.Checked Then
-            pnlMovieSearch.Visible = True
-            txtCrewName.Clear()
-            txtCrewBYear.Clear()
-            txtCrewDYear.Clear()
-            txtCrewPos.Clear()
-            txtCrewProf.Clear()
+    Private Sub radMovie_CheckedChanged(sender As Object, e As EventArgs) Handles radPreSearchByMovie.CheckedChanged
+        If radPreSearchByMovie.Checked Then
+            pnlSearchMovie.Visible = True
+            txtSearchCName.Clear()
+            txtSearchCBYear.Clear()
+            txtSearchCDYear.Clear()
+            txtSearchCPos.Clear()
+            txtSearchCProf.Clear()
         Else
-            pnlMovieSearch.Visible = False
+            pnlSearchMovie.Visible = False
         End If
     End Sub
 
-    Private Sub radCrew_CheckedChanged(sender As Object, e As EventArgs) Handles radCrew.CheckedChanged
-        If radCrew.Checked Then
-            pnlCrewSearch.Visible = True
-            txtMSearchName.Clear()
-            txtMSearchSYear.Clear()
-            txtMSearchEYear.Clear()
-            txtRatings.Clear()
-            txtRTM.Clear()
-            cboSearchGenre.SelectedIndex = 0
+    Private Sub radCrew_CheckedChanged(sender As Object, e As EventArgs) Handles radPreSearchByCrew.CheckedChanged
+        If radPreSearchByCrew.Checked Then
+            pnlSearchCrew.Visible = True
+            txtSearchMName.Clear()
+            txtSearchMRYear.Clear()
+            txtSearchMEYear.Clear()
+            txtSearchMRating.Clear()
+            txtSearchMRTM.Clear()
+            cboSearchMGenre.SelectedIndex = 0
         Else
-            pnlCrewSearch.Visible = False
+            pnlSearchCrew.Visible = False
         End If
     End Sub
 End Class
