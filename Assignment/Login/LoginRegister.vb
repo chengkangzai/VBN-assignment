@@ -22,15 +22,15 @@ Public Class LoginRegister
         cmd = New SqlCommand(stm, con)
         Dim reader As SqlDataReader = cmd.ExecuteReader
 
-        If (txtRFName.Text = "" Or txtRLName.Text = "" Or txtRAge.Text = "" Or txtRUserName.Text = "" Or txtRpassword.Text = "" Or txtRIC.Text = "") Then
+        If (txtLusername.Text = "" Or txtLpassword.Text = "") Then
             MessageBox.Show("Please Enter Every Details", "Incomplete Data/Details")
-            Else
+        Else
             If reader.Read Then
                 MessageBox.Show("Welcome", "Login Successfully")
                 Me.Hide()
                 Home.Show()
             Else
-                MessageBox.Show("Invalid Account/exist", "Error")
+                MessageBox.Show("Invalid Username/Password", "Error")
                 txtLusername.Clear()
                 txtLpassword.Clear()
             End If
