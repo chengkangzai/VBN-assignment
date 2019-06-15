@@ -550,9 +550,9 @@ Partial Class LoginRegister
         Me.lblPRTipsIC.Location = New System.Drawing.Point(464, 165)
         Me.lblPRTipsIC.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.lblPRTipsIC.Name = "lblPRTipsIC"
-        Me.lblPRTipsIC.Size = New System.Drawing.Size(229, 25)
+        Me.lblPRTipsIC.Size = New System.Drawing.Size(250, 25)
         Me.lblPRTipsIC.TabIndex = 4
-        Me.lblPRTipsIC.Text = "Please Put Only Numeric"
+        Me.lblPRTipsIC.Text = "Please Input Numbers Only"
         '
         'btnconchanges
         '
@@ -561,7 +561,7 @@ Partial Class LoginRegister
         Me.btnconchanges.Name = "btnconchanges"
         Me.btnconchanges.Size = New System.Drawing.Size(118, 33)
         Me.btnconchanges.TabIndex = 3
-        Me.btnconchanges.Text = "Recover"
+        Me.btnconchanges.Text = "Reset"
         Me.btnconchanges.UseVisualStyleBackColor = True
         '
         'txtPRConPass
@@ -662,9 +662,9 @@ Partial Class LoginRegister
         Me.ClientSize = New System.Drawing.Size(1095, 578)
         Me.Controls.Add(Me.pnlNavButton)
         Me.Controls.Add(Me.pnlNavigation)
-        Me.Controls.Add(Me.pnlLogin)
-        Me.Controls.Add(Me.pnlRegister)
         Me.Controls.Add(Me.pnlRecovery)
+        Me.Controls.Add(Me.pnlRegister)
+        Me.Controls.Add(Me.pnlLogin)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
         Me.Margin = New System.Windows.Forms.Padding(2)
         Me.Name = "LoginRegister"
