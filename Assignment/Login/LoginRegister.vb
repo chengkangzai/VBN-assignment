@@ -13,7 +13,7 @@ Public Class LoginRegister
     'Login
     Private Sub Button5_Click(sender As Object, e As EventArgs) Handles btnLogin.Click
 
-        con = New SqlConnection("Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=E:\Assignments\Semester 3\VB.Net\vbimdb.mdf;Integrated Security=True;Connect Timeout=30")
+        con = New SqlConnection("Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\Chin Wei\Desktop\VBimdb.mdf;Integrated Security=True;Connect Timeout=30")
         con.Open()
         Dim stm As String = "select * from [User] where U_Username='" & txtLusername.Text & "' And U_Password='" & txtLpassword.Text & "' "
         cmd = New SqlCommand(stm, con)
@@ -23,7 +23,6 @@ Public Class LoginRegister
             MessageBox.Show("Please Enter Every Details", "Incomplete Data/Details")
         Else
             If reader.Read Then
-                MessageBox.Show("Welcome", "Login Successfully")
                 Me.Hide()
                 Home.Show()
             Else
@@ -199,6 +198,8 @@ Public Class LoginRegister
             lblRTipsIC.Visible = True
         End If
     End Sub
+
+
 #End Region
 #Region "Windows Drag"
     Dim drag As Boolean = False
