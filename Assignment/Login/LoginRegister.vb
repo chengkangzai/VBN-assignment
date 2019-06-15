@@ -159,7 +159,7 @@ Public Class LoginRegister
         pnlRegister.Visible = True
     End Sub
 
-    Private Sub btnavRecPass_Click(sender As Object, e As EventArgs)
+    Private Sub btnavRecPass_Click(sender As Object, e As EventArgs) Handles btnavRecPass.Click
         pnlLogin.Visible = False
         pnlRecovery.Visible = True
         pnlRegister.Visible = False
@@ -217,6 +217,10 @@ Public Class LoginRegister
     End Sub
     Private Sub pnlNavButton_MouseUp(sender As Object, e As MouseEventArgs) Handles pnlNavButton.MouseUp
         drag = False
+    End Sub
+
+    Private Sub btnavRecPass_Click_1(sender As Object, e As EventArgs) Handles btnavRecPass.Click
+
     End Sub
 #End Region
 
