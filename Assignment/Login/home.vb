@@ -136,6 +136,7 @@ Public Class Home
         Dim login As New LoginRegister
         Dim ans As Integer = MessageBox.Show("You will be logged out" & vbNewLine & "Are You Sure?", "Log out Comfirmation", MessageBoxButtons.YesNo)
         If ans = DialogResult.Yes Then
+            Me.Close()
             login.Show()
         End If
 
