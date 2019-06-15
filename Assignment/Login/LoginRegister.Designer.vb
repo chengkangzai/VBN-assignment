@@ -42,12 +42,13 @@ Partial Class LoginRegister
         Me.Label4 = New System.Windows.Forms.Label()
         Me.Label3 = New System.Windows.Forms.Label()
         Me.pnlRegister = New System.Windows.Forms.Panel()
+        Me.Panel1 = New System.Windows.Forms.Panel()
         Me.lblRTipsIC = New System.Windows.Forms.Label()
         Me.lblRTipsAge = New System.Windows.Forms.Label()
         Me.btncheckstrength = New System.Windows.Forms.Button()
-        Me.btnRegister = New System.Windows.Forms.Button()
         Me.txtRpassword = New System.Windows.Forms.TextBox()
         Me.lblRPass = New System.Windows.Forms.Label()
+        Me.btnRegister = New System.Windows.Forms.Button()
         Me.txtRIC = New System.Windows.Forms.TextBox()
         Me.lblRIC = New System.Windows.Forms.Label()
         Me.txtRUserName = New System.Windows.Forms.TextBox()
@@ -79,6 +80,7 @@ Partial Class LoginRegister
         CType(Me.picWinCtrlExit, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.pnlLogin.SuspendLayout()
         Me.pnlRegister.SuspendLayout()
+        Me.Panel1.SuspendLayout()
         Me.pnlRecovery.SuspendLayout()
         Me.SuspendLayout()
         '
@@ -243,253 +245,294 @@ Partial Class LoginRegister
         '
         'btnLogin
         '
+        Me.btnLogin.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.btnLogin.Location = New System.Drawing.Point(384, 285)
         Me.btnLogin.Margin = New System.Windows.Forms.Padding(2)
         Me.btnLogin.Name = "btnLogin"
-        Me.btnLogin.Size = New System.Drawing.Size(118, 34)
+        Me.btnLogin.Size = New System.Drawing.Size(118, 59)
         Me.btnLogin.TabIndex = 4
         Me.btnLogin.Text = "Login"
         Me.btnLogin.UseVisualStyleBackColor = True
         '
         'txtLpassword
         '
+        Me.txtLpassword.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.txtLpassword.Location = New System.Drawing.Point(421, 214)
         Me.txtLpassword.Margin = New System.Windows.Forms.Padding(2)
         Me.txtLpassword.MaxLength = 12
         Me.txtLpassword.Name = "txtLpassword"
         Me.txtLpassword.PasswordChar = Global.Microsoft.VisualBasic.ChrW(42)
-        Me.txtLpassword.Size = New System.Drawing.Size(114, 26)
+        Me.txtLpassword.Size = New System.Drawing.Size(114, 30)
         Me.txtLpassword.TabIndex = 3
         '
         'txtLusername
         '
+        Me.txtLusername.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.txtLusername.Location = New System.Drawing.Point(421, 165)
         Me.txtLusername.Margin = New System.Windows.Forms.Padding(2)
         Me.txtLusername.MaxLength = 20
         Me.txtLusername.Name = "txtLusername"
-        Me.txtLusername.Size = New System.Drawing.Size(114, 26)
+        Me.txtLusername.Size = New System.Drawing.Size(114, 30)
         Me.txtLusername.TabIndex = 2
         '
         'Label5
         '
         Me.Label5.AutoSize = True
-        Me.Label5.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(134, Byte))
-        Me.Label5.Location = New System.Drawing.Point(326, 218)
+        Me.Label5.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label5.Location = New System.Drawing.Point(311, 217)
         Me.Label5.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.Label5.Name = "Label5"
-        Me.Label5.Size = New System.Drawing.Size(82, 20)
+        Me.Label5.Size = New System.Drawing.Size(104, 25)
         Me.Label5.TabIndex = 1
         Me.Label5.Text = "Password:"
+        Me.Label5.TextAlign = System.Drawing.ContentAlignment.MiddleRight
         '
         'Label4
         '
         Me.Label4.AutoSize = True
-        Me.Label4.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(134, Byte))
-        Me.Label4.Location = New System.Drawing.Point(323, 169)
+        Me.Label4.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label4.Location = New System.Drawing.Point(308, 168)
         Me.Label4.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.Label4.Name = "Label4"
-        Me.Label4.Size = New System.Drawing.Size(87, 20)
+        Me.Label4.Size = New System.Drawing.Size(108, 25)
         Me.Label4.TabIndex = 1
         Me.Label4.Text = "Username:"
+        Me.Label4.TextAlign = System.Drawing.ContentAlignment.MiddleRight
         '
         'Label3
         '
         Me.Label3.AutoSize = True
-        Me.Label3.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(134, Byte))
+        Me.Label3.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label3.Location = New System.Drawing.Point(426, 106)
         Me.Label3.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.Label3.Name = "Label3"
-        Me.Label3.Size = New System.Drawing.Size(48, 20)
+        Me.Label3.Size = New System.Drawing.Size(60, 25)
         Me.Label3.TabIndex = 0
         Me.Label3.Text = "Login"
         '
         'pnlRegister
         '
-        Me.pnlRegister.Controls.Add(Me.lblRTipsIC)
-        Me.pnlRegister.Controls.Add(Me.lblRTipsAge)
-        Me.pnlRegister.Controls.Add(Me.btncheckstrength)
-        Me.pnlRegister.Controls.Add(Me.btnRegister)
-        Me.pnlRegister.Controls.Add(Me.txtRpassword)
-        Me.pnlRegister.Controls.Add(Me.lblRPass)
-        Me.pnlRegister.Controls.Add(Me.txtRIC)
-        Me.pnlRegister.Controls.Add(Me.lblRIC)
-        Me.pnlRegister.Controls.Add(Me.txtRUserName)
-        Me.pnlRegister.Controls.Add(Me.lblRUserName)
-        Me.pnlRegister.Controls.Add(Me.txtRAge)
-        Me.pnlRegister.Controls.Add(Me.lblRAge)
-        Me.pnlRegister.Controls.Add(Me.txtRLName)
-        Me.pnlRegister.Controls.Add(Me.lblRLName)
-        Me.pnlRegister.Controls.Add(Me.txtRFName)
-        Me.pnlRegister.Controls.Add(Me.Label7)
-        Me.pnlRegister.Controls.Add(Me.Label6)
+        Me.pnlRegister.Controls.Add(Me.Panel1)
         Me.pnlRegister.Location = New System.Drawing.Point(203, 46)
         Me.pnlRegister.Margin = New System.Windows.Forms.Padding(0)
         Me.pnlRegister.Name = "pnlRegister"
         Me.pnlRegister.Size = New System.Drawing.Size(892, 532)
         Me.pnlRegister.TabIndex = 3
         '
+        'Panel1
+        '
+        Me.Panel1.Controls.Add(Me.lblRTipsIC)
+        Me.Panel1.Controls.Add(Me.lblRTipsAge)
+        Me.Panel1.Controls.Add(Me.btncheckstrength)
+        Me.Panel1.Controls.Add(Me.txtRpassword)
+        Me.Panel1.Controls.Add(Me.lblRPass)
+        Me.Panel1.Controls.Add(Me.btnRegister)
+        Me.Panel1.Controls.Add(Me.txtRIC)
+        Me.Panel1.Controls.Add(Me.lblRIC)
+        Me.Panel1.Controls.Add(Me.txtRUserName)
+        Me.Panel1.Controls.Add(Me.lblRUserName)
+        Me.Panel1.Controls.Add(Me.txtRAge)
+        Me.Panel1.Controls.Add(Me.lblRAge)
+        Me.Panel1.Controls.Add(Me.txtRLName)
+        Me.Panel1.Controls.Add(Me.lblRLName)
+        Me.Panel1.Controls.Add(Me.txtRFName)
+        Me.Panel1.Controls.Add(Me.Label7)
+        Me.Panel1.Controls.Add(Me.Label6)
+        Me.Panel1.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Panel1.Location = New System.Drawing.Point(117, 24)
+        Me.Panel1.Name = "Panel1"
+        Me.Panel1.Size = New System.Drawing.Size(661, 496)
+        Me.Panel1.TabIndex = 7
+        '
         'lblRTipsIC
         '
         Me.lblRTipsIC.AutoSize = True
-        Me.lblRTipsIC.Location = New System.Drawing.Point(363, 237)
+        Me.lblRTipsIC.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblRTipsIC.Location = New System.Drawing.Point(363, 359)
         Me.lblRTipsIC.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.lblRTipsIC.Name = "lblRTipsIC"
-        Me.lblRTipsIC.Size = New System.Drawing.Size(124, 13)
+        Me.lblRTipsIC.Size = New System.Drawing.Size(229, 25)
         Me.lblRTipsIC.TabIndex = 6
         Me.lblRTipsIC.Text = "Please Put Only Numeric"
+        Me.lblRTipsIC.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.lblRTipsIC.Visible = False
         '
         'lblRTipsAge
         '
         Me.lblRTipsAge.AutoSize = True
-        Me.lblRTipsAge.Location = New System.Drawing.Point(363, 128)
+        Me.lblRTipsAge.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblRTipsAge.Location = New System.Drawing.Point(363, 210)
         Me.lblRTipsAge.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.lblRTipsAge.Name = "lblRTipsAge"
-        Me.lblRTipsAge.Size = New System.Drawing.Size(124, 13)
+        Me.lblRTipsAge.Size = New System.Drawing.Size(229, 25)
         Me.lblRTipsAge.TabIndex = 5
         Me.lblRTipsAge.Text = "Please Put Only Numeric"
+        Me.lblRTipsAge.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.lblRTipsAge.Visible = False
         '
         'btncheckstrength
         '
-        Me.btncheckstrength.Location = New System.Drawing.Point(349, 285)
+        Me.btncheckstrength.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btncheckstrength.Location = New System.Drawing.Point(349, 429)
         Me.btncheckstrength.Margin = New System.Windows.Forms.Padding(2)
         Me.btncheckstrength.Name = "btncheckstrength"
-        Me.btncheckstrength.Size = New System.Drawing.Size(102, 37)
+        Me.btncheckstrength.Size = New System.Drawing.Size(208, 37)
         Me.btncheckstrength.TabIndex = 4
         Me.btncheckstrength.Text = "Password Strength"
         Me.btncheckstrength.UseVisualStyleBackColor = True
         '
-        'btnRegister
-        '
-        Me.btnRegister.Location = New System.Drawing.Point(193, 285)
-        Me.btnRegister.Margin = New System.Windows.Forms.Padding(2)
-        Me.btnRegister.Name = "btnRegister"
-        Me.btnRegister.Size = New System.Drawing.Size(122, 37)
-        Me.btnRegister.TabIndex = 3
-        Me.btnRegister.Text = "Register"
-        Me.btnRegister.UseVisualStyleBackColor = True
-        '
         'txtRpassword
         '
-        Me.txtRpassword.Location = New System.Drawing.Point(209, 194)
+        Me.txtRpassword.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txtRpassword.Location = New System.Drawing.Point(199, 309)
         Me.txtRpassword.Margin = New System.Windows.Forms.Padding(2)
         Me.txtRpassword.MaxLength = 12
         Me.txtRpassword.Name = "txtRpassword"
         Me.txtRpassword.PasswordChar = Global.Microsoft.VisualBasic.ChrW(42)
-        Me.txtRpassword.Size = New System.Drawing.Size(137, 20)
+        Me.txtRpassword.Size = New System.Drawing.Size(137, 30)
         Me.txtRpassword.TabIndex = 2
         '
         'lblRPass
         '
         Me.lblRPass.AutoSize = True
-        Me.lblRPass.Location = New System.Drawing.Point(118, 198)
+        Me.lblRPass.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblRPass.Location = New System.Drawing.Point(63, 312)
         Me.lblRPass.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.lblRPass.Name = "lblRPass"
-        Me.lblRPass.Size = New System.Drawing.Size(56, 13)
+        Me.lblRPass.Size = New System.Drawing.Size(104, 25)
         Me.lblRPass.TabIndex = 1
         Me.lblRPass.Text = "Password:"
+        Me.lblRPass.TextAlign = System.Drawing.ContentAlignment.MiddleRight
+        '
+        'btnRegister
+        '
+        Me.btnRegister.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnRegister.Location = New System.Drawing.Point(118, 429)
+        Me.btnRegister.Margin = New System.Windows.Forms.Padding(2)
+        Me.btnRegister.Name = "btnRegister"
+        Me.btnRegister.Size = New System.Drawing.Size(157, 37)
+        Me.btnRegister.TabIndex = 3
+        Me.btnRegister.Text = "Register"
+        Me.btnRegister.UseVisualStyleBackColor = True
         '
         'txtRIC
         '
-        Me.txtRIC.Location = New System.Drawing.Point(209, 233)
+        Me.txtRIC.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txtRIC.Location = New System.Drawing.Point(199, 359)
         Me.txtRIC.Margin = New System.Windows.Forms.Padding(2)
         Me.txtRIC.MaxLength = 12
         Me.txtRIC.Name = "txtRIC"
-        Me.txtRIC.Size = New System.Drawing.Size(137, 20)
+        Me.txtRIC.Size = New System.Drawing.Size(137, 30)
         Me.txtRIC.TabIndex = 2
         '
         'lblRIC
         '
         Me.lblRIC.AutoSize = True
-        Me.lblRIC.Location = New System.Drawing.Point(140, 237)
+        Me.lblRIC.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblRIC.Location = New System.Drawing.Point(102, 362)
         Me.lblRIC.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.lblRIC.Name = "lblRIC"
-        Me.lblRIC.Size = New System.Drawing.Size(35, 13)
+        Me.lblRIC.Size = New System.Drawing.Size(65, 25)
         Me.lblRIC.TabIndex = 1
         Me.lblRIC.Text = "IC.no:"
+        Me.lblRIC.TextAlign = System.Drawing.ContentAlignment.MiddleRight
         '
         'txtRUserName
         '
-        Me.txtRUserName.Location = New System.Drawing.Point(209, 158)
+        Me.txtRUserName.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txtRUserName.Location = New System.Drawing.Point(199, 255)
         Me.txtRUserName.Margin = New System.Windows.Forms.Padding(2)
         Me.txtRUserName.MaxLength = 20
         Me.txtRUserName.Name = "txtRUserName"
-        Me.txtRUserName.Size = New System.Drawing.Size(137, 20)
+        Me.txtRUserName.Size = New System.Drawing.Size(137, 30)
         Me.txtRUserName.TabIndex = 2
         '
         'lblRUserName
         '
         Me.lblRUserName.AutoSize = True
-        Me.lblRUserName.Location = New System.Drawing.Point(115, 162)
+        Me.lblRUserName.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblRUserName.Location = New System.Drawing.Point(59, 258)
         Me.lblRUserName.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.lblRUserName.Name = "lblRUserName"
-        Me.lblRUserName.Size = New System.Drawing.Size(58, 13)
+        Me.lblRUserName.Size = New System.Drawing.Size(108, 25)
         Me.lblRUserName.TabIndex = 1
         Me.lblRUserName.Text = "Username:"
+        Me.lblRUserName.TextAlign = System.Drawing.ContentAlignment.MiddleRight
         '
         'txtRAge
         '
-        Me.txtRAge.Location = New System.Drawing.Point(209, 124)
+        Me.txtRAge.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txtRAge.Location = New System.Drawing.Point(199, 207)
         Me.txtRAge.Margin = New System.Windows.Forms.Padding(2)
         Me.txtRAge.MaxLength = 3
         Me.txtRAge.Name = "txtRAge"
-        Me.txtRAge.Size = New System.Drawing.Size(137, 20)
+        Me.txtRAge.Size = New System.Drawing.Size(137, 30)
         Me.txtRAge.TabIndex = 2
         '
         'lblRAge
         '
         Me.lblRAge.AutoSize = True
-        Me.lblRAge.Location = New System.Drawing.Point(145, 128)
+        Me.lblRAge.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblRAge.Location = New System.Drawing.Point(113, 206)
         Me.lblRAge.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.lblRAge.Name = "lblRAge"
-        Me.lblRAge.Size = New System.Drawing.Size(29, 13)
+        Me.lblRAge.Size = New System.Drawing.Size(54, 25)
         Me.lblRAge.TabIndex = 1
         Me.lblRAge.Text = "Age:"
+        Me.lblRAge.TextAlign = System.Drawing.ContentAlignment.MiddleRight
         '
         'txtRLName
         '
-        Me.txtRLName.Location = New System.Drawing.Point(209, 89)
+        Me.txtRLName.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txtRLName.Location = New System.Drawing.Point(199, 161)
         Me.txtRLName.Margin = New System.Windows.Forms.Padding(2)
         Me.txtRLName.MaxLength = 25
         Me.txtRLName.Name = "txtRLName"
-        Me.txtRLName.Size = New System.Drawing.Size(137, 20)
+        Me.txtRLName.Size = New System.Drawing.Size(137, 30)
         Me.txtRLName.TabIndex = 2
         '
         'lblRLName
         '
         Me.lblRLName.AutoSize = True
-        Me.lblRLName.Location = New System.Drawing.Point(131, 93)
+        Me.lblRLName.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblRLName.Location = New System.Drawing.Point(89, 164)
         Me.lblRLName.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.lblRLName.Name = "lblRLName"
-        Me.lblRLName.Size = New System.Drawing.Size(42, 13)
+        Me.lblRLName.Size = New System.Drawing.Size(78, 25)
         Me.lblRLName.TabIndex = 1
         Me.lblRLName.Text = "Lname:"
+        Me.lblRLName.TextAlign = System.Drawing.ContentAlignment.MiddleRight
         '
         'txtRFName
         '
-        Me.txtRFName.Location = New System.Drawing.Point(209, 56)
+        Me.txtRFName.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txtRFName.Location = New System.Drawing.Point(199, 111)
         Me.txtRFName.Margin = New System.Windows.Forms.Padding(2)
         Me.txtRFName.MaxLength = 15
         Me.txtRFName.Name = "txtRFName"
-        Me.txtRFName.Size = New System.Drawing.Size(137, 20)
+        Me.txtRFName.Size = New System.Drawing.Size(137, 30)
         Me.txtRFName.TabIndex = 2
         '
         'Label7
         '
         Me.Label7.AutoSize = True
-        Me.Label7.Location = New System.Drawing.Point(131, 60)
+        Me.Label7.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label7.Location = New System.Drawing.Point(88, 114)
         Me.Label7.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.Label7.Name = "Label7"
-        Me.Label7.Size = New System.Drawing.Size(42, 13)
+        Me.Label7.Size = New System.Drawing.Size(79, 25)
         Me.Label7.TabIndex = 1
         Me.Label7.Text = "Fname:"
+        Me.Label7.TextAlign = System.Drawing.ContentAlignment.MiddleRight
         '
         'Label6
         '
         Me.Label6.AutoSize = True
-        Me.Label6.Location = New System.Drawing.Point(213, 24)
+        Me.Label6.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label6.Location = New System.Drawing.Point(252, 20)
         Me.Label6.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.Label6.Name = "Label6"
-        Me.Label6.Size = New System.Drawing.Size(74, 13)
+        Me.Label6.Size = New System.Drawing.Size(133, 25)
         Me.Label6.TabIndex = 0
         Me.Label6.Text = "Register Now!"
         '
@@ -644,7 +687,8 @@ Partial Class LoginRegister
         Me.pnlLogin.ResumeLayout(False)
         Me.pnlLogin.PerformLayout()
         Me.pnlRegister.ResumeLayout(False)
-        Me.pnlRegister.PerformLayout()
+        Me.Panel1.ResumeLayout(False)
+        Me.Panel1.PerformLayout()
         Me.pnlRecovery.ResumeLayout(False)
         Me.pnlRecovery.PerformLayout()
         Me.ResumeLayout(False)
@@ -699,4 +743,5 @@ Partial Class LoginRegister
     Friend WithEvents picWinCtrlExit As PictureBox
     Friend WithEvents btnavRecPass As Button
     Friend WithEvents lblProgramName As Label
+    Friend WithEvents Panel1 As Panel
 End Class

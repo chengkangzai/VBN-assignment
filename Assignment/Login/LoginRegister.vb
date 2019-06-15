@@ -123,9 +123,25 @@ Public Class LoginRegister
         End If
     End Sub
 #Region "Windows Control (havent Finished "
-    Private Sub Button1_Click(sender As Object, e As EventArgs) Handles btnFormClose.Click
-        Me.Close()
+    Private Sub Button1_Click(sender As Object, e As EventArgs) Handles btnFormClose.Click, picWinCtrlExit.Click
+        Dim result As Integer = MessageBox.Show("Are you sure ?", "Confirmation", MessageBoxButtons.YesNo)
+        If result = DialogResult.Yes Then
+            Me.Close()
+        End If
     End Sub
+
+    Private Sub picWinCtrlMinimize_Click(sender As Object, e As EventArgs) Handles picWinCtrlMinimize.Click
+        Me.WindowState = FormWindowState.Minimized
+    End Sub
+
+    Private Sub picWinCtrlMaximize_Click(sender As Object, e As EventArgs) Handles picWinCtrlMaximize.Click, picWinCtrlMaximize.DoubleClick
+        If Me.WindowState = FormWindowState.Maximized Then
+            Me.WindowState = FormWindowState.Normal
+        Else
+            Me.WindowState = FormWindowState.Maximized
+        End If
+    End Sub
+
 
 #End Region
 #Region "Navigation Button Show"
@@ -149,6 +165,23 @@ Public Class LoginRegister
         pnlRegister.Visible = False
     End Sub
 
+    Private Sub LoginRegister_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+        lblRTipsAge.Visible = False
+        lblRTipsIC.Visible = False
+        lblPRTipsIC.Visible = False
+    End Sub
+#End Region
+#Region "Data Validation"
+    'Data Validation label show(password recovery)
+
+    Private Sub txtPRIC_Validating(sender As Object, e As CancelEventArgs) Handles txtPRIC.Validating
+        If IsNumeric(txtPRIC.Text) Then
+            lblPRTipsIC.Visible = False
+        Else
+            lblPRTipsIC.Visible = True
+        End If
+    End Sub
+
     'Data Validation label show(register)
     Private Sub txtRage_Validating(sender As Object, e As CancelEventArgs) Handles txtRAge.Validating
         If IsNumeric(txtRAge.Text) Then
@@ -165,23 +198,31 @@ Public Class LoginRegister
             lblRTipsIC.Visible = True
         End If
     End Sub
-
-    Private Sub LoginRegister_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-        lblRTipsAge.Visible = False
-        lblRTipsIC.Visible = False
-        lblPRTipsIC.Visible = False
+#End Region
+#Region "Windows Drag"
+    Dim drag As Boolean = False
+    Dim mousex As Integer
+    Dim mousey As Integer
+    ' REF: https://www.dreamincode.net/forums/topic/135768-moving-a-borderless-form/
+    Private Sub pnlNavButton_MouseDown(sender As Object, e As MouseEventArgs) Handles pnlNavButton.MouseDown
+        drag = True
+        mousex = Windows.Forms.Cursor.Position.X - Me.Left
+        mousey = Windows.Forms.Cursor.Position.Y - Me.Top
+    End Sub
+    Private Sub pnlNavButton_MouseMove(sender As Object, e As MouseEventArgs) Handles pnlNavButton.MouseMove
+        If drag = True Then
+            Me.Top = Windows.Forms.Cursor.Position.Y - mousey
+            Me.Left = Windows.Forms.Cursor.Position.X - mousex
+        End If
+    End Sub
+    Private Sub pnlNavButton_MouseUp(sender As Object, e As MouseEventArgs) Handles pnlNavButton.MouseUp
+        drag = False
     End Sub
 #End Region
 
-    'Data Validation label show(password recovery)
 
-    Private Sub txtPRIC_Validating(sender As Object, e As CancelEventArgs) Handles txtPRIC.Validating
-        If IsNumeric(txtPRIC.Text) Then
-            lblPRTipsIC.Visible = False
-        Else
-            lblPRTipsIC.Visible = True
-        End If
-    End Sub
+
+
 
 
 End Class
