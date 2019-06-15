@@ -25,6 +25,7 @@ Partial Class Home
         Me.components = New System.ComponentModel.Container()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(Home))
         Me.pnlMainPanel = New System.Windows.Forms.Panel()
+        Me.lblProgramName = New System.Windows.Forms.Label()
         Me.btnpnlSearch = New System.Windows.Forms.Button()
         Me.btnpnlAbout = New System.Windows.Forms.Button()
         Me.btnpnlExit = New System.Windows.Forms.Button()
@@ -109,7 +110,7 @@ Partial Class Home
         Me.lblAbout3AgeTP = New System.Windows.Forms.Label()
         Me.lblAbout3AgeTPAns = New System.Windows.Forms.Label()
         Me.VbnetimdbDataSetBindingSource = New System.Windows.Forms.BindingSource(Me.components)
-        Me.lblProgramName = New System.Windows.Forms.Label()
+        Me.btnpnlLogout = New System.Windows.Forms.Button()
         Me.pnlMainPanel.SuspendLayout()
         Me.pnlSearch.SuspendLayout()
         Me.pnlPreSearch.SuspendLayout()
@@ -142,6 +143,7 @@ Partial Class Home
         Me.pnlMainPanel.Controls.Add(Me.lblProgramName)
         Me.pnlMainPanel.Controls.Add(Me.btnpnlSearch)
         Me.pnlMainPanel.Controls.Add(Me.btnpnlAbout)
+        Me.pnlMainPanel.Controls.Add(Me.btnpnlLogout)
         Me.pnlMainPanel.Controls.Add(Me.btnpnlExit)
         Me.pnlMainPanel.Controls.Add(Me.btnpnlMovie)
         Me.pnlMainPanel.Dock = System.Windows.Forms.DockStyle.Left
@@ -149,6 +151,18 @@ Partial Class Home
         Me.pnlMainPanel.Name = "pnlMainPanel"
         Me.pnlMainPanel.Size = New System.Drawing.Size(201, 536)
         Me.pnlMainPanel.TabIndex = 0
+        '
+        'lblProgramName
+        '
+        Me.lblProgramName.AutoSize = True
+        Me.lblProgramName.BackColor = System.Drawing.Color.Transparent
+        Me.lblProgramName.Font = New System.Drawing.Font("Microsoft JhengHei", 20.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(134, Byte))
+        Me.lblProgramName.ForeColor = System.Drawing.Color.Green
+        Me.lblProgramName.Location = New System.Drawing.Point(12, 48)
+        Me.lblProgramName.Name = "lblProgramName"
+        Me.lblProgramName.Size = New System.Drawing.Size(166, 34)
+        Me.lblProgramName.TabIndex = 1
+        Me.lblProgramName.Text = "Power Apps"
         '
         'btnpnlSearch
         '
@@ -195,7 +209,7 @@ Partial Class Home
         Me.btnpnlExit.ForeColor = System.Drawing.Color.Black
         Me.btnpnlExit.Image = CType(resources.GetObject("btnpnlExit.Image"), System.Drawing.Image)
         Me.btnpnlExit.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.btnpnlExit.Location = New System.Drawing.Point(0, 321)
+        Me.btnpnlExit.Location = New System.Drawing.Point(0, 390)
         Me.btnpnlExit.Margin = New System.Windows.Forms.Padding(0)
         Me.btnpnlExit.Name = "btnpnlExit"
         Me.btnpnlExit.Size = New System.Drawing.Size(201, 53)
@@ -1084,17 +1098,22 @@ Partial Class Home
         Me.lblAbout3AgeTPAns.TabIndex = 5
         Me.lblAbout3AgeTPAns.Text = "TP051210"
         '
-        'lblProgramName
+        'btnpnlLogout
         '
-        Me.lblProgramName.AutoSize = True
-        Me.lblProgramName.BackColor = System.Drawing.Color.Transparent
-        Me.lblProgramName.Font = New System.Drawing.Font("Microsoft JhengHei", 20.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(134, Byte))
-        Me.lblProgramName.ForeColor = System.Drawing.Color.Green
-        Me.lblProgramName.Location = New System.Drawing.Point(12, 48)
-        Me.lblProgramName.Name = "lblProgramName"
-        Me.lblProgramName.Size = New System.Drawing.Size(166, 34)
-        Me.lblProgramName.TabIndex = 1
-        Me.lblProgramName.Text = "Power Apps"
+        Me.btnpnlLogout.BackColor = System.Drawing.Color.MediumAquamarine
+        Me.btnpnlLogout.FlatAppearance.BorderSize = 0
+        Me.btnpnlLogout.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.btnpnlLogout.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(134, Byte))
+        Me.btnpnlLogout.ForeColor = System.Drawing.Color.Black
+        Me.btnpnlLogout.Image = CType(resources.GetObject("btnpnlLogout.Image"), System.Drawing.Image)
+        Me.btnpnlLogout.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.btnpnlLogout.Location = New System.Drawing.Point(0, 321)
+        Me.btnpnlLogout.Margin = New System.Windows.Forms.Padding(0)
+        Me.btnpnlLogout.Name = "btnpnlLogout"
+        Me.btnpnlLogout.Size = New System.Drawing.Size(201, 53)
+        Me.btnpnlLogout.TabIndex = 0
+        Me.btnpnlLogout.Text = "Logout"
+        Me.btnpnlLogout.UseVisualStyleBackColor = False
         '
         'Home
         '
@@ -1233,4 +1252,5 @@ Partial Class Home
     Friend WithEvents pnlSearchMovie As Panel
     Friend WithEvents lblPreSearchBy As Label
     Friend WithEvents lblProgramName As Label
+    Friend WithEvents btnpnlLogout As Button
 End Class

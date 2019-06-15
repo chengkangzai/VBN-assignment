@@ -61,7 +61,7 @@ Public Class Home
     Dim pagingds As DataSet
 
 
-#Region "Panel Visibility "
+#Region "Panel Button (mostly visibility) "
 
     'Form Load Event
     Private Sub New_UI_Load(sender As Object, e As EventArgs) Handles MyBase.Load
@@ -132,12 +132,12 @@ Public Class Home
         pnlSearchCrew.Visible = False
     End Sub
 
-    Private Sub btnpnlLogin_Click(sender As Object, e As EventArgs)
-        pnlWelcome.Visible = False
-        pnlSearch.Visible = False
-        pnlMovie.Visible = False
-        pnlAbout.Visible = False
-        pnlAfterSearch.Visible = False
+    Private Sub btnpnlLogout_Click(sender As Object, e As EventArgs) Handles btnpnlLogout.Click
+        Dim login As New LoginRegister
+        Dim ans As Integer = MessageBox.Show("You will be logged out" & vbNewLine & "Are You Sure?", "Log out Comfirmation", MessageBoxButtons.YesNo)
+        If ans = DialogResult.Yes Then
+            login.Show()
+        End If
 
     End Sub
 
@@ -157,6 +157,7 @@ Public Class Home
         pnlAfterSearch.Visible = False
 
     End Sub
+
 #End Region
 #Region "Search Function "
     Private Sub btnSearch_Click(sender As Object, e As EventArgs) Handles btnPreSearch.Click
@@ -165,7 +166,7 @@ Public Class Home
         If radPreSearchByMovie.Checked Then
             sql = "SELECT * FROM [MovieFilter] WHERE "
             If Not String.IsNullOrWhiteSpace(txtSearchMName.Text) Then
-                sql = sql & "[movie title] LIKE '%" & txtSearchMName.Text & "%' AND "
+                sql = sql & "[movie title] Like '%" & txtSearchMName.Text & "%' AND "
             End If
             If Not String.IsNullOrWhiteSpace(txtSearchMRYear.Text) Then
                 sql = sql & "[release year] " & cboSearchMRYearMod.Text & " '" & txtSearchMRYear.Text & "' AND "
@@ -252,9 +253,6 @@ Public Class Home
         pnlPreSearch.Visible = True
 
     End Sub
-#End Region
-
-
 
 
     Private Sub DgvSearchResult_CellContentClick(sender As Object, e As DataGridViewCellEventArgs) Handles dgvSearchResult.CellContentClick
@@ -346,6 +344,6 @@ Public Class Home
             pnlSearchCrew.Visible = False
         End If
     End Sub
-
+#End Region
 
 End Class

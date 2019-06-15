@@ -682,9 +682,9 @@ Partial Class LoginRegister
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(1095, 578)
+        Me.Controls.Add(Me.pnlLogin)
         Me.Controls.Add(Me.pnlRecovery)
         Me.Controls.Add(Me.pnlNavigation)
-        Me.Controls.Add(Me.pnlLogin)
         Me.Controls.Add(Me.pnlRegister)
         Me.Controls.Add(Me.pnlNavButton)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None

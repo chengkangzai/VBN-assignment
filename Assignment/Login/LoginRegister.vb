@@ -9,7 +9,7 @@ Public Class LoginRegister
     Dim cmd As New SqlCommand
     Dim dr As SqlDataReader
 
-
+#Region "Login Function"
     'Login
     Private Sub Button5_Click(sender As Object, e As EventArgs) Handles btnLogin.Click
 
@@ -122,7 +122,8 @@ Public Class LoginRegister
             End Try
         End If
     End Sub
-#Region "Windows Control (havent Finished "
+#End Region
+#Region "Windows Control "
     Private Sub Button1_Click(sender As Object, e As EventArgs) Handles btnFormClose.Click, picWinCtrlExit.Click
         Dim result As Integer = MessageBox.Show("Are you sure ?", "Confirmation", MessageBoxButtons.YesNo)
         If result = DialogResult.Yes Then
@@ -223,10 +224,5 @@ Public Class LoginRegister
 
     End Sub
 #End Region
-
-
-
-
-
 
 End Class
