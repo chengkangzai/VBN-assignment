@@ -24,7 +24,7 @@ Public Class Home
     End Sub
 
     Private Sub PictureBox3_Click(sender As Object, e As EventArgs) Handles picWinCtrlExit.Click, btnpnlExit.Click
-        Dim result As Integer = MessageBox.Show("Are you sure ?", "Confirmation", MessageBoxButtons.YesNo)
+        Dim result As Integer = MessageBox.Show("Are you sure?", "Confirmation", MessageBoxButtons.YesNo)
         If result = DialogResult.Yes Then
             Me.Close()
         End If

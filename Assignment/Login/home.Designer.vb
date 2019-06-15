@@ -28,6 +28,7 @@ Partial Class Home
         Me.lblProgramName = New System.Windows.Forms.Label()
         Me.btnpnlSearch = New System.Windows.Forms.Button()
         Me.btnpnlAbout = New System.Windows.Forms.Button()
+        Me.btnpnlLogout = New System.Windows.Forms.Button()
         Me.btnpnlExit = New System.Windows.Forms.Button()
         Me.btnpnlMovie = New System.Windows.Forms.Button()
         Me.pnlSearch = New System.Windows.Forms.Panel()
@@ -110,7 +111,6 @@ Partial Class Home
         Me.lblAbout3AgeTP = New System.Windows.Forms.Label()
         Me.lblAbout3AgeTPAns = New System.Windows.Forms.Label()
         Me.VbnetimdbDataSetBindingSource = New System.Windows.Forms.BindingSource(Me.components)
-        Me.btnpnlLogout = New System.Windows.Forms.Button()
         Me.pnlMainPanel.SuspendLayout()
         Me.pnlSearch.SuspendLayout()
         Me.pnlPreSearch.SuspendLayout()
@@ -199,6 +199,23 @@ Partial Class Home
         Me.btnpnlAbout.TabIndex = 0
         Me.btnpnlAbout.Text = "About"
         Me.btnpnlAbout.UseVisualStyleBackColor = False
+        '
+        'btnpnlLogout
+        '
+        Me.btnpnlLogout.BackColor = System.Drawing.Color.MediumAquamarine
+        Me.btnpnlLogout.FlatAppearance.BorderSize = 0
+        Me.btnpnlLogout.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.btnpnlLogout.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(134, Byte))
+        Me.btnpnlLogout.ForeColor = System.Drawing.Color.Black
+        Me.btnpnlLogout.Image = CType(resources.GetObject("btnpnlLogout.Image"), System.Drawing.Image)
+        Me.btnpnlLogout.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.btnpnlLogout.Location = New System.Drawing.Point(0, 321)
+        Me.btnpnlLogout.Margin = New System.Windows.Forms.Padding(0)
+        Me.btnpnlLogout.Name = "btnpnlLogout"
+        Me.btnpnlLogout.Size = New System.Drawing.Size(201, 53)
+        Me.btnpnlLogout.TabIndex = 0
+        Me.btnpnlLogout.Text = "Logout"
+        Me.btnpnlLogout.UseVisualStyleBackColor = False
         '
         'btnpnlExit
         '
@@ -1097,23 +1114,6 @@ Partial Class Home
         Me.lblAbout3AgeTPAns.Size = New System.Drawing.Size(101, 27)
         Me.lblAbout3AgeTPAns.TabIndex = 5
         Me.lblAbout3AgeTPAns.Text = "TP051210"
-        '
-        'btnpnlLogout
-        '
-        Me.btnpnlLogout.BackColor = System.Drawing.Color.MediumAquamarine
-        Me.btnpnlLogout.FlatAppearance.BorderSize = 0
-        Me.btnpnlLogout.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.btnpnlLogout.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(134, Byte))
-        Me.btnpnlLogout.ForeColor = System.Drawing.Color.Black
-        Me.btnpnlLogout.Image = CType(resources.GetObject("btnpnlLogout.Image"), System.Drawing.Image)
-        Me.btnpnlLogout.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.btnpnlLogout.Location = New System.Drawing.Point(0, 321)
-        Me.btnpnlLogout.Margin = New System.Windows.Forms.Padding(0)
-        Me.btnpnlLogout.Name = "btnpnlLogout"
-        Me.btnpnlLogout.Size = New System.Drawing.Size(201, 53)
-        Me.btnpnlLogout.TabIndex = 0
-        Me.btnpnlLogout.Text = "Logout"
-        Me.btnpnlLogout.UseVisualStyleBackColor = False
         '
         'Home
         '
