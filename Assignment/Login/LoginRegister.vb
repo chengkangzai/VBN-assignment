@@ -9,9 +9,6 @@ Public Class LoginRegister
     Dim cmd As New SqlCommand
     Dim dr As SqlDataReader
 
-    Private Sub Button1_Click(sender As Object, e As EventArgs) Handles btnFormClose.Click
-        Me.Close()
-    End Sub
 
     'Login
     Private Sub Button5_Click(sender As Object, e As EventArgs) Handles btnLogin.Click
@@ -125,8 +122,15 @@ Public Class LoginRegister
             End Try
         End If
     End Sub
+#Region "Windows Control (havent Finished "
+    Private Sub Button1_Click(sender As Object, e As EventArgs) Handles btnFormClose.Click
+        Me.Close()
+    End Sub
 
+#End Region
+#Region "Navigation Button Show"
     'btnavigation
+
     Private Sub btnavLogin_Click(sender As Object, e As EventArgs) Handles btnavLogin.Click
         pnlLogin.Visible = True
         pnlRecovery.Visible = False
@@ -139,7 +143,7 @@ Public Class LoginRegister
         pnlRegister.Visible = True
     End Sub
 
-    Private Sub btnavRecPass_Click(sender As Object, e As EventArgs) Handles btnavRecPass.Click
+    Private Sub btnavRecPass_Click(sender As Object, e As EventArgs)
         pnlLogin.Visible = False
         pnlRecovery.Visible = True
         pnlRegister.Visible = False
@@ -167,6 +171,7 @@ Public Class LoginRegister
         lblRTipsIC.Visible = False
         lblPRTipsIC.Visible = False
     End Sub
+#End Region
 
     'Data Validation label show(password recovery)
 
@@ -177,4 +182,6 @@ Public Class LoginRegister
             lblPRTipsIC.Visible = True
         End If
     End Sub
+
+
 End Class

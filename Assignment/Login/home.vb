@@ -9,20 +9,16 @@
 'Importing Guideline 2: https://docs.microsoft.com/en-us/sql/relational-databases/import-export/import-flat-file-wizard?view=sql-server-2017
 
 Imports System.Data.SqlClient
-
+#Region "Windows Control"
 Public Class Home
     'Maximize and Minimize or close
-    Private Sub PictureBox1_Click(sender As Object, e As EventArgs) Handles picWinCtrlMaximize.Click
+    Private Sub PictureBox1_Click(sender As Object, e As EventArgs) Handles picWinCtrlMaximize.Click, pnlWinCtrl.MouseDoubleClick
         If Me.WindowState = FormWindowState.Normal Then
             Me.WindowState = FormWindowState.Maximized
         Else Me.WindowState = FormWindowState.Normal
         End If
 
     End Sub
-    Dim con As SqlConnection
-    Dim scrollval As Integer
-    Dim pageadapter As SqlDataAdapter
-    Dim pagingds As DataSet
     Private Sub PictureBox2_Click(sender As Object, e As EventArgs) Handles picWinCtrlMinimize.Click
         Me.WindowState = FormWindowState.Minimized
     End Sub
@@ -34,8 +30,40 @@ Public Class Home
         End If
     End Sub
 
-    ' Panel Visibility 
+#End Region
+#Region "Windows Drag"
+    Dim drag As Boolean = False
+    Dim mousex As Integer
+    Dim mousey As Integer
+    ' REF: https://www.dreamincode.net/forums/topic/135768-moving-a-borderless-form/
+    Private Sub Panel2_MouseDown(sender As Object, e As MouseEventArgs) Handles pnlWinCtrl.MouseDown
+        drag = True
+        mousex = Windows.Forms.Cursor.Position.X - Me.Left
+        mousey = Windows.Forms.Cursor.Position.Y - Me.Top
+    End Sub
 
+    Private Sub Panel2_MouseMove(sender As Object, e As MouseEventArgs) Handles pnlWinCtrl.MouseMove
+        If drag = True Then
+            Me.Top = Windows.Forms.Cursor.Position.Y - mousey
+            Me.Left = Windows.Forms.Cursor.Position.X - mousex
+        End If
+    End Sub
+
+    Private Sub Panel2_MouseUp(sender As Object, e As MouseEventArgs) Handles pnlWinCtrl.MouseUp
+        drag = False
+    End Sub
+#End Region
+
+
+    Dim con As SqlConnection
+    Dim scrollval As Integer
+    Dim pageadapter As SqlDataAdapter
+    Dim pagingds As DataSet
+
+
+#Region "Panel Visibility "
+
+    'Form Load Event
     Private Sub New_UI_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         pnlSearch.Visible = False
         pnlMovie.Visible = False
@@ -129,6 +157,8 @@ Public Class Home
         pnlAfterSearch.Visible = False
 
     End Sub
+#End Region
+#Region "Search Function "
     Private Sub btnSearch_Click(sender As Object, e As EventArgs) Handles btnPreSearch.Click
         Dim con As New SqlConnection("Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=E:\Assignments\Semester 3\VB.Net\vbimdb.mdf;Integrated Security=True;Connect Timeout=30")
         Dim sql As String
@@ -222,35 +252,10 @@ Public Class Home
         pnlPreSearch.Visible = True
 
     End Sub
-
-    Dim drag As Boolean = False
-    Dim mousex As Integer
-    Dim mousey As Integer
-    ' REF: https://www.dreamincode.net/forums/topic/135768-moving-a-borderless-form/
-    Private Sub Panel2_MouseDown(sender As Object, e As MouseEventArgs) Handles pnlWinCtrl.MouseDown
-        drag = True
-        mousex = Windows.Forms.Cursor.Position.X - Me.Left
-        mousey = Windows.Forms.Cursor.Position.Y - Me.Top
-    End Sub
-
-    Private Sub Panel2_MouseMove(sender As Object, e As MouseEventArgs) Handles pnlWinCtrl.MouseMove
-        If drag = True Then
-            Me.Top = Windows.Forms.Cursor.Position.Y - mousey
-            Me.Left = Windows.Forms.Cursor.Position.X - mousex
-        End If
-    End Sub
-
-    Private Sub Panel2_MouseUp(sender As Object, e As MouseEventArgs) Handles pnlWinCtrl.MouseUp
-        drag = False
-    End Sub
+#End Region
 
 
-    Private Sub Panel2_MouseDoubleClick(sender As Object, e As MouseEventArgs) Handles pnlWinCtrl.MouseDoubleClick
-        If Me.WindowState = FormWindowState.Normal Then
-            Me.WindowState = FormWindowState.Maximized
-        Else Me.WindowState = FormWindowState.Normal
-        End If
-    End Sub
+
 
     Private Sub DgvSearchResult_CellContentClick(sender As Object, e As DataGridViewCellEventArgs) Handles dgvSearchResult.CellContentClick
         Dim website As String

@@ -22,13 +22,18 @@ Partial Class LoginRegister
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
+        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(LoginRegister))
         Me.pnlNavigation = New System.Windows.Forms.Panel()
-        Me.Label1 = New System.Windows.Forms.Label()
+        Me.lblProgramName = New System.Windows.Forms.Label()
+        Me.btnavRecPass = New System.Windows.Forms.Button()
         Me.btnavLogin = New System.Windows.Forms.Button()
         Me.btnavRegister = New System.Windows.Forms.Button()
-        Me.btnavRecPass = New System.Windows.Forms.Button()
         Me.btnFormClose = New System.Windows.Forms.Button()
         Me.pnlNavButton = New System.Windows.Forms.Panel()
+        Me.pnlWinCtrlBox = New System.Windows.Forms.Panel()
+        Me.picWinCtrlMinimize = New System.Windows.Forms.PictureBox()
+        Me.picWinCtrlMaximize = New System.Windows.Forms.PictureBox()
+        Me.picWinCtrlExit = New System.Windows.Forms.PictureBox()
         Me.pnlLogin = New System.Windows.Forms.Panel()
         Me.btnLogin = New System.Windows.Forms.Button()
         Me.txtLpassword = New System.Windows.Forms.TextBox()
@@ -67,6 +72,11 @@ Partial Class LoginRegister
         Me.lblPRUsername = New System.Windows.Forms.Label()
         Me.lblPRTitle = New System.Windows.Forms.Label()
         Me.pnlNavigation.SuspendLayout()
+        Me.pnlNavButton.SuspendLayout()
+        Me.pnlWinCtrlBox.SuspendLayout()
+        CType(Me.picWinCtrlMinimize, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.picWinCtrlMaximize, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.picWinCtrlExit, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.pnlLogin.SuspendLayout()
         Me.pnlRegister.SuspendLayout()
         Me.pnlRecovery.SuspendLayout()
@@ -74,67 +84,147 @@ Partial Class LoginRegister
         '
         'pnlNavigation
         '
-        Me.pnlNavigation.Controls.Add(Me.Label1)
+        Me.pnlNavigation.BackColor = System.Drawing.Color.MediumAquamarine
+        Me.pnlNavigation.Controls.Add(Me.lblProgramName)
+        Me.pnlNavigation.Controls.Add(Me.btnavRecPass)
         Me.pnlNavigation.Controls.Add(Me.btnavLogin)
         Me.pnlNavigation.Controls.Add(Me.btnavRegister)
-        Me.pnlNavigation.Controls.Add(Me.btnavRecPass)
         Me.pnlNavigation.Controls.Add(Me.btnFormClose)
-        Me.pnlNavigation.Location = New System.Drawing.Point(0, 0)
+        Me.pnlNavigation.Dock = System.Windows.Forms.DockStyle.Left
+        Me.pnlNavigation.Location = New System.Drawing.Point(0, 47)
+        Me.pnlNavigation.Margin = New System.Windows.Forms.Padding(0)
         Me.pnlNavigation.Name = "pnlNavigation"
-        Me.pnlNavigation.Size = New System.Drawing.Size(200, 502)
+        Me.pnlNavigation.Size = New System.Drawing.Size(201, 531)
         Me.pnlNavigation.TabIndex = 0
         '
-        'Label1
+        'lblProgramName
         '
-        Me.Label1.AutoSize = True
-        Me.Label1.Location = New System.Drawing.Point(61, 66)
-        Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(76, 17)
-        Me.Label1.TabIndex = 2
-        Me.Label1.Text = "Power App"
-        '
-        'btnavLogin
-        '
-        Me.btnavLogin.Location = New System.Drawing.Point(0, 143)
-        Me.btnavLogin.Name = "btnavLogin"
-        Me.btnavLogin.Size = New System.Drawing.Size(200, 45)
-        Me.btnavLogin.TabIndex = 1
-        Me.btnavLogin.Text = "Login"
-        Me.btnavLogin.UseVisualStyleBackColor = True
-        '
-        'btnavRegister
-        '
-        Me.btnavRegister.Location = New System.Drawing.Point(0, 227)
-        Me.btnavRegister.Name = "btnavRegister"
-        Me.btnavRegister.Size = New System.Drawing.Size(200, 45)
-        Me.btnavRegister.TabIndex = 1
-        Me.btnavRegister.Text = "Register"
-        Me.btnavRegister.UseVisualStyleBackColor = True
+        Me.lblProgramName.AutoSize = True
+        Me.lblProgramName.BackColor = System.Drawing.Color.Transparent
+        Me.lblProgramName.Font = New System.Drawing.Font("Microsoft JhengHei", 20.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(134, Byte))
+        Me.lblProgramName.ForeColor = System.Drawing.Color.Green
+        Me.lblProgramName.Location = New System.Drawing.Point(12, 48)
+        Me.lblProgramName.Name = "lblProgramName"
+        Me.lblProgramName.Size = New System.Drawing.Size(166, 34)
+        Me.lblProgramName.TabIndex = 4
+        Me.lblProgramName.Text = "Power Apps"
         '
         'btnavRecPass
         '
-        Me.btnavRecPass.Location = New System.Drawing.Point(0, 302)
+        Me.btnavRecPass.BackColor = System.Drawing.Color.MediumAquamarine
+        Me.btnavRecPass.FlatAppearance.BorderSize = 0
+        Me.btnavRecPass.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.btnavRecPass.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnavRecPass.Image = CType(resources.GetObject("btnavRecPass.Image"), System.Drawing.Image)
+        Me.btnavRecPass.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.btnavRecPass.Location = New System.Drawing.Point(0, 251)
+        Me.btnavRecPass.Margin = New System.Windows.Forms.Padding(0)
         Me.btnavRecPass.Name = "btnavRecPass"
-        Me.btnavRecPass.Size = New System.Drawing.Size(200, 45)
-        Me.btnavRecPass.TabIndex = 1
-        Me.btnavRecPass.Text = "Password Recovery"
-        Me.btnavRecPass.UseVisualStyleBackColor = True
+        Me.btnavRecPass.Size = New System.Drawing.Size(201, 70)
+        Me.btnavRecPass.TabIndex = 3
+        Me.btnavRecPass.Text = "    Forget        Password"
+        Me.btnavRecPass.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText
+        Me.btnavRecPass.UseVisualStyleBackColor = False
+        '
+        'btnavLogin
+        '
+        Me.btnavLogin.BackColor = System.Drawing.Color.MediumAquamarine
+        Me.btnavLogin.FlatAppearance.BorderSize = 0
+        Me.btnavLogin.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.btnavLogin.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnavLogin.Image = CType(resources.GetObject("btnavLogin.Image"), System.Drawing.Image)
+        Me.btnavLogin.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.btnavLogin.Location = New System.Drawing.Point(0, 111)
+        Me.btnavLogin.Margin = New System.Windows.Forms.Padding(0)
+        Me.btnavLogin.Name = "btnavLogin"
+        Me.btnavLogin.Size = New System.Drawing.Size(201, 53)
+        Me.btnavLogin.TabIndex = 1
+        Me.btnavLogin.Text = "     Login"
+        Me.btnavLogin.UseVisualStyleBackColor = False
+        '
+        'btnavRegister
+        '
+        Me.btnavRegister.BackColor = System.Drawing.Color.MediumAquamarine
+        Me.btnavRegister.FlatAppearance.BorderSize = 0
+        Me.btnavRegister.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.btnavRegister.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnavRegister.Image = CType(resources.GetObject("btnavRegister.Image"), System.Drawing.Image)
+        Me.btnavRegister.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.btnavRegister.Location = New System.Drawing.Point(0, 181)
+        Me.btnavRegister.Margin = New System.Windows.Forms.Padding(0)
+        Me.btnavRegister.Name = "btnavRegister"
+        Me.btnavRegister.Size = New System.Drawing.Size(201, 53)
+        Me.btnavRegister.TabIndex = 1
+        Me.btnavRegister.Text = "     Register"
+        Me.btnavRegister.UseVisualStyleBackColor = False
         '
         'btnFormClose
         '
-        Me.btnFormClose.Location = New System.Drawing.Point(0, 379)
+        Me.btnFormClose.BackColor = System.Drawing.Color.MediumAquamarine
+        Me.btnFormClose.FlatAppearance.BorderSize = 0
+        Me.btnFormClose.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.btnFormClose.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnFormClose.Image = CType(resources.GetObject("btnFormClose.Image"), System.Drawing.Image)
+        Me.btnFormClose.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.btnFormClose.Location = New System.Drawing.Point(0, 340)
+        Me.btnFormClose.Margin = New System.Windows.Forms.Padding(0)
         Me.btnFormClose.Name = "btnFormClose"
-        Me.btnFormClose.Size = New System.Drawing.Size(200, 45)
+        Me.btnFormClose.Size = New System.Drawing.Size(201, 53)
         Me.btnFormClose.TabIndex = 1
-        Me.btnFormClose.Text = "Close"
-        Me.btnFormClose.UseVisualStyleBackColor = True
+        Me.btnFormClose.Text = "     Exit"
+        Me.btnFormClose.UseVisualStyleBackColor = False
         '
         'pnlNavButton
         '
-        Me.pnlNavButton.Location = New System.Drawing.Point(201, 0)
+        Me.pnlNavButton.BackColor = System.Drawing.SystemColors.ActiveCaption
+        Me.pnlNavButton.Controls.Add(Me.pnlWinCtrlBox)
+        Me.pnlNavButton.Dock = System.Windows.Forms.DockStyle.Top
+        Me.pnlNavButton.Location = New System.Drawing.Point(0, 0)
+        Me.pnlNavButton.Margin = New System.Windows.Forms.Padding(2)
         Me.pnlNavButton.Name = "pnlNavButton"
-        Me.pnlNavButton.Size = New System.Drawing.Size(672, 58)
+        Me.pnlNavButton.Size = New System.Drawing.Size(1095, 47)
         Me.pnlNavButton.TabIndex = 0
+        '
+        'pnlWinCtrlBox
+        '
+        Me.pnlWinCtrlBox.Controls.Add(Me.picWinCtrlMinimize)
+        Me.pnlWinCtrlBox.Controls.Add(Me.picWinCtrlMaximize)
+        Me.pnlWinCtrlBox.Controls.Add(Me.picWinCtrlExit)
+        Me.pnlWinCtrlBox.Dock = System.Windows.Forms.DockStyle.Right
+        Me.pnlWinCtrlBox.Location = New System.Drawing.Point(967, 0)
+        Me.pnlWinCtrlBox.Name = "pnlWinCtrlBox"
+        Me.pnlWinCtrlBox.Size = New System.Drawing.Size(128, 47)
+        Me.pnlWinCtrlBox.TabIndex = 4
+        '
+        'picWinCtrlMinimize
+        '
+        Me.picWinCtrlMinimize.Image = CType(resources.GetObject("picWinCtrlMinimize.Image"), System.Drawing.Image)
+        Me.picWinCtrlMinimize.Location = New System.Drawing.Point(4, 4)
+        Me.picWinCtrlMinimize.Name = "picWinCtrlMinimize"
+        Me.picWinCtrlMinimize.Size = New System.Drawing.Size(35, 35)
+        Me.picWinCtrlMinimize.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
+        Me.picWinCtrlMinimize.TabIndex = 2
+        Me.picWinCtrlMinimize.TabStop = False
+        '
+        'picWinCtrlMaximize
+        '
+        Me.picWinCtrlMaximize.Image = CType(resources.GetObject("picWinCtrlMaximize.Image"), System.Drawing.Image)
+        Me.picWinCtrlMaximize.Location = New System.Drawing.Point(45, 4)
+        Me.picWinCtrlMaximize.Name = "picWinCtrlMaximize"
+        Me.picWinCtrlMaximize.Size = New System.Drawing.Size(35, 35)
+        Me.picWinCtrlMaximize.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
+        Me.picWinCtrlMaximize.TabIndex = 2
+        Me.picWinCtrlMaximize.TabStop = False
+        '
+        'picWinCtrlExit
+        '
+        Me.picWinCtrlExit.Image = CType(resources.GetObject("picWinCtrlExit.Image"), System.Drawing.Image)
+        Me.picWinCtrlExit.Location = New System.Drawing.Point(86, 4)
+        Me.picWinCtrlExit.Name = "picWinCtrlExit"
+        Me.picWinCtrlExit.Size = New System.Drawing.Size(35, 35)
+        Me.picWinCtrlExit.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
+        Me.picWinCtrlExit.TabIndex = 2
+        Me.picWinCtrlExit.TabStop = False
         '
         'pnlLogin
         '
@@ -144,61 +234,72 @@ Partial Class LoginRegister
         Me.pnlLogin.Controls.Add(Me.Label5)
         Me.pnlLogin.Controls.Add(Me.Label4)
         Me.pnlLogin.Controls.Add(Me.Label3)
-        Me.pnlLogin.Location = New System.Drawing.Point(201, 55)
+        Me.pnlLogin.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(134, Byte))
+        Me.pnlLogin.Location = New System.Drawing.Point(203, 45)
+        Me.pnlLogin.Margin = New System.Windows.Forms.Padding(0)
         Me.pnlLogin.Name = "pnlLogin"
-        Me.pnlLogin.Size = New System.Drawing.Size(669, 447)
+        Me.pnlLogin.Size = New System.Drawing.Size(892, 533)
         Me.pnlLogin.TabIndex = 2
         '
         'btnLogin
         '
-        Me.btnLogin.Location = New System.Drawing.Point(251, 268)
+        Me.btnLogin.Location = New System.Drawing.Point(384, 285)
+        Me.btnLogin.Margin = New System.Windows.Forms.Padding(2)
         Me.btnLogin.Name = "btnLogin"
-        Me.btnLogin.Size = New System.Drawing.Size(158, 42)
+        Me.btnLogin.Size = New System.Drawing.Size(118, 34)
         Me.btnLogin.TabIndex = 4
         Me.btnLogin.Text = "Login"
         Me.btnLogin.UseVisualStyleBackColor = True
         '
         'txtLpassword
         '
-        Me.txtLpassword.Location = New System.Drawing.Point(300, 181)
+        Me.txtLpassword.Location = New System.Drawing.Point(421, 214)
+        Me.txtLpassword.Margin = New System.Windows.Forms.Padding(2)
         Me.txtLpassword.MaxLength = 12
         Me.txtLpassword.Name = "txtLpassword"
         Me.txtLpassword.PasswordChar = Global.Microsoft.VisualBasic.ChrW(42)
-        Me.txtLpassword.Size = New System.Drawing.Size(151, 22)
+        Me.txtLpassword.Size = New System.Drawing.Size(114, 26)
         Me.txtLpassword.TabIndex = 3
         '
         'txtLusername
         '
-        Me.txtLusername.Location = New System.Drawing.Point(300, 120)
+        Me.txtLusername.Location = New System.Drawing.Point(421, 165)
+        Me.txtLusername.Margin = New System.Windows.Forms.Padding(2)
         Me.txtLusername.MaxLength = 20
         Me.txtLusername.Name = "txtLusername"
-        Me.txtLusername.Size = New System.Drawing.Size(151, 22)
+        Me.txtLusername.Size = New System.Drawing.Size(114, 26)
         Me.txtLusername.TabIndex = 2
         '
         'Label5
         '
         Me.Label5.AutoSize = True
-        Me.Label5.Location = New System.Drawing.Point(173, 186)
+        Me.Label5.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(134, Byte))
+        Me.Label5.Location = New System.Drawing.Point(326, 218)
+        Me.Label5.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.Label5.Name = "Label5"
-        Me.Label5.Size = New System.Drawing.Size(73, 17)
+        Me.Label5.Size = New System.Drawing.Size(82, 20)
         Me.Label5.TabIndex = 1
         Me.Label5.Text = "Password:"
         '
         'Label4
         '
         Me.Label4.AutoSize = True
-        Me.Label4.Location = New System.Drawing.Point(169, 125)
+        Me.Label4.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(134, Byte))
+        Me.Label4.Location = New System.Drawing.Point(323, 169)
+        Me.Label4.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.Label4.Name = "Label4"
-        Me.Label4.Size = New System.Drawing.Size(77, 17)
+        Me.Label4.Size = New System.Drawing.Size(87, 20)
         Me.Label4.TabIndex = 1
         Me.Label4.Text = "Username:"
         '
         'Label3
         '
         Me.Label3.AutoSize = True
-        Me.Label3.Location = New System.Drawing.Point(306, 48)
+        Me.Label3.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(134, Byte))
+        Me.Label3.Location = New System.Drawing.Point(426, 106)
+        Me.Label3.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.Label3.Name = "Label3"
-        Me.Label3.Size = New System.Drawing.Size(43, 17)
+        Me.Label3.Size = New System.Drawing.Size(48, 20)
         Me.Label3.TabIndex = 0
         Me.Label3.Text = "Login"
         '
@@ -221,156 +322,174 @@ Partial Class LoginRegister
         Me.pnlRegister.Controls.Add(Me.txtRFName)
         Me.pnlRegister.Controls.Add(Me.Label7)
         Me.pnlRegister.Controls.Add(Me.Label6)
-        Me.pnlRegister.Location = New System.Drawing.Point(199, 56)
+        Me.pnlRegister.Location = New System.Drawing.Point(203, 46)
+        Me.pnlRegister.Margin = New System.Windows.Forms.Padding(0)
         Me.pnlRegister.Name = "pnlRegister"
-        Me.pnlRegister.Size = New System.Drawing.Size(669, 447)
+        Me.pnlRegister.Size = New System.Drawing.Size(892, 532)
         Me.pnlRegister.TabIndex = 3
         '
         'lblRTipsIC
         '
         Me.lblRTipsIC.AutoSize = True
-        Me.lblRTipsIC.Location = New System.Drawing.Point(484, 292)
+        Me.lblRTipsIC.Location = New System.Drawing.Point(363, 237)
+        Me.lblRTipsIC.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.lblRTipsIC.Name = "lblRTipsIC"
-        Me.lblRTipsIC.Size = New System.Drawing.Size(165, 17)
+        Me.lblRTipsIC.Size = New System.Drawing.Size(124, 13)
         Me.lblRTipsIC.TabIndex = 6
         Me.lblRTipsIC.Text = "Please Put Only Numeric"
         '
         'lblRTipsAge
         '
         Me.lblRTipsAge.AutoSize = True
-        Me.lblRTipsAge.Location = New System.Drawing.Point(484, 157)
+        Me.lblRTipsAge.Location = New System.Drawing.Point(363, 128)
+        Me.lblRTipsAge.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.lblRTipsAge.Name = "lblRTipsAge"
-        Me.lblRTipsAge.Size = New System.Drawing.Size(165, 17)
+        Me.lblRTipsAge.Size = New System.Drawing.Size(124, 13)
         Me.lblRTipsAge.TabIndex = 5
         Me.lblRTipsAge.Text = "Please Put Only Numeric"
         '
         'btncheckstrength
         '
-        Me.btncheckstrength.Location = New System.Drawing.Point(465, 351)
+        Me.btncheckstrength.Location = New System.Drawing.Point(349, 285)
+        Me.btncheckstrength.Margin = New System.Windows.Forms.Padding(2)
         Me.btncheckstrength.Name = "btncheckstrength"
-        Me.btncheckstrength.Size = New System.Drawing.Size(136, 45)
+        Me.btncheckstrength.Size = New System.Drawing.Size(102, 37)
         Me.btncheckstrength.TabIndex = 4
         Me.btncheckstrength.Text = "Password Strength"
         Me.btncheckstrength.UseVisualStyleBackColor = True
         '
         'btnRegister
         '
-        Me.btnRegister.Location = New System.Drawing.Point(257, 351)
+        Me.btnRegister.Location = New System.Drawing.Point(193, 285)
+        Me.btnRegister.Margin = New System.Windows.Forms.Padding(2)
         Me.btnRegister.Name = "btnRegister"
-        Me.btnRegister.Size = New System.Drawing.Size(163, 45)
+        Me.btnRegister.Size = New System.Drawing.Size(122, 37)
         Me.btnRegister.TabIndex = 3
         Me.btnRegister.Text = "Register"
         Me.btnRegister.UseVisualStyleBackColor = True
         '
         'txtRpassword
         '
-        Me.txtRpassword.Location = New System.Drawing.Point(279, 239)
+        Me.txtRpassword.Location = New System.Drawing.Point(209, 194)
+        Me.txtRpassword.Margin = New System.Windows.Forms.Padding(2)
         Me.txtRpassword.MaxLength = 12
         Me.txtRpassword.Name = "txtRpassword"
         Me.txtRpassword.PasswordChar = Global.Microsoft.VisualBasic.ChrW(42)
-        Me.txtRpassword.Size = New System.Drawing.Size(181, 22)
+        Me.txtRpassword.Size = New System.Drawing.Size(137, 20)
         Me.txtRpassword.TabIndex = 2
         '
         'lblRPass
         '
         Me.lblRPass.AutoSize = True
-        Me.lblRPass.Location = New System.Drawing.Point(157, 244)
+        Me.lblRPass.Location = New System.Drawing.Point(118, 198)
+        Me.lblRPass.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.lblRPass.Name = "lblRPass"
-        Me.lblRPass.Size = New System.Drawing.Size(73, 17)
+        Me.lblRPass.Size = New System.Drawing.Size(56, 13)
         Me.lblRPass.TabIndex = 1
         Me.lblRPass.Text = "Password:"
         '
         'txtRIC
         '
-        Me.txtRIC.Location = New System.Drawing.Point(279, 287)
+        Me.txtRIC.Location = New System.Drawing.Point(209, 233)
+        Me.txtRIC.Margin = New System.Windows.Forms.Padding(2)
         Me.txtRIC.MaxLength = 12
         Me.txtRIC.Name = "txtRIC"
-        Me.txtRIC.Size = New System.Drawing.Size(181, 22)
+        Me.txtRIC.Size = New System.Drawing.Size(137, 20)
         Me.txtRIC.TabIndex = 2
         '
         'lblRIC
         '
         Me.lblRIC.AutoSize = True
-        Me.lblRIC.Location = New System.Drawing.Point(186, 292)
+        Me.lblRIC.Location = New System.Drawing.Point(140, 237)
+        Me.lblRIC.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.lblRIC.Name = "lblRIC"
-        Me.lblRIC.Size = New System.Drawing.Size(44, 17)
+        Me.lblRIC.Size = New System.Drawing.Size(35, 13)
         Me.lblRIC.TabIndex = 1
         Me.lblRIC.Text = "IC.no:"
         '
         'txtRUserName
         '
-        Me.txtRUserName.Location = New System.Drawing.Point(279, 194)
+        Me.txtRUserName.Location = New System.Drawing.Point(209, 158)
+        Me.txtRUserName.Margin = New System.Windows.Forms.Padding(2)
         Me.txtRUserName.MaxLength = 20
         Me.txtRUserName.Name = "txtRUserName"
-        Me.txtRUserName.Size = New System.Drawing.Size(181, 22)
+        Me.txtRUserName.Size = New System.Drawing.Size(137, 20)
         Me.txtRUserName.TabIndex = 2
         '
         'lblRUserName
         '
         Me.lblRUserName.AutoSize = True
-        Me.lblRUserName.Location = New System.Drawing.Point(153, 199)
+        Me.lblRUserName.Location = New System.Drawing.Point(115, 162)
+        Me.lblRUserName.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.lblRUserName.Name = "lblRUserName"
-        Me.lblRUserName.Size = New System.Drawing.Size(77, 17)
+        Me.lblRUserName.Size = New System.Drawing.Size(58, 13)
         Me.lblRUserName.TabIndex = 1
         Me.lblRUserName.Text = "Username:"
         '
         'txtRAge
         '
-        Me.txtRAge.Location = New System.Drawing.Point(279, 152)
+        Me.txtRAge.Location = New System.Drawing.Point(209, 124)
+        Me.txtRAge.Margin = New System.Windows.Forms.Padding(2)
         Me.txtRAge.MaxLength = 3
         Me.txtRAge.Name = "txtRAge"
-        Me.txtRAge.Size = New System.Drawing.Size(181, 22)
+        Me.txtRAge.Size = New System.Drawing.Size(137, 20)
         Me.txtRAge.TabIndex = 2
         '
         'lblRAge
         '
         Me.lblRAge.AutoSize = True
-        Me.lblRAge.Location = New System.Drawing.Point(193, 157)
+        Me.lblRAge.Location = New System.Drawing.Point(145, 128)
+        Me.lblRAge.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.lblRAge.Name = "lblRAge"
-        Me.lblRAge.Size = New System.Drawing.Size(37, 17)
+        Me.lblRAge.Size = New System.Drawing.Size(29, 13)
         Me.lblRAge.TabIndex = 1
         Me.lblRAge.Text = "Age:"
         '
         'txtRLName
         '
-        Me.txtRLName.Location = New System.Drawing.Point(279, 110)
+        Me.txtRLName.Location = New System.Drawing.Point(209, 89)
+        Me.txtRLName.Margin = New System.Windows.Forms.Padding(2)
         Me.txtRLName.MaxLength = 25
         Me.txtRLName.Name = "txtRLName"
-        Me.txtRLName.Size = New System.Drawing.Size(181, 22)
+        Me.txtRLName.Size = New System.Drawing.Size(137, 20)
         Me.txtRLName.TabIndex = 2
         '
         'lblRLName
         '
         Me.lblRLName.AutoSize = True
-        Me.lblRLName.Location = New System.Drawing.Point(175, 115)
+        Me.lblRLName.Location = New System.Drawing.Point(131, 93)
+        Me.lblRLName.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.lblRLName.Name = "lblRLName"
-        Me.lblRLName.Size = New System.Drawing.Size(55, 17)
+        Me.lblRLName.Size = New System.Drawing.Size(42, 13)
         Me.lblRLName.TabIndex = 1
         Me.lblRLName.Text = "Lname:"
         '
         'txtRFName
         '
-        Me.txtRFName.Location = New System.Drawing.Point(279, 69)
+        Me.txtRFName.Location = New System.Drawing.Point(209, 56)
+        Me.txtRFName.Margin = New System.Windows.Forms.Padding(2)
         Me.txtRFName.MaxLength = 15
         Me.txtRFName.Name = "txtRFName"
-        Me.txtRFName.Size = New System.Drawing.Size(181, 22)
+        Me.txtRFName.Size = New System.Drawing.Size(137, 20)
         Me.txtRFName.TabIndex = 2
         '
         'Label7
         '
         Me.Label7.AutoSize = True
-        Me.Label7.Location = New System.Drawing.Point(175, 74)
+        Me.Label7.Location = New System.Drawing.Point(131, 60)
+        Me.Label7.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.Label7.Name = "Label7"
-        Me.Label7.Size = New System.Drawing.Size(55, 17)
+        Me.Label7.Size = New System.Drawing.Size(42, 13)
         Me.Label7.TabIndex = 1
         Me.Label7.Text = "Fname:"
         '
         'Label6
         '
         Me.Label6.AutoSize = True
-        Me.Label6.Location = New System.Drawing.Point(284, 30)
+        Me.Label6.Location = New System.Drawing.Point(213, 24)
+        Me.Label6.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.Label6.Name = "Label6"
-        Me.Label6.Size = New System.Drawing.Size(95, 17)
+        Me.Label6.Size = New System.Drawing.Size(74, 13)
         Me.Label6.TabIndex = 0
         Me.Label6.Text = "Register Now!"
         '
@@ -387,122 +506,141 @@ Partial Class LoginRegister
         Me.pnlRecovery.Controls.Add(Me.txtPRUsername)
         Me.pnlRecovery.Controls.Add(Me.lblPRUsername)
         Me.pnlRecovery.Controls.Add(Me.lblPRTitle)
-        Me.pnlRecovery.Location = New System.Drawing.Point(200, 56)
+        Me.pnlRecovery.Location = New System.Drawing.Point(203, 46)
+        Me.pnlRecovery.Margin = New System.Windows.Forms.Padding(0)
         Me.pnlRecovery.Name = "pnlRecovery"
-        Me.pnlRecovery.Size = New System.Drawing.Size(669, 447)
+        Me.pnlRecovery.Size = New System.Drawing.Size(892, 532)
         Me.pnlRecovery.TabIndex = 4
         '
         'lblPRTipsIC
         '
         Me.lblPRTipsIC.AutoSize = True
-        Me.lblPRTipsIC.Location = New System.Drawing.Point(483, 115)
+        Me.lblPRTipsIC.Location = New System.Drawing.Point(362, 93)
+        Me.lblPRTipsIC.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.lblPRTipsIC.Name = "lblPRTipsIC"
-        Me.lblPRTipsIC.Size = New System.Drawing.Size(165, 17)
+        Me.lblPRTipsIC.Size = New System.Drawing.Size(124, 13)
         Me.lblPRTipsIC.TabIndex = 4
         Me.lblPRTipsIC.Text = "Please Put Only Numeric"
         '
         'btnconchanges
         '
-        Me.btnconchanges.Location = New System.Drawing.Point(252, 250)
+        Me.btnconchanges.Location = New System.Drawing.Point(189, 203)
+        Me.btnconchanges.Margin = New System.Windows.Forms.Padding(2)
         Me.btnconchanges.Name = "btnconchanges"
-        Me.btnconchanges.Size = New System.Drawing.Size(158, 41)
+        Me.btnconchanges.Size = New System.Drawing.Size(118, 33)
         Me.btnconchanges.TabIndex = 3
         Me.btnconchanges.Text = "Recover"
         Me.btnconchanges.UseVisualStyleBackColor = True
         '
         'txtPRConPass
         '
-        Me.txtPRConPass.Location = New System.Drawing.Point(256, 196)
+        Me.txtPRConPass.Location = New System.Drawing.Point(192, 159)
+        Me.txtPRConPass.Margin = New System.Windows.Forms.Padding(2)
         Me.txtPRConPass.MaxLength = 12
         Me.txtPRConPass.Name = "txtPRConPass"
         Me.txtPRConPass.PasswordChar = Global.Microsoft.VisualBasic.ChrW(42)
-        Me.txtPRConPass.Size = New System.Drawing.Size(203, 22)
+        Me.txtPRConPass.Size = New System.Drawing.Size(153, 20)
         Me.txtPRConPass.TabIndex = 2
         '
         'lblPRConPass
         '
         Me.lblPRConPass.AutoSize = True
-        Me.lblPRConPass.Location = New System.Drawing.Point(104, 202)
+        Me.lblPRConPass.Location = New System.Drawing.Point(78, 164)
+        Me.lblPRConPass.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.lblPRConPass.Name = "lblPRConPass"
-        Me.lblPRConPass.Size = New System.Drawing.Size(125, 17)
+        Me.lblPRConPass.Size = New System.Drawing.Size(94, 13)
         Me.lblPRConPass.TabIndex = 1
         Me.lblPRConPass.Text = "Confirm Password:"
         '
         'txtPRNewPass
         '
-        Me.txtPRNewPass.Location = New System.Drawing.Point(256, 152)
+        Me.txtPRNewPass.Location = New System.Drawing.Point(192, 124)
+        Me.txtPRNewPass.Margin = New System.Windows.Forms.Padding(2)
         Me.txtPRNewPass.MaxLength = 12
         Me.txtPRNewPass.Name = "txtPRNewPass"
-        Me.txtPRNewPass.Size = New System.Drawing.Size(203, 22)
+        Me.txtPRNewPass.Size = New System.Drawing.Size(153, 20)
         Me.txtPRNewPass.TabIndex = 2
         '
         'lblPRNewPass
         '
         Me.lblPRNewPass.AutoSize = True
-        Me.lblPRNewPass.Location = New System.Drawing.Point(125, 152)
+        Me.lblPRNewPass.Location = New System.Drawing.Point(94, 124)
+        Me.lblPRNewPass.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.lblPRNewPass.Name = "lblPRNewPass"
-        Me.lblPRNewPass.Size = New System.Drawing.Size(104, 17)
+        Me.lblPRNewPass.Size = New System.Drawing.Size(81, 13)
         Me.lblPRNewPass.TabIndex = 1
         Me.lblPRNewPass.Text = "New Password:"
         '
         'txtPRIC
         '
-        Me.txtPRIC.Location = New System.Drawing.Point(256, 110)
+        Me.txtPRIC.Location = New System.Drawing.Point(192, 89)
+        Me.txtPRIC.Margin = New System.Windows.Forms.Padding(2)
         Me.txtPRIC.MaxLength = 12
         Me.txtPRIC.Name = "txtPRIC"
-        Me.txtPRIC.Size = New System.Drawing.Size(203, 22)
+        Me.txtPRIC.Size = New System.Drawing.Size(153, 20)
         Me.txtPRIC.TabIndex = 2
         '
         'lblPRIC
         '
         Me.lblPRIC.AutoSize = True
-        Me.lblPRIC.Location = New System.Drawing.Point(185, 115)
+        Me.lblPRIC.Location = New System.Drawing.Point(139, 93)
+        Me.lblPRIC.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.lblPRIC.Name = "lblPRIC"
-        Me.lblPRIC.Size = New System.Drawing.Size(44, 17)
+        Me.lblPRIC.Size = New System.Drawing.Size(35, 13)
         Me.lblPRIC.TabIndex = 1
         Me.lblPRIC.Text = "IC.no:"
         '
         'txtPRUsername
         '
-        Me.txtPRUsername.Location = New System.Drawing.Point(256, 66)
+        Me.txtPRUsername.Location = New System.Drawing.Point(192, 54)
+        Me.txtPRUsername.Margin = New System.Windows.Forms.Padding(2)
         Me.txtPRUsername.MaxLength = 20
         Me.txtPRUsername.Name = "txtPRUsername"
-        Me.txtPRUsername.Size = New System.Drawing.Size(203, 22)
+        Me.txtPRUsername.Size = New System.Drawing.Size(153, 20)
         Me.txtPRUsername.TabIndex = 2
         '
         'lblPRUsername
         '
         Me.lblPRUsername.AutoSize = True
-        Me.lblPRUsername.Location = New System.Drawing.Point(152, 69)
+        Me.lblPRUsername.Location = New System.Drawing.Point(114, 56)
+        Me.lblPRUsername.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.lblPRUsername.Name = "lblPRUsername"
-        Me.lblPRUsername.Size = New System.Drawing.Size(77, 17)
+        Me.lblPRUsername.Size = New System.Drawing.Size(58, 13)
         Me.lblPRUsername.TabIndex = 1
         Me.lblPRUsername.Text = "Username:"
         '
         'lblPRTitle
         '
         Me.lblPRTitle.AutoSize = True
-        Me.lblPRTitle.Location = New System.Drawing.Point(274, 30)
+        Me.lblPRTitle.Location = New System.Drawing.Point(206, 24)
+        Me.lblPRTitle.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.lblPRTitle.Name = "lblPRTitle"
-        Me.lblPRTitle.Size = New System.Drawing.Size(133, 17)
+        Me.lblPRTitle.Size = New System.Drawing.Size(102, 13)
         Me.lblPRTitle.TabIndex = 0
         Me.lblPRTitle.Text = "Password Recovery"
         '
         'LoginRegister
         '
-        Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
+        Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(870, 501)
+        Me.ClientSize = New System.Drawing.Size(1095, 578)
+        Me.Controls.Add(Me.pnlNavigation)
         Me.Controls.Add(Me.pnlLogin)
         Me.Controls.Add(Me.pnlRegister)
         Me.Controls.Add(Me.pnlRecovery)
-        Me.Controls.Add(Me.pnlNavigation)
         Me.Controls.Add(Me.pnlNavButton)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
+        Me.Margin = New System.Windows.Forms.Padding(2)
         Me.Name = "LoginRegister"
+        Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "LoginRegister"
         Me.pnlNavigation.ResumeLayout(False)
         Me.pnlNavigation.PerformLayout()
+        Me.pnlNavButton.ResumeLayout(False)
+        Me.pnlWinCtrlBox.ResumeLayout(False)
+        CType(Me.picWinCtrlMinimize, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.picWinCtrlMaximize, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.picWinCtrlExit, System.ComponentModel.ISupportInitialize).EndInit()
         Me.pnlLogin.ResumeLayout(False)
         Me.pnlLogin.PerformLayout()
         Me.pnlRegister.ResumeLayout(False)
@@ -516,10 +654,8 @@ Partial Class LoginRegister
     Friend WithEvents pnlNavigation As Panel
     Friend WithEvents btnavLogin As Button
     Friend WithEvents btnavRegister As Button
-    Friend WithEvents btnavRecPass As Button
     Friend WithEvents btnFormClose As Button
     Friend WithEvents pnlNavButton As Panel
-    Friend WithEvents Label1 As Label
     Friend WithEvents pnlLogin As Panel
     Friend WithEvents btnLogin As Button
     Friend WithEvents txtLpassword As TextBox
@@ -557,4 +693,10 @@ Partial Class LoginRegister
     Friend WithEvents lblRTipsIC As Label
     Friend WithEvents lblRTipsAge As Label
     Friend WithEvents lblPRTipsIC As Label
+    Friend WithEvents pnlWinCtrlBox As Panel
+    Friend WithEvents picWinCtrlMinimize As PictureBox
+    Friend WithEvents picWinCtrlMaximize As PictureBox
+    Friend WithEvents picWinCtrlExit As PictureBox
+    Friend WithEvents btnavRecPass As Button
+    Friend WithEvents lblProgramName As Label
 End Class
