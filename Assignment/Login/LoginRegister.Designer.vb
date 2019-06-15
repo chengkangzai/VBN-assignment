@@ -91,10 +91,10 @@ Partial Class LoginRegister
         Me.pnlNavigation.Controls.Add(Me.btnavRegister)
         Me.pnlNavigation.Controls.Add(Me.btnFormClose)
         Me.pnlNavigation.Dock = System.Windows.Forms.DockStyle.Left
-        Me.pnlNavigation.Location = New System.Drawing.Point(0, 47)
+        Me.pnlNavigation.Location = New System.Drawing.Point(0, 0)
         Me.pnlNavigation.Margin = New System.Windows.Forms.Padding(0)
         Me.pnlNavigation.Name = "pnlNavigation"
-        Me.pnlNavigation.Size = New System.Drawing.Size(203, 531)
+        Me.pnlNavigation.Size = New System.Drawing.Size(203, 578)
         Me.pnlNavigation.TabIndex = 0
         '
         'lblProgramName
@@ -179,10 +179,10 @@ Partial Class LoginRegister
         Me.pnlNavButton.BackColor = System.Drawing.SystemColors.ActiveCaption
         Me.pnlNavButton.Controls.Add(Me.pnlWinCtrlBox)
         Me.pnlNavButton.Dock = System.Windows.Forms.DockStyle.Top
-        Me.pnlNavButton.Location = New System.Drawing.Point(0, 0)
+        Me.pnlNavButton.Location = New System.Drawing.Point(203, 0)
         Me.pnlNavButton.Margin = New System.Windows.Forms.Padding(2)
         Me.pnlNavButton.Name = "pnlNavButton"
-        Me.pnlNavButton.Size = New System.Drawing.Size(1095, 47)
+        Me.pnlNavButton.Size = New System.Drawing.Size(892, 47)
         Me.pnlNavButton.TabIndex = 0
         '
         'pnlWinCtrlBox
@@ -191,7 +191,7 @@ Partial Class LoginRegister
         Me.pnlWinCtrlBox.Controls.Add(Me.picWinCtrlMaximize)
         Me.pnlWinCtrlBox.Controls.Add(Me.picWinCtrlExit)
         Me.pnlWinCtrlBox.Dock = System.Windows.Forms.DockStyle.Right
-        Me.pnlWinCtrlBox.Location = New System.Drawing.Point(967, 0)
+        Me.pnlWinCtrlBox.Location = New System.Drawing.Point(764, 0)
         Me.pnlWinCtrlBox.Name = "pnlWinCtrlBox"
         Me.pnlWinCtrlBox.Size = New System.Drawing.Size(128, 47)
         Me.pnlWinCtrlBox.TabIndex = 4
@@ -660,11 +660,11 @@ Partial Class LoginRegister
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(1095, 578)
+        Me.Controls.Add(Me.pnlNavButton)
+        Me.Controls.Add(Me.pnlNavigation)
+        Me.Controls.Add(Me.pnlLogin)
         Me.Controls.Add(Me.pnlRegister)
         Me.Controls.Add(Me.pnlRecovery)
-        Me.Controls.Add(Me.pnlLogin)
-        Me.Controls.Add(Me.pnlNavigation)
-        Me.Controls.Add(Me.pnlNavButton)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
         Me.Margin = New System.Windows.Forms.Padding(2)
         Me.Name = "LoginRegister"

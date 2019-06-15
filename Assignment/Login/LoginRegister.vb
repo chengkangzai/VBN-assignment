@@ -167,9 +167,9 @@ Public Class LoginRegister
     End Sub
 
     Private Sub LoginRegister_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-        lblRTipsAge.Visible = False
-        lblRTipsIC.Visible = False
-        lblPRTipsIC.Visible = False
+        pnlLogin.Visible = True
+        pnlRecovery.Visible = False
+        pnlRegister.Visible = False
     End Sub
 #End Region
 #Region "Data Validation"
