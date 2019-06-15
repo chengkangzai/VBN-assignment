@@ -13,7 +13,7 @@ Public Class LoginRegister
     'Login
     Private Sub Button5_Click(sender As Object, e As EventArgs) Handles btnLogin.Click
 
-        con = New SqlConnection("Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\Chin Wei\Desktop\VBimdb.mdf;Integrated Security=True;Connect Timeout=30")
+        con = New SqlConnection("Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=E:\Assignments\Semester 3\VB.Net\vbimdb.mdf;Integrated Security=True;Connect Timeout=30")
         con.Open()
         Dim stm As String = "select * from [User] where U_Username='" & txtLusername.Text & "' And U_Password='" & txtLpassword.Text & "' "
         cmd = New SqlCommand(stm, con)
@@ -37,7 +37,7 @@ Public Class LoginRegister
     'Register
     Private Sub Button6_Click(sender As Object, e As EventArgs) Handles btnRegister.Click
 
-        con = New SqlConnection("Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\Chin Wei\Desktop\VBimdb.mdf;Integrated Security=True;Connect Timeout=30")
+        con = New SqlConnection("Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=E:\Assignments\Semester 3\VB.Net\vbimdb.mdf;Integrated Security=True;Connect Timeout=30")
         con.Open()
         cmd.Connection = con
         cmd.CommandType = CommandType.Text
@@ -95,7 +95,7 @@ Public Class LoginRegister
             MessageBox.Show("Please Match Your Password", "Password Does Not Match")
         End If
 
-        con = New SqlConnection("Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\Chin Wei\Desktop\VBimdb.mdf;Integrated Security=True;Connect Timeout=30")
+        con = New SqlConnection("Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=E:\Assignments\Semester 3\VB.Net\vbimdb.mdf;Integrated Security=True;Connect Timeout=30")
         If txtPRNewPass.Text = txtPRConPass.Text Then
             Try
                 con.Open()
