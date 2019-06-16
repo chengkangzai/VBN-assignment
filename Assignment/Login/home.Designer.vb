@@ -147,9 +147,9 @@ Partial Class Home
         Me.pnlMainPanel.Controls.Add(Me.btnpnlExit)
         Me.pnlMainPanel.Controls.Add(Me.btnpnlMovie)
         Me.pnlMainPanel.Dock = System.Windows.Forms.DockStyle.Left
-        Me.pnlMainPanel.Location = New System.Drawing.Point(0, 42)
+        Me.pnlMainPanel.Location = New System.Drawing.Point(0, 0)
         Me.pnlMainPanel.Name = "pnlMainPanel"
-        Me.pnlMainPanel.Size = New System.Drawing.Size(201, 536)
+        Me.pnlMainPanel.Size = New System.Drawing.Size(201, 578)
         Me.pnlMainPanel.TabIndex = 0
         '
         'lblProgramName
@@ -721,7 +721,7 @@ Partial Class Home
         Me.pnlWinCtrlBox.Controls.Add(Me.picWinCtrlMaximize)
         Me.pnlWinCtrlBox.Controls.Add(Me.picWinCtrlExit)
         Me.pnlWinCtrlBox.Dock = System.Windows.Forms.DockStyle.Right
-        Me.pnlWinCtrlBox.Location = New System.Drawing.Point(967, 0)
+        Me.pnlWinCtrlBox.Location = New System.Drawing.Point(766, 0)
         Me.pnlWinCtrlBox.Name = "pnlWinCtrlBox"
         Me.pnlWinCtrlBox.Size = New System.Drawing.Size(128, 42)
         Me.pnlWinCtrlBox.TabIndex = 3
@@ -761,9 +761,9 @@ Partial Class Home
         Me.pnlWinCtrl.BackColor = System.Drawing.SystemColors.ActiveCaption
         Me.pnlWinCtrl.Controls.Add(Me.pnlWinCtrlBox)
         Me.pnlWinCtrl.Dock = System.Windows.Forms.DockStyle.Top
-        Me.pnlWinCtrl.Location = New System.Drawing.Point(0, 0)
+        Me.pnlWinCtrl.Location = New System.Drawing.Point(201, 0)
         Me.pnlWinCtrl.Name = "pnlWinCtrl"
-        Me.pnlWinCtrl.Size = New System.Drawing.Size(1095, 42)
+        Me.pnlWinCtrl.Size = New System.Drawing.Size(894, 42)
         Me.pnlWinCtrl.TabIndex = 1
         '
         'pnlMovie
@@ -1120,8 +1120,8 @@ Partial Class Home
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(1095, 578)
-        Me.Controls.Add(Me.pnlMainPanel)
         Me.Controls.Add(Me.pnlWinCtrl)
+        Me.Controls.Add(Me.pnlMainPanel)
         Me.Controls.Add(Me.pnlWelcome)
         Me.Controls.Add(Me.pnlSearch)
         Me.Controls.Add(Me.pnlAbout)
