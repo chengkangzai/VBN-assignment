@@ -169,6 +169,9 @@ Public Class LoginRegister
         pnlLogin.Visible = True
         pnlRecovery.Visible = False
         pnlRegister.Visible = False
+        lblPRTipsIC.Visible = False
+        lblRTipsAge.Visible = False
+        lblRTipsIC.Visible = False
     End Sub
 #End Region
 #Region "Data Validation"
