@@ -8,6 +8,7 @@
 'Importing Guideline: https://support.discountasp.net/kb/a1179/how-to-import-a-csv-file-into-a-database-using-sql-server-management-studio.aspx
 'Importing Guideline 2: https://docs.microsoft.com/en-us/sql/relational-databases/import-export/import-flat-file-wizard?view=sql-server-2017
 
+
 Imports System.Data.SqlClient
 #Region "Windows Control"
 Public Class Home
@@ -258,11 +259,16 @@ Public Class Home
 
     Private Sub DgvSearchResult_CellContentClick(sender As Object, e As DataGridViewCellEventArgs) Handles dgvSearchResult.CellContentClick
         Dim website As String
+        Dim website2 As String
         Dim url As String
+        Dim url2 As String
 
         website = dgvSearchResult.CurrentRow.Cells(0).Value.ToString()
+        website2 = dgvMovieList.CurrentRow.Cells(0).Value.ToString()
         url = "https://www.imdb.com/title/" + website
+        url2 = "https://www.imdb.com/title/" + website2
         Process.Start(url)
+        Process.Start(url2)
     End Sub
 
     Private Sub BtnPrevious_Click(sender As Object, e As EventArgs) Handles btnAfterSearchPrevious.Click
